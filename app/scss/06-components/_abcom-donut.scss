@@ -1,0 +1,63 @@
+.abcom-donut {
+    position: relative;
+	
+	display: inline-block;
+	height: 180px;
+	width: 180px;
+	border-radius: 90px;
+	padding: 14px;
+	margin: 15px 25px;
+
+	@include abcom-gradient($gray-bg, $white);
+
+	.donut{
+		width: 152px;
+		height: 152px;
+		border-radius: 75px;
+		border: 1px solid $gray-bg;
+		background-color: $white-light;
+
+		h1, div{
+			position: absolute;
+			left: 50%;
+			z-index: 3;
+
+			margin-left: -50px;
+			width: 100px;
+			
+			text-align: center;
+			color: $gray-base-active;
+		}
+
+		h1{
+			top: 30px;
+			font-weight: bold;
+			font-size: 32px;
+		}
+
+		div{
+			top: 90px;
+			line-height: 16px;
+		}
+
+		svg {
+		    transform: rotate(-90deg);
+		}
+
+		.filler{
+			stroke: $white;
+			stroke-dashoffset:0;
+		}
+
+		.circle_animation, .filler {
+			stroke-dasharray: 440;
+			stroke-width: 10px;
+		}
+
+		.circle_animation {
+			stroke-dashoffset: 440;
+			stroke: $blue-light;
+		}
+	}
+
+}

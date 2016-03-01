@@ -1,0 +1,29 @@
+.usernav{
+
+	padding: 18px 0;
+	.btn{
+		font-size: 12px;
+	}
+
+	&__profile{
+		position: relative;
+		border-radius: 15px 0 0 15px;
+		color: $red;
+		text-indent: 24px;
+	}
+
+	&__photo{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+	}
+
+	&__button{
+		border-radius: 0 15px 15px 0;
+
+	}
+
+}

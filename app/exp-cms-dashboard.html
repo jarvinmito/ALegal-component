@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aboitiz Legal</title>
+  <link rel="Shortcut Icon" type="image-x/icon" href="assets/images/favicon.png" />
+
+  <!-- build:css css/app.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="ab-wrapper">
+    <!-- start : header section -->
+    <header class="header">
+      <nav class="navbar abnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CORS</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#" class="abnav__link"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-hourglass"></i>Management</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-file"></i>Templates</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-folder-open"></i>Requestor's Page</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-briefcase"></i>Reports</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><img class="header__brand" src="assets/images/brand.png" alt="Aboitiz Legal" ></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <nav class="navbar absubnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="absubnav__title navbar-brand"><span class="ab-icon"><i class="fa fa-home"></i></span>Home</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+              <div class="usernav btn-group">
+                <div class="usernav__profile btn btn-default"><img class="usernav__photo" src="assets/images/photo.jpg" alt="Juan Dela Cruz">Natalie Dormer</div>
+                <button class="usernav__button btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+              </div>
+            </div>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <!-- end : header section -->
+    
+
+    <!-- start : body section -->
+    <section class="main-content">
+      <section class="main-content__main">
+        <!-- INSERT MAIN PANEL CONTENT HERE -->
+        <div class="abcom-title">
+          <span class="abcom-title__main">Request Trackers</span>
+          <span class="abcom-title__sub">Status of all Requests</span>
+        </div>
+
+        <div class="abcom-container abcom-container--center">
+          <div id="donut_approved" class="abcom abcom-donut">
+              <div class="donut">
+                  <h1>35</h1>
+                  <div>Requests Approved</div>
+                  <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                   <g>
+                    <title>Requests Approved</title>
+                    <circle id="circle" class="filler" r="69.85699" cy="75" cx="75" fill="none"/>
+                    <circle id="circle" class="circle_animation" r="69.85699" cy="75" cx="75" fill="none"/>
+                   </g>
+                  </svg>
+              </div>
+          </div>
+
+          <div id="donut_pending" class="abcom abcom-donut">
+              <div class="donut">
+                  <h1>15</h1>
+                  <div>Requests Pending</div>
+                  <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                   <g>
+                    <title>Requests Pending</title>
+                    <circle id="circle" class="filler" r="69.85699" cy="75" cx="75" fill="none"/>
+                    <circle id="circle" class="circle_animation" r="69.85699" cy="75" cx="75" fill="none"/>
+                   </g>
+                  </svg>
+              </div>
+          </div>
+
+          <div id="donut_completed" class="abcom abcom-donut">
+              <div class="donut">
+                  <h1>85</h1>
+                  <div>Requests Completed</div>
+                  <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                   <g>
+                    <title>Requests Completed</title>
+                    <circle id="circle" class="filler" r="69.85699" cy="75" cx="75" fill="none"/>
+                    <circle id="circle" class="circle_animation" r="69.85699" cy="75" cx="75" fill="none"/>
+                   </g>
+                  </svg>
+              </div>
+          </div>
+
+          <div id="donut_cancelled" class="abcom abcom-donut">
+              <div class="donut">
+                  <h1>5</h1>
+                  <div>Requests Cancelled</div>
+                  <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                   <g>
+                    <title>Requests Cancelled</title>
+                    <circle id="circle" class="filler" r="69.85699" cy="75" cx="75" fill="none"/>
+                    <circle id="circle" class="circle_animation" r="69.85699" cy="75" cx="75" fill="none"/>
+                   </g>
+                  </svg>
+              </div>
+          </div>
+        </div>
+      </section><!-- // End main -->
+
+    </section>
+    <!-- end : body section -->
+
+    <!-- start : footer section -->
+    <footer class="footer container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 text-align--left"><p class="footer__text">&#169; 2016 Aboitiz Equity Ventures. All rights reserved.</p></div>
+        <div class="col-sm-6 col-xs-12 text-align--right"><p class="footer__text">Powered by <b class="footer__provider">YONDU</b></p></div>
+      </div>
+    </footer>
+    <!-- end : footer section -->
+  </div>
+
+  <!-- build:js js/app.js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.dataTables.js"></script>
+  <script src="js/dataTables.bootstrap.js"></script>
+  <script src="js/handlebars.runtime.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/handlebars.helper.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- endbuild -->
+
+  <script>
+  $(document).ready(function(){
+    var approved = $('#donut_approved');
+    var pending = $('#donut_pending');
+    var cancelled = $('#donut_cancelled');
+    var completed = $('#donut_completed');
+    
+    initDonut(approved);
+    initDonut(pending);
+    initDonut(cancelled);
+    initDonut(completed);
+  });
+  </script>
+</body>
+</html>

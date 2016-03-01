@@ -1,0 +1,28 @@
+.auth{
+	text-align: center;
+
+	padding-top: 150px;
+
+	.auth__brand{
+		height: 70px;
+	}
+
+	.auth__separator{
+		margin: 30px 0;
+		border-top: 1px solid $gray-bg-active;
+	}
+
+	.auth__description{
+		margin: 5px auto;
+	}
+
+	.auth__button{
+		margin: 30px 0;
+		text-align: center;
+
+		.input-group{
+			width: 100px;
+			margin: auto;
+		}
+	}
+}

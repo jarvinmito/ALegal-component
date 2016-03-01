@@ -1,0 +1,71 @@
+.abcom-progress[value]{
+	/* RESET */
+	-webkit-appearance: none;
+	appearance: none;
+
+	/* CUSTOM */
+	position: relative;
+	display: block;
+
+	width: 100%;
+	height: 50px;
+	border: none;
+
+	&:before, &:after{
+		position: absolute;
+		left: 0;
+		
+		width: 100%;
+		display: none;
+
+		text-align: center;
+		color: $black;
+	}
+
+	&:before{
+		content: attr(value) "%";
+		top: 0;
+		z-index: 4;
+
+		padding-top: 10px;
+
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	&:after{
+		content: attr(data-status);
+		bottom: 0;
+		z-index: 3;
+
+		height: 50px;
+		padding-top: 25px;
+
+		font-size: 10px;
+		line-height: 10px;
+		
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	&:hover, &:active, &:focus{
+		&:after, &:before{
+			display: block;
+		}
+	}
+
+	&::-webkit-progress-bar{
+		background-color: $white;
+		// border:1px solid $white-light;
+	}
+	
+	// default color
+	&::-webkit-progress-value{ background-color: $blue-light; }
+
+	&--forendorsement::-webkit-progress-value{ background-color:#FFFE50; }
+	&--forapproval::-webkit-progress-value{ background-color:#30B1FF; }
+	&--disapproved::-webkit-progress-value{ background-color:$red; }
+	&--forprocess::-webkit-progress-value{ background-color:#28FF9D; }
+	&--forpickup::-webkit-progress-value{ background-color:#FFB319; }
+	&--completed::-webkit-progress-value{ background-color:#27FF73; }
+	&--cancelled::-webkit-progress-value{ background-color:#b9b9b9; }
+}

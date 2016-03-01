@@ -1,0 +1,172 @@
+<h3>Services Main Page</h3>
+<p>Using the Page Layout with Sidepanel, find this section:</p>
+<pre class="yondu__code"><code>&lt;section class=&quot;main-content__main&quot;&gt;&lt;/section&gt;</code></pre>
+<p>Inside the <code>main-content__main</code> we'll be creating the demo below:</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<!-- insert section title component here -->
+		<div class="abcom abcom-filter nav">
+          <div class="navbar-left">
+            <div class="form-group">
+              <label for="" class="abcom-filter__label">Filter/Search by:</label>
+              <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control">
+                <option selected>Select Category</option>
+                <option value="">Reference No.</option>
+                <option value="">Date of Request (From and To)</option>
+                <option value="">Company Name</option>
+                <option value="">Description</option>
+                <option value="">Lawyer-in-Charge</option>
+                <option value="">Paralegal-in-Charge</option>
+                <option value="">Status</option>
+              </select>
+              <button class="btn abcom-btn abcom-btn--default">Search</button>
+              <button class="btn abcom-btn abcom-btn--default">Clear</button>
+            </div>
+          </div>
+          <div class="navbar-right">
+            <div class="form-group">
+              <button class="btn abcom-btn abcom-btn--default abcom-btn--rounded">View Legends</button>
+              <label for="" class="abcom-filter__label">Entries per page</label>
+              <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <table id="table_id3" class="abcom abcom-table">
+          <thead>
+            <tr>
+              <th>Reference No.</th>
+              <th>Request Date</th>
+              <th>Company Name</th>
+              <th>Description</th>
+              <th>Lawyer-in-charge</th>
+              <th>Paralegal-in-charge</th>
+              <th>Requestor Name</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0000-0000-0000-00</td>
+              <td>MM / DD / YYYY</td>
+              <td>Company Name</td>
+              <td>Service Type Category</td>
+              <td>Lawyer Name</td>
+              <td>Paralegal Name</td>
+              <td>Requestor Name</td>
+              <td><progress class="abcom-progress" data-status="For Approval" value="80" max="100"></progress></td>
+              <td>
+                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></a>
+                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-ban"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>0000-0000-0000-00</td>
+              <td>MM / DD / YYYY</td>
+              <td>Company Name</td>
+              <td>Service Type Category</td>
+              <td>Lawyer Name</td>
+              <td>Paralegal Name</td>
+              <td>Requestor Name</td>
+              <td><progress class="abcom-progress" data-status="For Endorsement" value="30" max="100"></progress></td>
+              <td>
+                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></a>
+                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-ban"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+	</div>
+</div>
+		<p>Here is the HTML code:</p>
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
+  &lt;div class=&quot;navbar-left&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+      &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control&quot;&gt;
+        &lt;option selected&gt;Select Category&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Reference No.&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Date of Request (From and To)&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Company Name&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Description&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Lawyer-in-Charge&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Paralegal-in-Charge&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Status&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Search&lt;/button&gt;
+      &lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Clear&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;navbar-right&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded&quot;&gt;View Legends&lt;/button&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+      &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control&quot;&gt;
+        &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+        &lt;option value=&quot;15&quot;&gt;15&lt;/option&gt;
+        &lt;option value=&quot;20&quot;&gt;20&lt;/option&gt;
+        &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;table id=&quot;table_id3&quot; class=&quot;abcom abcom-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Reference No.&lt;/th&gt;
+      &lt;th&gt;Request Date&lt;/th&gt;
+      &lt;th&gt;Company Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Lawyer-in-charge&lt;/th&gt;
+      &lt;th&gt;Paralegal-in-charge&lt;/th&gt;
+      &lt;th&gt;Requestor Name&lt;/th&gt;
+      &lt;th&gt;Status&lt;/th&gt;
+      &lt;th&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0000-0000-0000-00&lt;/td&gt;
+      &lt;td&gt;MM / DD / YYYY&lt;/td&gt;
+      &lt;td&gt;Company Name&lt;/td&gt;
+      &lt;td&gt;Service Type Category&lt;/td&gt;
+      &lt;td&gt;Lawyer Name&lt;/td&gt;
+      &lt;td&gt;Paralegal Name&lt;/td&gt;
+      &lt;td&gt;Requestor Name&lt;/td&gt;
+      &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Approval&quot; value=&quot;80&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-ban&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0000-0000-0000-00&lt;/td&gt;
+      &lt;td&gt;MM / DD / YYYY&lt;/td&gt;
+      &lt;td&gt;Company Name&lt;/td&gt;
+      &lt;td&gt;Service Type Category&lt;/td&gt;
+      &lt;td&gt;Lawyer Name&lt;/td&gt;
+      &lt;td&gt;Paralegal Name&lt;/td&gt;
+      &lt;td&gt;Requestor Name&lt;/td&gt;
+      &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Endorsement&quot; value=&quot;30&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-ban&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<p>Here is the Javascript code:</p>
+<pre class="yondu__code"><code>$('#table_id3').DataTable({
+  searching : false,
+  lengthChange : false,
+  info : false
+});</code></pre>
+
+<a href="exp-cms-management-services.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Services Page</a>

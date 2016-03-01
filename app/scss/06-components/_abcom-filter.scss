@@ -1,0 +1,18 @@
+.abcom-filter{
+	padding: 15px;
+	background-color: $gray-bg;
+
+	.form-group{
+		display:block;
+	}
+	
+	&__label{
+		color: $red;
+		font-weight: bold;
+		line-height: 40px;
+		height: 40px;
+		margin-bottom: 0;
+		margin-right: 10px;
+		display: inline-block;
+	}
+}

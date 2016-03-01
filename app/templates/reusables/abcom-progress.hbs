@@ -1,0 +1,39 @@
+<h2>Progress Bar</h2>
+<p>This is used for Status (Progress bar)</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<progress class="abcom-progress" data-status="For Endorsement" value="60" max="100"></progress>
+		<p>This are used especially inside a table data whenever a request page is concerned.</p>
+<pre class="yondu__code"><code>&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Endorsement&quot; value=&quot;60&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+
+		<h3>Sample with Data Tables</h3>
+		<p>Here is a sample code for integrating progress status bar inside a table</p>
+		<table id="table_id" class="abcom abcom-table">
+	        <thead>
+	            <tr>
+	                <th>Column 1</th>
+	                <th>Column 2</th>
+	                <th>Column 2</th>
+	                <th>Column 2</th>
+	                <th>Column 2</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr>
+	                <td>Row 1 Data 1</td>
+	                <td><progress class="abcom-progress" data-status="For Approval" value="60" max="100"></progress></td>
+	                <td>Row 1 Data 2</td>
+	                <td>Row 1 Data 2</td>
+	                <td>Row 1 Data 2</td>
+	            </tr>
+	            <tr>
+	                <td>Row 2 Data 1</td>
+	                <td><progress class="abcom-progress" value="30" data-status="For Endorsement" max="100"></progress></td>
+	                <td>Row 2 Data 2</td>
+	                <td>Row 2 Data 2</td>
+	                <td>Row 2 Data 2</td>
+	            </tr>
+	        </tbody>
+	    </table><!-- // End abcom-table -->
+	</div>
+</div>

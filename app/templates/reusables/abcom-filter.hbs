@@ -1,0 +1,59 @@
+<h2>Search Filter Bar</h2>
+<p>Displays the filter section for a recordset. The section also occupies the width of its parent container.</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<!-- insert section title component here -->
+		<div class="abcom abcom-filter nav">
+			<div class="navbar-left">
+				<div class="form-group">
+					<label for="" class="abcom-filter__label">Filter/Search by:</label>
+		        	<select name="" id="" class="selectpicker abcom-form abcom-form--min form-control">
+		        		<option selected>Select Category</option>
+		        		<option value="">Creator</option>
+		        		<option value="">Date</option>
+		        		<option value="">Status Name</option>
+		        	</select>
+		        	<input type="text" class="form-control abcom-form abcom-form--min" placeholder="Search here...">
+		    	</div>
+			</div>
+			<div class="navbar-right">
+				<div class="form-group">
+					{{!-- <button class="btn abcom-btn abcom-btn--default abcom-btn--rounded">View Legends</button> --}}
+					<label for="" class="abcom-filter__label">Entries per page</label>
+		        	<select name="" id="" class="selectpicker abcom-form abcom-form--min form-control">
+		        		<option value="10">10</option>
+		        		<option value="15">15</option>
+		        		<option value="20">20</option>
+		        		<option value="50">50</option>
+		        	</select>
+		    	</div>
+			</div>
+		</div>
+		<p>Here is the code sample for the Search Filter Section:</p>
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
+    &lt;div class=&quot;navbar-left&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control&quot;&gt;
+                &lt;option selected&gt;Select Category&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Creator&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Date&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Status Name&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;navbar-right&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded&quot;&gt;View Legends&lt;/button&gt;
+            &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control&quot;&gt;
+                &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+                &lt;option value=&quot;15&quot;&gt;15&lt;/option&gt;
+                &lt;option value=&quot;20&quot;&gt;20&lt;/option&gt;
+                &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div>

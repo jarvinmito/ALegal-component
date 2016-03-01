@@ -1,0 +1,30 @@
+.main-content{
+	width: 100%;
+
+	// Height of the footer
+	padding-bottom: 36px;
+
+	&.has-side{
+		@extend .clearfix;
+
+		.main-content__side{
+			position: absolute;
+			top: 138px;
+			bottom: 36px;
+			left: 0;
+
+			width: 76px;
+			padding: 20px;
+
+			margin-right: -76px;
+		}
+
+		.main-content__main{
+			margin-left: 56px;
+		}
+	}
+
+	&__main{
+		padding: 20px;
+	}
+}

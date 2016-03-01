@@ -1,0 +1,97 @@
+/* Bootstrap overrides */
+.btn{
+    &, &:hover, &:active, &:focus{
+        outline: 0;
+    }
+}
+
+.form-group{
+	margin: 0;
+}
+
+.form-control{
+	border-radius: 2px;
+    height: 40px;
+    border-radius: 2px;
+
+    box-shadow: none;
+    color: $black;
+    border-color: $gray-bg-active;
+}
+
+
+/* Data Tables overrides */
+.dataTables_wrapper{
+	background-color: $white;
+}
+
+table.dataTable thead th {
+    position: relative;
+    background-image: none !important;
+}
+ 
+table.dataTable thead th.sorting:after,
+table.dataTable thead th.sorting_asc:after,
+table.dataTable thead th.sorting_desc:after {
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    display: block;
+    font-family: FontAwesome;
+}
+
+table.dataTable thead th.sorting:after {
+    content: "\f0dc";
+    color: $gray-bg;
+    font-size: 0.8em;
+    padding-top: 0.12em;
+}
+table.dataTable thead th.sorting_asc:after {
+    content: "\f0de";
+}
+table.dataTable thead th.sorting_desc:after {
+    content: "\f0dd";
+}
+
+
+/* Data Tables module */
+.dataTables_info, .dataTables_paginate, .dataTables_length, .dataTables_filter{
+    padding: 0;
+    height: 40px;
+}
+/* Data Tables Info*/
+.dataTables_info{
+
+}
+
+/* Data Tables Pagination */
+.dataTables_paginate{
+    .pagination{
+        margin: 0;
+
+        li.paginate_button{
+            
+            
+            &, &.active, &.disabled{
+                &, &:hover, &:active, &:focus{
+                    outline: 0;
+                    margin: 0 2px;
+                    padding: 0;
+                    border: none;
+                }
+            }
+
+            & a{
+                background: transparent;
+                color: $black;
+            }
+
+            &.active a, & a:hover, & a:active, & a:focus{
+                outline: 0;
+                border-color: $red;
+                background: $red;
+                color: $white;
+            }
+        }
+    }
+}

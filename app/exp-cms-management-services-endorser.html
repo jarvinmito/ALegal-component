@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aboitiz Legal</title>
+  <link rel="Shortcut Icon" type="image-x/icon" href="assets/images/favicon.png" />
+
+  <!-- build:css css/app.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="ab-wrapper">
+    <!-- start : header section -->
+    <header class="header">
+      <nav class="navbar abnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CORS</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#" class="abnav__link"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="#" class="abnav__link"><i class="fa fa-hourglass"></i>Management</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-file"></i>Templates</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-folder-open"></i>Requestor's Page</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-briefcase"></i>Reports</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><img class="header__brand" src="assets/images/brand.png" alt="Aboitiz Legal" ></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <nav class="navbar absubnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="absubnav__title navbar-brand"><span class="ab-icon"><i class="fa fa-cog"></i></span>Services Management</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+              <div class="usernav btn-group">
+                <div class="usernav__profile btn btn-default"><img class="usernav__photo" src="assets/images/photo.jpg" alt="Juan Dela Cruz">Natalie Dormer</div>
+                <button class="usernav__button btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+              </div>
+            </div>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <!-- end : header section -->
+    
+
+    <!-- start : body section -->
+    <section class="main-content has-side">
+      <section class="main-content__side side">
+        <a href="#" class="side__nav active" title="Services"><i class="fa fa-cog"></i></a>
+        <a href="#" class="side__nav" title="Requests Status"><i class="fa fa-flag"></i></a>
+        <a href="#" class="side__nav" title="Workspace"><i class="fa fa-briefcase"></i></a>
+        <a href="#" class="side__nav" title="Documents"><i class="fa fa-file"></i></a>
+        <a href="#" class="side__nav" title="Company Profile"><i class="fa fa-building"></i></a>
+        <a href="#" class="side__nav" title="Survey Results"><i class="fa fa-list-ul"></i></a>
+        <a href="#" class="side__nav" title="Users Profile"><i class="fa fa-users"></i></a>
+      </section>
+
+      <section class="main-content__main">
+        <!-- FORM START -->
+        <form action="" class="form-horizontal">
+          <!-- COMPANY -->
+          <div class="form-group">
+            <label for="form_company" class="col-sm-2 abcom-form">Company</label>
+            <div class="col-sm-10">
+              <select name="" id="form_company" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Company</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <!-- SERVICE TYPE -->
+          <div class="form-group">
+            <label for="form_service" class="col-sm-2 abcom-form">Service Type</label>
+            <div class="col-sm-10">
+              <select name="" id="form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Service Type</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CATEGORY -->
+          <div class="form-group">
+            <label for="form_category" class="col-sm-2 abcom-form">Category</label>
+            <div class="col-sm-4">
+              <select name="" id="form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Category</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+
+            <div class="col-sm-3">
+              <select name="" id="form_subcategorya" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Sub Category A</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+
+            <div class="col-sm-3">
+              <select name="" id="form_subcategoryb" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Sub Category B</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- SEPARATOR -->
+          <div class="abcom-title">
+            <span class="abcom-title__main">Required Information</span>
+            <span class="abcom-title__sub">Please fill-out the form</span>
+          </div>
+          
+          <!-- OFFICER -->
+          <div class="form-group">
+            <label for="form_officer" class="col-sm-2 abcom-form">Name of Officer</label>
+            <div class="col-sm-10">
+              <input type="text" id="form_officer" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Enter name here">
+            </div>
+          </div>
+
+          <!-- PURPOSE -->
+          <div class="form-group">
+            <label for="form_purpose" class="col-sm-2 abcom-form">Purpose</label>
+            <div class="col-sm-6">
+              <input type="text" id="form_purpose" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Enter purpose here">
+            </div>
+            <label for="form_numofcopies" class="col-sm-2 abcom-form">No. of Copies</label>
+            <div class="col-sm-2">
+              <select name="" id="form_numofcopies" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- SEPARATOR -->
+          <div class="abcom-title">
+            <span class="abcom-title__sub">Endorsers and Approvers</span>
+          </div>
+
+          <div class="form-group">
+            <label for="form_endorsers" class="col-sm-2 abcom-form">Endorsers</label>
+            <div class="col-sm-4">
+              <ol class="abcom-list">
+                <li>Juan Dela Cruz</li>
+                <li>Johann Cheese</li>
+                <li>Yvonne Strahovsky</li>
+                <li>Natalie Dormer</li>
+              </ol>
+            </div>
+
+            <label for="form_endorsers" class="col-sm-2 abcom-form">Approvers</label>
+            <div class="col-sm-4">
+              <ol class="abcom-list">
+                <li>Juan Dela Cruz</li>
+                <li>Johann Cheese</li>
+                <li>Yvonne Strahovsky</li>
+                <li>Natalie Dormer</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form_otherrec" class="col-sm-2 abcom-form">Other Recipients</label>
+            <div class="col-sm-10">
+              <input type="text" id="form_otherrec" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Enter recipient here">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <textarea class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Remarks"></textarea>
+            </div>
+          </div>
+
+
+        </form>
+
+      </section><!-- // End main -->
+
+    </section>
+    <!-- end : body section -->
+
+    <!-- start : footer section -->
+    <footer class="footer container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 text-align--left"><p class="footer__text">&#169; 2016 Aboitiz Equity Ventures. All rights reserved.</p></div>
+        <div class="col-sm-6 col-xs-12 text-align--right"><p class="footer__text">Powered by <b class="footer__provider">YONDU</b></p></div>
+      </div>
+    </footer>
+    <!-- end : footer section -->
+  </div>
+
+  <!-- build:js js/app.js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/handlebars.runtime.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/handlebars.helper.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

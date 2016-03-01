@@ -1,0 +1,38 @@
+<h2>Donut Chart</h2>
+<p>Displays a graphical representation of a certain number or count. This component is useful for displaying surveys, or any type of record counting.</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<!-- insert section title component here -->
+		<div id="donut_id" class="abcom abcom-donut">
+			<div class="donut">
+				<h1>35</h1>
+				<div>Requests Approved</div>
+			    <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+			     <g>
+			      <title>Layer 1</title>
+			      <circle id="circle" class="filler" r="69.85699" cy="75" cx="75" fill="none"/>
+			      <circle id="circle" class="circle_animation" r="69.85699" cy="75" cx="75" fill="none"/>
+			     </g>
+			    </svg>
+			</div>
+		</div>
+		<p>Here is the sample code:</p>
+<pre class="yondu__code"><code>&lt;div id=&quot;donut_id&quot; class=&quot;abcom abcom-donut&quot;&gt;
+    &lt;div class=&quot;donut&quot;&gt;
+        &lt;h1&gt;35&lt;/h1&gt;
+        &lt;div&gt;Requests Approved&lt;/div&gt;
+        &lt;svg width=&quot;150&quot; height=&quot;150&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+         &lt;g&gt;
+          &lt;title&gt;Layer 1&lt;/title&gt;
+          &lt;circle id=&quot;circle&quot; class=&quot;filler&quot; r=&quot;69.85699&quot; cy=&quot;75&quot; cx=&quot;75&quot; fill=&quot;none&quot;/&gt;
+          &lt;circle id=&quot;circle&quot; class=&quot;circle_animation&quot; r=&quot;69.85699&quot; cy=&quot;75&quot; cx=&quot;75&quot; fill=&quot;none&quot;/&gt;
+         &lt;/g&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	<p>Instantiate the Donut Chart using javascript:</p>
+<pre class="yondu__code"><code>var donut = $('#donut_id');
+initDonut(donut);</code></pre>
+<p>Here, we declared a variable that contains the element to manipulate, and use the <code>initDonut</code> function to animate the chart.</p>
+	</div>
+</div>

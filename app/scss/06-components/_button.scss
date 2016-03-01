@@ -1,0 +1,27 @@
+.ab-btn{
+	
+	color : $white;
+	
+	&--default{
+		background-color: $gray-base;
+
+		&:hover, &:active, &:focus{
+			color: $white;
+			background-color: $gray-base-active;
+		}
+	}
+
+	&--action{
+		background-color: $red;
+
+		&:hover, &:active, &:focus{
+			color: $white;
+			background-color: $red-active;
+		}
+	}
+
+	.fa{
+		margin-right: 10px;
+	}
+
+}

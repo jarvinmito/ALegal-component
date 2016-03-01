@@ -1,0 +1,143 @@
+<h2>Tables</h2>
+<hr>
+<h3>Table Tag</h3>
+<p>Tables in Aboitiz Legal utilizes the <code>Data Tables</code> plugin.</p>
+<p>Here is the basic view of Data Tables. The table must have an ID and is used on initialization.</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <table id="table_id" class="abcom abcom-table">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+            </tr>
+        </tbody>
+      </table><!-- // End abcom-table -->
+  </div>
+</div>
+<pre class="yondu__code"><code>&lt;table id=&quot;table_id&quot; class=&quot;abcom abcom-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 1 Data 1&lt;/td&gt;
+            &lt;td class=&quot;is-status&quot;&gt;Row 1 Data 2&lt;/td&gt;
+            &lt;td&gt;Row 1 Data 2&lt;/td&gt;
+            &lt;td&gt;Row 1 Data 2&lt;/td&gt;
+            &lt;td&gt;Row 1 Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 2 Data 1&lt;/td&gt;
+            &lt;td class=&quot;is-status&quot;&gt;Row 2 Data 2&lt;/td&gt;
+            &lt;td&gt;Row 2 Data 2&lt;/td&gt;
+            &lt;td&gt;Row 2 Data 2&lt;/td&gt;
+            &lt;td&gt;Row 2 Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<hr>
+<h3>Initialize using Javascript</h3>
+<p>Include a <code>&lt;script&gt;</code> tag at the bottom of your HTML document -- before the <code>&lt;/body&gt;</code> tag -- and use the following code.</p>
+<pre class="yondu__code"><code>$('.abcom-table').DataTable();</code></pre>
+
+<hr>
+<h3>Removing other elements</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <table id="table_id2" class="abcom abcom-table">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+            </tr>
+        </tbody>
+      </table><!-- // End abcom-table -->
+  </div>
+</div>
+<p>Include a <code>&lt;script&gt;</code> tag at the bottom of your HTML document -- before the <code>&lt;/body&gt;</code> tag -- and use the following code.</p>
+<pre class="yondu__code"><code>$('.abcom-table').DataTable({
+  searching : false,
+  paging : false,
+  info : false
+});</code></pre>
+<p>Here, we used data table options like <code>searching</code>, <code>paging</code> and <code>info</code> for the layout. You can always refer to datatables plugin documentation <a href="https://www.datatables.net/" target="_blank" >here</a>.</p>
+
+<hr>
+<h3>Aboitiz Status</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <table id="table_id2" class="abcom abcom-table">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td class="is-status">Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td class="is-status">Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 2</td>
+            </tr>
+        </tbody>
+    </table><!-- // End abcom-table -->
+  </div>
+</div>

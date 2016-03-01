@@ -1,0 +1,20 @@
+.abcom-title{
+	
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 15px;
+	
+	background-color: $gray-bg;
+
+	&__main{
+		color: $red;
+		text-transform: uppercase;
+		font-weight:bold;
+		margin-right: 5px;
+	}
+
+	&__sub{
+		color: $black;
+	}
+
+}

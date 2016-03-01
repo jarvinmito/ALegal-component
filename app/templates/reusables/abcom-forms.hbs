@@ -1,0 +1,89 @@
+<h2>Forms</h2>
+<p>Forms play a huge part especially inside a CMS website / app. Aboitiz Legal has this set of form elements for you to use.</p>
+
+<h3>Labels</h3>
+<p>Labels will be in fixed <code>40px</code> height.</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<label for="" class="abcom-form">This is a Label</label>
+	</div>
+</div>
+<pre class="yondu__code"><code>&lt;label for=&quot;&quot; class=&quot;abcom-form&quot;&gt;This is a Label&lt;/label&gt;</code></pre>
+<h3>Input box</h3>
+<p>This utilizes bootstrap feature for styling inputs.</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>This sample is the default size:</p>
+		<input type="text" class="form-control abcom-form abcom-form--min abcom-form--hasmargin" placeholder="This is an Input">
+<pre class="yondu__code"><code>&lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-form--hasmargin&quot; placeholder=&quot;This is an Input&quot;&gt;</code></pre>
+		<p>This sample will occupy the width of its parent element:</p>
+		<input type="text" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="This is an Input">
+<pre class="yondu__code"><code>&lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;This is an Input&quot;&gt;</code></pre>
+	</div>
+</div>
+
+<h3>Textarea</h3>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>Here is a sample of a Textarea:</p>
+		<textarea class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="This is a Textarea"></textarea>
+<pre class="yondu__code"><code>&lt;textarea class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;This is a Textarea&quot;&gt;&lt;/textarea&gt;</code></pre>
+	</div>
+</div>
+
+<h3>Select Dropdown</h3>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>Dropdown utilizes a bootstrap plugin called bootstrap select</p>
+		<select name="" id="" class="selectpicker abcom-form abcom-form--min abcom-form--hasmargin form-control">
+    		<option selected>Select Category</option>
+    		<option value="">Creator</option>
+    		<option value="">Date</option>
+    		<option value="">Status Name</option>
+    	</select>
+<pre class="yondu__code"><code>&lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min abcom-form--hasmargin form-control&quot;&gt;
+    &lt;option selected&gt;Select Category&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Creator&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Date&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Status Name&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+		<p>Or again, you can use a full width select dropdown</p>
+		<select name="" id="" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+    		<option selected>Select Category</option>
+    		<option value="">Creator</option>
+    		<option value="">Date</option>
+    		<option value="">Status Name</option>
+    	</select>
+<pre class="yondu__code"><code>&lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+    &lt;option selected&gt;Select Category&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Creator&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Date&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Status Name&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+	</div>
+</div>
+
+<h3>Form Buttons</h3>
+<p>Form buttons utilize the default buttons.</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		
+		<p>Here is the action type button. It is useful for accent type or main function buttons like submit.</p>
+		<input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--hasmargin" value="Submit">
+<pre class="yondu__code"><code>&lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--hasmargin&quot; value=&quot;Submit&quot;&gt;</code></pre>
+		
+		<p>Here is the default type button.</p>
+		<input type="button" class="btn abcom-btn abcom-btn--default abcom-form--hasmargin" value="Preview">
+<pre class="yondu__code"><code>&lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-form--hasmargin&quot; value=&quot;Preview&quot;&gt;</code></pre>
+		<button type="submit" class="btn abcom-btn abcom-btn--default abcom-form--hasmargin">Save</button>
+<pre class="yondu__code"><code>&lt;button type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-form--hasmargin&quot;&gt;Save&lt;/button&gt;</code></pre>
+
+		<p>You can also add icons same with how we use our buttons component.</p>
+		<button class="btn abcom-btn abcom-btn--default abcom-form--hasmargin"><i class="fa fa-ban"></i>Remove</button>
+<pre class="yondu__code"><code>&lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-form--hasmargin&quot;&gt;&lt;i class=&quot;fa fa-ban&quot;&gt;&lt;/i&gt;Remove&lt;/button&gt;</code></pre>
+		<p>Note: You cannot use <code>&lt;input type=&quot;submit&quot;&gt;</code> for buttons with icon. So, we should use <code>&lt;button&gt;</code> tag instead. and bind its click function to our submit using jquery like:
+<pre class="yondu__code"><code>$('#submit_btn').click(function(){
+  $('#form_id').submit();
+});</code></pre>
+	</div>
+</div>

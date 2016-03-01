@@ -1,0 +1,37 @@
+.abcom-form{
+
+	&--hasmargin{
+		margin-bottom: 10px;
+	}
+
+	height: 40px;
+	border-radius: 2px;
+
+	box-shadow: none;
+	color: $black;
+	border-color: $gray-bg-active;
+	
+	&--min{
+		min-width: 50px;
+		width: auto;
+		display: inline-block;
+		margin-right: 15px;
+	}
+
+	&--full{
+		width :100%;
+		display: block;
+	}
+}
+
+textarea.abcom-form{
+	height: 130px;
+}
+
+label.abcom-form{
+	height: 40px;
+	padding: 10px 15px;
+	margin-bottom: 0;
+	color: $black;
+	text-align: right;
+}

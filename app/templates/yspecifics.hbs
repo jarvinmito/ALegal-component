@@ -1,0 +1,91 @@
+<div class="container-fluid yondu__reusables">
+	<div class="row">
+		<div class="col-sm-2">
+			<div class="yondu__sidepanel affix" data-spy="affix" data-offset-top="70" data-offset-bottom="40">
+				<h4>Quick Links</h4>
+				<div id="yondu__quicklinks" role="tablist" class="panel-group">
+					<div class="panel">
+						<a href="#yondu__mgt0" data-toggle="collapse" aria-expanded="true" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Dashboard</b></a>
+						<div class="panel panel-collapse collapse in" id="yondu__mgt0" role="tabpanel">
+							<a href="javascript:;" data-href="#abcom-dashboard" class="yondu__navlist">Home</a>
+						</div>
+					</div>
+					<div class="panel">					
+						<a href="#yondu__mgt1" data-toggle="collapse" aria-expanded="true" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Management</b></a>
+						<div class="panel panel-collapse collapse" id="yondu__mgt1" role="tabpanel">
+							<a href="javascript:;" data-href="#abcom-management__sidepanel" class="yondu__navlist">Services</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Request Status</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Workspace</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Survey</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">User Profile</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Company Profile</a>
+						</div>
+					</div>
+					
+					<div class="panel">
+						<a href="#yondu__mgt2" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Templates</b></a>
+						<div class="panel panel-collapse collapse" id="yondu__mgt2" role="tabpanel">
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Minutes of the Meeting</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Forms</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Surveys</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Email Messages</a>
+						</div>
+					</div>
+					
+					<div class="panel">
+						<a href="#yondu__mgt3" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Requestor's Page</b></a>
+						<div class="panel panel-collapse collapse" id="yondu__mgt3" role="tabpanel">
+							<a href="javascript:;" data-href="#" class="yondu__navlist">About Us</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Contact Us</a>
+						</div>
+					</div>
+					
+					<div class="panel">
+						<a href="#yondu__mgt4" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Setup</b></a>
+						<div class="panel panel-collapse collapse" id="yondu__mgt4" role="tabpanel">
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Access Matrix</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Holidays</a>
+						</div>
+					</div>
+					
+					<div class="panel">
+						<a href="#yondu__mgt5" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Reports</b></a>
+						<div class="panel panel-collapse collapse" id="yondu__mgt5" role="tabpanel">
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Audit Trail</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Requests</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Companies</a>
+							<a href="javascript:;" data-href="#" class="yondu__navlist">Directors &amp; Officers</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-10">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h2>Page Specific Components</h2>
+					<hr>
+					<h2>Dashboard</h2>
+					<div id="abcom-dashboard"></div>
+					<hr>
+					<!-- MANAGEMENT PAGE -->
+					<h2>Management</h2>
+					<div id="abcom-management__sidepanel"></div>
+					<hr>
+					<div id="abcom-management__services"></div>
+					<hr>
+					<div id="abcom-management__services__endorser"></div>
+
+					<script>
+						$('#abcom-dashboard').html(App.Templates['specifics/abcom-dashboard']());
+						$('#abcom-management__sidepanel').html(App.Templates['specifics/abcom-management__sidepanel']());
+						$('#abcom-management__services').html(App.Templates['specifics/abcom-management__services']());
+						$('#abcom-management__services__endorser').html(App.Templates['specifics/abcom-management__services__endorser']());
+					</script>
+
+				</div> <!-- // end : panel body -->
+
+			</div>
+		</div>
+	</div>
+</div>

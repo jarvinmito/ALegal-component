@@ -1,0 +1,27 @@
+{
+  "name": "New",
+  "description": "New",
+  "main": "index.js",
+  "authors": [
+    "jarvinm <mito.jan_arvin@yahoo.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "New"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.6"
+  }
+}
