@@ -76,6 +76,7 @@ App.Pageloader = (function(){
 
 	var bind = function(){
 		if( $('.yondu__navlist').length ){
+			$('.yondu__navlist').unbind('click');
 			$('.yondu__navlist').click(function(){
 				var anchor = $(this);
 				var pos = $(anchor.data('href')).offset().top;
@@ -88,18 +89,42 @@ App.Pageloader = (function(){
 				}, 500);
 			});
 		}
+
+		// Whenever listing is present in the DOM
+		if( $('.abcom-list__item__link').length ){
+			$('.abcom-list__item__link').unbind('click');
+			$('.abcom-list__item__link').click(function(){
+				$(this).parent('.abcom-list__item').remove();
+			});
+		}
+
+		
 	};
 
-	var initDonut = function(elem){
-		// Interpret value as %
-		var value = elem.find('h1').html();
-		var circle = elem.find('.circle_animation');
-		var getPercentage = Math.abs(((value / 100) * 440) - 440);
-		// subtract 440 to reverse the effect
-		// 440 = 0% and 0 = 100% in the stroke-dashoffset of svg in css
+	// var initSelect2 = function(){
+	// 	// Select2 is present
+	// 	var selectid = $('#select2');
+	// 	if( selectid.length ){
+	// 		var selection = selectid.select2({
+	// 				placeholder : 'Select ' + selectid.data('title')
+	// 			});
 
-		circle.animate({'stroke-dashoffset' : getPercentage}, 1000);
-	};
+	// 		selection.on('change', function(){
+	// 			console.log($(this).val());
+	// 		});
+	// 	}
+	// };
+
+	// var initDonut = function(elem){
+	// 	// Interpret value as %
+	// 	var value = elem.find('h1').html();
+	// 	var circle = elem.find('.circle_animation');
+	// 	var getPercentage = Math.abs(((value / 100) * 440) - 440);
+	// 	// subtract 440 to reverse the effect
+	// 	// 440 = 0% and 0 = 100% in the stroke-dashoffset of svg in css
+
+	// 	circle.animate({'stroke-dashoffset' : getPercentage}, 1000);
+	// };
 		
 	// Page Loaders
 	var home = function(){
@@ -116,8 +141,13 @@ App.Pageloader = (function(){
 		jqueryMap.$body.html(App.Templates['yreusables']());
 		initClipboard();
 		initDataTables();
+
 		var donut = $('.abcom-donut');
-		initDonut(donut);
+		aboitizApp.initDonut(donut);
+
+		var select2 = $('#select2');
+		aboitizApp.initListing(select2);
+
 		bind();
 	};
 

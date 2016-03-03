@@ -1,7 +1,19 @@
 .abcom-list{
 	
-	li{
+	&__item{
+		position: relative;
 		margin-top: 10px;
+		
+		&__link {
+			position: absolute;
+			left: -36px;
+
+			color: $red;
+
+			&:hover, &:active, &:focus, &.active{
+				color: $red-active;
+			}
+		}
 	}
 
 }

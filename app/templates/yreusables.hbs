@@ -11,8 +11,9 @@
 				<a href="javascript:;" data-href="#abcom-progress" class="yondu__navlist">Progress Bar</a>
 				<a href="javascript:;" data-href="#abcom-donut" class="yondu__navlist">Donut Chart</a>
 				<a href="javascript:;" data-href="#abcom-forms" class="yondu__navlist">Forms</a>
-				<a href="javascript:;" data-href="#abcom-modal" class="yondu__navlist">Modal</a>
 				<a href="javascript:;" data-href="#abcom-listing" class="yondu__navlist">Listing</a>
+				<a href="javascript:;" data-href="#abcom-upload" class="yondu__navlist">Upload</a>
+				<a href="javascript:;" data-href="#abcom-modal" class="yondu__navlist">Modal</a>
 			</div>
 		</div>
 		<div class="col-sm-10">
@@ -44,11 +45,14 @@
 					<!-- FORMS COMPONENT -->
 					<div id="abcom-forms"></div>
 					<hr>
-					<!-- MODAL COMPONENT -->
-					<div id="abcom-modal"></div>
+					<!-- LISTING COMPONENT -->
+					<div id="abcom-listing"></div>
+					<hr>
+					<!-- UPLOAD COMPONENT -->
+					<div id="abcom-upload"></div>
 					<hr>
 					<!-- MODAL COMPONENT -->
-					<div id="abcom-listing"></div>
+					<div id="abcom-modal"></div>
 
 					<script>
 						$('#abcom-title').html(App.Templates['reusables/abcom-title']());
@@ -61,6 +65,7 @@
 						$('#abcom-forms').html(App.Templates['reusables/abcom-forms']());
 						$('#abcom-modal').html(App.Templates['reusables/abcom-modal']());
 						$('#abcom-listing').html(App.Templates['reusables/abcom-listing']());
+						$('#abcom-upload').html(App.Templates['reusables/abcom-upload']());
 					</script>
 
 				</div> <!-- // end : panel body -->

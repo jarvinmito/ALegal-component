@@ -8,3 +8,13 @@ var initDonut = function(elem){
 
 	circle.animate({'stroke-dashoffset' : getPercentage}, 1000);
 };
+
+// Self executing function
+$(function(){
+	// Whenever listing is present in the DOM
+	if( $('.abcom-list__item__link').length ){
+		$('.abcom-list__item__link').click(function(){
+			$(this).parent('.abcom-list__item').remove();
+		});
+	}
+}());

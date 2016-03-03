@@ -1,0 +1,37 @@
+<h2>Upload</h2>
+<p>Custom upload form for Aboitiz Legal uses <a href="https://github.com/blueimp/jQuery-File-Upload" target="_blank">blueimp</a> plugin</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="abcom-upload">
+			<div class="abcom-upload__header">
+				<button class="btn abcom-btn abcom-btn--default fileinput-button">
+					<i class="fa fa-plus"></i>
+					<span>Add Files / Images</span>
+					<input id="fileupload" type="file" name="files[]" multiple>
+				</button>
+				<button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Clear Uploads</button>
+				<button class="btn abcom-btn abcom-btn--default"><i class="fa fa-upload"></i>Start Upload</button>
+			</div>
+			<div class="abcom-upload__body">
+				<ul id="files" class="abcom-upload__list files">
+					<li class="abcom-upload__list__item container-fluid">
+						<div class="row">
+							<div class="col-sm-2"><img src="assets/images/yis.jpg" alt="" class="abcom-upload__image" /></div>
+							<div class="col-sm-4">Project Documentation v12323.232.13.pdf</div>
+							<div class="col-sm-3">165.03 Kb</div>
+							<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Remove</button></div>
+						</div>
+					</li>
+					<li class="abcom-upload__list__item container-fluid">
+						<div class="row">
+							<div class="col-xs-2"><img src="assets/images/ysi2.jpg" alt="" class="abcom-upload__image" /></div>
+							<div class="col-xs-4">Nature.jpg</div>
+							<div class="col-sm-3">183.39 Kb</div>
+							<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Remove</button></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

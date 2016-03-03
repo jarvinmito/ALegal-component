@@ -35,3 +35,20 @@ label.abcom-form{
 	color: $black;
 	text-align: right;
 }
+
+/* FOR SELECT 2 OVERRIDES */
+.select2-selection{
+	@extend .abcom-form;
+
+	&__choice{
+		display: none;
+		height: 30px;
+		line-height: 30px;
+	}
+
+	.select2-search .select2-search__field{
+		height: 40px;
+		width: 100%;
+		margin: 0;
+	}
+}

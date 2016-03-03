@@ -38,6 +38,8 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.dataTables.js"></script>
   <script src="js/dataTables.bootstrap.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <!-- Start :: Yondu Proper -->
   <script src="js/handlebars.runtime.js"></script>
   <script src="js/yonduapp.js"></script>
   <script src="js/yonduapp.pageloader.js"></script>
@@ -45,11 +47,14 @@
   <script src="js/templates.js"></script>
   <script src="js/handlebars.helper.js"></script>
   <script src="js/clipboard.min.js"></script>
+  <!-- End :: Yondu Proper -->
+  <script src="js/aboitiz-app.js"></script>
   <script src="js/custom.js"></script>
   <!-- endbuild -->
 
   <script>
   $(document).ready(function(){
+    aboitizApp.initModule();
     App.initModule();
   });
   </script>
