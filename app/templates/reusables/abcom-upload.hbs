@@ -4,13 +4,12 @@
 	<div class="panel-body">
 		<div class="abcom-upload">
 			<div class="abcom-upload__header">
-				<button class="btn abcom-btn abcom-btn--default fileinput-button">
+				<button class="btn abcom-btn abcom-btn--default abcom-upload__addbtn">
 					<i class="fa fa-plus"></i>
 					<span>Add Files / Images</span>
-					<input id="fileupload" type="file" name="files[]" multiple>
+					<input class="abcom-upload__file" type="file" name="files[]" multiple>
 				</button>
-				<button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Clear Uploads</button>
-				<button class="btn abcom-btn abcom-btn--default"><i class="fa fa-upload"></i>Start Upload</button>
+				<button class="btn abcom-btn abcom-btn--default abcom-upload__clearbtn"><i class="fa fa-ban"></i>Clear Uploads</button>
 			</div>
 			<div class="abcom-upload__body">
 				<ul id="files" class="abcom-upload__list files">

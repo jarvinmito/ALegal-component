@@ -46,6 +46,84 @@ var aboitizApp = (function(){
 		}
 	};
 
+
+	var initFileReader = function(){
+		var upBtn = $('.abcom-upload__addbtn');
+		var upParent = upBtn.parents('.abcom-upload');
+		var allFiles = [];
+		// upBtn.click(function(){
+		// 	upParent.find('.abcom-upload__file').click();
+		// });
+
+		$('.abcom-upload__file').fileReaderJS({
+			readAsDefault: "DataURL",
+			on: {
+			    load: function(e, file) {
+			      var data = { e : e, file : file};
+			      if( extCheck(file) ){
+			      	allFiles.push(data);
+			      	renderList(file);
+			      }
+			    }
+			}
+		});
+
+		var extCheck = function(filedata){
+			var filename = filedata.name;
+			var extension = filename.substr(filename.lastIndexOf('.') + 1, filename.length);
+			var extensions = ['jpg','jpeg','gif','png','doc','docx','odt','txt','rtf','pdf','xls','xlsx','csv','ods','ppt','pptx','odp'];
+			
+			return (extensions.indexOf(extension) != -1) ? true : false;
+		};
+
+		var formatBytes = function(bytes,decimals) {
+		   if(bytes == 0) return '0 Byte';
+		   var k = 1000; // or 1024 for binary
+		   var dm = decimals + 1 || 3;
+		   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+		   var i = Math.floor(Math.log(bytes) / Math.log(k));
+		   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+		};
+
+		var renderList = function(filedata){
+			var icons = {
+				'jpg' : '<i class="fa fa-file-image-o"></i>',
+				'jpeg' : this['jpg'],
+				'gif' : this['jpg'],
+				'png' : this['jpg'],
+				'png' : this['jpg'],
+				'doc' : '<i class="fa fa-file-word-o"></i>',
+				'docx' : this['doc'],
+				'odt' : this['doc'],
+				'txt' : '<i class="fa fa-file-text-o"></i>',
+				'rtf' : this['txt'],
+				'pdf' : '<i class="fa fa-file-pdf-o"></i>',
+				'xls' : '<i class="fa fa-file-excel-o"></i>',
+				'xlsx' : this['xls'],
+				'csv' : this['xls'],
+				'ods' : this['xls'],
+				'ppt' : '<i class="fa fa-file-powerpoint-o"></i>',
+				'pptx' : this['ppt'],
+				'odp' : this['ppt']
+			};
+
+			var filename = filedata.name;
+			var size = filedata.size;
+			var extension = filename.substr(filename.lastIndexOf('.') + 1, filename.length);
+
+			var html = '<li class="abcom-upload__list__item container-fluid">' +
+						'<div class="row">' +
+							'<div class="col-sm-2">'+icons[extension]+'</div>' +
+							'<div class="col-sm-4">'+filename+'</div>' +
+							'<div class="col-sm-3">'+formatBytes(size)+'</div>' +
+							'<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Remove</button></div>' +
+						'</div>' +
+					'</li>';
+
+			upParent.find('.abcom-upload__list').append(html);
+		};
+	};
+
 	var initModule = function(){
 		console.log('Aboitiz Yeah!');
 	};
@@ -53,7 +131,8 @@ var aboitizApp = (function(){
 	return {
 		initModule : initModule,
 		initDonut : initDonut,
-		initListing : initListing
+		initListing : initListing,
+		initFileReader : initFileReader
 	}
 
 }());

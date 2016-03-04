@@ -147,6 +147,8 @@ App.Pageloader = (function(){
 
 		var select2 = $('#select2');
 		aboitizApp.initListing(select2);
+		
+		aboitizApp.initFileReader();
 
 		bind();
 	};

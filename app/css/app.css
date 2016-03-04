@@ -13602,6 +13602,16 @@ label.abcom-form, label.select2-selection {
   width: 100%;
 }
 
+.abcom-upload__file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .abcom-modal .modal-dialog, .abcom-modal .modal-content {
   border-radius: 0;
 }
