@@ -13222,6 +13222,11 @@ body {
   margin-bottom: 20px;
 }
 
+.abcom__text {
+  height: 40px;
+  padding: 10px 15px;
+}
+
 .abcom-container {
   width: 100%;
 }
