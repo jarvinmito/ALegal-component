@@ -1,5 +1,6 @@
 <h2>Upload</h2>
 <p>Custom upload form for Aboitiz Legal uses <a href="https://github.com/blueimp/jQuery-File-Upload" target="_blank">blueimp</a> plugin</p>
+<p>Display the upload feature</p>
 <div class="panel panel-default">
 	<div class="panel-body">
 		<div class="abcom-upload">
@@ -12,25 +13,74 @@
 				<button class="btn abcom-btn abcom-btn--default abcom-upload__clearbtn"><i class="fa fa-ban"></i>Clear Uploads</button>
 			</div>
 			<div class="abcom-upload__body">
+				<ul id="files" class="abcom-upload__list files"></ul>
+			</div>
+		</div>
+	</div>
+</div>
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom-upload&quot;&gt;
+    &lt;div class=&quot;abcom-upload__header&quot;&gt;
+        &lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-upload__addbtn&quot;&gt;
+            &lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;Add Files / Images&lt;/span&gt;
+            &lt;input class=&quot;abcom-upload__file&quot; type=&quot;file&quot; name=&quot;files[]&quot; multiple&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-upload__clearbtn&quot;&gt;&lt;i class=&quot;fa fa-ban&quot;&gt;&lt;/i&gt;Clear Uploads&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;abcom-upload__body&quot;&gt;
+        &lt;ul id=&quot;files&quot; class=&quot;abcom-upload__list files&quot;&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Display only the list</p>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="abcom-upload">
+			<div class="abcom-upload__body">
 				<ul id="files" class="abcom-upload__list files">
 					<li class="abcom-upload__list__item container-fluid">
-						<div class="row">
-							<div class="col-sm-2"><img src="assets/images/yis.jpg" alt="" class="abcom-upload__image" /></div>
-							<div class="col-sm-4">Project Documentation v12323.232.13.pdf</div>
-							<div class="col-sm-3">165.03 Kb</div>
-							<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Remove</button></div>
-						</div>
+					    <div class="row">
+					        <div class="col-sm-1"><span class="abcom-upload__file__icon"><i class="fa fa-file-pdf-o"></i></span></div>
+					        <div class="col-sm-5">Project Documentation v12323.232.13.jpg</div>
+					        <div class="col-sm-3">165.03 Kb</div>
+					        <div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default">Download</button></div>
+					    </div>
 					</li>
 					<li class="abcom-upload__list__item container-fluid">
-						<div class="row">
-							<div class="col-xs-2"><img src="assets/images/ysi2.jpg" alt="" class="abcom-upload__image" /></div>
-							<div class="col-xs-4">Nature.jpg</div>
-							<div class="col-sm-3">183.39 Kb</div>
-							<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Remove</button></div>
-						</div>
+					    <div class="row">
+					        <div class="col-xs-1"><span class="abcom-upload__file__icon"><i class="fa fa-file-image-o"></i></span></div>
+					        <div class="col-xs-5">Nature.jpg</div>
+					        <div class="col-sm-3">183.39 Kb</div>
+					        <div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default">Download</button></div>
+					    </div>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
+
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom-upload&quot;&gt;
+	&lt;div class=&quot;abcom-upload__body&quot;&gt;
+	    &lt;ul id=&quot;files&quot; class=&quot;abcom-upload__list files&quot;&gt;
+	        &lt;li class=&quot;abcom-upload__list__item container-fluid&quot;&gt;
+	            &lt;div class=&quot;row&quot;&gt;
+	                &lt;div class=&quot;col-sm-1&quot;&gt;&lt;span class=&quot;abcom-upload__file__icon&quot;&gt;&lt;i class=&quot;fa fa-file-pdf-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+	                &lt;div class=&quot;col-sm-5&quot;&gt;Project Documentation v12323.232.13.jpg&lt;/div&gt;
+	                &lt;div class=&quot;col-sm-3&quot;&gt;165.03 Kb&lt;/div&gt;
+	                &lt;div class=&quot;col-sm-3 abcom-container--right&quot;&gt;&lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download&lt;/button&gt;&lt;/div&gt;
+	            &lt;/div&gt;
+	        &lt;/li&gt;
+	        &lt;li class=&quot;abcom-upload__list__item container-fluid&quot;&gt;
+	            &lt;div class=&quot;row&quot;&gt;
+	                &lt;div class=&quot;col-xs-1&quot;&gt;&lt;span class=&quot;abcom-upload__file__icon&quot;&gt;&lt;i class=&quot;fa fa-file-image-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+	                &lt;div class=&quot;col-xs-5&quot;&gt;Nature.jpg&lt;/div&gt;
+	                &lt;div class=&quot;col-sm-3&quot;&gt;183.39 Kb&lt;/div&gt;
+	                &lt;div class=&quot;col-sm-3 abcom-container--right&quot;&gt;&lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download&lt;/button&gt;&lt;/div&gt;
+	            &lt;/div&gt;
+	        &lt;/li&gt;
+	    &lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>

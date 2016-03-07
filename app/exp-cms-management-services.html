@@ -143,8 +143,8 @@
               <td>Requestor Name</td>
               <td><progress class="abcom-progress" data-status="For Approval" value="80" max="100"></progress></td>
               <td>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></a>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-ban"></i></a>
+                <button data-toggle="modal" data-target="#updateStatus" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
               </td>
             </tr>
             <tr>
@@ -157,8 +157,8 @@
               <td>Requestor Name</td>
               <td><progress class="abcom-progress" data-status="For Endorsement" value="30" max="100"></progress></td>
               <td>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></a>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-ban"></i></a>
+                <button data-toggle="modal" data-target="#updateStatus" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
               </td>
             </tr>
           </tbody>
@@ -176,6 +176,42 @@
       </div>
     </footer>
     <!-- end : footer section -->
+  </div>
+
+  <!-- MODAL -->
+  <div id="updateStatus" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="myModalLabel">Update Status</h4>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label for="modal_form_status">Status</label>
+                <select name="" id="modal_form_status" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Status</option>
+                  <option value="Completed">Completed</option>
+                  <option value="For Pick-up">For Pick-up</option>
+                  <option value="For Processing">For Processing</option>
+                  <option value="For Approval">For Approval</option>
+                  <option value="For Endorsement">For Endorsement</option>
+                  <option value="Cancelled">Cancelled</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="modal_form_remarks">Remarks</label>
+                <textarea id="modal_form_remarks" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
   </div>
 
   <!-- build:js js/app.js -->

@@ -1,4 +1,10 @@
 /* Bootstrap overrides */
+label{
+    height: 40px;
+    padding: 10px;
+    text-align: left;
+}
+
 .btn{
     &, &:hover, &:active, &:focus{
         outline: 0;

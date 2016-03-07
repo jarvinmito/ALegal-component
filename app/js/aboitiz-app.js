@@ -86,25 +86,34 @@ var aboitizApp = (function(){
 		};
 
 		var renderList = function(filedata){
-			var icons = {
-				'jpg' : '<i class="fa fa-file-image-o"></i>',
-				'jpeg' : this['jpg'],
-				'gif' : this['jpg'],
-				'png' : this['jpg'],
-				'png' : this['jpg'],
+			var iconlist = {
+				'img' : '<i class="fa fa-file-image-o"></i>',
 				'doc' : '<i class="fa fa-file-word-o"></i>',
-				'docx' : this['doc'],
-				'odt' : this['doc'],
 				'txt' : '<i class="fa fa-file-text-o"></i>',
-				'rtf' : this['txt'],
 				'pdf' : '<i class="fa fa-file-pdf-o"></i>',
 				'xls' : '<i class="fa fa-file-excel-o"></i>',
-				'xlsx' : this['xls'],
-				'csv' : this['xls'],
-				'ods' : this['xls'],
-				'ppt' : '<i class="fa fa-file-powerpoint-o"></i>',
-				'pptx' : this['ppt'],
-				'odp' : this['ppt']
+				'ppt' : '<i class="fa fa-file-powerpoint-o"></i>'
+			};
+
+			var icons = {
+				'jpg' : iconlist['img'],
+				'jpeg' : iconlist['img'],
+				'gif' : iconlist['img'],
+				'png' : iconlist['img'],
+				'png' : iconlist['img'],
+				'doc' : iconlist['doc'],
+				'docx' : iconlist['doc'],
+				'odt' : iconlist['doc'],
+				'txt' : iconlist['txt'],
+				'rtf' : iconlist['txt'],
+				'pdf' : iconlist['pdf'],
+				'xls' : iconlist['xls'],
+				'xlsx' : iconlist['xls'],
+				'csv' : iconlist['xls'],
+				'ods' : iconlist['xls'],
+				'ppt' : iconlist['ppt'],
+				'pptx' : iconlist['ppt'],
+				'odp' : iconlist['ppt']
 			};
 
 			var filename = filedata.name;
@@ -113,7 +122,7 @@ var aboitizApp = (function(){
 
 			var html = '<li class="abcom-upload__list__item container-fluid">' +
 						'<div class="row">' +
-							'<div class="col-sm-2">'+icons[extension]+'</div>' +
+							'<div class="col-sm-2"><span class="abcom-upload__file__icon">'+icons[extension]+'</span></div>' +
 							'<div class="col-sm-4">'+filename+'</div>' +
 							'<div class="col-sm-3">'+formatBytes(size)+'</div>' +
 							'<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Remove</button></div>' +

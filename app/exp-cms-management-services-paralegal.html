@@ -238,12 +238,15 @@
               <textarea class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Remarks"></textarea>
             </div>
           </div>
-
+          
+          <!-- BUTTON -->
           <div class="form-group">
             <div class="col-sm-12">
               <div class="abcom-container abcom-container--right">
-                <button type="button" class="btn abcom-btn abcom-btn--default">Approve</button>
-                <button type="button" data-toggle="modal" data-target="#disapproveRequest" class="btn abcom-btn abcom-btn--default">Disapprove</button>
+                <button type="button" class="btn abcom-btn abcom-btn--default">Download as PDF</button>
+                <button type="button" class="btn abcom-btn abcom-btn--default">Download as DOC</button>
+                <button type="button" class="btn abcom-btn abcom-btn--default">Revise</button>
+                <button type="button" class="btn abcom-btn abcom-btn--default" data-toggle="modal" data-target="#customizeRequest">Customize</button>
               </div>
             </div>
           </div>
@@ -268,23 +271,67 @@
 
 
   <!-- MODAL -->
-  <div id="disapproveRequest" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+  <div id="customizeRequest" class="modal fade abcom-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <h4 class="modal-title" id="myModalLabel">Disapprove Request</h4>
+              <h4 class="modal-title" id="myModalLabel">Please fill up the form customization</h4>
           </div>
           <div class="modal-body">
             <form action="" class="form-horizontal">
               <div class="form-group">
-                <label for="modal_form_status" class="col-sm-4 abcom-container--left">Reference No.:</label>
-                <p class="col-sm-8">Lorem Ipsum</p>
+                <label for="modal_form_company" class="col-sm-4 abcom-container--left">Company</label>
+                <div class="col-sm-8">
+                  <select name="" id="modal_form_company" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                    <option selected>Select Company</option>
+                    <option value="">Aboitiz</option>
+                    <option value="">Comapny Name</option>
+                    <option value="">Company Name 2</option>
+                    <option value="">Company Name 3</option>
+                  </select>
+                </div>
               </div>
+
               <div class="form-group">
-                <div class="col-sm-12">
-                  <label for="modal_form_reason">Reason (optional):</label>
-                  <textarea id="modal_form_reason" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
+                <label for="modal_form_service" class="col-sm-4 abcom-container--left">Service Type</label>
+                <div class="col-sm-8">
+                  <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                    <option selected>Select Service Type</option>
+                    <option value="">Type A</option>
+                    <option value="">Type B</option>
+                    <option value="">Type C</option>
+                    <option value="">Type D</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="modal_form_status" class="col-sm-4 abcom-container--left">Category</label>
+                <div class="col-sm-8">
+                  <select name="" id="modal_form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                    <option selected>Select Category</option>
+                    <option value="">Category 1</option>
+                    <option value="">Category 2</option>
+                    <option value="">Category 3</option>
+                    <option value="">Category 4</option>
+                  </select>
+
+                  <select name="" id="modal_form_subA" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                    <option selected>Select Sub-category A</option>
+                    <option value="">Category 1</option>
+                    <option value="">Category 2</option>
+                    <option value="">Category 3</option>
+                    <option value="">Category 4</option>
+                  </select>
+
+                  <select name="" id="modal_form_subB" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                    <option selected>Select Sub-category B</option>
+                    <option value="">Category 1</option>
+                    <option value="">Category 2</option>
+                    <option value="">Category 3</option>
+                    <option value="">Category 4</option>
+                  </select>
                 </div>
               </div>
 

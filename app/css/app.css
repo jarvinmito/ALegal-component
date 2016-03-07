@@ -13388,6 +13388,12 @@ table.abcom-table.no-footer, table.abcom-table tbody > tr:last-child > td {
   background-color: transparent;
 }
 
+.abcom-btn[disabled], .abcom-btn[disabled]:hover, .abcom-btn[disabled]:active, .abcom-btn[disabled]:focus, .abcom-btn.disabled, .abcom-btn.disabled:hover, .abcom-btn.disabled:active, .abcom-btn.disabled:focus {
+  color: #ffffff;
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+
 .abcom-btn .fa {
   margin-right: 15px;
 }
@@ -13612,6 +13618,10 @@ label.abcom-form, label.select2-selection {
   cursor: pointer;
 }
 
+.abcom-upload__file__icon {
+  font-size: 24px;
+}
+
 .abcom-modal .modal-dialog, .abcom-modal .modal-content {
   border-radius: 0;
 }
@@ -13705,6 +13715,12 @@ label.abcom-form, label.select2-selection {
  * (no relation). Helpers and overrides.
  */
 /* Bootstrap overrides */
+label {
+  height: 40px;
+  padding: 10px;
+  text-align: left;
+}
+
 .btn, .btn:hover, .btn:active, .btn:focus {
   outline: 0;
 }

@@ -1,4 +1,5 @@
 <h3>Services Main Page</h3>
+<p>Acces level: <b>All</b></p>
 <p>Using the Page Layout with Sidepanel, find this section:</p>
 <pre class="yondu__code"><code>&lt;section class=&quot;main-content__main&quot;&gt;&lt;/section&gt;</code></pre>
 <p>Inside the <code>main-content__main</code> we'll be creating the demo below:</p>
@@ -62,8 +63,8 @@
               <td>Requestor Name</td>
               <td><progress class="abcom-progress" data-status="For Approval" value="80" max="100"></progress></td>
               <td>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></a>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-ban"></i></a>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle" disabled><i class="fa fa-pencil-square-o"></i></button>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
               </td>
             </tr>
             <tr>
@@ -76,8 +77,8 @@
               <td>Requestor Name</td>
               <td><progress class="abcom-progress" data-status="For Endorsement" value="30" max="100"></progress></td>
               <td>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></a>
-                <a href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-ban"></i></a>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle" disabled><i class="fa fa-pencil-square-o"></i></button>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
               </td>
             </tr>
           </tbody>
@@ -142,8 +143,8 @@
       &lt;td&gt;Requestor Name&lt;/td&gt;
       &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Approval&quot; value=&quot;80&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
       &lt;td&gt;
-        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-ban&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle &quot; disabled&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -156,8 +157,8 @@
       &lt;td&gt;Requestor Name&lt;/td&gt;
       &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Endorsement&quot; value=&quot;30&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
       &lt;td&gt;
-        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-ban&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle &quot; disabled&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -168,5 +169,178 @@
   lengthChange : false,
   info : false
 });</code></pre>
+
+<h3>Paralegal's Access</h3>
+<p>Using the same layout and code above. Paralegal can manually update the status of the request.</p>
+<p>
+  Inside the action table data let's modify the codes for this: <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button> button.
+</p>
+
+<pre class="yondu__code"><code>&lt;button data-toggle=&quot;modal&quot; data-target=&quot;#updateStatus&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;</code></pre>
+
+<p>Let's add the modal code here:</p>
+<p>You can place the modal codes anywhere in the html structure. but it is adviced at the bottom or end of the page</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="abcom-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update Status</h4>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="form-group">
+                  <label for="modal_form_status">Status</label>
+                  <select name="" id="modal_form_status" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                    <option selected>Select Status</option>
+                    <option value="Completed">Completed</option>
+                    <option value="For Pick-up">For Pick-up</option>
+                    <option value="For Processing">For Processing</option>
+                    <option value="For Approval">For Approval</option>
+                    <option value="For Endorsement">For Endorsement</option>
+                    <option value="Cancelled">Cancelled</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="modal_form_remarks">Remarks</label>
+                  <textarea id="modal_form_remarks" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<pre class="yondu__code"><code>&lt;div id=&quot;updateStatus&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
+            &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Update Status&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;form action=&quot;&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_status&quot;&gt;Status&lt;/label&gt;
+              &lt;select name=&quot;&quot; id=&quot;modal_form_status&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                &lt;option selected&gt;Select Status&lt;/option&gt;
+                &lt;option value=&quot;Completed&quot;&gt;Completed&lt;/option&gt;
+                &lt;option value=&quot;For Pick-up&quot;&gt;For Pick-up&lt;/option&gt;
+                &lt;option value=&quot;For Processing&quot;&gt;For Processing&lt;/option&gt;
+                &lt;option value=&quot;For Approval&quot;&gt;For Approval&lt;/option&gt;
+                &lt;option value=&quot;For Endorsement&quot;&gt;For Endorsement&lt;/option&gt;
+                &lt;option value=&quot;Cancelled&quot;&gt;Cancelled&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_remarks&quot;&gt;Remarks&lt;/label&gt;
+              &lt;textarea id=&quot;modal_form_remarks&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--full&quot; value=&quot;Submit&quot;&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Here is the demo:</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    
+
+    <table id="table_id3" class="abcom abcom-table">
+      <thead>
+        <tr>
+          <th>Reference No.</th>
+          <th>Request Date</th>
+          <th>Company Name</th>
+          <th>Description</th>
+          <th>Lawyer-in-charge</th>
+          <th>Paralegal-in-charge</th>
+          <th>Requestor Name</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0000-0000-0000-00</td>
+          <td>MM / DD / YYYY</td>
+          <td>Company Name</td>
+          <td>Service Type Category</td>
+          <td>Lawyer Name</td>
+          <td>Paralegal Name</td>
+          <td>Requestor Name</td>
+          <td><progress class="abcom-progress" data-status="For Approval" value="80" max="100"></progress></td>
+          <td>
+            <button class="abcom-btn abcom-btn--default abcom-btn--circle" data-toggle="modal" data-target="#updateStatus"><i class="fa fa-pencil-square-o"></i></button>
+            <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>0000-0000-0000-00</td>
+          <td>MM / DD / YYYY</td>
+          <td>Company Name</td>
+          <td>Service Type Category</td>
+          <td>Lawyer Name</td>
+          <td>Paralegal Name</td>
+          <td>Requestor Name</td>
+          <td><progress class="abcom-progress" data-status="For Endorsement" value="30" max="100"></progress></td>
+          <td>
+           <button class="abcom-btn abcom-btn--default abcom-btn--circle" data-toggle="modal" data-target="#updateStatus"><i class="fa fa-pencil-square-o"></i></button>
+            <button href="javascript:;" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{{!-- ACTUAL MODAL HERE --}}
+<div id="updateStatus" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="myModalLabel">Update Status</h4>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="form-group">
+              <label for="modal_form_status">Status</label>
+              <select name="" id="modal_form_status" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                <option selected>Select Status</option>
+                <option value="Completed">Completed</option>
+                <option value="For Pick-up">For Pick-up</option>
+                <option value="For Processing">For Processing</option>
+                <option value="For Approval">For Approval</option>
+                <option value="For Endorsement">For Endorsement</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="modal_form_remarks">Remarks</label>
+              <textarea id="modal_form_remarks" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
 
 <a href="exp-cms-management-services.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Services Page</a>

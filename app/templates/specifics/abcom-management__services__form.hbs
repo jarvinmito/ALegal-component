@@ -1,0 +1,671 @@
+<h3>Services Form Page</h3>
+<p>Access Level: <b>All</b></p>
+<p>Using the same Layout and side panel.</p>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<form action="" class="form-horizontal">
+          <!-- COMPANY -->
+          <div class="form-group">
+            <label for="form_company" class="col-sm-2 abcom-form">Company</label>
+            <div class="col-sm-10">
+              <select name="" id="form_company" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Company</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <!-- SERVICE TYPE -->
+          <div class="form-group">
+            <label for="form_service" class="col-sm-2 abcom-form">Service Type</label>
+            <div class="col-sm-10">
+              <select name="" id="form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Service Type</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CATEGORY -->
+          <div class="form-group">
+            <label for="form_category" class="col-sm-2 abcom-form">Category</label>
+            <div class="col-sm-4">
+              <select name="" id="form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Category</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+
+            <div class="col-sm-3">
+              <select name="" id="form_subcategorya" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Sub Category A</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+
+            <div class="col-sm-3">
+              <select name="" id="form_subcategoryb" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Sub Category B</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- SEPARATOR -->
+          <div class="abcom-title">
+            <span class="abcom-title__main">Required Information</span>
+            <span class="abcom-title__sub">Please fill-out the form</span>
+          </div>
+          
+          <!-- OFFICER -->
+          <div class="form-group">
+            <label for="form_officer" class="col-sm-2 abcom-form">Name of Officer</label>
+            <div class="col-sm-10">
+              <input type="text" id="form_officer" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Enter name here">
+            </div>
+          </div>
+
+          <!-- PURPOSE -->
+          <div class="form-group">
+            <label for="form_purpose" class="col-sm-2 abcom-form">Purpose</label>
+            <div class="col-sm-6">
+              <input type="text" id="form_purpose" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Enter purpose here">
+            </div>
+            <label for="form_numofcopies" class="col-sm-2 abcom-form">No. of Copies</label>
+            <div class="col-sm-2">
+              <select name="" id="form_numofcopies" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- SEPARATOR -->
+          <div class="abcom-title">
+            <span class="abcom-title__sub">Endorsers and Approvers</span>
+          </div>
+
+          <div class="form-group">
+            <label for="form_endorsers" class="col-sm-2 abcom-form">Endorsers</label>
+            <div class="col-sm-4">
+              <ol class="abcom-list">
+                <li class="abcom-list__item">Juan Dela Cruz</li>
+                <li class="abcom-list__item">Johann Cheese</li>
+                <li class="abcom-list__item">Yvonne Strahovsky</li>
+                <li class="abcom-list__item">Natalie Dormer</li>
+              </ol>
+            </div>
+
+            <label for="form_endorsers" class="col-sm-2 abcom-form">Approvers</label>
+            <div class="col-sm-4">
+              <ol class="abcom-list">
+                <li class="abcom-list__item">Juan Dela Cruz</li>
+                <li class="abcom-list__item">Johann Cheese</li>
+                <li class="abcom-list__item">Yvonne Strahovsky</li>
+                <li class="abcom-list__item">Natalie Dormer</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form_otherrec" class="col-sm-2 abcom-form">Other Recipients</label>
+            <div class="col-sm-10">
+              <input type="text" id="form_otherrec" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Enter recipient here">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="abcom-upload abcom-form--hasmargin">
+                <div class="abcom-upload__body">
+                    <ul id="files" class="abcom-upload__list files">
+                        <li class="abcom-upload__list__item container-fluid">
+                            <div class="row">
+                                <div class="col-sm-1"><span class="abcom-upload__file__icon"><i class="fa fa-file-pdf-o"></i></span></div>
+                                <div class="col-sm-5">Project Documentation v12323.232.13.jpg</div>
+                                <div class="col-sm-3">165.03 Kb</div>
+                                <div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default">Download</button></div>
+                            </div>
+                        </li>
+                        <li class="abcom-upload__list__item container-fluid">
+                            <div class="row">
+                                <div class="col-xs-1"><span class="abcom-upload__file__icon"><i class="fa fa-file-image-o"></i></span></div>
+                                <div class="col-xs-5">Nature.jpg</div>
+                                <div class="col-sm-3">183.39 Kb</div>
+                                <div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default">Download</button></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <textarea class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Remarks"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="abcom-container abcom-container--right">
+                <button type="button" class="btn abcom-btn abcom-btn--default">Approve</button>
+                <button type="button" data-toggle="modal" data-target="#disapproveRequest" class="btn abcom-btn abcom-btn--default">Disapprove</button>
+              </div>
+            </div>
+          </div>
+
+
+        </form>
+
+	</div>
+</div>
+
+<pre class="yondu__code"><code>&lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+  &lt;!-- COMPANY --&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;form_company&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Company&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;select name=&quot;&quot; id=&quot;form_company&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+          &lt;option selected&gt;Select Company&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- SERVICE TYPE --&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;form_service&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Service Type&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;select name=&quot;&quot; id=&quot;form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+          &lt;option selected&gt;Select Service Type&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- CATEGORY --&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;form_category&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Category&lt;/label&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;
+      &lt;select name=&quot;&quot; id=&quot;form_category&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+          &lt;option selected&gt;Select Category&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-sm-3&quot;&gt;
+      &lt;select name=&quot;&quot; id=&quot;form_subcategorya&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+          &lt;option selected&gt;Select Sub Category A&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-sm-3&quot;&gt;
+      &lt;select name=&quot;&quot; id=&quot;form_subcategoryb&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+          &lt;option selected&gt;Select Sub Category B&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- SEPARATOR --&gt;
+  &lt;div class=&quot;abcom-title&quot;&gt;
+    &lt;span class=&quot;abcom-title__main&quot;&gt;Required Information&lt;/span&gt;
+    &lt;span class=&quot;abcom-title__sub&quot;&gt;Please fill-out the form&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- OFFICER --&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;form_officer&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Name of Officer&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;form_officer&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Enter name here&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- PURPOSE --&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;form_purpose&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Purpose&lt;/label&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;form_purpose&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Enter purpose here&quot;&gt;
+    &lt;/div&gt;
+    &lt;label for=&quot;form_numofcopies&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;No. of Copies&lt;/label&gt;
+    &lt;div class=&quot;col-sm-2&quot;&gt;
+      &lt;select name=&quot;&quot; id=&quot;form_numofcopies&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+          &lt;option selected&gt;1&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;2&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;3&lt;/option&gt;
+          &lt;option value=&quot;&quot;&gt;4&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- SEPARATOR --&gt;
+  &lt;div class=&quot;abcom-title&quot;&gt;
+    &lt;span class=&quot;abcom-title__sub&quot;&gt;Endorsers and Approvers&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;form_endorsers&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Endorsers&lt;/label&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;
+      &lt;ol class=&quot;abcom-list&quot;&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Juan Dela Cruz&lt;/li&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Johann Cheese&lt;/li&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Yvonne Strahovsky&lt;/li&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Natalie Dormer&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+
+    &lt;label for=&quot;form_endorsers&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Approvers&lt;/label&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;
+      &lt;ol class=&quot;abcom-list&quot;&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Juan Dela Cruz&lt;/li&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Johann Cheese&lt;/li&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Yvonne Strahovsky&lt;/li&gt;
+        &lt;li class=&quot;abcom-list__item&quot;&gt;Natalie Dormer&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;form_otherrec&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Other Recipients&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;form_otherrec&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Enter recipient here&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt;
+      &lt;div class=&quot;abcom-upload abcom-form--hasmargin&quot;&gt;
+        &lt;div class=&quot;abcom-upload__body&quot;&gt;
+            &lt;ul id=&quot;files&quot; class=&quot;abcom-upload__list files&quot;&gt;
+                &lt;li class=&quot;abcom-upload__list__item container-fluid&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-sm-1&quot;&gt;&lt;span class=&quot;abcom-upload__file__icon&quot;&gt;&lt;i class=&quot;fa fa-file-pdf-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class=&quot;col-sm-5&quot;&gt;Project Documentation v12323.232.13.jpg&lt;/div&gt;
+                        &lt;div class=&quot;col-sm-3&quot;&gt;165.03 Kb&lt;/div&gt;
+                        &lt;div class=&quot;col-sm-3 abcom-container--right&quot;&gt;&lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download&lt;/button&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;abcom-upload__list__item container-fluid&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-xs-1&quot;&gt;&lt;span class=&quot;abcom-upload__file__icon&quot;&gt;&lt;i class=&quot;fa fa-file-image-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class=&quot;col-xs-5&quot;&gt;Nature.jpg&lt;/div&gt;
+                        &lt;div class=&quot;col-sm-3&quot;&gt;183.39 Kb&lt;/div&gt;
+                        &lt;div class=&quot;col-sm-3 abcom-container--right&quot;&gt;&lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download&lt;/button&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt;
+      &lt;textarea class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Remarks&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- BUTTONS --&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt;
+      &lt;div class=&quot;abcom-container abcom-container--right&quot;&gt;
+        &lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Approve&lt;/button&gt;
+        &lt;button class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Disapprove&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+
+<h3>Disapprove Modal</h3>
+<p>Access Level: <b>Endorser , Approver</b></p>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="abcom-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Disapprove Request</h4>
+            </div>
+            <div class="modal-body">
+              <form action="" class="form-horizontal">
+                <div class="form-group">
+                  <label for="modal_form_status" class="col-sm-4 abcom-container--left">Reference No.:</label>
+                  <p class="col-sm-8">Lorem Ipsum</p>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <label for="modal_form_reason">Reason (optional):</label>
+                    <textarea id="modal_form_reason" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<pre class="yondu__code"><code>&lt;div id=&quot;disapproveRequest&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
+            &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Disapprove Request&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_status&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Reference No.:&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8&quot;&gt;Lorem Ipsum&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;label for=&quot;modal_form_reason&quot;&gt;Reason (optional):&lt;/label&gt;
+                &lt;textarea id=&quot;modal_form_reason&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;&lt;/textarea&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--full&quot; value=&quot;Submit&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<a href="exp-cms-management-services-endorser.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Services - Endorser / Approver Page</a>
+
+
+<h3>Paralegal's Access</h3>
+<p>Access Level: <b>Paralegal</b></p>
+<p>Form in the above example is the same as in the Paralegal's Access Page. We will only edit the button part.</p>
+<p>Find the <code>&lt;!-- BUTTON --&gt;</code> section in the form and change it to:</p>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <button type="button" class="btn abcom-btn abcom-btn--default">Download as PDF</button>
+    <button type="button" class="btn abcom-btn abcom-btn--default">Download as DOC</button>
+    <button type="button" class="btn abcom-btn abcom-btn--default">Revise</button>
+    <button type="button" class="btn abcom-btn abcom-btn--default" data-toggle="modal" data-target="#customizeRequest">Customize</button>
+  </div>
+</div>
+
+<pre class="yondu__code"><code>&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download as PDF&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download as DOC&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Revise&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot; data-toggle=&quot;modal&quot; data-target=&quot;#customizeRequest&quot;&gt;Customize&lt;/button&gt;</code></pre>
+
+<h3>Customize Request Modal</h3>
+<p>Access Level: <b>Paralegal</b></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+   
+    <div class="abcom-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Please fill up the form customization</h4>
+            </div>
+            <div class="modal-body">
+              <form action="" class="form-horizontal">
+                <div class="form-group">
+                  <label for="modal_form_company" class="col-sm-4 abcom-container--left">Company</label>
+                  <div class="col-sm-8">
+                    <select name="" id="modal_form_company" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                      <option selected>Select Company</option>
+                      <option value="">Aboitiz</option>
+                      <option value="">Comapny Name</option>
+                      <option value="">Company Name 2</option>
+                      <option value="">Company Name 3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="modal_form_service" class="col-sm-4 abcom-container--left">Service Type</label>
+                  <div class="col-sm-8">
+                    <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                      <option selected>Select Service Type</option>
+                      <option value="">Type A</option>
+                      <option value="">Type B</option>
+                      <option value="">Type C</option>
+                      <option value="">Type D</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="modal_form_status" class="col-sm-4 abcom-container--left">Category</label>
+                  <div class="col-sm-8">
+                    <select name="" id="modal_form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                      <option selected>Select Category</option>
+                      <option value="">Category 1</option>
+                      <option value="">Category 2</option>
+                      <option value="">Category 3</option>
+                      <option value="">Category 4</option>
+                    </select>
+
+                    <select name="" id="modal_form_subA" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                      <option selected>Select Sub-category A</option>
+                      <option value="">Category 1</option>
+                      <option value="">Category 2</option>
+                      <option value="">Category 3</option>
+                      <option value="">Category 4</option>
+                    </select>
+
+                    <select name="" id="modal_form_subB" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                      <option selected>Select Sub-category B</option>
+                      <option value="">Category 1</option>
+                      <option value="">Category 2</option>
+                      <option value="">Category 3</option>
+                      <option value="">Category 4</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<pre class="yondu__code"><code>&lt;div id=&quot;customizeRequest&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
+            &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Please fill up the form customization&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Company&lt;/label&gt;
+              &lt;div class=&quot;col-sm-8&quot;&gt;
+                &lt;select name=&quot;&quot; id=&quot;modal_form_company&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                  &lt;option selected&gt;Select Company&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Aboitiz&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Comapny Name&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Company Name 2&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Company Name 3&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_service&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Service Type&lt;/label&gt;
+              &lt;div class=&quot;col-sm-8&quot;&gt;
+                &lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                  &lt;option selected&gt;Select Service Type&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Type A&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Type B&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Type C&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Type D&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_status&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Category&lt;/label&gt;
+              &lt;div class=&quot;col-sm-8&quot;&gt;
+                &lt;select name=&quot;&quot; id=&quot;modal_form_category&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                  &lt;option selected&gt;Select Category&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 1&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 2&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 3&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 4&lt;/option&gt;
+                &lt;/select&gt;
+
+                &lt;select name=&quot;&quot; id=&quot;modal_form_subA&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                  &lt;option selected&gt;Select Sub-category A&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 1&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 2&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 3&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 4&lt;/option&gt;
+                &lt;/select&gt;
+
+                &lt;select name=&quot;&quot; id=&quot;modal_form_subB&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                  &lt;option selected&gt;Select Sub-category B&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 1&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 2&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 3&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Category 4&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--full&quot; value=&quot;Submit&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+{{!-- Actual Modal --}}
+<div id="customizeRequest" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="myModalLabel">Please fill up the form customization</h4>
+        </div>
+        <div class="modal-body">
+          <form action="" class="form-horizontal">
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Company</label>
+              <div class="col-sm-8">
+                <select name="" id="modal_form_company" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Company</option>
+                  <option value="">Aboitiz</option>
+                  <option value="">Comapny Name</option>
+                  <option value="">Company Name 2</option>
+                  <option value="">Company Name 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Service Type</label>
+              <div class="col-sm-8">
+                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Service Type</option>
+                  <option value="">Type A</option>
+                  <option value="">Type B</option>
+                  <option value="">Type C</option>
+                  <option value="">Type D</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="modal_form_status" class="col-sm-4 abcom-container--left">Category</label>
+              <div class="col-sm-8">
+                <select name="" id="modal_form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Category</option>
+                  <option value="">Category 1</option>
+                  <option value="">Category 2</option>
+                  <option value="">Category 3</option>
+                  <option value="">Category 4</option>
+                </select>
+
+                <select name="" id="modal_form_subA" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Sub-category A</option>
+                  <option value="">Category 1</option>
+                  <option value="">Category 2</option>
+                  <option value="">Category 3</option>
+                  <option value="">Category 4</option>
+                </select>
+
+                <select name="" id="modal_form_subB" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                  <option selected>Select Sub-category B</option>
+                  <option value="">Category 1</option>
+                  <option value="">Category 2</option>
+                  <option value="">Category 3</option>
+                  <option value="">Category 4</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<a href="exp-cms-management-services-paralegal.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Services - Paralegal's Access</a>

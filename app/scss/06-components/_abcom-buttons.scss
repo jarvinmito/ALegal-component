@@ -11,6 +11,14 @@
 	color: $black;
 	background-color: transparent;
 
+	&[disabled], &.disabled{
+		&, &:hover, &:active, &:focus{
+			color: $white;
+			background-color: $gray-bg;
+			border-color: $gray-bg;
+		}
+	}
+
 	.fa{
 		// position: absolute;
 		// top: 13px;
