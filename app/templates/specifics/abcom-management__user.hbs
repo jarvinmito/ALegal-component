@@ -1,0 +1,114 @@
+<h3>User Profile Main Page</h3>
+<p>Acces level: <b>All</b></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		{{!-- START CONTENT HERE --}}
+			<div class="abcom abcom-filter nav">
+			  <div class="navbar-left">
+			    <div class="form-group">
+			    <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__last">Create New User</button>
+			      <label for="" class="abcom-filter__label">Filter/Search by:</label>
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
+			            <option selected>Select Category</option>
+			            <option value="text">Full Name</option>
+			            <option value="dropdown">User Role/Type</option>
+			            <option value="text">Designation</option>
+			            <option value="text">Created by</option>
+			            <option value="text">Date Created</option>
+			            <option value="dropdown">Status</option>
+			          </select>
+			          <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
+			            <option value="">Option 1</option>
+			            <option value="">Option 2</option>
+			            <option value="">Option 3</option>
+			            <option value="">Option 4</option>
+			            <option value="">Option 5</option>
+			          </select>
+
+			          <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
+			                <div class='input-group abcom-filter__date' data-role="from">
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			                <div class='input-group abcom-filter__date' data-role="to">
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			            </div>
+
+			            <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
+			                <div class='input-group abcom-filter__date'>
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			            </div>
+
+			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
+			      </div>
+			  </div>
+			  <div class="navbar-right">
+			    <div class="form-group">
+			      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
+			      <label for="" class="abcom-filter__label">Entries per page</label>
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-user-table">
+			            <option value="10">10</option>
+			            <option value="25">25</option>
+			            <option value="50">50</option>
+			            <option value="100">100</option>
+			          </select>
+			      </div>
+			  </div>
+			</div>
+
+			<table id="management-user-table" class="abcom abcom-table">
+			    <thead>
+			        <tr>
+			            <th>Name</th>
+			            <th>Role</th>
+			            <th>Designation</th>
+			            <th>Created by</th>
+			            <th>Date Created</th>
+			            <th>Status</th>
+			            <th>Actions</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Name of person</td>
+			            <td>Role of User</td>
+			            <td>Designation of User</td>
+			            <td>Name of Creator</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>Active</td>
+			            <td>
+        					<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+			            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>Name of person</td>
+			            <td>Role of User</td>
+			            <td>Designation of User</td>
+			            <td>Name of Creator</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>Active</td>
+			            <td>
+        					<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+			            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+			            </td>
+			        </tr>
+			    </tbody>
+			</table>
+		
+
+		{{!-- END CONTENT HERE --}}
+	</div>
+</div>

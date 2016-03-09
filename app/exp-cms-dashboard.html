@@ -152,28 +152,18 @@
   </div>
 
   <!-- build:js js/app.js -->
+  <!-- plugins -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
   <script src="js/jquery.dataTables.js"></script>
   <script src="js/dataTables.bootstrap.js"></script>
-  <script src="js/handlebars.runtime.js"></script>
-  <script src="js/templates.js"></script>
-  <script src="js/handlebars.helper.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <script src="js/filereader.js"></script>
+  <!-- customized -->
+  <script src="js/aboitiz-app.js"></script>
   <script src="js/custom.js"></script>
   <!-- endbuild -->
-
-  <script>
-  $(document).ready(function(){
-    var approved = $('#donut_approved');
-    var pending = $('#donut_pending');
-    var cancelled = $('#donut_cancelled');
-    var completed = $('#donut_completed');
-    
-    initDonut(approved);
-    initDonut(pending);
-    initDonut(cancelled);
-    initDonut(completed);
-  });
-  </script>
 </body>
 </html>

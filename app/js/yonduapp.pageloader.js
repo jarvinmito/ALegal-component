@@ -142,13 +142,11 @@ App.Pageloader = (function(){
 		initClipboard();
 		initDataTables();
 
-		var donut = $('.abcom-donut');
-		aboitizApp.initDonut(donut);
-
-		var select2 = $('#select2');
-		aboitizApp.initListing(select2);
-		
+		aboitizApp.initDonut();
+		aboitizApp.initListing();
 		aboitizApp.initFileReader();
+		aboitizApp.initDateTimePicker();
+		aboitizApp.initFilter();
 
 		bind();
 	};
@@ -157,6 +155,14 @@ App.Pageloader = (function(){
 		jqueryMap.$body.html(App.Templates['yspecifics']());
 		initClipboard();
 		initDataTables();
+
+		aboitizApp.initDonut();
+		aboitizApp.initFileReader();
+		aboitizApp.initListing();
+		aboitizApp.initDateTimePicker();
+		aboitizApp.initFilter();
+		aboitizApp.initDataTables();
+
 		bind();
 	};
 

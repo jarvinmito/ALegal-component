@@ -1,0 +1,378 @@
+<h3>Survey Main Page</h3>
+<p>Acces level: <b>All</b></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		{{!-- START CONTENT HERE --}}
+			<div class="abcom abcom-filter nav">
+			  <div class="navbar-left">
+			    <div class="form-group">
+			      <label for="" class="abcom-filter__label">Filter/Search by:</label>
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
+			            <option selected>Select Category</option>
+			            <option value="text">Requestor's Name</option>
+			            <option value="text">Form Name</option>
+			            <option value="text">Requesting Company</option>
+			            <option value="daterange">Date Submitted</option>
+			            <option value="dropdown">Q Response</option>
+			          </select>
+			          <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
+			            <option value="">Option 1</option>
+			            <option value="">Option 2</option>
+			            <option value="">Option 3</option>
+			            <option value="">Option 4</option>
+			            <option value="">Option 5</option>
+			          </select>
+
+			          <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
+			                <div class='input-group abcom-filter__date' data-role="from">
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			                <div class='input-group abcom-filter__date' data-role="to">
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			            </div>
+
+			            <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
+			                <div class='input-group abcom-filter__date'>
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			            </div>
+
+			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
+			      </div>
+			  </div>
+			  <div class="navbar-right">
+			    <div class="form-group">
+			      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
+			      <label for="" class="abcom-filter__label">Entries per page</label>
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-survey">
+			            <option value="10">10</option>
+			            <option value="25">25</option>
+			            <option value="50">50</option>
+			            <option value="100">100</option>
+			          </select>
+			      </div>
+			  </div>
+			</div>
+		
+			<table id="management-survey" class="abcom abcom-table">
+			    <thead>
+			        <tr>
+			            <th>Requestor's Name</th>
+			            <th>Form Name</th>
+			            <th>Requesting Company</th>
+			            <th>Date Submitted</th>
+			            <th>Q1 Responses</th>
+			            <th>Action</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Name of company</td>
+			            <td>name of business</td>
+			            <td>Requesting company name</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>2</td>
+			            <td>
+							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search" data-toggle="modal" data-target="#management-survey-view"></i></button>
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>Name of company</td>
+			            <td>name of business</td>
+			            <td>Requesting company name</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>5</td>
+			            <td>
+							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search" data-toggle="modal" data-target="#management-survey-view"></i></button>
+			            </td>
+			        </tr>
+			    </tbody>
+			</table>
+		{{!-- END CONTENT HERE --}}
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		{{!-- START CONTENT HERE --}}
+		<div class="abcom-modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+		            <h4 class="modal-title" id="myModalLabel">Survey Result</h4>
+		        </div>
+		        <div class="modal-body">
+		          <div class="form-horizontal">
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Form Name</label>
+		              <p class="col-sm-8 abcom__text">Form Number 1</p>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Requestor's Name</label>
+		              <p class="col-sm-8 abcom__text">Name of Requestor</p>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Requesting Company</label>
+		              <p class="col-sm-8 abcom__text">Name of Company</p>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Question 1</label>
+		              <p class="col-sm-8 abcom__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		            </div>
+
+
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Answer 1</label>
+		              <p class="col-sm-8 abcom__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		            </div>
+					
+					<hr>
+
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Question 2</label>
+		              <p class="col-sm-8 abcom__text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		            </div>
+
+					
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Answer 2</label>
+		              <p class="col-sm-8 abcom__text">when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		            </div>
+
+		          </div>
+		        </div>
+		    </div>
+		  </div>
+		</div>
+		{{!-- END CONTENT HERE --}}
+	</div>
+</div>
+
+<p>Insert this code inside the <code>main-content__main</code> section.</p>
+
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
+  &lt;div class=&quot;navbar-left&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
+            &lt;option selected&gt;Select Category&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Requestor's Name&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Form Name&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Requesting Company&lt;/option&gt;
+            &lt;option value=&quot;daterange&quot;&gt;Date Submitted&lt;/option&gt;
+            &lt;option value=&quot;dropdown&quot;&gt;Q Response&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
+          &lt;/select&gt;
+
+          &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
+                &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
+                &lt;div class='input-group abcom-filter__date'&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;navbar-right&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#management-survey&quot;&gt;
+            &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+            &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+            &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+            &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+          &lt;/select&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;table id=&quot;management-survey&quot; class=&quot;abcom abcom-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Requestor's Name&lt;/th&gt;
+            &lt;th&gt;Form Name&lt;/th&gt;
+            &lt;th&gt;Requesting Company&lt;/th&gt;
+            &lt;th&gt;Date Submitted&lt;/th&gt;
+            &lt;th&gt;Q1 Responses&lt;/th&gt;
+            &lt;th&gt;Action&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Name of company&lt;/td&gt;
+            &lt;td&gt;name of business&lt;/td&gt;
+            &lt;td&gt;Requesting company name&lt;/td&gt;
+            &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;
+        &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot; data-toggle=&quot;modal&quot; data-target=&quot;#management-survey-view&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Name of company&lt;/td&gt;
+            &lt;td&gt;name of business&lt;/td&gt;
+            &lt;td&gt;Requesting company name&lt;/td&gt;
+            &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;
+        &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot; data-toggle=&quot;modal&quot; data-target=&quot;#management-survey-view&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;div id=&quot;management-survey-view&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
+            &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Survey Result&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;div class=&quot;form-horizontal&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Form Name&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8 abcom__text&quot;&gt;Form Number 1&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Requestor's Name&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8 abcom__text&quot;&gt;Name of Requestor&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Requesting Company&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8 abcom__text&quot;&gt;Name of Company&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Question 1&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8 abcom__text&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Answer 1&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8 abcom__text&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
+            &lt;/div&gt;
+      
+      &lt;hr&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Question 2&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8 abcom__text&quot;&gt;Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+            &lt;/div&gt;
+
+      
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Answer 2&lt;/label&gt;
+              &lt;p class=&quot;col-sm-8 abcom__text&quot;&gt;when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+<a href="exp-cms-management-survey.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Survey Page</a>
+
+
+<div id="management-survey-view" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="myModalLabel">Survey Result</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Form Name</label>
+              <p class="col-sm-8 abcom__text">Form Number 1</p>
+            </div>
+
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Requestor's Name</label>
+              <p class="col-sm-8 abcom__text">Name of Requestor</p>
+            </div>
+
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Requesting Company</label>
+              <p class="col-sm-8 abcom__text">Name of Company</p>
+            </div>
+
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Question 1</label>
+              <p class="col-sm-8 abcom__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+
+
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Answer 1</label>
+              <p class="col-sm-8 abcom__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+			
+			<hr>
+
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Question 2</label>
+              <p class="col-sm-8 abcom__text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+
+			
+            <div class="form-group">
+              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Answer 2</label>
+              <p class="col-sm-8 abcom__text">when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

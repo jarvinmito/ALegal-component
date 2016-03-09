@@ -1,72 +1,189 @@
 var aboitizApp = (function(){
 
-	var initDonut = function(elem){
-		// Interpret value as %
-		var value = elem.find('h1').html();
-		var circle = elem.find('.circle_animation');
-		var getPercentage = Math.abs(((value / 100) * 440) - 440);
-		// subtract 440 to reverse the effect
-		// 440 = 0% and 0 = 100% in the stroke-dashoffset of svg in css
+	var initFilter = function(){
+		var filter = $('.abcom-filter');
+		if( filter.length ){
+			filter.each(function(){
+				var sfilter = $(this);
+				var cat = sfilter.find('.abcom-filter__category');
+				var entries = sfilter.find('.abcom-filter__entries');
+				// var clear = sfilter.find('.abcom-filter__btn--clear');
+				// var search = sfilter.find('.abcom-filter__btn--search');
 
-		circle.animate({'stroke-dashoffset' : getPercentage}, 1000);
+				sfilter.find('.abcom-filter__type').hide();
+
+				var clearform = function(){
+					sfilter.find('select, input').not('.abcom-filter__category, .abcom-filter__entries').val('');
+				};
+
+				cat.on('change', function(e){
+					var selected = $(this).val();
+					// Reset all values
+					clearform();
+					sfilter.find('.abcom-filter__type').not('.abcom-filter__type[data-filter-type="'+selected+'"]').hide();
+					sfilter.find('.abcom-filter__type[data-filter-type="'+selected+'"]').show();
+					// console.log(sfilter.find('.abcom-filter__type[data-filter-type="'+selected+'"]'));
+				});
+
+				entries.on('change', function(e){
+					var selected = $(this).val();
+
+					if( $(this).data('target') ){
+						var target = $(this).data('target');
+						var actual_target = $(target).parents('.dataTables_wrapper').find('.dataTables_length select');
+
+						actual_target.val(selected);
+						actual_target.trigger('change');
+					}
+
+				});
+
+				// clear.on('click', function(e){
+				// 	clearform();
+				// });
+
+			});
+		}
+	};
+
+	var initDonut = function(){
+		// Interpret value as %
+		var elem = $('.abcom-donut');
+
+		if( elem.length ){
+
+			elem.each(function( index ){
+				var value = $(this).find('h1').html();
+				var circle = $(this).find('.circle_animation');
+				var getPercentage = Math.abs(((value / 100) * 440) - 440);
+				// subtract 440 to reverse the effect
+				// 440 = 0% and 0 = 100% in the stroke-dashoffset of svg in css
+
+				circle.animate({'stroke-dashoffset' : getPercentage}, 1000);
+			});
+		}
 	};
 	
-	var initListing = function(elem){
+	var initListing = function(){
 		// Select2 is present
+		var elem = $('.abcom-list__dropdown');
+		var renderList = function(elem){
+			var html = "";
+			var values = selection.val();
+
+			for(var key in values){
+				// console.log( key, values, values[key]);
+				html += '<li class="abcom-list__item" data-index="'+key+'" data-value="'+values[key]+'">'+values[key]+'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+			}
+
+			var id = elem.attr('id');
+			var list = $('.abcom-list[data-parent="'+id+'"]');
+			list.html(html);
+			list.find('.abcom-list__item__link').unbind('click');
+			list.find('.abcom-list__item__link').click(function(e){
+				var thisList = $(this).parent('.abcom-list__item');
+				var index = thisList.data('index');
+
+				// Remove from selection -- Array
+				var newValue = selection.val();
+				newValue.splice(index, 1);
+
+				thisList.remove();
+
+				selection.val(newValue);
+				selection.trigger('change');
+			});
+		};
+
 		if( elem.length ){
 			var selection = elem.select2({
 					placeholder : 'Select ' + elem.data('title')
 				});
 
-			selection.on('change', function(){
-				var html = "";
-				var values = selection.val();
+			renderList(elem);
+			selection.on('change', function(){ renderList(elem); });
 
-				for(var key in values){
-					// console.log( key, values, values[key]);
-					html += '<li class="abcom-list__item" data-index="'+key+'" data-value="'+values[key]+'">'+values[key]+'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+		}
+	};
+
+	var initDateTimePicker = function(){
+		var inputs = $('.abcom-filter__type--date');
+
+		if( inputs.length ){
+
+			inputs.each(function( index ){
+				var currentSet = $(this);
+				var dates = $(this).find('.abcom-filter__date');
+				
+				if( dates.length === 1 ){
+					// single
+					dates.datetimepicker({
+						format: 'MM/DD/YYYY'
+					});
+
+				}else if( dates.length === 2){
+					// daterange
+					dates.each(function(){
+						var current = $(this);
+
+						if( current.is($('.abcom-filter__date[data-role="from"]')) ){
+							var from = current;
+							from.datetimepicker({
+								format: 'MM/DD/YYYY'
+							});
+							from.on("dp.change", function (e) {
+								currentSet.find('.abcom-filter__date[data-role="to"]').data("DateTimePicker").minDate(e.date);
+					        });
+						}else if( current.is($('.abcom-filter__date[data-role="to"]')) ){
+							var to = current;
+							to.datetimepicker({
+								format: 'MM/DD/YYYY',
+								useCurrent : false
+							});
+							to.on("dp.change", function (e) {
+								currentSet.find('.abcom-filter__date[data-role="from"]').data("DateTimePicker").maxDate(e.date);
+					        });
+						}
+					});
 				}
-				$('.abcom-list[data-parent="'+elem.attr('id')+'"]').html(html);
 
-				$('.abcom-list__item__link').unbind('click');
-				$('.abcom-list__item__link').click(function(e){
-					var thisList = $(this).parent('.abcom-list__item');
-					var index = thisList.data('index');
-
-					// Remove from selection -- Array
-					var newValue = selection.val();
-					newValue.splice(index, 1);
-
-					thisList.remove();
-
-					selection.val(newValue);
-					selection.trigger('change');
-				});
 			});
 		}
 	};
 
 
 	var initFileReader = function(){
-		var upBtn = $('.abcom-upload__addbtn');
-		var upParent = upBtn.parents('.abcom-upload');
-		var allFiles = [];
-		// upBtn.click(function(){
-		// 	upParent.find('.abcom-upload__file').click();
-		// });
+		var uploadForm = $('.abcom-upload');
+		var allFiles = {};
 
-		$('.abcom-upload__file').fileReaderJS({
-			readAsDefault: "DataURL",
-			on: {
-			    load: function(e, file) {
-			      var data = { e : e, file : file};
-			      if( extCheck(file) ){
-			      	allFiles.push(data);
-			      	renderList(file);
-			      }
-			    }
-			}
-		});
+		if( uploadForm.length ){
+			uploadForm.each(function( index ){
+				var upParent = $(this);
+				allFiles[index] = [];
+				
+				upParent.find('.abcom-upload__file').fileReaderJS({
+					readAsDefault: "DataURL",
+					on: {
+					    load: function(e, file) {
+					      var data = { e : e, file : file};
+					      if( extCheck(file) ){
+					      	allFiles[index].push(data);
+					      	renderList(file, upParent, index);
+					      	// bind(file, upParent, index, data);
+					      }
+					    }
+					}
+				});
+			});
+		}
+
+		var bind = function(file, upParent, index, data){
+			upParent.find('.abcom-upload__removebtn').unbind('click');
+			upParent.find('.abcom-upload__removebtn').click(function(){
+				allFiles[index].splice(allFiles[index].indexOf(data), 1);
+				renderList(file, upParent, index);
+			});
+		};
 
 		var extCheck = function(filedata){
 			var filename = filedata.name;
@@ -85,7 +202,7 @@ var aboitizApp = (function(){
 		   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 		};
 
-		var renderList = function(filedata){
+		var renderList = function(filedata, upParent, index){
 			var iconlist = {
 				'img' : '<i class="fa fa-file-image-o"></i>',
 				'doc' : '<i class="fa fa-file-word-o"></i>',
@@ -125,7 +242,7 @@ var aboitizApp = (function(){
 							'<div class="col-sm-2"><span class="abcom-upload__file__icon">'+icons[extension]+'</span></div>' +
 							'<div class="col-sm-4">'+filename+'</div>' +
 							'<div class="col-sm-3">'+formatBytes(size)+'</div>' +
-							'<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default"><i class="fa fa-ban"></i>Remove</button></div>' +
+							'<div class="col-sm-3 abcom-container--right"><button class="btn abcom-btn abcom-btn--default abcom-upload__removebtn"><i class="fa fa-ban"></i>Remove</button></div>' +
 						'</div>' +
 					'</li>';
 
@@ -133,15 +250,27 @@ var aboitizApp = (function(){
 		};
 	};
 
+	var initDataTables = function(){
+		$('.abcom-table').dataTable();
+	};
+
 	var initModule = function(){
-		console.log('Aboitiz Yeah!');
+		initDonut();
+		initListing();
+		initFileReader();
+		initDateTimePicker();
+		initFilter();
+		initDataTables();
 	};
 
 	return {
 		initModule : initModule,
 		initDonut : initDonut,
 		initListing : initListing,
-		initFileReader : initFileReader
+		initFileReader : initFileReader,
+		initDateTimePicker : initDateTimePicker,
+		initFilter : initFilter,
+		initDataTables : initDataTables
 	}
 
 }());

@@ -15,10 +15,10 @@
 						<div class="panel panel-collapse collapse" id="yondu__mgt1" role="tabpanel">
 							<a href="javascript:;" data-href="#abcom-management__sidepanel" class="yondu__navlist">Services</a>
 							<a href="javascript:;" data-href="#" class="yondu__navlist">Request Status</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Workspace</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Survey</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">User Profile</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Company Profile</a>
+							<a href="javascript:;" data-href="#abcom-management__workspace__sidepanel" class="yondu__navlist">Workspace</a>
+							<a href="javascript:;" data-href="#abcom-management__survey__sidepanel" class="yondu__navlist">Survey</a>
+							<a href="javascript:;" data-href="#abcom-management__user__sidepanel" class="yondu__navlist">User Profile</a>
+							<a href="javascript:;" data-href="#abcom-management__company__sidepanel" class="yondu__navlist">Company Profile</a>
 						</div>
 					</div>
 					
@@ -75,13 +75,37 @@
 					<div id="abcom-management__services"></div>
 					<hr>
 					<div id="abcom-management__services__form"></div>
-
-					<script>
-						$('#abcom-dashboard').html(App.Templates['specifics/abcom-dashboard']());
-						$('#abcom-management__sidepanel').html(App.Templates['specifics/abcom-management__sidepanel']());
-						$('#abcom-management__services').html(App.Templates['specifics/abcom-management__services']());
-						$('#abcom-management__services__form').html(App.Templates['specifics/abcom-management__services__form']());
-					</script>
+					<hr>
+					<div id="abcom-management__workspace__sidepanel"></div>
+					<hr>
+					<div id="abcom-management__workspace"></div>
+					<hr>
+					<div id="abcom-management__workspace__mom"></div>
+					<hr>
+					<div id="abcom-management__workspace__documents"></div>
+					<hr>
+					<div id="abcom-management__survey__sidepanel"></div>
+					<hr>
+					<div id="abcom-management__survey"></div>
+					<hr>
+					<div id="abcom-management__user__sidepanel"></div>
+					<hr>
+					<div id="abcom-management__user"></div>
+					
+<script>
+$('#abcom-dashboard').html(App.Templates['specifics/abcom-dashboard']());
+$('#abcom-management__sidepanel').html(App.Templates['specifics/abcom-management__sidepanel']());
+$('#abcom-management__services').html(App.Templates['specifics/abcom-management__services']());
+$('#abcom-management__services__form').html(App.Templates['specifics/abcom-management__services__form']());
+$('#abcom-management__workspace').html(App.Templates['specifics/abcom-management__workspace']());
+$('#abcom-management__workspace__sidepanel').html(App.Templates['specifics/abcom-management__workspace__sidepanel']());
+$('#abcom-management__workspace__mom').html(App.Templates['specifics/abcom-management__workspace__mom']());
+$('#abcom-management__workspace__documents').html(App.Templates['specifics/abcom-management__workspace__documents']());
+$('#abcom-management__survey__sidepanel').html(App.Templates['specifics/abcom-management__survey__sidepanel']());
+$('#abcom-management__survey').html(App.Templates['specifics/abcom-management__survey']());
+$('#abcom-management__user__sidepanel').html(App.Templates['specifics/abcom-management__user__sidepanel']());
+$('#abcom-management__user').html(App.Templates['specifics/abcom-management__user']());
+</script>
 
 				</div> <!-- // end : panel body -->
 

@@ -3,7 +3,12 @@
 
 
 	&__text{
-		height: 40px;
+		min-height: 40px;
 		padding: 10px 15px;
+	}
+
+	&__list{
+		padding-top: 10px;
+		padding-left: 16px;
 	}
 }

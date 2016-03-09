@@ -29,8 +29,8 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="#" class="abnav__link"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
-              <li class="active"><a href="#" class="abnav__link"><i class="fa fa-hourglass"></i>Management</a></li>
+              <li class="active"><a href="#" class="abnav__link"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-hourglass"></i>Management</a></li>
               <li><a href="#" class="abnav__link"><i class="fa fa-file"></i>Templates</a></li>
               <li><a href="#" class="abnav__link"><i class="fa fa-folder-open"></i>Requestor's Page</a></li>
               <li><a href="#" class="abnav__link"><i class="fa fa-briefcase"></i>Reports</a></li>
@@ -52,7 +52,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a href="#" class="absubnav__title navbar-brand"><span class="ab-icon"><i class="fa fa-hourglass"></i></span>Management - Services</a>
+            <a href="#" class="absubnav__title navbar-brand"><span class="ab-icon"><i class="fa fa-home"></i></span>Home</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,19 +71,7 @@
     
 
     <!-- start : body section -->
-    <section class="main-content has-side">
-      <section class="main-content__side side">
-        <!-- INSERT SIDE PANEL CONTENT HERE -->
-        <!-- EXAMPLE: -->
-        <a href="#" class="side__nav active" title="Services"><i class="fa fa-cog"></i></a>
-        <a href="#" class="side__nav" title="Requests Status"><i class="fa fa-flag"></i></a>
-        <a href="#" class="side__nav" title="Workspace"><i class="fa fa-briefcase"></i></a>
-        <a href="#" class="side__nav" title="Documents"><i class="fa fa-file"></i></a>
-        <a href="#" class="side__nav" title="Company Profile"><i class="fa fa-building"></i></a>
-        <a href="#" class="side__nav" title="Survey Results"><i class="fa fa-list-ul"></i></a>
-        <a href="#" class="side__nav" title="Users Profile"><i class="fa fa-users"></i></a>
-      </section><!-- // End side -->
-
+    <section class="main-content">
       <section class="main-content__main">
         <!-- INSERT MAIN PANEL CONTENT HERE -->
         <div class="abcom abcom-filter nav">
@@ -92,13 +80,10 @@
               <label for="" class="abcom-filter__label">Filter/Search by:</label>
                   <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
                     <option selected>Select Category</option>
-                    <option value="text">Reference No.</option>
-                    <option value="daterange">Date of Request</option>
-                    <option value="text">Company Name</option>
-                    <option value="dropdown">Description</option>
-                    <option value="dropdown">Lawyer-in-Charge</option>
-                    <option value="dropdown">Paralegal-in-Charge</option>
-                    <option value="dropdown">Status</option>
+                    <option value="text" data-type="text">Creator</option>
+                    <option value="dropdown" data-type="dropdown">Status</option>
+                    <option value="date" data-type="date">Date</option>
+                    <option value="daterange" data-type="daterange">Date Range</option>
                   </select>
                   <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
                   <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
@@ -141,7 +126,7 @@
             <div class="form-group">
               <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
               <label for="" class="abcom-filter__label">Entries per page</label>
-                  <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-services-table">
+                  <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#table_id3">
                     <option value="10">10</option>
                     <option value="25">25</option>
                     <option value="50">50</option>
@@ -151,7 +136,7 @@
           </div>
         </div>
 
-        <table id="management-services-table" class="abcom abcom-table">
+        <table id="table_id3" class="abcom abcom-table">
           <thead>
             <tr>
               <th>Reference No.</th>
@@ -176,7 +161,7 @@
               <td>Requestor Name</td>
               <td><progress class="abcom-progress" data-status="For Approval" value="80" max="100"></progress></td>
               <td>
-                <button data-toggle="modal" data-target="#updateStatus" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle" disabled><i class="fa fa-pencil-square-o"></i></button>
                 <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
               </td>
             </tr>
@@ -190,7 +175,7 @@
               <td>Requestor Name</td>
               <td><progress class="abcom-progress" data-status="For Endorsement" value="30" max="100"></progress></td>
               <td>
-                <button data-toggle="modal" data-target="#updateStatus" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+                <button class="abcom-btn abcom-btn--default abcom-btn--circle" disabled><i class="fa fa-pencil-square-o"></i></button>
                 <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
               </td>
             </tr>
@@ -204,51 +189,14 @@
     <!-- start : footer section -->
     <footer class="footer container-fluid">
       <div class="row">
-        <div class="col-sm-6 col-xs-12 text-align--left"><p class="footer__text">&#169; 2016 Aboitiz Equity Ventures. All rights reserved.</p></div>
+        <div class="col-sm-6 col-xs-12 text-align--left"><p class="footer__text">© 2016 Aboitiz Equity Ventures. All rights reserved.</p></div>
         <div class="col-sm-6 col-xs-12 text-align--right"><p class="footer__text">Powered by <b class="footer__provider">YONDU</b></p></div>
       </div>
     </footer>
     <!-- end : footer section -->
   </div>
 
-  <!-- MODAL -->
-  <div id="updateStatus" class="modal fade abcom-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <h4 class="modal-title" id="myModalLabel">Update Status</h4>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="form-group">
-                <label for="modal_form_status">Status</label>
-                <select name="" id="modal_form_status" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-                  <option selected>Select Status</option>
-                  <option value="Completed">Completed</option>
-                  <option value="For Pick-up">For Pick-up</option>
-                  <option value="For Processing">For Processing</option>
-                  <option value="For Approval">For Approval</option>
-                  <option value="For Endorsement">For Endorsement</option>
-                  <option value="Cancelled">Cancelled</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="modal_form_remarks">Remarks</label>
-                <textarea id="modal_form_remarks" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
-              </div>
-
-              <div class="form-group">
-                <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
-              </div>
-            </form>
-          </div>
-      </div>
-    </div>
-  </div>
-
   <!-- build:js js/app.js -->
-  <!-- plugins -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/moment.min.js"></script>

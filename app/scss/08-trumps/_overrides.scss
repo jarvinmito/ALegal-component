@@ -1,7 +1,7 @@
 /* Bootstrap overrides */
 label{
     height: 40px;
-    padding: 10px;
+    padding: 10px 0;
     text-align: left;
 }
 
@@ -28,7 +28,11 @@ label{
 
 /* Data Tables overrides */
 .dataTables_wrapper{
-	background-color: $white;
+	background-color: transparent;
+
+    .row:first-child{
+        display: none;
+    }
 }
 
 table.dataTable thead th {
@@ -67,16 +71,16 @@ table.dataTable thead th.sorting_desc:after {
 }
 /* Data Tables Info*/
 .dataTables_info{
-
+    display: none;
 }
 
 /* Data Tables Pagination */
 .dataTables_paginate{
+    margin-top: 10px;
     .pagination{
         margin: 0;
 
         li.paginate_button{
-            
             
             &, &.active, &.disabled{
                 &, &:hover, &:active, &:focus{
@@ -88,7 +92,7 @@ table.dataTable thead th.sorting_desc:after {
             }
 
             & a{
-                background: transparent;
+                background: $white;
                 color: $black;
             }
 

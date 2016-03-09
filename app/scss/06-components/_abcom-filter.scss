@@ -9,10 +9,42 @@
 	&__label{
 		color: $red;
 		font-weight: bold;
-		line-height: 40px;
 		height: 40px;
 		margin-bottom: 0;
 		margin-right: 10px;
 		display: inline-block;
+	}
+
+	&__type{
+		// display: none !important;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__btn{
+		vertical-align: top;
+
+		&--legend{
+			display: none;
+		}
+	}
+
+	&__date{
+		width: 140px;
+		float: left;
+		margin-right: 4px;
+		&, & .input-group-addon{
+			box-shadow: none;
+			color: $black;
+			border-color: $gray-bg-active;
+		}
+
+		& .input-group-addon{
+			cursor: pointer;
+		}
+	}
+
+	&__last{
+		margin-right: 15px;
 	}
 }
