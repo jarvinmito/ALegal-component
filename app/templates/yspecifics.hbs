@@ -44,7 +44,7 @@
 						<a href="#yondu__mgt4" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Setup</b></a>
 						<div class="panel panel-collapse collapse" id="yondu__mgt4" role="tabpanel">
 							<a href="javascript:;" data-href="#" class="yondu__navlist">Access Matrix</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Holidays</a>
+							<a href="javascript:;" data-href="#abcom-setup__holidays__sidepanel" class="yondu__navlist">Holidays</a>
 						</div>
 					</div>
 					
@@ -120,6 +120,14 @@
 					<hr>
 					<div id="abcom-templates__email"></div>
 
+					{{!-- SETUP SECTION --}}
+					<hr>
+					<hr>
+					<h2>Setup</h2>
+					<div id="abcom-setup__holidays__sidepanel"></div>
+					<hr>
+					<div id="abcom-setup__holidays"></div>
+
 					{{!-- REPORTS SECTION --}}
 					<hr>
 					<hr>
@@ -167,6 +175,10 @@ $('#abcom-templates__survey').html(App.Templates['specifics/abcom-templates__sur
 $('#abcom-templates__email__sidepanel').html(App.Templates['specifics/abcom-templates__email__sidepanel']());
 $('#abcom-templates__email').html(App.Templates['specifics/abcom-templates__email']());
 
+
+// SETUP SECTION
+$('#abcom-setup__holidays__sidepanel').html(App.Templates['specifics/abcom-setup__holidays__sidepanel']());
+$('#abcom-setup__holidays').html(App.Templates['specifics/abcom-setup__holidays']());
 
 
 // REPORTS SECTION

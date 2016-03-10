@@ -1,0 +1,209 @@
+<h3>Setup Holidays Page</h3>
+<p>Acces level: <b>All</b></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		{{!-- START CONTENT HERE --}}
+			<div class="abcom abcom-filter nav">
+			  <div class="navbar-left">
+			    <div class="form-group">
+			      <label for="" class="abcom-filter__label">Filter/Search by:</label>
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
+			            <option selected>Select Category</option>
+			            <option value="text">Holiday Name</option>
+			            <option value="date">Holiday Date</option>
+			            <option value="date">Date Created</option>
+			            <option value="text">Created by</option>
+			            <option value="dropdown">Status</option>
+			          </select>
+			          <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
+			            <option value="">Option 1</option>
+			            <option value="">Option 2</option>
+			            <option value="">Option 3</option>
+			            <option value="">Option 4</option>
+			            <option value="">Option 5</option>
+			          </select>
+
+			          <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
+			                <div class='input-group abcom-filter__date' data-role="from">
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			                <div class='input-group abcom-filter__date' data-role="to">
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			            </div>
+
+			            <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
+			                <div class='input-group abcom-filter__date'>
+			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+			            </div>
+
+			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
+			      </div>
+			  </div>
+			  <div class="navbar-right">
+			    <div class="form-group">
+			      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
+			      <label for="" class="abcom-filter__label">Entries per page</label>
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#setup-holidays-table">
+			            <option value="10">10</option>
+			            <option value="25">25</option>
+			            <option value="50">50</option>
+			            <option value="100">100</option>
+			          </select>
+			      </div>
+			  </div>
+			</div>
+
+			<table id="setup-holidays-table" class="abcom abcom-table">
+			    <thead>
+			        <tr>
+			            <th>Holiday Name</th>
+			            <th>Holiday Date</th>
+			            <th>Created by</th>
+			            <th>Date Created</th>
+			            <th>Status</th>
+			            <th>Action</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Name of the Document</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>Creator name</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>Active</td>
+			            <td>
+			            	<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>Name of the Document</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>Creator name</td>
+			            <td>mm/dd/yyyy</td>
+			            <td>Active</td>
+			            <td>
+			            	<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+			            </td>
+			        </tr>
+			    </tbody>
+			</table>
+		
+
+		{{!-- END CONTENT HERE --}}
+	</div>
+</div>
+
+<p>Insert this code inside the <code>main-content__main</code> section.</p>
+
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
+    &lt;div class=&quot;navbar-left&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
+              &lt;option selected&gt;Select Category&lt;/option&gt;
+              &lt;option value=&quot;text&quot;&gt;Holiday Name&lt;/option&gt;
+              &lt;option value=&quot;date&quot;&gt;Holiday Date&lt;/option&gt;
+              &lt;option value=&quot;date&quot;&gt;Date Created&lt;/option&gt;
+              &lt;option value=&quot;text&quot;&gt;Created by&lt;/option&gt;
+              &lt;option value=&quot;dropdown&quot;&gt;Status&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
+            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
+              &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+              &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+              &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+              &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
+              &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
+            &lt;/select&gt;
+
+            &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
+                  &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
+                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+                      &lt;span class=&quot;input-group-addon&quot;&gt;
+                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                      &lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
+                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+                      &lt;span class=&quot;input-group-addon&quot;&gt;
+                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                      &lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
+                  &lt;div class='input-group abcom-filter__date'&gt;
+                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
+                      &lt;span class=&quot;input-group-addon&quot;&gt;
+                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                      &lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
+              &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;navbar-right&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
+        &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#setup-holidays-table&quot;&gt;
+              &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+              &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+              &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+              &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;table id=&quot;setup-holidays-table&quot; class=&quot;abcom abcom-table&quot;&gt;
+      &lt;thead&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Holiday Name&lt;/th&gt;
+              &lt;th&gt;Holiday Date&lt;/th&gt;
+              &lt;th&gt;Created by&lt;/th&gt;
+              &lt;th&gt;Date Created&lt;/th&gt;
+              &lt;th&gt;Status&lt;/th&gt;
+              &lt;th&gt;Action&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Name of the Document&lt;/td&gt;
+              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+              &lt;td&gt;Creator name&lt;/td&gt;
+              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+              &lt;td&gt;Active&lt;/td&gt;
+              &lt;td&gt;
+                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Name of the Document&lt;/td&gt;
+              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+              &lt;td&gt;Creator name&lt;/td&gt;
+              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+              &lt;td&gt;Active&lt;/td&gt;
+              &lt;td&gt;
+                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/tbody&gt;
+  &lt;/table&gt;</code></pre>
+
+<a href="exp-cms-setup-holidays.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Setup Holidays Page</a>
