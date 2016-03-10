@@ -14,7 +14,7 @@
 						<a href="#yondu__mgt1" data-toggle="collapse" aria-expanded="true" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Management</b></a>
 						<div class="panel panel-collapse collapse" id="yondu__mgt1" role="tabpanel">
 							<a href="javascript:;" data-href="#abcom-management__sidepanel" class="yondu__navlist">Services</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Request Status</a>
+							<a href="javascript:;" data-href="#abcom-management__status__sidepanel" class="yondu__navlist">Request Status</a>
 							<a href="javascript:;" data-href="#abcom-management__workspace__sidepanel" class="yondu__navlist">Workspace</a>
 							<a href="javascript:;" data-href="#abcom-management__survey__sidepanel" class="yondu__navlist">Survey</a>
 							<a href="javascript:;" data-href="#abcom-management__user__sidepanel" class="yondu__navlist">User Profile</a>
@@ -25,10 +25,10 @@
 					<div class="panel">
 						<a href="#yondu__mgt2" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Templates</b></a>
 						<div class="panel panel-collapse collapse" id="yondu__mgt2" role="tabpanel">
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Minutes of the Meeting</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Forms</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Surveys</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Email Messages</a>
+							<a href="javascript:;" data-href="#abcom-templates__mom__sidepanel" class="yondu__navlist">Minutes of the Meeting</a>
+							<a href="javascript:;" data-href="#abcom-templates__forms__sidepanel" class="yondu__navlist">Forms</a>
+							<a href="javascript:;" data-href="#abcom-templates__survey__sidepanel" class="yondu__navlist">Surveys</a>
+							<a href="javascript:;" data-href="#abcom-templates__email__sidepanel" class="yondu__navlist">Email Messages</a>
 						</div>
 					</div>
 					
@@ -51,10 +51,10 @@
 					<div class="panel">
 						<a href="#yondu__mgt5" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Reports</b></a>
 						<div class="panel panel-collapse collapse" id="yondu__mgt5" role="tabpanel">
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Audit Trail</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Requests</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Companies</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Directors &amp; Officers</a>
+							<a href="javascript:;" data-href="#abcom-reports__audit__sidepanel" class="yondu__navlist">Audit Trail</a>
+							<a href="javascript:;" data-href="#abcom-reports__requests__sidepanel" class="yondu__navlist">Requests</a>
+							<a href="javascript:;" data-href="#abcom-reports__companies__sidepanel" class="yondu__navlist">Companies</a>
+							<a href="javascript:;" data-href="#abcom-reports__officers__sidepanel" class="yondu__navlist">Directors &amp; Officers</a>
 						</div>
 					</div>
 				</div>
@@ -76,6 +76,10 @@
 					<hr>
 					<div id="abcom-management__services__form"></div>
 					<hr>
+					<div id="abcom-management__status__sidepanel"></div>
+					<hr>
+					<div id="abcom-management__status"></div>
+					<hr>
 					<div id="abcom-management__workspace__sidepanel"></div>
 					<hr>
 					<div id="abcom-management__workspace"></div>
@@ -91,12 +95,57 @@
 					<div id="abcom-management__user__sidepanel"></div>
 					<hr>
 					<div id="abcom-management__user"></div>
-					
+					<hr>
+					<div id="abcom-management__company__sidepanel"></div>
+					<hr>
+					<div id="abcom-management__company"></div>
+						
+					{{!-- TEMPLATES SECTION --}}
+					<hr>
+					<hr>
+					<h2>Templates</h2>
+					<div id="abcom-templates__mom__sidepanel"></div>
+					<hr>
+					<div id="abcom-templates__mom"></div>
+					<hr>
+					<div id="abcom-templates__forms__sidepanel"></div>
+					<hr>
+					<div id="abcom-templates__forms"></div>
+					<hr>
+					<div id="abcom-templates__survey__sidepanel"></div>
+					<hr>
+					<div id="abcom-templates__survey"></div>
+					<hr>
+					<div id="abcom-templates__email__sidepanel"></div>
+					<hr>
+					<div id="abcom-templates__email"></div>
+
+					{{!-- REPORTS SECTION --}}
+					<hr>
+					<hr>
+					<h2>Reports</h2>
+					<div id="abcom-reports__audit__sidepanel"></div>
+					<hr>
+					<div id="abcom-reports__audit"></div>
+					<hr>
+					<div id="abcom-reports__requests__sidepanel"></div>
+					<hr>
+					<div id="abcom-reports__requests"></div>
+					<hr>
+					<div id="abcom-reports__companies__sidepanel"></div>
+					<hr>
+					<div id="abcom-reports__companies"></div>
+					<hr>
+					<div id="abcom-reports__officers__sidepanel"></div>
+					<hr>
+					<div id="abcom-reports__officers"></div>
 <script>
 $('#abcom-dashboard').html(App.Templates['specifics/abcom-dashboard']());
 $('#abcom-management__sidepanel').html(App.Templates['specifics/abcom-management__sidepanel']());
 $('#abcom-management__services').html(App.Templates['specifics/abcom-management__services']());
 $('#abcom-management__services__form').html(App.Templates['specifics/abcom-management__services__form']());
+$('#abcom-management__status__sidepanel').html(App.Templates['specifics/abcom-management__status__sidepanel']());
+$('#abcom-management__status').html(App.Templates['specifics/abcom-management__status']());
 $('#abcom-management__workspace').html(App.Templates['specifics/abcom-management__workspace']());
 $('#abcom-management__workspace__sidepanel').html(App.Templates['specifics/abcom-management__workspace__sidepanel']());
 $('#abcom-management__workspace__mom').html(App.Templates['specifics/abcom-management__workspace__mom']());
@@ -105,6 +154,31 @@ $('#abcom-management__survey__sidepanel').html(App.Templates['specifics/abcom-ma
 $('#abcom-management__survey').html(App.Templates['specifics/abcom-management__survey']());
 $('#abcom-management__user__sidepanel').html(App.Templates['specifics/abcom-management__user__sidepanel']());
 $('#abcom-management__user').html(App.Templates['specifics/abcom-management__user']());
+$('#abcom-management__company__sidepanel').html(App.Templates['specifics/abcom-management__company__sidepanel']());
+$('#abcom-management__company').html(App.Templates['specifics/abcom-management__company']());
+
+// TEMPLATES SECTION
+$('#abcom-templates__mom__sidepanel').html(App.Templates['specifics/abcom-templates__mom__sidepanel']());
+$('#abcom-templates__mom').html(App.Templates['specifics/abcom-templates__mom']());
+$('#abcom-templates__forms__sidepanel').html(App.Templates['specifics/abcom-templates__forms__sidepanel']());
+$('#abcom-templates__forms').html(App.Templates['specifics/abcom-templates__forms']());
+$('#abcom-templates__survey__sidepanel').html(App.Templates['specifics/abcom-templates__survey__sidepanel']());
+$('#abcom-templates__survey').html(App.Templates['specifics/abcom-templates__survey']());
+$('#abcom-templates__email__sidepanel').html(App.Templates['specifics/abcom-templates__email__sidepanel']());
+$('#abcom-templates__email').html(App.Templates['specifics/abcom-templates__email']());
+
+
+
+// REPORTS SECTION
+$('#abcom-reports__audit__sidepanel').html(App.Templates['specifics/abcom-reports__audit__sidepanel']());
+$('#abcom-reports__audit').html(App.Templates['specifics/abcom-reports__audit']());
+$('#abcom-reports__requests__sidepanel').html(App.Templates['specifics/abcom-reports__requests__sidepanel']());
+$('#abcom-reports__requests').html(App.Templates['specifics/abcom-reports__requests']());
+$('#abcom-reports__companies__sidepanel').html(App.Templates['specifics/abcom-reports__companies__sidepanel']());
+$('#abcom-reports__companies').html(App.Templates['specifics/abcom-reports__companies']());
+$('#abcom-reports__officers__sidepanel').html(App.Templates['specifics/abcom-reports__officers__sidepanel']());
+$('#abcom-reports__officers').html(App.Templates['specifics/abcom-reports__officers']());
+
 </script>
 
 				</div> <!-- // end : panel body -->

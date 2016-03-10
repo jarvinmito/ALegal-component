@@ -13715,7 +13715,7 @@ body {
   cursor: pointer;
 }
 
-.abcom-filter__last {
+.abcom-filter__last, .abcom-filter--hasmargin {
   margin-right: 15px;
 }
 

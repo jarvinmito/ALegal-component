@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aboitiz Legal</title>
+  <link rel="Shortcut Icon" type="image-x/icon" href="assets/images/favicon.png" />
+
+  <!-- build:css css/app.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="ab-wrapper">
+    <!-- start : header section -->
+    <header class="header">
+      <nav class="navbar abnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CORS</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#" class="abnav__link"><i class="fa fa-home"></i>Home</a></li>
+              <li class="active"><a href="#" class="abnav__link"><i class="fa fa-hourglass"></i>Management</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-file"></i>Templates</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-folder-open"></i>Requestor's Page</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-briefcase"></i>Reports</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><img class="header__brand" src="assets/images/brand.png" alt="Aboitiz Legal" ></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <nav class="navbar absubnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="absubnav__title navbar-brand"><span class="ab-icon"><i class="fa fa-hourglass"></i></span>Management - User Profile</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+              <div class="usernav btn-group">
+                <div class="usernav__profile btn btn-default"><img class="usernav__photo" src="assets/images/photo.jpg" alt="Juan Dela Cruz">Natalie Dormer</div>
+                <button class="usernav__button btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+              </div>
+            </div>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <!-- end : header section -->
+    
+
+    <!-- start : body section -->
+    <section class="main-content has-side">
+      <section class="main-content__side side">
+        <a href="#" class="side__nav" title="Services"><i class="fa fa-cog"></i></a>
+        <a href="#" class="side__nav" title="Requests Status"><i class="fa fa-flag"></i></a>
+        <a href="#" class="side__nav" title="Workspace"><i class="fa fa-briefcase"></i></a>
+        <a href="#" class="side__nav" title="Documents"><i class="fa fa-file"></i></a>
+        <a href="#" class="side__nav" title="Survey Results"><i class="fa fa-list-ul"></i></a>
+        <a href="#" class="side__nav active" title="User Profile"><i class="fa fa-users"></i></a>
+        <a href="#" class="side__nav" title="Company Profile"><i class="fa fa-building"></i></a>
+      </section><!-- // End side -->
+
+      <section class="main-content__main">
+        <div class="abcom abcom-filter nav">
+        <div class="navbar-left">
+          <div class="form-group">
+          <a href="#" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New User</a>
+            <label for="" class="abcom-filter__label">Filter/Search by:</label>
+                <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
+                  <option selected>Select Category</option>
+                  <option value="text">Full Name</option>
+                  <option value="dropdown">User Role/Type</option>
+                  <option value="text">Designation</option>
+                  <option value="text">Created by</option>
+                  <option value="text">Date Created</option>
+                  <option value="dropdown">Status</option>
+                </select>
+                <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
+                <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                  <option value="">Option 4</option>
+                  <option value="">Option 5</option>
+                </select>
+
+                <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
+                      <div class='input-group abcom-filter__date' data-role="from">
+                          <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                      <div class='input-group abcom-filter__date' data-role="to">
+                          <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
+
+                  <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
+                      <div class='input-group abcom-filter__date'>
+                          <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
+
+                  <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+                  <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
+            </div>
+        </div>
+        <div class="navbar-right">
+          <div class="form-group">
+            <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
+            <label for="" class="abcom-filter__label">Entries per page</label>
+                <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-user-table">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+        </div>
+
+        <table id="management-user-table" class="abcom abcom-table">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Designation</th>
+                  <th>Created by</th>
+                  <th>Date Created</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Name of person</td>
+                  <td>Role of User</td>
+                  <td>Designation of User</td>
+                  <td>Name of Creator</td>
+                  <td>mm/dd/yyyy</td>
+                  <td>Active</td>
+                  <td>
+                  <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+                    <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Name of person</td>
+                  <td>Role of User</td>
+                  <td>Designation of User</td>
+                  <td>Name of Creator</td>
+                  <td>mm/dd/yyyy</td>
+                  <td>Active</td>
+                  <td>
+                  <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+                    <button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+      </section><!-- // End main -->
+
+    </section>
+    <!-- end : body section -->
+
+    <!-- start : footer section -->
+    <footer class="footer container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 text-align--left"><p class="footer__text">© 2016 Aboitiz Equity Ventures. All rights reserved.</p></div>
+        <div class="col-sm-6 col-xs-12 text-align--right"><p class="footer__text">Powered by <b class="footer__provider">YONDU</b></p></div>
+      </div>
+    </footer>
+    <!-- end : footer section -->
+  </div>
+
+  <!-- build:js js/app.js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/jquery.dataTables.js"></script>
+  <script src="js/dataTables.bootstrap.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <script src="js/filereader.js"></script>
+  <!-- customized -->
+  <script src="js/aboitiz-app.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

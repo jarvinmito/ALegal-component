@@ -1,4 +1,4 @@
-<h3>Request Status Page</h3>
+<h3>Form Templates Page</h3>
 <p>Acces level: <b>All</b></p>
 <div class="panel panel-default">
 	<div class="panel-body">
@@ -6,10 +6,16 @@
 			<div class="abcom abcom-filter nav">
 			  <div class="navbar-left">
 			    <div class="form-group">
+			      <a href="#" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Template</a>
 			      <label for="" class="abcom-filter__label">Filter/Search by:</label>
 			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
 			            <option selected>Select Category</option>
-			            <option value="text">Status Name</option>
+			            <option value="dropdown">Service Type</option>
+			            <option value="dropdown">Category</option>
+			            <option value="dropdown">Sub Category A</option>
+			            <option value="dropdown">Sub Category B</option>
+			            <option value="dropdown">SLC</option>
+			            <option value="text">Status</option>
 			            <option value="text">Created by</option>
 			            <option value="date">Date Created</option>
 			          </select>
@@ -54,7 +60,7 @@
 			    <div class="form-group">
 			      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
 			      <label for="" class="abcom-filter__label">Entries per page</label>
-			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-status">
+			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#templates-forms-table">
 			            <option value="10">10</option>
 			            <option value="25">25</option>
 			            <option value="50">50</option>
@@ -64,75 +70,49 @@
 			  </div>
 			</div>
 
-			<table id="management-status" class="abcom abcom-table">
+			<table id="templates-forms-table" class="abcom abcom-table">
 			    <thead>
 			        <tr>
-			            <th>Status Name</th>
-			            <th>Color</th>
+			            <th>Service Type</th>
+			            <th>Categories</th>
+			            <th>SLC</th>
 			            <th>Created by</th>
 			            <th>Date Created</th>
+			            <th>Status</th>
 			            <th>Action</th>
 			        </tr>
 			    </thead>
 			    <tbody>
 			        <tr>
-			            <td>Completed</td>
-			            <td><progress class="abcom-progress" data-status="Completed" value="100" max="100"></progress></td>
-			            <td>Name of Creator</td>
+			            <td>Type of Service</td>
+			            <td>Category</td>
+			            <td>SLC</td>
+			            <td>Creator</td>
 			            <td>mm/dd/yyyy</td>
+			            <td>Status</td>
 			            <td>
-							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+			            	<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-download"></i></button>
+			            	<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
 			            </td>
 			        </tr>
 			        <tr>
-			            <td>For Pickup</td>
-			            <td><progress class="abcom-progress" data-status="For Pickup" value="80" max="100"></progress></td>
-			            <td>Name of Creator</td>
+			            <td>Type of Service</td>
+			            <td>Category</td>
+			            <td>SLC</td>
+			            <td>Creator</td>
 			            <td>mm/dd/yyyy</td>
+			            <td>Status</td>
 			            <td>
-							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
-			            </td>
-			        </tr>
-			        <tr>
-			            <td>For Processing</td>
-			            <td><progress class="abcom-progress" data-status="For Processing" value="50" max="100"></progress></td>
-			            <td>Name of Creator</td>
-			            <td>mm/dd/yyyy</td>
-			            <td>
-							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
-			            </td>
-			        </tr>
-			        <tr>
-			            <td>For Approval</td>
-			            <td><progress class="abcom-progress" data-status="For Approval" value="40" max="100"></progress></td>
-			            <td>Name of Creator</td>
-			            <td>mm/dd/yyyy</td>
-			            <td>
-							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
-			            </td>
-			        </tr>
-			        <tr>
-			            <td>For Endoresment</td>
-			            <td><progress class="abcom-progress" data-status="For Endorsement" value="20" max="100"></progress></td>
-			            <td>Name of Creator</td>
-			            <td>mm/dd/yyyy</td>
-			            <td>
-							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
-			            </td>
-			        </tr>
-			        <tr>
-			            <td>Cancelled</td>
-			            <td><progress class="abcom-progress" data-status="Cancelled" value="100" max="100"></progress></td>
-			            <td>Name of Creator</td>
-			            <td>mm/dd/yyyy</td>
-			            <td>
-							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+							<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+			            	<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-download"></i></button>
+			            	<button type="button" class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
 			            </td>
 			        </tr>
 			    </tbody>
 			</table>
 		
-			
+
 		{{!-- END CONTENT HERE --}}
 	</div>
 </div>
@@ -142,10 +122,16 @@
 <pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
     &lt;div class=&quot;navbar-left&quot;&gt;
       &lt;div class=&quot;form-group&quot;&gt;
+        &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;Create New Template&lt;/a&gt;
         &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
             &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
               &lt;option selected&gt;Select Category&lt;/option&gt;
-              &lt;option value=&quot;text&quot;&gt;Status Name&lt;/option&gt;
+              &lt;option value=&quot;dropdown&quot;&gt;Service Type&lt;/option&gt;
+              &lt;option value=&quot;dropdown&quot;&gt;Category&lt;/option&gt;
+              &lt;option value=&quot;dropdown&quot;&gt;Sub Category A&lt;/option&gt;
+              &lt;option value=&quot;dropdown&quot;&gt;Sub Category B&lt;/option&gt;
+              &lt;option value=&quot;dropdown&quot;&gt;SLC&lt;/option&gt;
+              &lt;option value=&quot;text&quot;&gt;Status&lt;/option&gt;
               &lt;option value=&quot;text&quot;&gt;Created by&lt;/option&gt;
               &lt;option value=&quot;date&quot;&gt;Date Created&lt;/option&gt;
             &lt;/select&gt;
@@ -190,7 +176,7 @@
       &lt;div class=&quot;form-group&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
         &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
-            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#management-status&quot;&gt;
+            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#templates-forms-table&quot;&gt;
               &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
               &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
               &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
@@ -200,72 +186,46 @@
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;table id=&quot;management-status&quot; class=&quot;abcom abcom-table&quot;&gt;
+  &lt;table id=&quot;templates-forms-table&quot; class=&quot;abcom abcom-table&quot;&gt;
       &lt;thead&gt;
           &lt;tr&gt;
-              &lt;th&gt;Status Name&lt;/th&gt;
-              &lt;th&gt;Color&lt;/th&gt;
+              &lt;th&gt;Service Type&lt;/th&gt;
+              &lt;th&gt;Categories&lt;/th&gt;
+              &lt;th&gt;SLC&lt;/th&gt;
               &lt;th&gt;Created by&lt;/th&gt;
               &lt;th&gt;Date Created&lt;/th&gt;
+              &lt;th&gt;Status&lt;/th&gt;
               &lt;th&gt;Action&lt;/th&gt;
           &lt;/tr&gt;
       &lt;/thead&gt;
       &lt;tbody&gt;
           &lt;tr&gt;
-              &lt;td&gt;Completed&lt;/td&gt;
-              &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;Completed&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
+              &lt;td&gt;Type of Service&lt;/td&gt;
+              &lt;td&gt;Category&lt;/td&gt;
+              &lt;td&gt;SLC&lt;/td&gt;
+              &lt;td&gt;Creator&lt;/td&gt;
               &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+              &lt;td&gt;Status&lt;/td&gt;
               &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
               &lt;/td&gt;
           &lt;/tr&gt;
           &lt;tr&gt;
-              &lt;td&gt;For Pickup&lt;/td&gt;
-              &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Pickup&quot; value=&quot;80&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
+              &lt;td&gt;Type of Service&lt;/td&gt;
+              &lt;td&gt;Category&lt;/td&gt;
+              &lt;td&gt;SLC&lt;/td&gt;
+              &lt;td&gt;Creator&lt;/td&gt;
               &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+              &lt;td&gt;Status&lt;/td&gt;
               &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-              &lt;td&gt;For Processing&lt;/td&gt;
-              &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Processing&quot; value=&quot;50&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-              &lt;td&gt;For Approval&lt;/td&gt;
-              &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Approval&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-              &lt;td&gt;For Endoresment&lt;/td&gt;
-              &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Endorsement&quot; value=&quot;20&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-              &lt;td&gt;Cancelled&lt;/td&gt;
-              &lt;td&gt;&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;Cancelled&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
               &lt;/td&gt;
           &lt;/tr&gt;
       &lt;/tbody&gt;
   &lt;/table&gt;</code></pre>
 
-<a href="exp-cms-management-status.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Request Status Page</a>
+<a href="exp-cms-templates-forms.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Form Templates Page</a>

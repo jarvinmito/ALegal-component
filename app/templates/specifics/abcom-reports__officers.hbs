@@ -1,0 +1,213 @@
+<h3>Summary of Directors &amp; Officers Page</h3>
+<p>Acces level: <b>All</b></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		{{!-- START CONTENT HERE --}}
+			
+		<div class="abcom abcom-filter nav">
+		  <div class="navbar-left">
+		    <div class="form-group">
+		      <label for="" class="abcom-filter__label">Filter/Search by:</label>
+		          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
+		            <option selected>Select Category</option>
+		            <option value="text">Company Name</option>
+		            <option value="text">Director Name</option>
+		            <option value="text">Officer Name</option>
+		          </select>
+		          <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
+		          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
+		            <option value="">Option 1</option>
+		            <option value="">Option 2</option>
+		            <option value="">Option 3</option>
+		            <option value="">Option 4</option>
+		            <option value="">Option 5</option>
+		          </select>
+
+		          <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
+		                <div class='input-group abcom-filter__date' data-role="from">
+		                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+		                    <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+		                <div class='input-group abcom-filter__date' data-role="to">
+		                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+		                    <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+		            </div>
+
+		            <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
+		                <div class='input-group abcom-filter__date'>
+		                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
+		                    <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+		            </div>
+
+		            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+		            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
+		      </div>
+		  </div>
+		  <div class="navbar-right">
+		    <div class="form-group">
+			  <label for="" class="abcom-filter__label">Export as:</label>
+		      <button type="button" class="btn abcom-btn abcom-btn--default">PDF</button>
+		      <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">XLS</button>
+
+		      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
+		      <label for="" class="abcom-filter__label">Entries per page</label>
+		          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#reports-officers-table">
+		            <option value="10">10</option>
+		            <option value="25">25</option>
+		            <option value="50">50</option>
+		            <option value="100">100</option>
+		          </select>
+		      </div>
+		  </div>
+		</div>
+
+		<table id="reports-officers-table" class="abcom abcom-table">
+		    <thead>
+		        <tr>
+		            <th>Company Name</th>
+		            <th>Director Name</th>
+		            <th>Director Designation</th>
+		            <th>Officer Name</th>
+		            <th>Officer Designation</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		            <td>Name of Company</td>
+		            <td>Name of Director</td>
+		            <td>Designation of Director</td>
+		            <td>Name of Officer</td>
+		            <td>Designation of Officer</td>
+		        </tr>
+		        <tr>
+		            <td>Name of Company</td>
+		            <td>Name of Director</td>
+		            <td>Designation of Director</td>
+		            <td>Name of Officer</td>
+		            <td>Designation of Officer</td>
+		        </tr>
+		        <tr>
+		            <td>Name of Company</td>
+		            <td>Name of Director</td>
+		            <td>Designation of Director</td>
+		            <td>Name of Officer</td>
+		            <td>Designation of Officer</td>
+		        </tr>
+		    </tbody>
+		</table>
+
+		{{!-- END CONTENT HERE --}}
+	</div>
+</div>
+
+<p>Insert this code inside the <code>main-content__main</code> section.</p>
+
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
+  &lt;div class=&quot;navbar-left&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
+            &lt;option selected&gt;Select Category&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Company Name&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Director Name&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Officer Name&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
+          &lt;/select&gt;
+
+          &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
+                &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
+                &lt;div class='input-group abcom-filter__date'&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;navbar-right&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Export as:&lt;/label&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;PDF&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;XLS&lt;/button&gt;
+
+      &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#reports-officers-table&quot;&gt;
+            &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+            &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+            &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+            &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+          &lt;/select&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;table id=&quot;reports-officers-table&quot; class=&quot;abcom abcom-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Company Name&lt;/th&gt;
+            &lt;th&gt;Director Name&lt;/th&gt;
+            &lt;th&gt;Director Designation&lt;/th&gt;
+            &lt;th&gt;Officer Name&lt;/th&gt;
+            &lt;th&gt;Officer Designation&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Name of Company&lt;/td&gt;
+            &lt;td&gt;Name of Director&lt;/td&gt;
+            &lt;td&gt;Designation of Director&lt;/td&gt;
+            &lt;td&gt;Name of Officer&lt;/td&gt;
+            &lt;td&gt;Designation of Officer&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Name of Company&lt;/td&gt;
+            &lt;td&gt;Name of Director&lt;/td&gt;
+            &lt;td&gt;Designation of Director&lt;/td&gt;
+            &lt;td&gt;Name of Officer&lt;/td&gt;
+            &lt;td&gt;Designation of Officer&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Name of Company&lt;/td&gt;
+            &lt;td&gt;Name of Director&lt;/td&gt;
+            &lt;td&gt;Designation of Director&lt;/td&gt;
+            &lt;td&gt;Name of Officer&lt;/td&gt;
+            &lt;td&gt;Designation of Officer&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<a href="exp-cms-reports-officers.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Summary of Directors &amp; Officers Page</a>
