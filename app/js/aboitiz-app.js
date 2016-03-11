@@ -69,14 +69,15 @@ var aboitizApp = (function(){
 		var elem = $('.abcom-list__dropdown');
 		var renderList = function(elem){
 			var html = "";
-			var values = selection.val();
+			var currSel = elem;
+			var values = currSel.val();
 
 			for(var key in values){
 				// console.log( key, values, values[key]);
 				html += '<li class="abcom-list__item" data-index="'+key+'" data-value="'+values[key]+'">'+values[key]+'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
 			}
 
-			var id = elem.attr('id');
+			var id = currSel.attr('id');
 			var list = $('.abcom-list[data-parent="'+id+'"]');
 			list.html(html);
 			list.find('.abcom-list__item__link').unbind('click');
@@ -85,24 +86,54 @@ var aboitizApp = (function(){
 				var index = thisList.data('index');
 
 				// Remove from selection -- Array
-				var newValue = selection.val();
+				var newValue = currSel.val();
 				newValue.splice(index, 1);
 
 				thisList.remove();
 
-				selection.val(newValue);
-				selection.trigger('change');
+				currSel.val(newValue);
+				currSel.trigger('change');
 			});
 		};
 
 		if( elem.length ){
-			var selection = elem.select2({
-					placeholder : 'Select ' + elem.data('title')
-				});
+			elem.each(function(){
+				var selection = $(this).select2({
+						placeholder : 'Select ' + $(this).data('title')
+					});
 
-			renderList(elem);
-			selection.on('change', function(){ renderList(elem); });
+				renderList($(this));
+				selection.on('change', function(){ renderList($(this)); });
+			});
+		}
+	};
 
+	// Used in form dates only
+	var initDTpicker = function(){
+		if( $('.abcom-form__date').length ){
+			$('.abcom-form__date').each(function(){
+				$(this).datetimepicker({
+					format: 'MM/DD/YYYY'
+				});	
+			})
+		}
+
+		if( $('.abcom-form__daterange').length ){
+			$('.abcom-form__daterange').each(function(){
+				var currSet = $(this),
+					currFrom = currSet.find('.abcom-form__daterange--from'),
+					currTo = currSet.find('.abcom-form__daterange--to');
+
+				currFrom.datetimepicker({ format: 'MM/DD/YYYY' });
+				currFrom.on("dp.change", function (e) {
+					currTo.data("DateTimePicker").minDate(e.date);
+		        });
+
+		        currTo.datetimepicker({ format: 'MM/DD/YYYY', useCurrent : false });
+				currTo.on("dp.change", function (e) {
+					currFrom.data("DateTimePicker").maxDate(e.date);
+		        });
+			});
 		}
 	};
 
@@ -251,7 +282,50 @@ var aboitizApp = (function(){
 	};
 
 	var initDataTables = function(){
-		$('.abcom-table').dataTable();
+		if( $('.abcom-table').length ){
+			$('.abcom-table').each(function(){
+				$(this).dataTable();
+			});
+		}
+	};
+
+	var initMovables = function(){
+		if( $('.abcom-movables').length ){
+			$('.abcom-movables').each(function(){
+
+				var currSet = $(this);
+
+				currSet.find('input').on('change', function(){
+					var new_val = parseInt($(this).val()),
+						old_val = parseInt($(this).parent('div.abcom-movables__data').attr('data-sort')),
+						$movable_contents = currSet,
+						$movables = $movable_contents.children('div.abcom-movables__data[data-sort]');
+
+					if(new_val <= $movables.length){
+						var pair = $('div.abcom-movables__data[data-sort="'+new_val+'"]'),
+							curr = $(this).parent('div.abcom-movables__data');
+						
+						// Find pair and replace number
+						currSet.find('div.abcom-movables__data[data-id="'+pair.attr('data-id')+'"]').attr('data-sort', old_val).children('input').attr('placeholder',old_val);
+						// Change self
+						curr.attr('data-sort', new_val);
+						$(this).attr('placeholder',new_val);
+						// console.log(curr.attr('data-sort'), pair.attr('data-sort'));
+
+						// Sorting start
+						$movables.sort(function(a,b) {
+							var ae = parseInt($(a).attr('data-sort')),
+								be = parseInt($(b).attr('data-sort'));
+							console.log(ae-be);
+						    return ae - be;
+						}).appendTo($movable_contents, 2000);
+						// Sorting Ends
+					}
+					currSet.find('input').val("");
+				});
+
+			});
+		}
 	};
 
 	var initModule = function(){
@@ -259,8 +333,10 @@ var aboitizApp = (function(){
 		initListing();
 		initFileReader();
 		initDateTimePicker();
+		initDTpicker();
 		initFilter();
 		initDataTables();
+		initMovables();
 	};
 
 	return {
@@ -269,8 +345,10 @@ var aboitizApp = (function(){
 		initListing : initListing,
 		initFileReader : initFileReader,
 		initDateTimePicker : initDateTimePicker,
+		initDTpicker : initDTpicker,
 		initFilter : initFilter,
-		initDataTables : initDataTables
+		initDataTables : initDataTables,
+		initMovables : initMovables
 	}
 
 }());

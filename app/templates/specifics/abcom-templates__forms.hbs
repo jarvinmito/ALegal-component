@@ -6,7 +6,7 @@
 			<div class="abcom abcom-filter nav">
 			  <div class="navbar-left">
 			    <div class="form-group">
-			      <a href="#" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Template</a>
+			      <a href="#" data-toggle="modal" data-target="#newTemplate-form" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Template</a>
 			      <label for="" class="abcom-filter__label">Filter/Search by:</label>
 			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
 			            <option selected>Select Category</option>
@@ -111,9 +111,224 @@
 			        </tr>
 			    </tbody>
 			</table>
+
+
+			<div id="newTemplate-form" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			            <h4 class="modal-title" id="myModalLabel">Create New Form Template</h4>
+			        </div>
+			        <div class="modal-body">
+			          <form action="" class="form-horizontal">
+
+			            <div class="form-group">
+			              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Service Type*</label>
+			              <div class="col-sm-8">
+			                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+			                  <option selected>Select Service Type</option>
+			                  <option value="">Type A</option>
+			                  <option value="">Type B</option>
+			                </select>
+			              </div>
+			            </div>
+
+			            <div class="form-group">
+			              <label for="modal_form_category" class="col-sm-4 abcom-container--left">Category</label>
+			              <div class="col-sm-8">
+			                <select name="" id="modal_form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+			                  <option selected>Select Category</option>
+			                  <option value="">Category A</option>
+			                  <option value="">Category B</option>
+			                </select>
+			              </div>
+			            </div>
+
+			            <div class="form-group">
+			              <label for="modal_form_suba" class="col-sm-4 abcom-container--left">Sub-Category A</label>
+			              <div class="col-sm-8">
+			                <select name="" id="modal_form_suba" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+			                  <option selected>Select Category</option>
+			                  <option value="">Sub-Category A - 1</option>
+			                  <option value="">Sub-Category A - 2</option>
+			                </select>
+			              </div>
+			            </div>
+
+			            <div class="form-group">
+			              <label for="modal_form_subb" class="col-sm-4 abcom-container--left">Sub-Category B</label>
+			              <div class="col-sm-8">
+			                <select name="" id="modal_form_subb" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+			                  <option selected>Select Category</option>
+			                  <option value="">Sub-Category B - 1</option>
+			                  <option value="">Sub-Category B - 2</option>
+			                </select>
+			              </div>
+			            </div>
+
+			            <div class="form-group">
+			              <label for="" class="col-sm-4 abcom-container--left">For Endorsement</label>
+			              <div class="col-sm-8">
+			                <label for="endorse-yes"><input type="radio" name="newform-endorsement" id="endorse-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+			                <label for="endorse-no"><input type="radio" name="newform-endorsement" id="endorse-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+			              </div>
+			            </div>
+
+			            <div class="form-group">
+			              <label for="" class="col-sm-4 abcom-container--left">For Approval</label>
+			              <div class="col-sm-8">
+			                <label for="approve-yes"><input type="radio" name="newform-approval" id="approve-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+			                <label for="approve-no"><input type="radio" name="newform-approval" id="approve-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+			              </div>
+			            </div>
+
+			            <div class="form-group">
+			              <label for="" class="col-sm-4 abcom-container--left">Auto-generate MoM</label>
+			              <div class="col-sm-8">
+			                <label for="mom-yes"><input type="radio" name="newform-mom" id="mom-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+			                <label for="mom-no"><input type="radio" name="newform-mom" id="mom-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+			              </div>
+			            </div>
+
+			            <div class="form-group">
+			                <label for="modal_form_slc" class="col-sm-4 abcom-container--left">SLC in Days</label>
+			                <div class="col-sm-8">
+			                  <input type="text" name="" id="modal_form_slc" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+			                </div>
+			            </div>
+
+			            <div class="form-group">
+			                <label for="modal_form_slc" class="col-sm-4 abcom-container--left">Reference No.</label>
+			                <div class="col-sm-8">
+			                  <input type="text" name="" id="modal_form_slc" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+			                </div>
+			            </div>
+
+			            <div class="form-group">
+			              <div class="col-sm-12">
+			                <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+			              </div>
+			            </div>
+			          </form>
+			        </div>
+			    </div>
+			  </div>
+			</div>
 		
 
 		{{!-- END CONTENT HERE --}}
+	</div>
+</div>
+
+<h4>Create New Form Template</h4>
+<p>When the user clicks <code>Create new template</code>, a modal will pop up.</p>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		
+		<div class="abcom-modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+		            <h4 class="modal-title" id="myModalLabel">Create New Form Template</h4>
+		        </div>
+		        <div class="modal-body">
+		          <form action="" class="form-horizontal">
+
+		            <div class="form-group">
+		              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Service Type*</label>
+		              <div class="col-sm-8">
+		                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+		                  <option selected>Select Service Type</option>
+		                  <option value="">Type A</option>
+		                  <option value="">Type B</option>
+		                </select>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="modal_form_category" class="col-sm-4 abcom-container--left">Category</label>
+		              <div class="col-sm-8">
+		                <select name="" id="modal_form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+		                  <option selected>Select Category</option>
+		                  <option value="">Category A</option>
+		                  <option value="">Category B</option>
+		                </select>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="modal_form_suba" class="col-sm-4 abcom-container--left">Sub-Category A</label>
+		              <div class="col-sm-8">
+		                <select name="" id="modal_form_suba" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+		                  <option selected>Select Category</option>
+		                  <option value="">Sub-Category A - 1</option>
+		                  <option value="">Sub-Category A - 2</option>
+		                </select>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="modal_form_subb" class="col-sm-4 abcom-container--left">Sub-Category B</label>
+		              <div class="col-sm-8">
+		                <select name="" id="modal_form_subb" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+		                  <option selected>Select Category</option>
+		                  <option value="">Sub-Category B - 1</option>
+		                  <option value="">Sub-Category B - 2</option>
+		                </select>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="" class="col-sm-4 abcom-container--left">For Endorsement</label>
+		              <div class="col-sm-8">
+		                <label for="endorse-yes"><input type="radio" name="newform-endorsement" id="endorse-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+		                <label for="endorse-no"><input type="radio" name="newform-endorsement" id="endorse-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="" class="col-sm-4 abcom-container--left">For Approval</label>
+		              <div class="col-sm-8">
+		                <label for="approve-yes"><input type="radio" name="newform-approval" id="approve-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+		                <label for="approve-no"><input type="radio" name="newform-approval" id="approve-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="" class="col-sm-4 abcom-container--left">Auto-generate MoM</label>
+		              <div class="col-sm-8">
+		                <label for="mom-yes"><input type="radio" name="newform-mom" id="mom-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+		                <label for="mom-no"><input type="radio" name="newform-mom" id="mom-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		                <label for="modal_form_slc" class="col-sm-4 abcom-container--left">SLC in Days</label>
+		                <div class="col-sm-8">
+		                  <input type="text" name="" id="modal_form_slc" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+		                </div>
+		            </div>
+
+		            <div class="form-group">
+		                <label for="modal_form_slc" class="col-sm-4 abcom-container--left">Reference No.</label>
+		                <div class="col-sm-8">
+		                  <input type="text" name="" id="modal_form_slc" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+		                </div>
+		            </div>
+
+		            <div class="form-group">
+		              <div class="col-sm-12">
+		                <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		    </div>
+		  </div>
+		</div>
 	</div>
 </div>
 
@@ -122,7 +337,7 @@
 <pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
     &lt;div class=&quot;navbar-left&quot;&gt;
       &lt;div class=&quot;form-group&quot;&gt;
-        &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;Create New Template&lt;/a&gt;
+        &lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;#newTemplate-form&quot; role=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;Create New Template&lt;/a&gt;
         &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
             &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
               &lt;option selected&gt;Select Category&lt;/option&gt;
@@ -226,6 +441,110 @@
               &lt;/td&gt;
           &lt;/tr&gt;
       &lt;/tbody&gt;
-  &lt;/table&gt;</code></pre>
+  &lt;/table&gt;
+
+
+  &lt;div id=&quot;newTemplate-form&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;modal-dialog&quot;&gt;
+      &lt;div class=&quot;modal-content&quot;&gt;
+          &lt;div class=&quot;modal-header&quot;&gt;
+              &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
+              &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Create New Form Template&lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;modal-body&quot;&gt;
+            &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;modal_form_service&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Service Type*&lt;/label&gt;
+                &lt;div class=&quot;col-sm-8&quot;&gt;
+                  &lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                    &lt;option selected&gt;Select Service Type&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Type A&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Type B&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;modal_form_category&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Category&lt;/label&gt;
+                &lt;div class=&quot;col-sm-8&quot;&gt;
+                  &lt;select name=&quot;&quot; id=&quot;modal_form_category&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                    &lt;option selected&gt;Select Category&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Category A&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Category B&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;modal_form_suba&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Sub-Category A&lt;/label&gt;
+                &lt;div class=&quot;col-sm-8&quot;&gt;
+                  &lt;select name=&quot;&quot; id=&quot;modal_form_suba&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                    &lt;option selected&gt;Select Category&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Sub-Category A - 1&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Sub-Category A - 2&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;modal_form_subb&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Sub-Category B&lt;/label&gt;
+                &lt;div class=&quot;col-sm-8&quot;&gt;
+                  &lt;select name=&quot;&quot; id=&quot;modal_form_subb&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                    &lt;option selected&gt;Select Category&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Sub-Category B - 1&lt;/option&gt;
+                    &lt;option value=&quot;&quot;&gt;Sub-Category B - 2&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;For Endorsement&lt;/label&gt;
+                &lt;div class=&quot;col-sm-8&quot;&gt;
+                  &lt;label for=&quot;endorse-yes&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;newform-endorsement&quot; id=&quot;endorse-yes&quot; class=&quot;form-control abcom-form abcom-form--min abcom-form--hasmargin&quot;&gt;Yes&lt;/label&gt;
+                  &lt;label for=&quot;endorse-no&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;newform-endorsement&quot; id=&quot;endorse-no&quot; class=&quot;form-control abcom-form abcom-form--min abcom-form--hasmargin&quot;&gt;No&lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;For Approval&lt;/label&gt;
+                &lt;div class=&quot;col-sm-8&quot;&gt;
+                  &lt;label for=&quot;approve-yes&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;newform-approval&quot; id=&quot;approve-yes&quot; class=&quot;form-control abcom-form abcom-form--min abcom-form--hasmargin&quot;&gt;Yes&lt;/label&gt;
+                  &lt;label for=&quot;approve-no&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;newform-approval&quot; id=&quot;approve-no&quot; class=&quot;form-control abcom-form abcom-form--min abcom-form--hasmargin&quot;&gt;No&lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Auto-generate MoM&lt;/label&gt;
+                &lt;div class=&quot;col-sm-8&quot;&gt;
+                  &lt;label for=&quot;mom-yes&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;newform-mom&quot; id=&quot;mom-yes&quot; class=&quot;form-control abcom-form abcom-form--min abcom-form--hasmargin&quot;&gt;Yes&lt;/label&gt;
+                  &lt;label for=&quot;mom-no&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;newform-mom&quot; id=&quot;mom-no&quot; class=&quot;form-control abcom-form abcom-form--min abcom-form--hasmargin&quot;&gt;No&lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label for=&quot;modal_form_slc&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;SLC in Days&lt;/label&gt;
+                  &lt;div class=&quot;col-sm-8&quot;&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;modal_form_slc&quot; class=&quot;abcom-form abcom-form--full abcom-form--hasmargin form-control&quot; placeholder=&quot;Type here&quot;&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                  &lt;label for=&quot;modal_form_slc&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Reference No.&lt;/label&gt;
+                  &lt;div class=&quot;col-sm-8&quot;&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;modal_form_slc&quot; class=&quot;abcom-form abcom-form--full abcom-form--hasmargin form-control&quot; placeholder=&quot;Type here&quot;&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;col-sm-12&quot;&gt;
+                  &lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--full&quot; value=&quot;Submit&quot;&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
 
 <a href="exp-cms-templates-forms.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Form Templates Page</a>

@@ -22,10 +22,42 @@
 		width :100%;
 		display: block;
 	}
+
+	&__daterange{
+		&--from{
+			margin-right: 4px;
+		}
+
+		&--from, &--to{
+			width: 49%;
+			float: left;
+
+			&, & .input-group-addon{
+				box-shadow: none;
+				color: $black;
+				border-color: $gray-bg-active;
+			}
+
+			& .input-group-addon{
+				cursor: pointer;
+			}
+		}
+	}
 }
 
 textarea.abcom-form{
 	height: 130px;
+}
+
+input[type="radio"].abcom-form{
+	height: 14px;
+	vertical-align: top;
+	margin-top: 3px;
+
+	&, &:hover, &:active, &:focus{
+		outline: none;
+		box-shadow: none;
+	} 
 }
 
 label.abcom-form{
@@ -34,6 +66,11 @@ label.abcom-form{
 	margin-bottom: 0;
 	color: $black;
 	text-align: right;
+}
+
+img.abcom-form{
+	width: 100%;
+	height: auto;
 }
 
 /* FOR SELECT 2 OVERRIDES */

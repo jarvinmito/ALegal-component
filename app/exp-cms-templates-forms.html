@@ -82,10 +82,11 @@
 
       <section class="main-content__main">
         <!-- INSERT MAIN PANEL CONTENT HERE -->
+        
         <div class="abcom abcom-filter nav">
           <div class="navbar-left">
             <div class="form-group">
-              <a href="#" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Template</a>
+              <a href="#" data-toggle="modal" data-target="#newTemplate-form" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Template</a>
               <label for="" class="abcom-filter__label">Filter/Search by:</label>
                   <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
                     <option selected>Select Category</option>
@@ -190,6 +191,111 @@
                 </tr>
             </tbody>
         </table>
+
+
+        <div id="newTemplate-form" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create New Form Template</h4>
+                </div>
+                <div class="modal-body">
+                  <form action="" class="form-horizontal">
+
+                    <div class="form-group">
+                      <label for="modal_form_service" class="col-sm-4 abcom-container--left">Service Type*</label>
+                      <div class="col-sm-8">
+                        <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                          <option selected>Select Service Type</option>
+                          <option value="">Type A</option>
+                          <option value="">Type B</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="modal_form_category" class="col-sm-4 abcom-container--left">Category</label>
+                      <div class="col-sm-8">
+                        <select name="" id="modal_form_category" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                          <option selected>Select Category</option>
+                          <option value="">Category A</option>
+                          <option value="">Category B</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="modal_form_suba" class="col-sm-4 abcom-container--left">Sub-Category A</label>
+                      <div class="col-sm-8">
+                        <select name="" id="modal_form_suba" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                          <option selected>Select Category</option>
+                          <option value="">Sub-Category A - 1</option>
+                          <option value="">Sub-Category A - 2</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="modal_form_subb" class="col-sm-4 abcom-container--left">Sub-Category B</label>
+                      <div class="col-sm-8">
+                        <select name="" id="modal_form_subb" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                          <option selected>Select Category</option>
+                          <option value="">Sub-Category B - 1</option>
+                          <option value="">Sub-Category B - 2</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="" class="col-sm-4 abcom-container--left">For Endorsement</label>
+                      <div class="col-sm-8">
+                        <label for="endorse-yes"><input type="radio" name="newform-endorsement" id="endorse-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+                        <label for="endorse-no"><input type="radio" name="newform-endorsement" id="endorse-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="" class="col-sm-4 abcom-container--left">For Approval</label>
+                      <div class="col-sm-8">
+                        <label for="approve-yes"><input type="radio" name="newform-approval" id="approve-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+                        <label for="approve-no"><input type="radio" name="newform-approval" id="approve-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="" class="col-sm-4 abcom-container--left">Auto-generate MoM</label>
+                      <div class="col-sm-8">
+                        <label for="mom-yes"><input type="radio" name="newform-mom" id="mom-yes" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">Yes</label>
+                        <label for="mom-no"><input type="radio" name="newform-mom" id="mom-no" class="form-control abcom-form abcom-form--min abcom-form--hasmargin">No</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modal_form_slc" class="col-sm-4 abcom-container--left">SLC in Days</label>
+                        <div class="col-sm-8">
+                          <input type="text" name="" id="modal_form_slc" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modal_form_slc" class="col-sm-4 abcom-container--left">Reference No.</label>
+                        <div class="col-sm-8">
+                          <input type="text" name="" id="modal_form_slc" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
       </section><!-- // End main -->
 
     </section>

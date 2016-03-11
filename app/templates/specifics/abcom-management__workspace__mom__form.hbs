@@ -1,0 +1,302 @@
+<h3>Workspace MoM Edit / Preview Page</h3>
+<p>Acces level: <b>All</b></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		{{!-- START CONTENT HERE --}}
+		<form action="" class="form-horizontal">
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Edit Minutes of the Meeting</span>
+			  <span class="abcom-title__sub">Please fill out the form. All fields are required.</span>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-9">
+						<!-- Company -->
+						<div class="form-group">
+				            <label for="form_company" class="col-sm-2">Company</label>
+				            <div class="col-sm-10">
+				              <select name="" id="form_company" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+				                  <option selected>Select Company</option>
+				                  <option value="">Aboitiz</option>
+				                  <option value="">Legal</option>
+				                  <option value="">Wire</option>
+				              </select>
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+				            <label for="form_meetingtype" class="col-sm-2">Meeting Type</label>
+				            <div class="col-sm-4">
+				              <select name="" id="form_meetingtype" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+				                  <option selected>Select Type</option>
+				                  <option value="">Annual Stockholders’ Meeting</option>
+				                  <option value="">Organizational Board Meeting</option>
+				                  <option value="">Regular Board Meeting</option>
+				                  <option value="">Special Board Meeting</option>
+				                  <option value="">Special Stockholders’ Meeting</option>
+				              </select>
+				            </div>
+				            <label for="form_meetingdate" class="col-sm-1">Date</label>
+				            <div class="col-sm-5">
+				            	<div class="abcom-form__daterange">
+								    <div class='input-group abcom-form__daterange--from'>
+								        <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+								        <span class="input-group-addon">
+								            <span class="glyphicon glyphicon-calendar"></span>
+								        </span>
+								    </div>
+								    <div class='input-group abcom-form__daterange--to'>
+								        <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+								        <span class="input-group-addon">
+								            <span class="glyphicon glyphicon-calendar"></span>
+								        </span>
+								    </div>
+								</div> 
+				            </div>
+
+				        </div>
+
+				        <hr>
+
+				        <div class="form-group">
+						  <label for="form_dpresent" class="col-sm-3">Directors Present</label>
+						  <div class="col-sm-9">
+						    <select multiple id="form_dpresent" data-title="Directors" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_dpresent"></ol>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						  <label for="form_dabsent" class="col-sm-3">Directors Present</label>
+						  <div class="col-sm-9">
+						    <select multiple id="form_dabsent" data-title="Directors" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_dabsent"></ol>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						  <label for="form_attendance" class="col-sm-3">in Attendance</label>
+						  <div class="col-sm-9">
+						    <select multiple id="form_attendance" data-title="Directors" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_attendance"></ol>
+						  </div>
+						</div>
+
+						<div class="form-group">
+							<label for="form_address" class="col-sm-3">Address</label>
+				            <div class="col-sm-9">
+				            	<input type="text" id="form_meetingdate" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+				        </div>
+						
+						<div class="form-group">
+							<label for="form_organizer" class="col-sm-3">Organized by</label>
+							<div class="col-sm-9">
+								<select name="" id="form_organizer" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+								    <option selected>Select Category</option>
+								    <option value="">Yvonne Strahovsky</option>
+								    <option value="">Natalie Dormer</option>
+								    <option value="">Juan Dela Cruz</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="form_recorder" class="col-sm-3">Recorded by</label>
+							<div class="col-sm-9">
+								<select name="" id="form_recorder" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+								    <option selected>Select Category</option>
+								    <option value="">Yvonne Strahovsky</option>
+								    <option value="">Natalie Dormer</option>
+								    <option value="">Juan Dela Cruz</option>
+								</select>
+							</div>
+						</div>
+						
+						<hr>
+
+						<div class="form-group">
+				            <div class="col-sm-12">
+				              <div class="abcom-container abcom-container--right">
+				                <button type="button" class="btn abcom-btn abcom-btn--default">Download as DOC</button>
+				                <button type="button" class="btn abcom-btn abcom-btn--default">Download as PDF</button>
+				                <button type="button" class="btn abcom-btn abcom-btn--default">Cancel</button>
+				                <button type="submit" class="btn abcom-btn abcom-btn--default">Submit</button>
+				              </div>
+				            </div>
+				        </div>
+					</div>
+					<div class="col-sm-3">
+						<img class="abcom-form" src="assets/images/brand.png" alt="Aboitiz Legal">
+					</div>
+				</div>
+			</div>
+		</form>
+		{{!-- END CONTENT HERE --}}
+	</div>
+</div>
+
+<p>Insert this code inside the <code>main-content__main</code> section.</p>
+<pre class="yondu__code"><code>&lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+  &lt;div class=&quot;abcom-title&quot;&gt;
+    &lt;span class=&quot;abcom-title__main&quot;&gt;Edit Minutes of the Meeting&lt;/span&gt;
+    &lt;span class=&quot;abcom-title__sub&quot;&gt;Please fill out the form. All fields are required.&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-9&quot;&gt;
+        &lt;!-- Company --&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;form_company&quot; class=&quot;col-sm-2&quot;&gt;Company&lt;/label&gt;
+                &lt;div class=&quot;col-sm-10&quot;&gt;
+                  &lt;select name=&quot;&quot; id=&quot;form_company&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                      &lt;option selected&gt;Select Company&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Aboitiz&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Legal&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Wire&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label for=&quot;form_meetingtype&quot; class=&quot;col-sm-2&quot;&gt;Meeting Type&lt;/label&gt;
+                &lt;div class=&quot;col-sm-4&quot;&gt;
+                  &lt;select name=&quot;&quot; id=&quot;form_meetingtype&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                      &lt;option selected&gt;Select Type&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Annual Stockholders’ Meeting&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Organizational Board Meeting&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Regular Board Meeting&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Special Board Meeting&lt;/option&gt;
+                      &lt;option value=&quot;&quot;&gt;Special Stockholders’ Meeting&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+                &lt;label for=&quot;form_meetingdate&quot; class=&quot;col-sm-1&quot;&gt;Date&lt;/label&gt;
+                &lt;div class=&quot;col-sm-5&quot;&gt;
+                  &lt;div class=&quot;abcom-form__daterange&quot;&gt;
+                &lt;div class='input-group abcom-form__daterange--from'&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class='input-group abcom-form__daterange--to'&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt; 
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;hr&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_dpresent&quot; class=&quot;col-sm-3&quot;&gt;Directors Present&lt;/label&gt;
+          &lt;div class=&quot;col-sm-9&quot;&gt;
+            &lt;select multiple id=&quot;form_dpresent&quot; data-title=&quot;Directors&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+              &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+              &lt;option&gt;Johann Cheese&lt;/option&gt;
+              &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+              &lt;option&gt;Natalie Dormer&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;ol class=&quot;abcom-list&quot; data-parent=&quot;form_dpresent&quot;&gt;&lt;/ol&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_dabsent&quot; class=&quot;col-sm-3&quot;&gt;Directors Present&lt;/label&gt;
+          &lt;div class=&quot;col-sm-9&quot;&gt;
+            &lt;select multiple id=&quot;form_dabsent&quot; data-title=&quot;Directors&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+              &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+              &lt;option&gt;Johann Cheese&lt;/option&gt;
+              &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+              &lt;option&gt;Natalie Dormer&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;ol class=&quot;abcom-list&quot; data-parent=&quot;form_dabsent&quot;&gt;&lt;/ol&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_attendance&quot; class=&quot;col-sm-3&quot;&gt;in Attendance&lt;/label&gt;
+          &lt;div class=&quot;col-sm-9&quot;&gt;
+            &lt;select multiple id=&quot;form_attendance&quot; data-title=&quot;Directors&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+              &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+              &lt;option&gt;Johann Cheese&lt;/option&gt;
+              &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+              &lt;option&gt;Natalie Dormer&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;ol class=&quot;abcom-list&quot; data-parent=&quot;form_attendance&quot;&gt;&lt;/ol&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_address&quot; class=&quot;col-sm-3&quot;&gt;Address&lt;/label&gt;
+                &lt;div class=&quot;col-sm-9&quot;&gt;
+                  &lt;input type=&quot;text&quot; id=&quot;form_meetingdate&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_organizer&quot; class=&quot;col-sm-3&quot;&gt;Organized by&lt;/label&gt;
+          &lt;div class=&quot;col-sm-9&quot;&gt;
+            &lt;select name=&quot;&quot; id=&quot;form_organizer&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                &lt;option selected&gt;Select Category&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Yvonne Strahovsky&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Natalie Dormer&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Juan Dela Cruz&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_recorder&quot; class=&quot;col-sm-3&quot;&gt;Recorded by&lt;/label&gt;
+          &lt;div class=&quot;col-sm-9&quot;&gt;
+            &lt;select name=&quot;&quot; id=&quot;form_recorder&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                &lt;option selected&gt;Select Category&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Yvonne Strahovsky&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Natalie Dormer&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Juan Dela Cruz&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;hr&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;col-sm-12&quot;&gt;
+                  &lt;div class=&quot;abcom-container abcom-container--right&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download as DOC&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Download as PDF&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Cancel&lt;/button&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Submit&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-3&quot;&gt;
+        &lt;img class=&quot;abcom-form&quot; src=&quot;assets/images/brand.png&quot; alt=&quot;Aboitiz Legal&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+<a href="exp-cms-management-workspace-mom-form.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Workspace Edit / Preview Page</a>

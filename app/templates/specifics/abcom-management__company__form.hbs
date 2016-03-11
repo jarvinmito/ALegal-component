@@ -1,0 +1,270 @@
+<h3>Company Profile Add / Edit / View Page</h3>
+<p>Acces level: <b>All</b></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+
+		<form action="" class="form-horizontal">
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Company Details</span>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-9">
+						
+						<div class="form-group">
+							<label for="form_company" class="col-sm-3">Name</label>
+				            <div class="col-sm-9">
+				            	<input type="text" id="form_company" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+							<label for="form_nature" class="col-sm-3">Nature of Business</label>
+				            <div class="col-sm-9">
+				            	<select name="" id="form_nature" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+								    <option selected>Select Nature</option>
+								    <option value="">Nature 1</option>
+								    <option value="">Nature 2</option>
+								    <option value="">Nature 3</option>
+								</select>
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+							<label for="form_oaddress" class="col-sm-3">Principal Office Address</label>
+				            <div class="col-sm-9">
+				            	<input type="text" id="form_oaddress" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+							<label for="form_baddress" class="col-sm-3">Business Address</label>
+				            <div class="col-sm-9">
+				            	<input type="text" id="form_baddress" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+				        </div>
+
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+							<img class="abcom-form abcom-form--hasmargin" src="assets/images/yis.jpg" alt="Profile Photo">
+							
+							<button class="btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn">
+							  <i class="fa fa-plus"></i>
+							  <span>Select Photo</span>
+							  <input class="abcom-upload__file" type="file" name="file">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Incorporation Details</span>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label for="form_dateinc" class="col-sm-2">Incorporation Date</label>
+				            <div class="col-sm-4">
+				            	<input type="text" id="form_dateinc" class="form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+				            </div>
+
+				            <label for="form_secno" class="col-sm-2">SEC Registration Number</label>
+				            <div class="col-sm-4">
+				            	<input type="text" id="form_secno" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+							<label for="form_asm" class="col-sm-2">ASM Date as per By-Laws</label>
+				            <div class="col-sm-4">
+				            	<input type="text" id="form_asm" class="form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+				            </div>
+
+				            <label for="form_tin" class="col-sm-2">Tax Identification Number</label>
+				            <div class="col-sm-4">
+				            	<input type="text" id="form_tin" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+							<label for="form_statusop" class="col-sm-2">Status of Operation</label>
+				            <div class="col-sm-4">
+				            	<select name="" id="form_statusop" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+								    <option selected>Select Nature</option>
+								    <option value="">Active</option>
+								    <option value="">Inactive</option>
+								</select>
+				            </div>
+
+				            <label for="form_statusfile" class="col-sm-2">Status of Filing with SEC</label>
+				            <div class="col-sm-4">
+				            	<select name="" id="form_statusfile" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+								    <option selected>Select Nature</option>
+								    <option value="">Active</option>
+								    <option value="">Inactive</option>
+								</select>
+				            </div>
+				        </div>
+					
+					</div>
+				</div>
+			</div>
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Directors and Officers</span>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						
+						<div class="form-group">
+						  <label for="form_director" class="col-sm-2">Director</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_director" data-title="Director" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_director"></ol>
+						  </div>
+
+						  <label for="form_officer" class="col-sm-2">Officer</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_officer" data-title="Officer" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_officer"></ol>
+						  </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Lawyers and Paralegals</span>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						
+						<div class="form-group">
+						  <label for="form_lawyer" class="col-sm-2">Lawyers</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_lawyer" data-title="Lawyers" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_lawyer"></ol>
+						  </div>
+
+						  <label for="form_paralegal" class="col-sm-2">Paralegal</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_paralegal" data-title="Paralegal" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_paralegal"></ol>
+						  </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Endorsers and Approvers</span>
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						
+						<div class="form-group">
+						  <label for="form_endorser" class="col-sm-2">Endorser</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_endorser" data-title="Endorser" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_endorser"></ol>
+						  </div>
+
+						  <label for="form_approver" class="col-sm-2">Approver</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_approver" data-title="Approver" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_approver"></ol>
+						  </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Date of Meetings</span>
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						
+						<div class="form-group">
+						  <label for="form_endorser" class="col-sm-2">Endorser</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_endorser" data-title="Endorser" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_endorser"></ol>
+						  </div>
+
+						  <label for="form_approver" class="col-sm-2">Approver</label>
+						  <div class="col-sm-4">
+						    <select multiple id="form_approver" data-title="Approver" class="form-control abcom-list__dropdown abcom-form" >
+						      <option>Juan Dela Cruz</option>
+						      <option>Johann Cheese</option>
+						      <option>Yvonne Strahovsky</option>
+						      <option>Natalie Dormer</option>
+						    </select>
+						    <ol class="abcom-list" data-parent="form_approver"></ol>
+						  </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</div>

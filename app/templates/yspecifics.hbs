@@ -35,15 +35,15 @@
 					<div class="panel">
 						<a href="#yondu__mgt3" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Requestor's Page</b></a>
 						<div class="panel panel-collapse collapse" id="yondu__mgt3" role="tabpanel">
-							<a href="javascript:;" data-href="#" class="yondu__navlist">About Us</a>
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Contact Us</a>
+							<a href="javascript:;" data-href="#abcom-setup__about__sidepanel" class="yondu__navlist">About Us</a>
+							<a href="javascript:;" data-href="#abcom-setup__contact__sidepanel" class="yondu__navlist">Contact Us</a>
 						</div>
 					</div>
 					
 					<div class="panel">
 						<a href="#yondu__mgt4" data-toggle="collapse" aria-expanded="false" data-parent="#yondu__quicklinks" class="yondu__navlink"><b>Setup</b></a>
 						<div class="panel panel-collapse collapse" id="yondu__mgt4" role="tabpanel">
-							<a href="javascript:;" data-href="#" class="yondu__navlist">Access Matrix</a>
+							<a href="javascript:;" data-href="#abcom-setup__access__sidepanel" class="yondu__navlist">Access Matrix</a>
 							<a href="javascript:;" data-href="#abcom-setup__holidays__sidepanel" class="yondu__navlist">Holidays</a>
 						</div>
 					</div>
@@ -86,6 +86,8 @@
 					<hr>
 					<div id="abcom-management__workspace__mom"></div>
 					<hr>
+					<div id="abcom-management__workspace__mom__form"></div>
+					<hr>
 					<div id="abcom-management__workspace__documents"></div>
 					<hr>
 					<div id="abcom-management__survey__sidepanel"></div>
@@ -96,9 +98,13 @@
 					<hr>
 					<div id="abcom-management__user"></div>
 					<hr>
+					<div id="abcom-management__user__form"></div>
+					<hr>
 					<div id="abcom-management__company__sidepanel"></div>
 					<hr>
 					<div id="abcom-management__company"></div>
+					<hr>
+					<div id="abcom-management__company__form"></div>
 						
 					{{!-- TEMPLATES SECTION --}}
 					<hr>
@@ -124,9 +130,22 @@
 					<hr>
 					<hr>
 					<h2>Setup</h2>
+					<div id="abcom-setup__about__sidepanel"></div>
+					<hr>
+					<div id="abcom-setup__about"></div>
+					<hr>
+					<div id="abcom-setup__contact__sidepanel"></div>
+					<hr>
+					<div id="abcom-setup__contact"></div>
+					<hr>
 					<div id="abcom-setup__holidays__sidepanel"></div>
 					<hr>
 					<div id="abcom-setup__holidays"></div>
+					<hr>
+					<div id="abcom-setup__access__sidepanel"></div>
+					<hr>
+					<div id="abcom-setup__access"></div>
+					
 
 					{{!-- REPORTS SECTION --}}
 					<hr>
@@ -157,13 +176,16 @@ $('#abcom-management__status').html(App.Templates['specifics/abcom-management__s
 $('#abcom-management__workspace').html(App.Templates['specifics/abcom-management__workspace']());
 $('#abcom-management__workspace__sidepanel').html(App.Templates['specifics/abcom-management__workspace__sidepanel']());
 $('#abcom-management__workspace__mom').html(App.Templates['specifics/abcom-management__workspace__mom']());
+$('#abcom-management__workspace__mom__form').html(App.Templates['specifics/abcom-management__workspace__mom__form']());
 $('#abcom-management__workspace__documents').html(App.Templates['specifics/abcom-management__workspace__documents']());
 $('#abcom-management__survey__sidepanel').html(App.Templates['specifics/abcom-management__survey__sidepanel']());
 $('#abcom-management__survey').html(App.Templates['specifics/abcom-management__survey']());
 $('#abcom-management__user__sidepanel').html(App.Templates['specifics/abcom-management__user__sidepanel']());
 $('#abcom-management__user').html(App.Templates['specifics/abcom-management__user']());
+$('#abcom-management__user__form').html(App.Templates['specifics/abcom-management__user__form']());
 $('#abcom-management__company__sidepanel').html(App.Templates['specifics/abcom-management__company__sidepanel']());
 $('#abcom-management__company').html(App.Templates['specifics/abcom-management__company']());
+$('#abcom-management__company__form').html(App.Templates['specifics/abcom-management__company__form']());
 
 // TEMPLATES SECTION
 $('#abcom-templates__mom__sidepanel').html(App.Templates['specifics/abcom-templates__mom__sidepanel']());
@@ -179,7 +201,12 @@ $('#abcom-templates__email').html(App.Templates['specifics/abcom-templates__emai
 // SETUP SECTION
 $('#abcom-setup__holidays__sidepanel').html(App.Templates['specifics/abcom-setup__holidays__sidepanel']());
 $('#abcom-setup__holidays').html(App.Templates['specifics/abcom-setup__holidays']());
-
+$('#abcom-setup__contact__sidepanel').html(App.Templates['specifics/abcom-setup__contact__sidepanel']());
+$('#abcom-setup__contact').html(App.Templates['specifics/abcom-setup__contact']());
+$('#abcom-setup__about__sidepanel').html(App.Templates['specifics/abcom-setup__about__sidepanel']());
+$('#abcom-setup__about').html(App.Templates['specifics/abcom-setup__about']());
+$('#abcom-setup__access__sidepanel').html(App.Templates['specifics/abcom-setup__access__sidepanel']());
+$('#abcom-setup__access').html(App.Templates['specifics/abcom-setup__access']());
 
 // REPORTS SECTION
 $('#abcom-reports__audit__sidepanel').html(App.Templates['specifics/abcom-reports__audit__sidepanel']());

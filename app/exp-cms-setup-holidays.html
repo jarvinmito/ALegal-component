@@ -82,9 +82,11 @@
 
       <section class="main-content__main">
         <!-- INSERT MAIN PANEL CONTENT HERE -->
+        
         <div class="abcom abcom-filter nav">
           <div class="navbar-left">
             <div class="form-group">
+              <a href="#" role="button" data-toggle="modal" data-target="#newSetup-holiday" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Holiday</a>
               <label for="" class="abcom-filter__label">Filter/Search by:</label>
                   <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
                     <option selected>Select Category</option>
@@ -179,6 +181,53 @@
                 </tr>
             </tbody>
         </table>
+
+        <div id="newSetup-holiday" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create New Holiday</h4>
+                </div>
+                <div class="modal-body">
+                  <form action="" class="form-horizontal">
+                    <div class="form-group">
+                      <label for="modal_form_name" class="col-sm-4 abcom-container--left">Name</label>
+                      <div class="col-sm-8">
+                        <input type="text" name="" id="modal_form_name" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="modal_form_date" class="col-sm-4 abcom-container--left">Date</label>
+                      <div class="col-sm-8">
+                        <input type="text" name="" id="modal_form_date" class="abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin form-control" placeholder="MM/DD/YYYY">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="modal_form_status" class="col-sm-4 abcom-container--left">Status</label>
+                      <div class="col-sm-8">
+                        <select name="" id="modal_form_status" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                          <option selected>Select Status</option>
+                          <option value="">Active</option>
+                          <option value="">Inactive</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
       </section><!-- // End main -->
 
     </section>

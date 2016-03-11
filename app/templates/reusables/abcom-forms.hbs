@@ -63,6 +63,82 @@
 	</div>
 </div>
 
+<h3>Dates</h3>
+<p>Form dates utilizes the datetimepicker from bootstrap.</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+
+        <input type='text' class="form-control abcom-form abcom-form__date abcom-form--full" placeholder="MM/DD/YYYY" />                
+
+	</div>
+</div>
+<p>Here is the code for the date input.</p>
+<pre class="yondu__code"><code>&lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form__date abcom-form--full&quot; placeholder=&quot;MM/DD/YYYY&quot; /&gt;</code></pre>
+
+<h3>Using Date Range</h3>
+<p>There will be some instances where you must use date range.</p>
+
+<div class="panel panel-default">
+	<div class="panel-body">     
+
+        <div class="abcom-form__daterange">
+            <div class='input-group abcom-form__daterange--from'>
+                <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <div class='input-group abcom-form__daterange--to'>
+                <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>        
+
+	</div>
+</div>
+
+<p>Note: To make the daterange work, you need to have the following code:</p>
+<p>This uses the <code>abcom-form__daterange</code> class and refer to its <code>abcom-form__daterange--from</code> and <code>abcom-form__daterange--to</code>.</p>
+
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom-form__daterange&quot;&gt;
+    &lt;div class='input-group abcom-form__daterange--from'&gt;
+        &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+        &lt;span class=&quot;input-group-addon&quot;&gt;
+            &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class='input-group abcom-form__daterange--to'&gt;
+        &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+        &lt;span class=&quot;input-group-addon&quot;&gt;
+            &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt; </code></pre>
+
+
+<hr>
+<h3>File upload</h3>
+<p>Form file upload</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		
+		<button class="btn abcom-btn abcom-btn--default abcom-form--full abcom-upload__addbtn">
+			<i class="fa fa-plus"></i>
+			<span>Select Photo</span>
+			<input class="abcom-upload__file" type="file" name="file">
+		</button>
+
+	</div>
+</div>
+<p>Use the upload component's add file button using this code</p>
+<pre class="yondu__code"><code>&lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-form--full abcom-upload__addbtn&quot;&gt;
+  &lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;
+  &lt;span&gt;Select Photo&lt;/span&gt;
+  &lt;input class=&quot;abcom-upload__file&quot; type=&quot;file&quot; name=&quot;file&quot;&gt;
+&lt;/button&gt;</code></pre>
+
 <h3>Form Buttons</h3>
 <p>Form buttons utilize the default buttons.</p>
 <div class="panel panel-default">

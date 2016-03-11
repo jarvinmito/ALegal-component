@@ -1,4 +1,25 @@
 /* Bootstrap overrides */
+.nav-tabs{
+    li{
+        &.active, &:hover, &:active, &:focus{
+            a, a:hover, a:active, a:focus{
+                color: $black;
+                background-color: $gray-bg;
+                border-color: $gray-bg;
+            }
+        }
+
+        a{
+            color: $black;
+
+            &:hover, &:active, &:focus{
+                background-color: $gray-bg;
+                border-color: $gray-bg;
+            }
+        }
+    }
+}
+
 label{
     height: 40px;
     padding: 10px 0;

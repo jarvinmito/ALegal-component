@@ -146,6 +146,7 @@ App.Pageloader = (function(){
 		aboitizApp.initListing();
 		aboitizApp.initFileReader();
 		aboitizApp.initDateTimePicker();
+		aboitizApp.initDTpicker();
 		aboitizApp.initFilter();
 
 		bind();
@@ -160,8 +161,10 @@ App.Pageloader = (function(){
 		aboitizApp.initFileReader();
 		aboitizApp.initListing();
 		aboitizApp.initDateTimePicker();
+		aboitizApp.initDTpicker();
 		aboitizApp.initFilter();
 		aboitizApp.initDataTables();
+		aboitizApp.initMovables();
 
 		bind();
 	};

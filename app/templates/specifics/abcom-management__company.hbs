@@ -1,111 +1,257 @@
-<h3>User Profile Main Page</h3>
+<h3>Company Profile Page</h3>
 <p>Acces level: <b>All</b></p>
 <div class="panel panel-default">
 	<div class="panel-body">
 		{{!-- START CONTENT HERE --}}
-			<div class="abcom abcom-filter nav">
-			  <div class="navbar-left">
-			    <div class="form-group">
-			    <a href="#" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Company</a>
-			      <label for="" class="abcom-filter__label">Filter/Search by:</label>
-			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
-			            <option selected>Select Category</option>
-			            <option value="text">Company Name</option>
-			            <option value="dropdown">Nature of Business</option>
-			            <option value="date">Incorporation Date</option>
-			            <option value="dropdown">Status of Operation</option>
-			            <option value="dropdown">Status of Filing with SEC</option>
-			          </select>
-			          <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
-			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
-			            <option value="">Option 1</option>
-			            <option value="">Option 2</option>
-			            <option value="">Option 3</option>
-			            <option value="">Option 4</option>
-			            <option value="">Option 5</option>
-			          </select>
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="javascript:;" aria-controls="company" role="tab" data-toggle="tab" data-target="#management-company-profile">Company Profile</a></li>
+			    <li role="presentation"><a href="javascript:;" aria-controls="nature" role="tab" data-toggle="tab" data-target="#management-company-nature">Nature of Business</a></li>
+			</ul>
 
-			          <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
-			                <div class='input-group abcom-filter__date' data-role="from">
-			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
-			                    <span class="input-group-addon">
-			                        <span class="glyphicon glyphicon-calendar"></span>
-			                    </span>
-			                </div>
-			                <div class='input-group abcom-filter__date' data-role="to">
-			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
-			                    <span class="input-group-addon">
-			                        <span class="glyphicon glyphicon-calendar"></span>
-			                    </span>
-			                </div>
-			            </div>
+			<div class="tab-content">
+				<!-- COMPANY PROFILE SECTION -->
+			    <div role="tabpanel" class="tab-pane active" id="management-company-profile">
+			    	<div class="abcom abcom-filter nav">
+					  <div class="navbar-left">
+					    <div class="form-group">
+					    <a href="#" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin">Create New Company</a>
+					      <label for="" class="abcom-filter__label">Filter/Search by:</label>
+					          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
+					            <option selected>Select Category</option>
+					            <option value="text">Company Name</option>
+					            <option value="dropdown">Nature of Business</option>
+					            <option value="date">Incorporation Date</option>
+					            <option value="dropdown">Status of Operation</option>
+					            <option value="dropdown">Status of Filing with SEC</option>
+					          </select>
+					          <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
+					          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
+					            <option value="">Option 1</option>
+					            <option value="">Option 2</option>
+					            <option value="">Option 3</option>
+					            <option value="">Option 4</option>
+					            <option value="">Option 5</option>
+					          </select>
 
-			            <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
-			                <div class='input-group abcom-filter__date'>
-			                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
-			                    <span class="input-group-addon">
-			                        <span class="glyphicon glyphicon-calendar"></span>
-			                    </span>
-			                </div>
-			            </div>
+					          <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
+					                <div class='input-group abcom-filter__date' data-role="from">
+					                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					                <div class='input-group abcom-filter__date' data-role="to">
+					                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
 
-			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
-			            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
-			      </div>
-			  </div>
-			  <div class="navbar-right">
-			    <div class="form-group">
-			      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
-			      <label for="" class="abcom-filter__label">Entries per page</label>
-			          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-user-table">
-			            <option value="10">10</option>
-			            <option value="25">25</option>
-			            <option value="50">50</option>
-			            <option value="100">100</option>
-			          </select>
-			      </div>
-			  </div>
+					            <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
+					                <div class='input-group abcom-filter__date'>
+					                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+
+					            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+					            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
+					      </div>
+					  </div>
+					  <div class="navbar-right">
+					    <div class="form-group">
+					      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
+					      <label for="" class="abcom-filter__label">Entries per page</label>
+					          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-company-profile-table">
+					            <option value="10">10</option>
+					            <option value="25">25</option>
+					            <option value="50">50</option>
+					            <option value="100">100</option>
+					          </select>
+					      </div>
+					  </div>
+					</div>
+
+					<table id="management-company-profile-table" class="abcom abcom-table">
+					    <thead>
+					        <tr>
+					            <th>Company Name</th>
+					            <th>Business Name</th>
+					            <th>Incorporation Date</th>
+					            <th>Status of Operation</th>
+					            <th>Status of Filing with SEC</th>
+					            <th>Status</th>
+					            <th>Actions</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					        <tr>
+					            <td>Name of Copmpany</td>
+					            <td>Business Name</td>
+					            <td>mm/dd/yyyy</td>
+					            <td>Operation Status</td>
+					            <td>SEC Filing Status</td>
+					            <td>Active</td>
+					            <td>
+		        					<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+					            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+					            </td>
+					        </tr>
+					        <tr>
+					            <td>Name of Copmpany</td>
+					            <td>Business Name</td>
+					            <td>mm/dd/yyyy</td>
+					            <td>Operation Status</td>
+					            <td>SEC Filing Status</td>
+					            <td>Inactive</td>
+					            <td>
+		        					<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
+					            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+					            </td>
+					        </tr>
+					    </tbody>
+					</table>
+			    </div>
+
+			    <!-- NATURE OF BUSINESS SECTION -->
+			    <div role="tabpanel" class="tab-pane" id="management-company-nature">
+			    	<div class="abcom abcom-filter nav">
+					  <div class="navbar-left">
+					    <div class="form-group">
+					    <a href="#" role="button" class="btn abcom-btn abcom-btn--default abcom-filter--hasmargin" data-toggle="modal" data-target="#newBusiness">Create New Nature of Business</a>
+					      <label for="" class="abcom-filter__label">Filter/Search by:</label>
+					          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
+					            <option selected>Select Category</option>
+					            <option value="text">Nature of Business Name</option>
+					            <option value="text">Created by</option>
+					            <option value="date">Date Created</option>
+					            <option value="dropdown">Status</option>
+					          </select>
+					          <input type="text" class="form-control abcom-form abcom-form--min abcom-filter__type" data-filter-type="text" placeholder="Search here">
+					          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__type" data-filter-type="dropdown">
+					            <option value="">Option 1</option>
+					            <option value="">Option 2</option>
+					            <option value="">Option 3</option>
+					            <option value="">Option 4</option>
+					            <option value="">Option 5</option>
+					          </select>
+
+					          <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
+					                <div class='input-group abcom-filter__date' data-role="from">
+					                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					                <div class='input-group abcom-filter__date' data-role="to">
+					                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="To" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+
+					            <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="date">
+					                <div class='input-group abcom-filter__date'>
+					                    <input type='text' class="form-control abcom-form abcom-form--min" placeholder="Select Date" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+
+					            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+					            <button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
+					      </div>
+					  </div>
+					  <div class="navbar-right">
+					    <div class="form-group">
+					      <button type="button" class="btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend">View Legends</button>
+					      <label for="" class="abcom-filter__label">Entries per page</label>
+					          <select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last" data-target="#management-company-nature-table">
+					            <option value="10">10</option>
+					            <option value="25">25</option>
+					            <option value="50">50</option>
+					            <option value="100">100</option>
+					          </select>
+					      </div>
+					  </div>
+					</div>
+
+					<table id="management-company-nature-table" class="abcom abcom-table">
+					    <thead>
+					        <tr>
+					            <th>Business Name</th>
+					            <th>Created by</th>
+					            <th>Date Created</th>
+					            <th>Status</th>
+					            <th>Actions</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					        <tr>
+					            <td>Business Name</td>
+					            <td>Name of person</td>
+					            <td>mm/dd/yyyy</td>
+					            <td>Active</td>
+					            <td>
+					            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+					            </td>
+					        </tr>
+					        <tr>
+					            <td>Business Name</td>
+					            <td>Name of person</td>
+					            <td>mm/dd/yyyy</td>
+					            <td>Active</td>
+					            <td>
+					            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
+					            </td>
+					        </tr>
+					    </tbody>
+					</table>
+
+					<div id="newBusiness" class="modal fade abcom-modal" tabindex="-1" role="dialog">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					        <div class="modal-header">
+					            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					            <h4 class="modal-title" id="myModalLabel">New Nature of Business</h4>
+					        </div>
+					        <div class="modal-body">
+					          <form action="" class="form-horizontal">
+					            <div class="form-group">
+					              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Business Name</label>
+					              <div class="col-sm-8">
+					                <input type="text" name="" id="modal_form_company" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+					              </div>
+					            </div>
+
+					            <div class="form-group">
+					              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Status</label>
+					              <div class="col-sm-8">
+					                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+					                  <option selected>Select Status</option>
+					                  <option value="">Active</option>
+					                  <option value="">Inactive</option>
+					                </select>
+					              </div>
+					            </div>
+
+					            <div class="form-group">
+					              <div class="col-sm-12">
+					                <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+					              </div>
+					            </div>
+					          </form>
+					        </div>
+					    </div>
+					  </div>
+					</div>
+			    </div>
 			</div>
-
-			<table id="management-user-table" class="abcom abcom-table">
-			    <thead>
-			        <tr>
-			            <th>Company Name</th>
-			            <th>Business Name</th>
-			            <th>Incorporation Date</th>
-			            <th>Status of Operation</th>
-			            <th>Status of Filing with SEC</th>
-			            <th>Status</th>
-			            <th>Actions</th>
-			        </tr>
-			    </thead>
-			    <tbody>
-			        <tr>
-			            <td>Name of Copmpany</td>
-			            <td>Business Name</td>
-			            <td>mm/dd/yyyy</td>
-			            <td>Operation Status</td>
-			            <td>SEC Filing Status</td>
-			            <td>Active</td>
-			            <td>
-        					<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
-			            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
-			            </td>
-			        </tr>
-			        <tr>
-			            <td>Name of Copmpany</td>
-			            <td>Business Name</td>
-			            <td>mm/dd/yyyy</td>
-			            <td>Operation Status</td>
-			            <td>SEC Filing Status</td>
-			            <td>Inactive</td>
-			            <td>
-        					<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-search"></i></button>
-			            	<button class="abcom-btn abcom-btn--default abcom-btn--circle"><i class="fa fa-pencil-square-o"></i></button>
-			            </td>
-			        </tr>
-			    </tbody>
-			</table>
 		
 
 		{{!-- END CONTENT HERE --}}
@@ -114,109 +260,303 @@
 
 <p>Insert this code inside the <code>main-content__main</code> section.</p>
 
-<pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
-    &lt;div class=&quot;navbar-left&quot;&gt;
-      &lt;div class=&quot;form-group&quot;&gt;
-      &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;Create New Company&lt;/a&gt;
-        &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
-            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
-              &lt;option selected&gt;Select Category&lt;/option&gt;
-              &lt;option value=&quot;text&quot;&gt;Company Name&lt;/option&gt;
-              &lt;option value=&quot;dropdown&quot;&gt;Nature of Business&lt;/option&gt;
-              &lt;option value=&quot;date&quot;&gt;Incorporation Date&lt;/option&gt;
-              &lt;option value=&quot;dropdown&quot;&gt;Status of Operation&lt;/option&gt;
-              &lt;option value=&quot;dropdown&quot;&gt;Status of Filing with SEC&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
-            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
-              &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
-            &lt;/select&gt;
+<pre class="yondu__code"><code>&lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+      &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;javascript:;&quot; aria-controls=&quot;company&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; data-target=&quot;#management-company-profile&quot;&gt;Company Profile&lt;/a&gt;&lt;/li&gt;
+      &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;javascript:;&quot; aria-controls=&quot;nature&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot; data-target=&quot;#management-company-nature&quot;&gt;Nature of Business&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 
-            &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
-                  &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
-                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
-                      &lt;span class=&quot;input-group-addon&quot;&gt;
-                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
-                      &lt;/span&gt;
-                  &lt;/div&gt;
-                  &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
-                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
-                      &lt;span class=&quot;input-group-addon&quot;&gt;
-                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
-                      &lt;/span&gt;
-                  &lt;/div&gt;
-              &lt;/div&gt;
+  &lt;div class=&quot;tab-content&quot;&gt;
+    &lt;!-- COMPANY PROFILE SECTION --&gt;
+      &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active&quot; id=&quot;management-company-profile&quot;&gt;
+        &lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
+        &lt;div class=&quot;navbar-left&quot;&gt;
+          &lt;div class=&quot;form-group&quot;&gt;
+          &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;Create New Company&lt;/a&gt;
+            &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+                &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
+                  &lt;option selected&gt;Select Category&lt;/option&gt;
+                  &lt;option value=&quot;text&quot;&gt;Company Name&lt;/option&gt;
+                  &lt;option value=&quot;dropdown&quot;&gt;Nature of Business&lt;/option&gt;
+                  &lt;option value=&quot;date&quot;&gt;Incorporation Date&lt;/option&gt;
+                  &lt;option value=&quot;dropdown&quot;&gt;Status of Operation&lt;/option&gt;
+                  &lt;option value=&quot;dropdown&quot;&gt;Status of Filing with SEC&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
+                &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
+                &lt;/select&gt;
 
-              &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
-                  &lt;div class='input-group abcom-filter__date'&gt;
-                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
-                      &lt;span class=&quot;input-group-addon&quot;&gt;
-                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
-                      &lt;/span&gt;
+                &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
+                      &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
+                          &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+                          &lt;span class=&quot;input-group-addon&quot;&gt;
+                              &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
+                          &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+                          &lt;span class=&quot;input-group-addon&quot;&gt;
+                              &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                      &lt;/div&gt;
                   &lt;/div&gt;
-              &lt;/div&gt;
 
-              &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+                  &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
+                      &lt;div class='input-group abcom-filter__date'&gt;
+                          &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
+                          &lt;span class=&quot;input-group-addon&quot;&gt;
+                              &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;navbar-right&quot;&gt;
-      &lt;div class=&quot;form-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
-        &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
-            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#management-user-table&quot;&gt;
-              &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
-              &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
-              &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
-              &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
-            &lt;/select&gt;
+        &lt;div class=&quot;navbar-right&quot;&gt;
+          &lt;div class=&quot;form-group&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
+            &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+                &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#management-company-profile-table&quot;&gt;
+                  &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+                  &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+                  &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+                  &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+      &lt;/div&gt;
 
-  &lt;table id=&quot;management-user-table&quot; class=&quot;abcom abcom-table&quot;&gt;
-      &lt;thead&gt;
-          &lt;tr&gt;
-              &lt;th&gt;Company Name&lt;/th&gt;
-              &lt;th&gt;Business Name&lt;/th&gt;
-              &lt;th&gt;Incorporation Date&lt;/th&gt;
-              &lt;th&gt;Status of Operation&lt;/th&gt;
-              &lt;th&gt;Status of Filing with SEC&lt;/th&gt;
-              &lt;th&gt;Status&lt;/th&gt;
-              &lt;th&gt;Actions&lt;/th&gt;
-          &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-          &lt;tr&gt;
-              &lt;td&gt;Name of Copmpany&lt;/td&gt;
-              &lt;td&gt;Business Name&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;Operation Status&lt;/td&gt;
-              &lt;td&gt;SEC Filing Status&lt;/td&gt;
-              &lt;td&gt;Active&lt;/td&gt;
-              &lt;td&gt;
-              &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-              &lt;td&gt;Name of Copmpany&lt;/td&gt;
-              &lt;td&gt;Business Name&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;Operation Status&lt;/td&gt;
-              &lt;td&gt;SEC Filing Status&lt;/td&gt;
-              &lt;td&gt;Inactive&lt;/td&gt;
-              &lt;td&gt;
-              &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-      &lt;/tbody&gt;
-  &lt;/table&gt;</code></pre>
+      &lt;table id=&quot;management-company-profile-table&quot; class=&quot;abcom abcom-table&quot;&gt;
+          &lt;thead&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Company Name&lt;/th&gt;
+                  &lt;th&gt;Business Name&lt;/th&gt;
+                  &lt;th&gt;Incorporation Date&lt;/th&gt;
+                  &lt;th&gt;Status of Operation&lt;/th&gt;
+                  &lt;th&gt;Status of Filing with SEC&lt;/th&gt;
+                  &lt;th&gt;Status&lt;/th&gt;
+                  &lt;th&gt;Actions&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;Name of Copmpany&lt;/td&gt;
+                  &lt;td&gt;Business Name&lt;/td&gt;
+                  &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+                  &lt;td&gt;Operation Status&lt;/td&gt;
+                  &lt;td&gt;SEC Filing Status&lt;/td&gt;
+                  &lt;td&gt;Active&lt;/td&gt;
+                  &lt;td&gt;
+                  &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;Name of Copmpany&lt;/td&gt;
+                  &lt;td&gt;Business Name&lt;/td&gt;
+                  &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+                  &lt;td&gt;Operation Status&lt;/td&gt;
+                  &lt;td&gt;SEC Filing Status&lt;/td&gt;
+                  &lt;td&gt;Inactive&lt;/td&gt;
+                  &lt;td&gt;
+                  &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;/div&gt;
 
+      &lt;!-- NATURE OF BUSINESS SECTION --&gt;
+      &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;management-company-nature&quot;&gt;
+        &lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
+        &lt;div class=&quot;navbar-left&quot;&gt;
+          &lt;div class=&quot;form-group&quot;&gt;
+          &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot; data-toggle=&quot;modal&quot; data-target=&quot;#newBusiness&quot;&gt;Create New Nature of Business&lt;/a&gt;
+            &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+                &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
+                  &lt;option selected&gt;Select Category&lt;/option&gt;
+                  &lt;option value=&quot;text&quot;&gt;Nature of Business Name&lt;/option&gt;
+                  &lt;option value=&quot;text&quot;&gt;Created by&lt;/option&gt;
+                  &lt;option value=&quot;date&quot;&gt;Date Created&lt;/option&gt;
+                  &lt;option value=&quot;dropdown&quot;&gt;Status&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
+                &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
+                  &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
+                &lt;/select&gt;
+
+                &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
+                      &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
+                          &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+                          &lt;span class=&quot;input-group-addon&quot;&gt;
+                              &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
+                          &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+                          &lt;span class=&quot;input-group-addon&quot;&gt;
+                              &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
+                      &lt;div class='input-group abcom-filter__date'&gt;
+                          &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
+                          &lt;span class=&quot;input-group-addon&quot;&gt;
+                              &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;navbar-right&quot;&gt;
+          &lt;div class=&quot;form-group&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
+            &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+                &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#management-company-nature-table&quot;&gt;
+                  &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+                  &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+                  &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+                  &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;table id=&quot;management-company-nature-table&quot; class=&quot;abcom abcom-table&quot;&gt;
+          &lt;thead&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Business Name&lt;/th&gt;
+                  &lt;th&gt;Created by&lt;/th&gt;
+                  &lt;th&gt;Date Created&lt;/th&gt;
+                  &lt;th&gt;Status&lt;/th&gt;
+                  &lt;th&gt;Actions&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;Business Name&lt;/td&gt;
+                  &lt;td&gt;Name of person&lt;/td&gt;
+                  &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+                  &lt;td&gt;Active&lt;/td&gt;
+                  &lt;td&gt;
+                    &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;Business Name&lt;/td&gt;
+                  &lt;td&gt;Name of person&lt;/td&gt;
+                  &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+                  &lt;td&gt;Active&lt;/td&gt;
+                  &lt;td&gt;
+                    &lt;button class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+
+      &lt;div id=&quot;newBusiness&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+        &lt;div class=&quot;modal-dialog&quot;&gt;
+          &lt;div class=&quot;modal-content&quot;&gt;
+              &lt;div class=&quot;modal-header&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
+                  &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;New Nature of Business&lt;/h4&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+                  &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Business Name&lt;/label&gt;
+                    &lt;div class=&quot;col-sm-8&quot;&gt;
+                      &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;modal_form_company&quot; class=&quot;abcom-form abcom-form--full abcom-form--hasmargin form-control&quot; placeholder=&quot;Type here&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label for=&quot;modal_form_service&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Status&lt;/label&gt;
+                    &lt;div class=&quot;col-sm-8&quot;&gt;
+                      &lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                        &lt;option selected&gt;Select Status&lt;/option&gt;
+                        &lt;option value=&quot;&quot;&gt;Active&lt;/option&gt;
+                        &lt;option value=&quot;&quot;&gt;Inactive&lt;/option&gt;
+                      &lt;/select&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;div class=&quot;col-sm-12&quot;&gt;
+                      &lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--full&quot; value=&quot;Submit&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/form&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+
+
+<hr>
+
+<h4>New Nature of Business Modal</h4>
+<p>This will be activated when user clicks the <code>Create New Nature of Business</code> button under the <code>Nature of Business</code> tab.</p>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="abcom-modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+		            <h4 class="modal-title" id="myModalLabel">New Nature of Business</h4>
+		        </div>
+		        <div class="modal-body">
+		          <form action="" class="form-horizontal">
+		            <div class="form-group">
+		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Business Name</label>
+		              <div class="col-sm-8">
+		                <input type="text" name="" id="modal_form_company" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Status</label>
+		              <div class="col-sm-8">
+		                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+		                  <option selected>Select Status</option>
+		                  <option value="">Active</option>
+		                  <option value="">Inactive</option>
+		                </select>
+		              </div>
+		            </div>
+
+		            <div class="form-group">
+		              <div class="col-sm-12">
+		                <input type="submit" class="btn abcom-btn abcom-btn--action abcom-form--full" value="Submit">
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		    </div>
+		  </div>
+		</div>
+
+	</div>
+</div>
 
 <a href="exp-cms-management-company.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Company Profile Page</a>

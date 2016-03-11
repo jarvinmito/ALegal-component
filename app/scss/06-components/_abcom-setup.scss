@@ -1,0 +1,40 @@
+.abcom-setup{
+	&__access{
+		width: 100%;
+
+		&__role{
+			width: 12%;
+		}
+
+		&__label{
+			font-weight: bold;
+		}
+
+		th, td{
+			text-align: center;
+			padding: 10px;
+		}
+
+		td:first-child{
+			text-align: left;
+		}
+
+		td[colspan="6"]{
+			background-color: $gray-bg;
+		}
+
+		th{
+			border: 1px solid $white-light;
+			color: $white;
+		}
+
+		td{
+			border: 1px solid $gray-bg;
+			background-color: $white;
+		}
+
+		thead{
+			background-color: $gray-base;
+		}
+	}
+}

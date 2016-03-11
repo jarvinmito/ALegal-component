@@ -13820,6 +13820,7 @@ table.abcom-table.no-footer, table.abcom-table tbody > tr:last-child > td {
 }
 
 .abcom-title {
+  position: relative;
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -13835,6 +13836,12 @@ table.abcom-table.no-footer, table.abcom-table tbody > tr:last-child > td {
 
 .abcom-title__sub {
   color: #111111;
+}
+
+.abcom-title .form-group {
+  position: absolute;
+  top: 2px;
+  right: 2px;
 }
 
 .abcom-btn {
@@ -13954,8 +13961,38 @@ table.abcom-table.no-footer, table.abcom-table tbody > tr:last-child > td {
   display: block;
 }
 
+.abcom-form__daterange--from {
+  margin-right: 4px;
+}
+
+.abcom-form__daterange--from, .abcom-form__daterange--to {
+  width: 49%;
+  float: left;
+}
+
+.abcom-form__daterange--from, .abcom-form__daterange--from .input-group-addon, .abcom-form__daterange--to, .abcom-form__daterange--to .input-group-addon {
+  box-shadow: none;
+  color: #111111;
+  border-color: #bbbbbb;
+}
+
+.abcom-form__daterange--from .input-group-addon, .abcom-form__daterange--to .input-group-addon {
+  cursor: pointer;
+}
+
 textarea.abcom-form, textarea.select2-selection {
   height: 130px;
+}
+
+input[type="radio"].abcom-form, input[type="radio"].select2-selection {
+  height: 14px;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+input[type="radio"].abcom-form, input[type="radio"].select2-selection, input[type="radio"].abcom-form:hover, input[type="radio"].select2-selection:hover, input[type="radio"].abcom-form:active, input[type="radio"].select2-selection:active, input[type="radio"].abcom-form:focus, input[type="radio"].select2-selection:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 label.abcom-form, label.select2-selection {
@@ -13964,6 +14001,11 @@ label.abcom-form, label.select2-selection {
   margin-bottom: 0;
   color: #111111;
   text-align: right;
+}
+
+img.abcom-form, img.select2-selection {
+  width: 100%;
+  height: auto;
 }
 
 /* FOR SELECT 2 OVERRIDES */
@@ -14106,6 +14148,132 @@ label.abcom-form, label.select2-selection {
   color: #fe0000;
 }
 
+.abcom-setup__access {
+  width: 100%;
+}
+
+.abcom-setup__access__role {
+  width: 12%;
+}
+
+.abcom-setup__access__label {
+  font-weight: bold;
+}
+
+.abcom-setup__access th, .abcom-setup__access td {
+  text-align: center;
+  padding: 10px;
+}
+
+.abcom-setup__access td:first-child {
+  text-align: left;
+}
+
+.abcom-setup__access td[colspan="6"] {
+  background-color: #dddddd;
+}
+
+.abcom-setup__access th {
+  border: 1px solid #eeeeee;
+  color: #ffffff;
+}
+
+.abcom-setup__access td {
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+.abcom-setup__access thead {
+  background-color: #555555;
+}
+
+.abcom-movables {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.abcom-movables__data, .abcom-movables__add {
+  position: relative;
+  float: left;
+  width: 25%;
+  padding: 10px;
+  margin: 0;
+  background-color: transparent;
+  border: 10px solid transparent;
+}
+
+.abcom-movables__data img, .abcom-movables__add img {
+  float: left;
+  height: 64px;
+  width: 64px;
+  margin-right: 5px;
+  border-radius: 32px;
+  border: 2px solid #dddddd;
+  outline: none;
+}
+
+.abcom-movables__data h1, .abcom-movables__add h1 {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.abcom-movables__data p, .abcom-movables__add p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.abcom-movables__data input, .abcom-movables__add input {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.abcom-movables__data__remove, .abcom-movables__add__remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  text-align: center;
+  font-size: 12px;
+  color: #111111;
+}
+
+.abcom-movables__add__btn {
+  width: 100%;
+  height: 100%;
+}
+
+.abcom-movables__add__btn, .abcom-movables__add__btn:hover, .abcom-movables__add__btn:active, .abcom-movables__add__btn:focus {
+  text-decoration: none;
+}
+
+.abcom-movables__add__btn div {
+  display: inline-block;
+  vertical-align: middle;
+  color: #111111;
+}
+
+.abcom-movables__add__btn div:first-child {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+  border-radius: 32px;
+  border: 2px solid #111111;
+  line-height: 64px;
+  text-align: center;
+}
+
 /**
  * 07 THEMES
  * Custom Theming
@@ -14176,6 +14344,21 @@ label.abcom-form, label.select2-selection {
  * (no relation). Helpers and overrides.
  */
 /* Bootstrap overrides */
+.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:active, .nav-tabs li.active a:focus, .nav-tabs li:hover a, .nav-tabs li:hover a:hover, .nav-tabs li:hover a:active, .nav-tabs li:hover a:focus, .nav-tabs li:active a, .nav-tabs li:active a:hover, .nav-tabs li:active a:active, .nav-tabs li:active a:focus, .nav-tabs li:focus a, .nav-tabs li:focus a:hover, .nav-tabs li:focus a:active, .nav-tabs li:focus a:focus {
+  color: #111111;
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+
+.nav-tabs li a {
+  color: #111111;
+}
+
+.nav-tabs li a:hover, .nav-tabs li a:active, .nav-tabs li a:focus {
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+
 label {
   height: 40px;
   padding: 10px 0;

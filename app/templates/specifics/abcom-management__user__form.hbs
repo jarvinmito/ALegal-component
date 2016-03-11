@@ -1,0 +1,286 @@
+<h3>User Profile Add / Edit / View Page</h3>
+<p>Acces level: <b>All</b></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		
+		<form action="" class="form-horizontal">
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Personal Information</span>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-9">
+						
+						<div class="form-group">
+							<label for="form_firstname" class="col-sm-2">First Name</label>
+				            <div class="col-sm-5">
+				            	<input type="text" id="form_firstname" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+				            <label for="form_middlename" class="col-sm-2">Middle Initial</label>
+				            <div class="col-sm-3">
+				            	<input type="text" id="form_middlename" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+							<label for="form_lastname" class="col-sm-2">Last Name</label>
+				            <div class="col-sm-10">
+				            	<input type="text" id="form_lastname" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+				        </div>
+
+				        <div class="form-group">
+							<label for="form_role" class="col-sm-2">User Role</label>
+							<div class="col-sm-10">
+								<select name="" id="form_role" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+								    <option selected>Select Role</option>
+								    <option value="">Requestor</option>
+								    <option value="">Endorser</option>
+								    <option value="">Approver</option>
+								    <option value="">Lawyer</option>
+								    <option value="">Paralegal</option>
+								    <option value="">Administrator</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="form_designation" class="col-sm-2">Designation</label>
+							<div class="col-sm-10">
+				            	<input type="text" id="form_designation" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+						</div>
+
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+							<img class="abcom-form abcom-form--hasmargin" src="assets/images/yis.jpg" alt="Profile Photo">
+							
+							<button class="btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn">
+							  <i class="fa fa-plus"></i>
+							  <span>Select Photo</span>
+							  <input class="abcom-upload__file" type="file" name="file">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Contact Details</span>
+			</div>
+			
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						
+						<div class="form-group">
+							<label for="form_email" class="col-sm-2">Email Address</label>
+							<div class="col-sm-4">
+				            	<input type="text" id="form_email" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+
+				            <label for="form_phone" class="col-sm-2">Phone Number</label>
+							<div class="col-sm-4">
+				            	<input type="text" id="form_phone" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+				            </div>
+						</div>
+
+						<div class="form-group">
+							<label for="form_address" class="col-sm-2">Office Address</label>
+							<div class="col-sm-10">
+				            	<textarea id="form_address" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
+				            </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="abcom-title">
+			  <span class="abcom-title__main">Other Information</span>
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+
+						<div class="form-group">
+							<label for="form_companies" class="col-sm-2">Companies Handled</label>
+							<div class="col-sm-4">
+				            	<textarea id="form_companies" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here"></textarea>
+				            </div>
+
+				            <label for="form_status" class="col-sm-2">Status</label>
+							<div class="col-sm-4">
+				            	<select name="" id="form_status" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+								    <option selected>Select Status</option>
+								    <option value="">Active</option>
+								    <option value="">Inactive</option>
+								</select>
+				            </div>
+						</div>
+
+						<div class="form-group">
+				            <div class="col-sm-12">
+				              <div class="abcom-container abcom-container--right">
+				                <button type="button" class="btn abcom-btn abcom-btn--default">Cancel</button>
+				                <button type="submit" class="btn abcom-btn abcom-btn--default">Submit</button>
+				              </div>
+				            </div>
+				        </div>
+
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+
+	</div>
+</div>
+
+<p>Insert this code inside the <code>main-content__main</code> section.</p>
+
+<pre class="yondu__code"><code>&lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+
+  &lt;div class=&quot;abcom-title&quot;&gt;
+    &lt;span class=&quot;abcom-title__main&quot;&gt;Personal Information&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-9&quot;&gt;
+        
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_firstname&quot; class=&quot;col-sm-2&quot;&gt;First Name&lt;/label&gt;
+                &lt;div class=&quot;col-sm-5&quot;&gt;
+                  &lt;input type=&quot;text&quot; id=&quot;form_firstname&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+                &lt;/div&gt;
+                &lt;label for=&quot;form_middlename&quot; class=&quot;col-sm-2&quot;&gt;Middle Initial&lt;/label&gt;
+                &lt;div class=&quot;col-sm-3&quot;&gt;
+                  &lt;input type=&quot;text&quot; id=&quot;form_middlename&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_lastname&quot; class=&quot;col-sm-2&quot;&gt;Last Name&lt;/label&gt;
+                &lt;div class=&quot;col-sm-10&quot;&gt;
+                  &lt;input type=&quot;text&quot; id=&quot;form_lastname&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_role&quot; class=&quot;col-sm-2&quot;&gt;User Role&lt;/label&gt;
+          &lt;div class=&quot;col-sm-10&quot;&gt;
+            &lt;select name=&quot;&quot; id=&quot;form_role&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                &lt;option selected&gt;Select Role&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Requestor&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Endorser&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Approver&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Lawyer&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Paralegal&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Administrator&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_designation&quot; class=&quot;col-sm-2&quot;&gt;Designation&lt;/label&gt;
+          &lt;div class=&quot;col-sm-10&quot;&gt;
+                  &lt;input type=&quot;text&quot; id=&quot;form_designation&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-3&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;img class=&quot;abcom-form abcom-form--hasmargin&quot; src=&quot;assets/images/yis.jpg&quot; alt=&quot;Profile Photo&quot;&gt;
+          
+          &lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn&quot;&gt;
+            &lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;Select Photo&lt;/span&gt;
+            &lt;input class=&quot;abcom-upload__file&quot; type=&quot;file&quot; name=&quot;file&quot;&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;abcom-title&quot;&gt;
+    &lt;span class=&quot;abcom-title__main&quot;&gt;Contact Details&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-12&quot;&gt;
+        
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_email&quot; class=&quot;col-sm-2&quot;&gt;Email Address&lt;/label&gt;
+          &lt;div class=&quot;col-sm-4&quot;&gt;
+                  &lt;input type=&quot;text&quot; id=&quot;form_email&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+                &lt;/div&gt;
+
+                &lt;label for=&quot;form_phone&quot; class=&quot;col-sm-2&quot;&gt;Phone Number&lt;/label&gt;
+          &lt;div class=&quot;col-sm-4&quot;&gt;
+                  &lt;input type=&quot;text&quot; id=&quot;form_phone&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_address&quot; class=&quot;col-sm-2&quot;&gt;Office Address&lt;/label&gt;
+          &lt;div class=&quot;col-sm-10&quot;&gt;
+                  &lt;textarea id=&quot;form_address&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;abcom-title&quot;&gt;
+    &lt;span class=&quot;abcom-title__main&quot;&gt;Other Information&lt;/span&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-12&quot;&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;form_companies&quot; class=&quot;col-sm-2&quot;&gt;Companies Handled&lt;/label&gt;
+          &lt;div class=&quot;col-sm-4&quot;&gt;
+                  &lt;textarea id=&quot;form_companies&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+
+                &lt;label for=&quot;form_status&quot; class=&quot;col-sm-2&quot;&gt;Status&lt;/label&gt;
+          &lt;div class=&quot;col-sm-4&quot;&gt;
+                  &lt;select name=&quot;&quot; id=&quot;form_status&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+                &lt;option selected&gt;Select Status&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Active&lt;/option&gt;
+                &lt;option value=&quot;&quot;&gt;Inactive&lt;/option&gt;
+            &lt;/select&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;col-sm-12&quot;&gt;
+                  &lt;div class=&quot;abcom-container abcom-container--right&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Cancel&lt;/button&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Submit&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/form&gt;</code></pre>
+
+<a href="exp-cms-management-user-form.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View User Profile Add / Edit Page</a>

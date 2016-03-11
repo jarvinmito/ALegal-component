@@ -1,0 +1,93 @@
+.abcom-movables{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+
+	&__data, &__add{
+		position: relative;
+		float: left;
+		
+		width: 25%;
+		padding: 10px;
+		margin: 0;
+		
+		background-color: transparent;
+		border: 10px solid transparent;
+
+		img{
+		    float: left;
+		    height: 64px;
+		    width: 64px;
+		    margin-right: 5px;
+			border-radius: 32px;
+			border: 2px solid $gray-bg;
+			outline: none;
+		}
+
+		h1{
+		    margin: 0;
+		    margin-top: 5px;
+		    font-size: 18px;
+		}
+
+		p{
+			font-size: 12px;
+    		margin: 0;
+		}
+
+		input{
+			position: absolute;
+		    right: 5px;
+		    bottom: 5px;
+		    width: 30px;
+		    height: 30px;
+		    padding: 5px;
+		    text-align: center;
+		    border: none;
+		    border-bottom: 1px solid $gray-bg-active;
+		}
+
+		&__remove{
+		    position: absolute;
+		    top: 5px;
+		    right: 5px;
+
+		    display: block;
+		    width: 20px;
+		    height: 20px;
+		    padding: 1px;
+		    
+		    text-align: center;
+		    font-size: 12px;
+		    color: $black;
+		}
+	}
+
+	&__add{
+		&__btn{
+			width: 100%;
+			height: 100%;
+
+			&, &:hover, &:active, &:focus{
+				text-decoration: none;
+			}
+
+			div{
+				display: inline-block;
+				vertical-align: middle;
+				color: $black;
+
+				&:first-child{
+					width: 64px;
+					height: 64px;
+			    	margin-right: 10px;
+			    	border-radius: 32px;
+			    	border: 2px solid $black;
+			    	
+			    	line-height: 64px;
+			    	text-align: center;
+				}
+			}
+		}
+	}
+}
