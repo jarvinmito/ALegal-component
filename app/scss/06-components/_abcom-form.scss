@@ -43,6 +43,16 @@
 			}
 		}
 	}
+
+	&__inputgroup{
+		.input-group-addon{
+			padding: 0;
+			padding-left: 10px;
+			margin: 0;
+			border: none;
+			background-color: transparent;
+		}
+	}
 }
 
 textarea.abcom-form{

@@ -2,10 +2,10 @@
 <p>Appears on some forms. Lists Endorsers or Approvers</p>
 <div class="panel panel-default">
 	<div class="panel-body">
-		<div class="form-group">
+		<div class="form-group abcom-list">
 			<label for="" class="col-sm-2 abcom-form">Endorsers</label>
 			<div class="col-sm-10">
-				<ol class="abcom-list">
+				<ol class="abcom-list__items">
 					<li class="abcom-list__item">Juan Dela Cruz</li>
 					<li class="abcom-list__item">Johann Cheese</li>
 					<li class="abcom-list__item">Yvonne Strahovsky</li>
@@ -15,16 +15,16 @@
 		</div>
 	</div>
 </div>
-<pre class="yondu__code"><code>&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Endorsers&lt;/label&gt;
-    &lt;div class=&quot;col-sm-10&quot;&gt;
-        &lt;ol class=&quot;abcom-list&quot;&gt;
-            &lt;li class=&quot;abcom-list__item&quot;&gt;Juan Dela Cruz&lt;/li&gt;
-            &lt;li class=&quot;abcom-list__item&quot;&gt;Johann Cheese&lt;/li&gt;
-            &lt;li class=&quot;abcom-list__item&quot;&gt;Yvonne Strahovsky&lt;/li&gt;
-            &lt;li class=&quot;abcom-list__item&quot;&gt;Natalie Dormer&lt;/li&gt;
-        &lt;/ol&gt;
-    &lt;/div&gt;
+<pre class="yondu__code"><code>&lt;div class=&quot;form-group abcom-list&quot;&gt;
+  &lt;label for=&quot;&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Endorsers&lt;/label&gt;
+  &lt;div class=&quot;col-sm-10&quot;&gt;
+    &lt;ol class=&quot;abcom-list__items&quot;&gt;
+      &lt;li class=&quot;abcom-list__item&quot;&gt;Juan Dela Cruz&lt;/li&gt;
+      &lt;li class=&quot;abcom-list__item&quot;&gt;Johann Cheese&lt;/li&gt;
+      &lt;li class=&quot;abcom-list__item&quot;&gt;Yvonne Strahovsky&lt;/li&gt;
+      &lt;li class=&quot;abcom-list__item&quot;&gt;Natalie Dormer&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 <h4>Listing with forms</h4>
@@ -35,40 +35,97 @@
 
 <div class="panel panel-default">
 	<div class="panel-body">
-		<div class="form-group">
+		<div class="form-group abcom-list">
 			<label for="" class="col-sm-2 abcom-form">Endorsers</label>
 			<div class="col-sm-10">
-				<select multiple id="select2" data-title="Endorser" class="form-control abcom-list__dropdown abcom-form" >
-					<option>Juan Dela Cruz</option>
-					<option>Johann Cheese</option>
-					<option>Yvonne Strahovsky</option>
-					<option>Natalie Dormer</option>
-				</select>
-				<ol class="abcom-list" data-parent="select2">
-					<li class="abcom-list__item">Juan Dela Cruz <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-					<li class="abcom-list__item">Johann Cheese <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-					<li class="abcom-list__item">Yvonne Strahovsky <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-					<li class="abcom-list__item">Natalie Dormer <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-				</ol>
+				<div class="input-group abcom-form__inputgroup">
+					<select multiple id="select2" data-title="Endorser" class="form-control abcom-list__dropdown abcom-form" >
+						<option>Juan Dela Cruz</option>
+						<option>Johann Cheese</option>
+						<option>Yvonne Strahovsky</option>
+						<option>Natalie Dormer</option>
+					</select>
+					<div class="input-group-addon">
+						<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
+				</div>
+				<ol class="abcom-list__items" data-parent="select2"></ol>
 			</div>
 		</div>
 	</div>
 </div>
 
-<pre class="yondu__code"><code>&lt;div class=&quot;form-group&quot;&gt;
+<pre class="yondu__code"><code>&lt;div class=&quot;form-group abcom-list&quot;&gt;
   &lt;label for=&quot;&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Endorsers&lt;/label&gt;
   &lt;div class=&quot;col-sm-10&quot;&gt;
-    &lt;select multiple id=&quot;select2&quot; data-title=&quot;Endorser&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-      &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-      &lt;option&gt;Johann Cheese&lt;/option&gt;
-      &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-      &lt;option&gt;Natalie Dormer&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;ol class=&quot;abcom-list&quot; data-parent=&quot;select2&quot;&gt;
-      &lt;li class=&quot;abcom-list__item&quot;&gt;Juan Dela Cruz &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-list__item__link&quot;&gt;&lt;i class=&quot;fa fa-close&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;abcom-list__item&quot;&gt;Johann Cheese &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-list__item__link&quot;&gt;&lt;i class=&quot;fa fa-close&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;abcom-list__item&quot;&gt;Yvonne Strahovsky &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-list__item__link&quot;&gt;&lt;i class=&quot;fa fa-close&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;abcom-list__item&quot;&gt;Natalie Dormer &lt;a href=&quot;javascript:;&quot; class=&quot;abcom-list__item__link&quot;&gt;&lt;i class=&quot;fa fa-close&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
+    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+      &lt;select multiple id=&quot;select2&quot; data-title=&quot;Endorser&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+        &lt;option&gt;Johann Cheese&lt;/option&gt;
+        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div class=&quot;input-group-addon&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;select2&quot;&gt;&lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>Using Dates with Listing</h4>
+<p>You can use Listing with Dates.</p>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+
+		<div class="form-group abcom-list">
+			<label for="" class="col-sm-1">Date</label>
+			<div class="col-sm-4">
+				<input type="text" class="abcom-list__date form-control abcom-form abcom-form__date abcom-form--full" placeholder="MM/DD/YYYY" />
+			</div>
+			<label for="" class="col-sm-2">Type of Meeting</label>
+			<div class="col-sm-5">
+				<div class="input-group abcom-form__inputgroup">
+					<select multiple id="abcom-list__select2date" data-title="Type of Meeting" class="form-control abcom-list__dropdown abcom-form" >
+						<option>Juan Dela Cruz</option>
+						<option>Johann Cheese</option>
+						<option>Yvonne Strahovsky</option>
+						<option>Natalie Dormer</option>
+					</select>
+					<div class="input-group-addon">
+						<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<ol class="abcom-list__items" data-parent="abcom-list__select2date"></ol>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<pre class="yondu__code"><code>&lt;div class=&quot;form-group abcom-list&quot;&gt;
+  &lt;label for=&quot;&quot; class=&quot;col-sm-1&quot;&gt;Date&lt;/label&gt;
+  &lt;div class=&quot;col-sm-4&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;abcom-list__date form-control abcom-form abcom-form__date abcom-form--full&quot; placeholder=&quot;MM/DD/YYYY&quot; /&gt;
+  &lt;/div&gt;
+  &lt;label for=&quot;&quot; class=&quot;col-sm-2&quot;&gt;Type of Meeting&lt;/label&gt;
+  &lt;div class=&quot;col-sm-5&quot;&gt;
+    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+      &lt;select multiple id=&quot;abcom-list__select2date&quot; data-title=&quot;Type of Meeting&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+        &lt;option&gt;Johann Cheese&lt;/option&gt;
+        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div class=&quot;input-group-addon&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-12&quot;&gt;
+    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;abcom-list__select2date&quot;&gt;&lt;/ol&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>

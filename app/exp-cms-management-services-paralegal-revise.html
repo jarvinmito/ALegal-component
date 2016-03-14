@@ -179,21 +179,23 @@
           </div>
 
           <div class="form-group">
-            
-            <label for="" class="col-sm-2 abcom-form">Endorsers</label>
-            <div class="col-sm-4">
-              <select multiple id="select2" data-title="Endorser" class="form-control abcom-list__dropdown abcom-form" >
-                <option>Juan Dela Cruz</option>
-                <option>Johann Cheese</option>
-                <option>Yvonne Strahovsky</option>
-                <option>Natalie Dormer</option>
-              </select>
-              <ol class="abcom-list" data-parent="select2">
-                <li class="abcom-list__item">Juan Dela Cruz <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-                <li class="abcom-list__item">Johann Cheese <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-                <li class="abcom-list__item">Yvonne Strahovsky <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-                <li class="abcom-list__item">Natalie Dormer <a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>
-              </ol>
+
+            <div class="abcom-list">
+              <label for="form_endorser" class="col-sm-2 abcom-form">Endorsers</label>
+              <div class="col-sm-4">
+                <div class="input-group abcom-form__inputgroup">
+                  <select multiple id="form_endorser" data-title="Endorser" class="form-control abcom-list__dropdown abcom-form" >
+                    <option>Juan Dela Cruz</option>
+                    <option>Johann Cheese</option>
+                    <option>Yvonne Strahovsky</option>
+                    <option>Natalie Dormer</option>
+                  </select>
+                  <div class="input-group-addon">
+                    <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                  </div>
+                </div>
+                <ol class="abcom-list__items" data-parent="form_endorser"></ol>
+              </div>
             </div>
 
             <label for="form_endorsers" class="col-sm-2 abcom-form">Approvers</label>

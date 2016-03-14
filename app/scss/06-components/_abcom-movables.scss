@@ -3,7 +3,13 @@
 	height: auto;
 	overflow: hidden;
 
-	&__data, &__add{
+	&__add{
+		float:left;
+		width: 25%;
+		margin: 0;
+	}
+
+	&__data, &__add__btn{
 		position: relative;
 		float: left;
 		
@@ -64,6 +70,11 @@
 	}
 
 	&__add{
+		&:hover, &:active, &:focus{
+			background-color: $gray-bg;
+			cursor: pointer;
+		}
+
 		&__btn{
 			width: 100%;
 			height: 100%;

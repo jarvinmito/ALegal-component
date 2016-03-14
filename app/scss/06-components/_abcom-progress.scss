@@ -25,7 +25,7 @@
 	&:before{
 		content: attr(value) "%";
 		top: 0;
-		z-index: 4;
+		z-index: -4;
 
 		padding-top: 10px;
 
@@ -36,7 +36,7 @@
 	&:after{
 		content: attr(data-status);
 		bottom: 0;
-		z-index: 3;
+		z-index: -3;
 
 		height: 50px;
 		padding-top: 25px;
@@ -68,4 +68,22 @@
 	&--forpickup::-webkit-progress-value{ background-color:#FFB319; }
 	&--completed::-webkit-progress-value{ background-color:#27FF73; }
 	&--cancelled::-webkit-progress-value{ background-color:#b9b9b9; }
+}
+
+
+div.abcom-progress{
+	position: relative;
+	display: block;
+
+	width: 100%;
+	height: 50px;
+	border: none;
+	background-color: $white-light;
+
+	&__value{
+		height: 50px;
+		width: 0;
+		border: none;
+		background-color: $blue-light;
+	}
 }

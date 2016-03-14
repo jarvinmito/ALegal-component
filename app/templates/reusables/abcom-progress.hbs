@@ -1,13 +1,25 @@
 <h2>Progress Bar</h2>
-<p>This is used for Status (Progress bar)</p>
+<p>This is used for Status (Progress bar) which utilizes the hint.css plugin</p>
 <div class="panel panel-default">
 	<div class="panel-body">
-		<progress class="abcom-progress" data-status="For Endorsement" value="60" max="100"></progress>
-		<p>This are used especially inside a table data whenever a request page is concerned.</p>
-<pre class="yondu__code"><code>&lt;progress class=&quot;abcom-progress&quot; data-status=&quot;For Endorsement&quot; value=&quot;60&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+		<div class="abcom-progress hint--left" data-color="default" data-hint="For Endorsement" data-value="60" data-max="100">
+			<div class="abcom-progress__value"></div>
+		</div>
+	</div>
+</div>
 
-		<h3>Sample with Data Tables</h3>
-		<p>Here is a sample code for integrating progress status bar inside a table</p>
+<p>This are used especially inside a table data whenever a request page is concerned.</p>
+<p>Make sure that the <code>div</code> <code>abcom-progress</code> has the <code>hint--left</code> class. Also make use of <code>data-hint="..."</code> attribute to tell what to display in the tooltip.</p>
+<p>The <code>data-value</code> plays a huge part for the graphical representation of the progress. <code>data-max</code> is used as the maximum or the 100% value of the progress. Also, include a <code>data-color</code> attribute for the color of the value. If none is set, the default color from the css will be used.</p>
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom-progress hint--left&quot; data-color=&quot;default&quot; data-hint=&quot;For Endorsement&quot; data-value=&quot;60&quot; data-max=&quot;100&quot;&gt;
+  &lt;div class=&quot;abcom-progress__value&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Sample with Data Tables</h3>
+<p>Here is a sample code for integrating progress status bar inside a table</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+	
 		<table id="table_id" class="abcom abcom-table">
 	        <thead>
 	            <tr>
@@ -21,14 +33,18 @@
 	        <tbody>
 	            <tr>
 	                <td>Row 1 Data 1</td>
-	                <td><progress class="abcom-progress" data-status="For Approval" value="60" max="100"></progress></td>
+	                <td><div class="abcom-progress hint--left" data-color="default" data-hint="For Endorsement" data-value="60" data-max="100">
+						<div class="abcom-progress__value"></div>
+					</div></td>
 	                <td>Row 1 Data 2</td>
 	                <td>Row 1 Data 2</td>
 	                <td>Row 1 Data 2</td>
 	            </tr>
 	            <tr>
 	                <td>Row 2 Data 1</td>
-	                <td><progress class="abcom-progress" value="30" data-status="For Endorsement" max="100"></progress></td>
+	                <td><div class="abcom-progress hint--left" data-color="default" data-hint="For Approval" data-value="30" data-max="100">
+						<div class="abcom-progress__value"></div>
+					</div></td>
 	                <td>Row 2 Data 2</td>
 	                <td>Row 2 Data 2</td>
 	                <td>Row 2 Data 2</td>
@@ -37,3 +53,17 @@
 	    </table><!-- // End abcom-table -->
 	</div>
 </div>
+
+<h3>Using color picker</h3>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="abcom-progress abcom-color hint--left" data-color="default" data-hint="For Endorsement" data-value="60" data-max="100">
+			<div class="abcom-progress__value"></div>
+		</div>
+	</div>
+</div>
+
+p{Here is the code for the Progress bar with Color Picker. The element should have a <code>abcom-color</code> class and has the <code>data-color</code> attribute.}
+<pre class="yondu__code"><code>&lt;div class=&quot;abcom-progress abcom-color hint--left&quot; data-color=&quot;default&quot; data-hint=&quot;For Endorsement&quot; data-value=&quot;60&quot; data-max=&quot;100&quot;&gt;
+  &lt;div class=&quot;abcom-progress__value&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>

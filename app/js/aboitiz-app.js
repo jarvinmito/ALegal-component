@@ -66,7 +66,7 @@ var aboitizApp = (function(){
 	
 	var initListing = function(){
 		// Select2 is present
-		var elem = $('.abcom-list__dropdown');
+		var elem = $('div.abcom-list');
 		var renderList = function(elem){
 			var html = "";
 			var currSel = elem;
@@ -78,7 +78,7 @@ var aboitizApp = (function(){
 			}
 
 			var id = currSel.attr('id');
-			var list = $('.abcom-list[data-parent="'+id+'"]');
+			var list = $('.abcom-list__items[data-parent="'+id+'"]');
 			list.html(html);
 			list.find('.abcom-list__item__link').unbind('click');
 			list.find('.abcom-list__item__link').click(function(e){
@@ -98,12 +98,47 @@ var aboitizApp = (function(){
 
 		if( elem.length ){
 			elem.each(function(){
-				var selection = $(this).select2({
-						placeholder : 'Select ' + $(this).data('title')
+				var select = $(this).find('.abcom-list__dropdown');
+				if( select.length ){
+					var selection = $(this).find('.abcom-list__dropdown').select2({
+							placeholder : 'Select ' + select.data('title')
+						});
+					var dateField = $(this).find('.abcom-list__date');
+					var addButton = $(this).find('.abcom-list__add');
+					var listItems = $(this).find('.abcom-list__items');
+
+					renderList(select);
+					selection.on('change', function(){ renderList(select); });
+					addButton.click(function(){
+						selection.select2('open');
 					});
 
-				renderList($(this));
-				selection.on('change', function(){ renderList($(this)); });
+					if( dateField.length ){
+						dateField.on('dp.change', function(){
+
+							var dateSelected = $(this).val();
+							var options = select[0].options;
+							// console.log(.length);
+
+							// Slightly Native
+							for(var key in options){
+								if( !options[key].selected ){
+									options[key].value = dateSelected + ' ' + options[key].text;
+								}
+							}
+
+							dateField.removeClass('has-error');
+
+						});
+
+						selection.on('select2:open', function(){
+							if( !dateField.val() ){
+								selection.select2('close');
+								dateField.addClass('has-error');
+							}
+						});
+					}
+				}
 			});
 		}
 	};
@@ -290,11 +325,16 @@ var aboitizApp = (function(){
 	};
 
 	var initMovables = function(){
+		var addMovable = function(parentElem){
+
+		};
+
 		if( $('.abcom-movables').length ){
 			$('.abcom-movables').each(function(){
 
 				var currSet = $(this);
 
+				currSet.find('')
 				currSet.find('input').on('change', function(){
 					var new_val = parseInt($(this).val()),
 						old_val = parseInt($(this).parent('div.abcom-movables__data').attr('data-sort')),
@@ -328,6 +368,37 @@ var aboitizApp = (function(){
 		}
 	};
 
+	var initColorPicker = function(){
+		var cpicker = $('.abcom-color');
+
+		if( cpicker.length ){
+			cpicker.each(function(){
+				var currSet = $(this);
+				currSet.spectrum();
+				currSet.on('move.spectrum', function(e, tinycolor){
+					var color = tinycolor.toHexString();
+					$(this).find('div').css({ 'background-color' : color });
+					$(this).attr('data-color', color);
+				});
+			});
+
+		}
+	};
+
+	var initProgressBar = function(){
+		var progress = $('div.abcom-progress');
+		if( progress.length ){
+			progress.each(function(){
+				var currSet = $(this);
+				var percent = currSet.data('value') / currSet.data('max');
+				var finalWidth = currSet.width() * percent;
+				var color = ( currSet.attr('data-color') ) ? currSet.attr('data-color') : 'default';
+				if( color != 'default' ){ currSet.find('.abcom-progress__value').css({ 'background-color' : color }); }
+				currSet.find('.abcom-progress__value').animate({ 'width' : finalWidth }, 750);
+			});
+		}
+	};
+
 	var initModule = function(){
 		initDonut();
 		initListing();
@@ -337,6 +408,8 @@ var aboitizApp = (function(){
 		initFilter();
 		initDataTables();
 		initMovables();
+		initColorPicker();
+		initProgressBar();
 	};
 
 	return {
@@ -348,7 +421,9 @@ var aboitizApp = (function(){
 		initDTpicker : initDTpicker,
 		initFilter : initFilter,
 		initDataTables : initDataTables,
-		initMovables : initMovables
+		initMovables : initMovables,
+		initColorPicker : initColorPicker,
+		initProgressBar : initProgressBar
 	}
 
 }());

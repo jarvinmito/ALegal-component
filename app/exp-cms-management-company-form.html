@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aboitiz Legal</title>
+  <link rel="Shortcut Icon" type="image-x/icon" href="assets/images/favicon.png" />
+
+  <!-- build:css css/app.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="ab-wrapper">
+    <!-- start : header section -->
+    <header class="header">
+      <nav class="navbar abnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CORS</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#" class="abnav__link"><i class="fa fa-home"></i>Home</a></li>
+              <li class="active"><a href="#" class="abnav__link"><i class="fa fa-hourglass"></i>Management</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-file"></i>Templates</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-folder-open"></i>Requestor's Page</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-briefcase"></i>Reports</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><img class="header__brand" src="assets/images/brand.png" alt="Aboitiz Legal" ></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <nav class="navbar absubnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="absubnav__title navbar-brand"><span class="ab-icon"><i class="fa fa-hourglass"></i></span>Company Profile Management</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+              <div class="usernav btn-group">
+                <div class="usernav__profile btn btn-default"><img class="usernav__photo" src="assets/images/photo.jpg" alt="Juan Dela Cruz">Natalie Dormer</div>
+                <button class="usernav__button btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+              </div>
+            </div>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <!-- end : header section -->
+    
+
+    <!-- start : body section -->
+    <section class="main-content has-side">
+      <section class="main-content__side side">
+        <!-- INSERT SIDE PANEL CONTENT HERE -->
+        <a href="#" class="side__nav" title="Services"><i class="fa fa-cog"></i></a>
+        <a href="#" class="side__nav" title="Requests Status"><i class="fa fa-flag"></i></a>
+        <a href="#" class="side__nav" title="Workspace"><i class="fa fa-briefcase"></i></a>
+        <a href="#" class="side__nav" title="Documents"><i class="fa fa-file"></i></a>
+        <a href="#" class="side__nav" title="Survey Results"><i class="fa fa-list-ul"></i></a>
+        <a href="#" class="side__nav" title="User Profile"><i class="fa fa-users"></i></a>
+        <a href="#" class="side__nav active" title="Company Profile"><i class="fa fa-building"></i></a>
+      </section><!-- // End side -->
+
+      <section class="main-content__main">
+        <!-- INSERT MAIN PANEL CONTENT HERE -->
+        <form action="" class="form-horizontal">
+
+          <div class="abcom-title">
+            <span class="abcom-title__main">Company Details</span>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-9">
+                
+                <div class="form-group">
+                  <label for="form_company" class="col-sm-3">Name</label>
+                        <div class="col-sm-9">
+                          <input type="text" id="form_company" class="form-control abcom-form abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                  <label for="form_nature" class="col-sm-3">Nature of Business</label>
+                        <div class="col-sm-9">
+                          <select name="" id="form_nature" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                        <option selected>Select Nature</option>
+                        <option value="">Nature 1</option>
+                        <option value="">Nature 2</option>
+                        <option value="">Nature 3</option>
+                    </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                  <label for="form_oaddress" class="col-sm-3">Principal Office Address</label>
+                        <div class="col-sm-9">
+                          <input type="text" id="form_oaddress" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                  <label for="form_baddress" class="col-sm-3">Business Address</label>
+                        <div class="col-sm-9">
+                          <input type="text" id="form_baddress" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here" />
+                        </div>
+                    </div>
+
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <img class="abcom-form abcom-form--hasmargin" src="assets/images/yis.jpg" alt="Profile Photo">
+                  
+                  <button class="btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn">
+                    <i class="fa fa-plus"></i>
+                    <span>Select Photo</span>
+                    <input class="abcom-upload__file" type="file" name="file">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="abcom-title">
+            <span class="abcom-title__main">Incorporation Details</span>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="form_dateinc" class="col-sm-2">Incorporation Date</label>
+                        <div class="col-sm-4">
+                          <input type="text" id="form_dateinc" class="form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+                        </div>
+
+                        <label for="form_secno" class="col-sm-2">SEC Registration Number</label>
+                        <div class="col-sm-4">
+                          <input type="text" id="form_secno" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                  <label for="form_asm" class="col-sm-2">ASM Date as per By-Laws</label>
+                        <div class="col-sm-4">
+                          <input type="text" id="form_asm" class="form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+                        </div>
+
+                        <label for="form_tin" class="col-sm-2">Tax Identification Number</label>
+                        <div class="col-sm-4">
+                          <input type="text" id="form_tin" class="form-control abcom-form  abcom-form--full abcom-form--hasmargin" placeholder="Type here">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                  <label for="form_statusop" class="col-sm-2">Status of Operation</label>
+                        <div class="col-sm-4">
+                          <select name="" id="form_statusop" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                        <option selected>Select Nature</option>
+                        <option value="">Active</option>
+                        <option value="">Inactive</option>
+                    </select>
+                        </div>
+
+                        <label for="form_statusfile" class="col-sm-2">Status of Filing with SEC</label>
+                        <div class="col-sm-4">
+                          <select name="" id="form_statusfile" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
+                        <option selected>Select Nature</option>
+                        <option value="">Active</option>
+                        <option value="">Inactive</option>
+                    </select>
+                        </div>
+                    </div>
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="abcom-title">
+            <span class="abcom-title__main">Directors and Officers</span>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+
+                <div class="form-group">
+                  <div class="abcom-list">
+                    <label for="form_director" class="col-sm-2">Director</label>
+                    <div class="col-sm-4">
+                      <div class="input-group abcom-form__inputgroup">
+                        <select multiple id="form_director" data-title="Director" class="form-control abcom-list__dropdown abcom-form" >
+                          <option>Juan Dela Cruz</option>
+                          <option>Johann Cheese</option>
+                          <option>Yvonne Strahovsky</option>
+                          <option>Natalie Dormer</option>
+                        </select>
+                        <div class="input-group-addon">
+                          <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                      </div>
+                      <ol class="abcom-list__items" data-parent="form_director"></ol>
+                    </div>
+                  </div>
+
+                  <div class="abcom-list">
+                    <label for="form_officer" class="col-sm-2">Officer</label>
+                    <div class="col-sm-4">
+                      <div class="input-group abcom-form__inputgroup">
+                        <select multiple id="form_officer" data-title="Officer" class="form-control abcom-list__dropdown abcom-form" >
+                          <option>Juan Dela Cruz</option>
+                          <option>Johann Cheese</option>
+                          <option>Yvonne Strahovsky</option>
+                          <option>Natalie Dormer</option>
+                        </select>
+                        <div class="input-group-addon">
+                          <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                      </div>
+                      <ol class="abcom-list__items" data-parent="form_officer"></ol>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="abcom-title">
+            <span class="abcom-title__main">Lawyers and Paralegals</span>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+
+                <div class="form-group">
+                  <div class="abcom-list">
+                    <label for="form_lawyer" class="col-sm-2">Lawyers</label>
+                    <div class="col-sm-4">
+                      <div class="input-group abcom-form__inputgroup">
+                        <select multiple id="form_lawyer" data-title="Lawyers" class="form-control abcom-list__dropdown abcom-form" >
+                          <option>Juan Dela Cruz</option>
+                          <option>Johann Cheese</option>
+                          <option>Yvonne Strahovsky</option>
+                          <option>Natalie Dormer</option>
+                        </select>
+                        <div class="input-group-addon">
+                          <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                      </div>
+                      <ol class="abcom-list__items" data-parent="form_lawyer"></ol>
+                    </div>
+                  </div>
+
+                  <div class="abcom-list">
+                    <label for="form_paralegal" class="col-sm-2">Paralegal</label>
+                    <div class="col-sm-4">
+                      <div class="input-group abcom-form__inputgroup">
+                        <select multiple id="form_paralegal" data-title="Paralegal" class="form-control abcom-list__dropdown abcom-form" >
+                          <option>Juan Dela Cruz</option>
+                          <option>Johann Cheese</option>
+                          <option>Yvonne Strahovsky</option>
+                          <option>Natalie Dormer</option>
+                        </select>
+                        <div class="input-group-addon">
+                          <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                      </div>
+                      <ol class="abcom-list__items" data-parent="form_paralegal"></ol>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="abcom-title">
+            <span class="abcom-title__main">Endorsers and Approvers</span>
+          </div>
+
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                
+                <div class="form-group">
+                  <div class="abcom-list">
+                    <label for="form_endorser" class="col-sm-2">Endorser</label>
+                    <div class="col-sm-4">
+                      <div class="input-group abcom-form__inputgroup">
+                        <select multiple id="form_endorser" data-title="Endorser" class="form-control abcom-list__dropdown abcom-form" >
+                          <option>Juan Dela Cruz</option>
+                          <option>Johann Cheese</option>
+                          <option>Yvonne Strahovsky</option>
+                          <option>Natalie Dormer</option>
+                        </select>
+                        <div class="input-group-addon">
+                          <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                      </div>
+                      <ol class="abcom-list__items" data-parent="form_endorser"></ol>
+                    </div>
+                  </div>
+
+                  <div class="abcom-list">
+                    <label for="form_approver" class="col-sm-2">Approver</label>
+                    <div class="col-sm-4">
+                      <div class="input-group abcom-form__inputgroup">
+                        <select multiple id="form_approver" data-title="Approver" class="form-control abcom-list__dropdown abcom-form" >
+                          <option>Juan Dela Cruz</option>
+                          <option>Johann Cheese</option>
+                          <option>Yvonne Strahovsky</option>
+                          <option>Natalie Dormer</option>
+                        </select>
+                        <div class="input-group-addon">
+                          <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                      </div>
+                      <ol class="abcom-list__items" data-parent="form_approver"></ol>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="abcom-title">
+            <span class="abcom-title__main">Date of Meetings</span>
+          </div>
+
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+
+                <div class="form-group abcom-list">
+                  <label for="" class="col-sm-1">Date</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="abcom-list__date form-control abcom-form abcom-form__date abcom-form--full" placeholder="MM/DD/YYYY" />
+                  </div>
+                  <label for="" class="col-sm-2">Type of Meeting</label>
+                  <div class="col-sm-5">
+                    <div class="input-group abcom-form__inputgroup">
+                      <select multiple id="abcom-list__select2date" data-title="Type of Meeting" class="form-control abcom-list__dropdown abcom-form" >
+                        <option>Juan Dela Cruz</option>
+                        <option>Johann Cheese</option>
+                        <option>Yvonne Strahovsky</option>
+                        <option>Natalie Dormer</option>
+                      </select>
+                      <div class="input-group-addon">
+                        <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <ol class="abcom-list__items" data-parent="abcom-list__select2date"></ol>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                      <div class="abcom-container abcom-container--right">
+                        <button type="button" class="btn abcom-btn abcom-btn--default">Cancel</button>
+                        <button type="submit" class="btn abcom-btn abcom-btn--default">Submit</button>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </section><!-- // End main -->
+
+    </section>
+    <!-- end : body section -->
+
+    <!-- start : footer section -->
+    <footer class="footer container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 text-align--left"><p class="footer__text">© 2016 Aboitiz Equity Ventures. All rights reserved.</p></div>
+        <div class="col-sm-6 col-xs-12 text-align--right"><p class="footer__text">Powered by <b class="footer__provider">YONDU</b></p></div>
+      </div>
+    </footer>
+    <!-- end : footer section -->
+  </div>
+
+  <!-- build:js js/app.js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/jquery.dataTables.js"></script>
+  <script src="js/dataTables.bootstrap.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <script src="js/filereader.js"></script>
+  <!-- customized -->
+  <script src="js/aboitiz-app.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

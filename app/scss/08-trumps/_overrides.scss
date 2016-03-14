@@ -44,6 +44,10 @@ label{
     box-shadow: none;
     color: $black;
     border-color: $gray-bg-active;
+
+    &.has-error{
+        border-color: $red-active;
+    }
 }
 
 
