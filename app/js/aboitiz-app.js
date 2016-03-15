@@ -325,44 +325,135 @@ var aboitizApp = (function(){
 	};
 
 	var initMovables = function(){
-		var addMovable = function(parentElem){
 
+		var renderMovables = function(currSet){
+			var select = currSet.find('.abcom-movables__add__select select');
+			var values = select.val();
+			var currOpt = select[0].options;
+			var elements = $('<div/>');
+			var sortCount = 1;
+
+			for( var key in currOpt ){
+				if( typeof currOpt[key] != 'object'){
+					continue;
+				}
+
+				if( currOpt[key].selected ){
+					var sort = ( $(currOpt[key]).data('sort') ) ? $(currOpt[key]).data('sort') : sortCount;
+					var name = $(currOpt[key]).data('name');
+					var img = $(currOpt[key]).data('photo');
+					var pos = $(currOpt[key]).data('position');
+					var id = $(currOpt[key]).data('id');
+
+					// console.log(currOpt[key]);
+					var element = $('<div data-id="'+id+'" data-sort="'+sort+'" class="abcom-movables__data" />');
+					var inner = '<img src="'+img+'" />';
+					inner += '<h1>'+name+'</h1>';
+					inner += '<p>'+pos+'</p>';
+					inner += '<input type="text" placeholder="'+sort+'" />';
+					inner += '<a href="#" class="abcom-movables__data__remove"><i class="fa fa-close"></i></a>';
+
+					element.html(inner);
+					elements.append(element);
+
+					sortCount++;
+				}
+			}
+
+
+			var movables = $(elements).find('.abcom-movables__data');
+
+			// console.log($(elements));
+			currSet.find('.abcom-movables__data').remove();
+
+			sortMovables(movables, currSet);
+			bind(currSet);
+
+		};
+
+		var sortMovables = function(elements, parentElem){
+			elements.sort(function(a,b) {
+				var ae = parseInt($(a).attr('data-sort')),
+					be = parseInt($(b).attr('data-sort'));
+			    return ae - be;
+			}).appendTo(parentElem, 2000);
+		};
+
+		var bind = function(currSet){
+			currSet.find('.abcom-movables__data__remove').click(function(e){
+				var select = currSet.find('.abcom-movables__add__select select');
+				var parentElem = $(this).parent('.abcom-movables__data');
+				var oldValue = select.val();
+
+				oldValue.splice(oldValue.indexOf(parentElem.data('id').toString()), 1);
+				var newValue = oldValue;
+
+				select.val(newValue);
+
+				renderMovables(currSet);
+
+				e.preventDefault();
+				// console.log(select.val());
+			});
+
+			currSet.find('.abcom-movables__data input').on('change', function(){
+				var new_val = parseInt($(this).val()),
+					old_val = parseInt($(this).parent('div.abcom-movables__data').attr('data-sort')),
+					$movable_contents = currSet,
+					$movables = $movable_contents.children('div.abcom-movables__data[data-sort]');
+
+				if(new_val <= $movables.length){
+					var pair = currSet.find('div.abcom-movables__data[data-sort="'+new_val+'"]'),
+						curr = $(this).parent('div.abcom-movables__data');
+					
+					// Find pair and replace number
+					currSet.find('div.abcom-movables__data[data-id="'+pair.attr('data-id')+'"]').attr('data-sort', old_val).children('input').attr('placeholder',old_val);
+					// Change self
+					curr.attr('data-sort', new_val);
+					$(this).attr('placeholder',new_val);
+					// console.log(curr.attr('data-sort'), pair.attr('data-sort'));
+
+					// Sorting Ends
+					sortMovables($movables, $movable_contents);
+				}
+				currSet.find('input').val("");
+			});
 		};
 
 		if( $('.abcom-movables').length ){
 			$('.abcom-movables').each(function(){
 
 				var currSet = $(this);
+				var addSection = currSet.find('.abcom-movables__add');
+				var addSelection = addSection.find('.abcom-movables__add__select select');
+				var addButton = addSection.find('.abcom-movables__add__btn');
 
-				currSet.find('')
-				currSet.find('input').on('change', function(){
-					var new_val = parseInt($(this).val()),
-						old_val = parseInt($(this).parent('div.abcom-movables__data').attr('data-sort')),
-						$movable_contents = currSet,
-						$movables = $movable_contents.children('div.abcom-movables__data[data-sort]');
+				// Instantiate Select2 plugin
+				addSelection.select2();
 
-					if(new_val <= $movables.length){
-						var pair = $('div.abcom-movables__data[data-sort="'+new_val+'"]'),
-							curr = $(this).parent('div.abcom-movables__data');
-						
-						// Find pair and replace number
-						currSet.find('div.abcom-movables__data[data-id="'+pair.attr('data-id')+'"]').attr('data-sort', old_val).children('input').attr('placeholder',old_val);
-						// Change self
-						curr.attr('data-sort', new_val);
-						$(this).attr('placeholder',new_val);
-						// console.log(curr.attr('data-sort'), pair.attr('data-sort'));
+				// Render the List
+				renderMovables(currSet);
 
-						// Sorting start
-						$movables.sort(function(a,b) {
-							var ae = parseInt($(a).attr('data-sort')),
-								be = parseInt($(b).attr('data-sort'));
-							console.log(ae-be);
-						    return ae - be;
-						}).appendTo($movable_contents, 2000);
-						// Sorting Ends
-					}
-					currSet.find('input').val("");
+				// Bind selection when closing
+				addSelection.on('select2:close', function(){
+					addSection.find('.abcom-movables__add__select').hide();
 				});
+
+				// Bind click on add button to display the select2 plugin
+				addButton.click(function(e){
+					e.preventDefault();
+					addSection.find('.abcom-movables__add__select').show();
+					addSelection.select2('open');
+				});
+
+				// Bind the change funciton of select2 plugin
+				addSelection.on('change', function(){
+					// console.log(addSelection[0].options);
+					renderMovables(currSet);
+				});
+
+				// Bind change function on input for sorting
+				bind(currSet);
 
 			});
 		}

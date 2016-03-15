@@ -15112,9 +15112,24 @@ img.abcom-form, img.select2-selection {
 }
 
 .abcom-movables__add {
+  position: relative;
   float: left;
   width: 25%;
   margin: 0;
+}
+
+.abcom-movables__add__select {
+  position: absolute;
+  display: none;
+  top: 0;
+  z-index: 10;
+  height: 104px;
+  padding: 30px;
+  background-color: #dddddd;
+}
+
+.abcom-movables__add__select, .abcom-movables__add__select select, .abcom-movables__add__select .select2-container {
+  width: 100%;
 }
 
 .abcom-movables__data, .abcom-movables__add__btn {

@@ -85,6 +85,7 @@
 
       <section class="main-content__main">
         <!-- INSERT MAIN PANEL CONTENT HERE -->
+        
         <div class="abcom abcom-filter nav">
           <div class="navbar-left">
             <div class="form-group">
@@ -159,7 +160,9 @@
             <tbody>
                 <tr>
                     <td>Completed</td>
-                    <td><progress class="abcom-progress" data-status="Completed" value="100" max="100"></progress></td>
+                    <td><div class="abcom-progress abcom-color hint--left" data-color="default" data-hint="Completed" data-value="100" data-max="100">
+                <div class="abcom-progress__value"></div>
+              </div></td>
                     <td>Name of Creator</td>
                     <td>mm/dd/yyyy</td>
                     <td>
@@ -168,7 +171,9 @@
                 </tr>
                 <tr>
                     <td>For Pickup</td>
-                    <td><progress class="abcom-progress" data-status="For Pickup" value="80" max="100"></progress></td>
+                    <td><div class="abcom-progress abcom-color hint--left" data-color="default" data-hint="For Pickup" data-value="80" data-max="100">
+                <div class="abcom-progress__value"></div>
+              </div></td>
                     <td>Name of Creator</td>
                     <td>mm/dd/yyyy</td>
                     <td>
@@ -177,7 +182,9 @@
                 </tr>
                 <tr>
                     <td>For Processing</td>
-                    <td><progress class="abcom-progress" data-status="For Processing" value="50" max="100"></progress></td>
+                    <td><div class="abcom-progress abcom-color hint--left" data-color="default" data-hint="For Processing" data-value="40" data-max="100">
+                <div class="abcom-progress__value"></div>
+              </div></td>
                     <td>Name of Creator</td>
                     <td>mm/dd/yyyy</td>
                     <td>
@@ -186,7 +193,9 @@
                 </tr>
                 <tr>
                     <td>For Approval</td>
-                    <td><progress class="abcom-progress" data-status="For Approval" value="40" max="100"></progress></td>
+                    <td><div class="abcom-progress abcom-color hint--left" data-color="default" data-hint="For Approval" data-value="60" data-max="100">
+                <div class="abcom-progress__value"></div>
+              </div></td>
                     <td>Name of Creator</td>
                     <td>mm/dd/yyyy</td>
                     <td>
@@ -194,8 +203,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>For Endoresment</td>
-                    <td><progress class="abcom-progress" data-status="For Endorsement" value="20" max="100"></progress></td>
+                    <td>For Endorsement</td>
+                    <td><div class="abcom-progress abcom-color hint--left" data-color="default" data-hint="For Endorsement" data-value="20" data-max="100">
+                <div class="abcom-progress__value"></div>
+              </div></td>
                     <td>Name of Creator</td>
                     <td>mm/dd/yyyy</td>
                     <td>
@@ -204,7 +215,9 @@
                 </tr>
                 <tr>
                     <td>Cancelled</td>
-                    <td><progress class="abcom-progress" data-status="Cancelled" value="100" max="100"></progress></td>
+                    <td><div class="abcom-progress abcom-color hint--left" data-color="default" data-hint="Cancelled" data-value="100" data-max="100">
+                <div class="abcom-progress__value"></div>
+              </div></td>
                     <td>Name of Creator</td>
                     <td>mm/dd/yyyy</td>
                     <td>
@@ -213,6 +226,7 @@
                 </tr>
             </tbody>
         </table>
+
       </section><!-- // End main -->
 
     </section>
@@ -237,6 +251,7 @@
   <script src="js/dataTables.bootstrap.js"></script>
   <script src="js/select2.full.min.js"></script>
   <script src="js/filereader.js"></script>
+  <script src="js/spectrum.js"></script>
   <!-- customized -->
   <script src="js/aboitiz-app.js"></script>
   <script src="js/custom.js"></script>

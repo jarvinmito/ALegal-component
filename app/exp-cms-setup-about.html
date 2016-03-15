@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aboitiz Legal</title>
+  <link rel="Shortcut Icon" type="image-x/icon" href="assets/images/favicon.png" />
+
+  <!-- build:css css/app.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div class="ab-wrapper">
+    <!-- start : header section -->
+    <header class="header">
+      <nav class="navbar abnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CORS</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#" class="abnav__link"><i class="fa fa-home"></i>Home</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-hourglass"></i>Management</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-file"></i>Templates</a></li>
+              <li class="active"><a href="#" class="abnav__link"><i class="fa fa-cog"></i>Setup</a></li>
+              <li><a href="#" class="abnav__link"><i class="fa fa-briefcase"></i>Reports</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><img class="header__brand" src="assets/images/brand.png" alt="Aboitiz Legal" ></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <nav class="navbar absubnav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="absubnav__title navbar-brand"><span class="ab-icon"><i class="fa fa-cog"></i></span>About Us Management</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+              <div class="usernav btn-group">
+                <div class="usernav__profile btn btn-default"><img class="usernav__photo" src="assets/images/photo.jpg" alt="Juan Dela Cruz">Natalie Dormer</div>
+                <button class="usernav__button btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+              </div>
+            </div>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <!-- end : header section -->
+    
+
+    <!-- start : body section -->
+    <section class="main-content has-side">
+      <section class="main-content__side side">
+        <!-- INSERT SIDE PANEL CONTENT HERE -->
+        <a href="#" class="side__nav active" title="About Us"><i class="fa fa-info"></i></a>
+        <a href="#" class="side__nav" title="Contact Us"><i class="fa fa-quote-left"></i></a>
+        <a href="#" class="side__nav" title="Holidays"><i class="fa fa-bell"></i></a>
+        <a href="#" class="side__nav" title="Access Rights"><i class="fa fa-key"></i></a>
+      </section><!-- // End side -->
+
+      <section class="main-content__main">
+        <!-- INSERT MAIN PANEL CONTENT HERE -->
+       <div class="abcom-title">
+          <span class="abcom-title__main">Description</span>
+          <span class="abcom-title__sub">Brief description of the company</span>
+          <div class="form-group">
+            <button type="button" class="btn abcom-btn abcom-btn--default">Edit</button>
+          </div>
+        </div>
+
+        <p class="abcom__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        <div class="abcom-title">
+          <span class="abcom-title__main">Members</span>
+          <span class="abcom-title__sub">Select users to view it from the requestor's page</span>
+        </div>
+
+        <div class="abcom-movables">
+          <div class="abcom-movables__add">
+            <a href="#" class="abcom-movables__add__btn">
+              <div><i class="fa fa-plus"></i></div>
+              <div>Add Member</div>
+            </a>
+            <div class="abcom-movables__add__select">
+              <select name="" id="" class="" style="width: 100%" multiple>
+                <optgroup label="Directors">
+                  <option data-id="1" data-photo="assets/images/yis.jpg" data-name="Juan Dela Cruz" data-position="Floor Director" value="1">Juan Dela Cruz</option>
+                  <option data-id="2" data-photo="assets/images/yis.jpg" data-name="Natalie Dormer" data-position="Director" value="2">Natalie Dormer</option>
+                  <option data-id="3" data-photo="assets/images/yis.jpg" data-name="Yvonne Strahovsky" data-position="Executive Director" value="3">Yvonne Strahovsky</option>
+                  <option data-id="4" data-photo="assets/images/yis.jpg" data-name="Ember" data-position="Director" value="4">Ember</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section><!-- // End main -->
+
+    </section>
+    <!-- end : body section -->
+
+    <!-- start : footer section -->
+    <footer class="footer container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 text-align--left"><p class="footer__text">© 2016 Aboitiz Equity Ventures. All rights reserved.</p></div>
+        <div class="col-sm-6 col-xs-12 text-align--right"><p class="footer__text">Powered by <b class="footer__provider">YONDU</b></p></div>
+      </div>
+    </footer>
+    <!-- end : footer section -->
+  </div>
+
+  <!-- build:js js/app.js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/jquery.dataTables.js"></script>
+  <script src="js/dataTables.bootstrap.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <script src="js/filereader.js"></script>
+  <!-- customized -->
+  <script src="js/aboitiz-app.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

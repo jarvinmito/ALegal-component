@@ -85,6 +85,7 @@
 
       <section class="main-content__main">
         <!-- INSERT MAIN PANEL CONTENT HERE -->
+        
         <form action="" class="form-horizontal">
           <div class="abcom-title">
             <span class="abcom-title__main">Edit Minutes of the Meeting</span>
@@ -140,43 +141,60 @@
                     </div>
 
                     <hr>
+                
 
-                    <div class="form-group">
-                  <label for="form_dpresent" class="col-sm-3">Directors Present</label>
-                  <div class="col-sm-9">
-                    <select multiple id="form_dpresent" data-title="Directors" class="form-control abcom-list__dropdown abcom-form" >
-                      <option>Juan Dela Cruz</option>
-                      <option>Johann Cheese</option>
-                      <option>Yvonne Strahovsky</option>
-                      <option>Natalie Dormer</option>
-                    </select>
-                    <ol class="abcom-list" data-parent="form_dpresent"></ol>
+                <div class="form-group abcom-list">
+                  <label for="form_dpresent" class="col-sm-2">Directors Present</label>
+                  <div class="col-sm-10">
+                    <div class="input-group abcom-form__inputgroup">
+                      <select multiple id="form_dpresent" data-title="Director" class="form-control abcom-list__dropdown abcom-form" >
+                        <option>Juan Dela Cruz</option>
+                        <option>Johann Cheese</option>
+                        <option>Yvonne Strahovsky</option>
+                        <option>Natalie Dormer</option>
+                      </select>
+                      <div class="input-group-addon">
+                        <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                      </div>
+                    </div>
+                    <ol class="abcom-list__items" data-parent="form_dpresent"></ol>
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="form_dabsent" class="col-sm-3">Directors Present</label>
-                  <div class="col-sm-9">
-                    <select multiple id="form_dabsent" data-title="Directors" class="form-control abcom-list__dropdown abcom-form" >
-                      <option>Juan Dela Cruz</option>
-                      <option>Johann Cheese</option>
-                      <option>Yvonne Strahovsky</option>
-                      <option>Natalie Dormer</option>
-                    </select>
-                    <ol class="abcom-list" data-parent="form_dabsent"></ol>
+                <div class="form-group abcom-list">
+                  <label for="form_dabsent" class="col-sm-2">Directors Absent</label>
+                  <div class="col-sm-10">
+                    <div class="input-group abcom-form__inputgroup">
+                      <select multiple id="form_dabsent" data-title="Director" class="form-control abcom-list__dropdown abcom-form" >
+                        <option>Juan Dela Cruz</option>
+                        <option>Johann Cheese</option>
+                        <option>Yvonne Strahovsky</option>
+                        <option>Natalie Dormer</option>
+                      </select>
+                      <div class="input-group-addon">
+                        <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                      </div>
+                    </div>
+                    <ol class="abcom-list__items" data-parent="form_dabsent"></ol>
                   </div>
                 </div>
+                
 
-                <div class="form-group">
-                  <label for="form_attendance" class="col-sm-3">in Attendance</label>
-                  <div class="col-sm-9">
-                    <select multiple id="form_attendance" data-title="Directors" class="form-control abcom-list__dropdown abcom-form" >
-                      <option>Juan Dela Cruz</option>
-                      <option>Johann Cheese</option>
-                      <option>Yvonne Strahovsky</option>
-                      <option>Natalie Dormer</option>
-                    </select>
-                    <ol class="abcom-list" data-parent="form_attendance"></ol>
+                <div class="form-group abcom-list">
+                  <label for="form_attendance" class="col-sm-2">in Attendance</label>
+                  <div class="col-sm-10">
+                    <div class="input-group abcom-form__inputgroup">
+                      <select multiple id="form_attendance" data-title="in Attendance" class="form-control abcom-list__dropdown abcom-form" >
+                        <option>Juan Dela Cruz</option>
+                        <option>Johann Cheese</option>
+                        <option>Yvonne Strahovsky</option>
+                        <option>Natalie Dormer</option>
+                      </select>
+                      <div class="input-group-addon">
+                        <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+                      </div>
+                    </div>
+                    <ol class="abcom-list__items" data-parent="form_attendance"></ol>
                   </div>
                 </div>
 
@@ -230,6 +248,7 @@
             </div>
           </div>
         </form>
+
       </section><!-- // End main -->
 
     </section>

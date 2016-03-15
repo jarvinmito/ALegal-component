@@ -167,6 +167,7 @@ App.Pageloader = (function(){
 		aboitizApp.initFilter();
 		aboitizApp.initDataTables();
 		aboitizApp.initMovables();
+		aboitizApp.initProgressBar();
 		aboitizApp.initColorPicker();
 
 		bind();
