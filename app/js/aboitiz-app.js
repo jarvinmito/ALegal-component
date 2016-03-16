@@ -225,6 +225,7 @@ var aboitizApp = (function(){
 		if( uploadForm.length ){
 			uploadForm.each(function( index ){
 				var upParent = $(this);
+				var currIndex = index;
 				allFiles[index] = [];
 				
 				upParent.find('.abcom-upload__file').fileReaderJS({
@@ -233,9 +234,16 @@ var aboitizApp = (function(){
 					    load: function(e, file) {
 					      var data = { e : e, file : file};
 					      if( extCheck(file) ){
+					      	var arrIndex = allFiles[index].length;
+					      	var params = {
+						      		file : file,
+						      		upParent : upParent,
+						      		currIndex : currIndex
+						      	}
+
 					      	allFiles[index].push(data);
-					      	renderList(file, upParent, index);
-					      	// bind(file, upParent, index, data);
+					      	renderList(params);
+					      	bind(params);
 					      }
 					    }
 					}
@@ -243,11 +251,31 @@ var aboitizApp = (function(){
 			});
 		}
 
-		var bind = function(file, upParent, index, data){
+		var exportFiles = function(){
+			return allFiles;
+		};
+
+		var bind = function(params){
+			var upParent = params.upParent;
+			var file = params.file;
+			var index = params.currIndex;
+
 			upParent.find('.abcom-upload__removebtn').unbind('click');
 			upParent.find('.abcom-upload__removebtn').click(function(){
-				allFiles[index].splice(allFiles[index].indexOf(data), 1);
-				renderList(file, upParent, index);
+				console.log(allFiles[index]);
+				var files = allFiles[index];
+				// allFiles[index].splice(allFiles[index].indexOf(data), 1);
+
+				for(var key in files){
+					var filename = files[key].file.name;
+					var parentItem = $(this).parents('.abcom-upload__list__item');
+					var pairname = parentItem.data('filename');
+
+					if( filename === pairname ){
+						allFiles[index].splice(key, 1);
+						parentItem.remove();
+					}
+				}
 			});
 		};
 
@@ -268,7 +296,7 @@ var aboitizApp = (function(){
 		   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 		};
 
-		var renderList = function(filedata, upParent, index){
+		var renderList = function(params){
 			var iconlist = {
 				'img' : '<i class="fa fa-file-image-o"></i>',
 				'doc' : '<i class="fa fa-file-word-o"></i>',
@@ -299,11 +327,14 @@ var aboitizApp = (function(){
 				'odp' : iconlist['ppt']
 			};
 
+			var filedata = params.file;
+			var upParent = params.upParent;
+
 			var filename = filedata.name;
 			var size = filedata.size;
 			var extension = filename.substr(filename.lastIndexOf('.') + 1, filename.length);
 
-			var html = '<li class="abcom-upload__list__item container-fluid">' +
+			var html = '<li class="abcom-upload__list__item container-fluid" data-filename="'+filename+'">' +
 						'<div class="row">' +
 							'<div class="col-sm-2"><span class="abcom-upload__file__icon">'+icons[extension]+'</span></div>' +
 							'<div class="col-sm-4">'+filename+'</div>' +
