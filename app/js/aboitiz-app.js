@@ -590,6 +590,38 @@ var aboitizApp = (function(){
 		}
 	};
 
+	var initModals = function(){
+		var button = $('[data-target][data-src]');
+
+		var resizeIframe = function (obj) {
+		    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+		};
+
+		if( button.length ){
+			button.each(function( index ){
+				var curr = $(this);
+
+				curr.on('click', function(e){
+					e.preventDefault();
+
+					var target = $(this).data('target');
+					var src = $(this).data('src');
+
+					$(target).on('show.bs.modal', function(){
+						var iframe = $(this).find('iframe');
+						iframe.attr('src', src);
+						iframe.on('load', function(){
+							resizeIframe(this);
+						});
+					});
+
+					$(target).modal({show: true});
+				});
+
+			});
+		}
+	};
+
 	var initModule = function(){
 		initDonut();
 		initListing();
@@ -601,6 +633,7 @@ var aboitizApp = (function(){
 		initMovables();
 		initColorPicker();
 		initProgressBar();
+		initModals();
 	};
 
 	return {
@@ -614,7 +647,8 @@ var aboitizApp = (function(){
 		initDataTables : initDataTables,
 		initMovables : initMovables,
 		initColorPicker : initColorPicker,
-		initProgressBar : initProgressBar
+		initProgressBar : initProgressBar,
+		initModals : initModals
 	}
 
 }());
