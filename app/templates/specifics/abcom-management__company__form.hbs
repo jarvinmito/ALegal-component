@@ -51,11 +51,11 @@
 						<div class="form-group">
 							<img class="abcom-form abcom-form--hasmargin" src="assets/images/yis.jpg" alt="Profile Photo">
 							
-							<button class="btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn">
+							<label for="file-input" class="btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn">
 							  <i class="fa fa-plus"></i>
 							  <span>Select Photo</span>
-							  <input class="abcom-upload__file" type="file" name="file">
-							</button>
+							  <input id="file-input" class="abcom-upload__file" type="file" name="file">
+							</label>
 						</div>
 					</div>
 				</div>
@@ -324,315 +324,315 @@
 
 <pre class="yondu__code"><code>&lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
 
-  &lt;div class=&quot;abcom-title&quot;&gt;
-    &lt;span class=&quot;abcom-title__main&quot;&gt;Company Details&lt;/span&gt;
-  &lt;/div&gt;
+	&lt;div class=&quot;abcom-title&quot;&gt;
+	  &lt;span class=&quot;abcom-title__main&quot;&gt;Company Details&lt;/span&gt;
+	&lt;/div&gt;
 
-  &lt;div class=&quot;container-fluid&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-sm-9&quot;&gt;
-        
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;form_company&quot; class=&quot;col-sm-3&quot;&gt;Name&lt;/label&gt;
-                &lt;div class=&quot;col-sm-9&quot;&gt;
-                  &lt;input type=&quot;text&quot; id=&quot;form_company&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+	&lt;div class=&quot;container-fluid&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-sm-9&quot;&gt;
+				
+				&lt;div class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;form_company&quot; class=&quot;col-sm-3&quot;&gt;Name&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-9&quot;&gt;
+		            	&lt;input type=&quot;text&quot; id=&quot;form_company&quot; class=&quot;form-control abcom-form abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+		            &lt;/div&gt;
+		        &lt;/div&gt;
+
+		        &lt;div class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;form_nature&quot; class=&quot;col-sm-3&quot;&gt;Nature of Business&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-9&quot;&gt;
+		            	&lt;select name=&quot;&quot; id=&quot;form_nature&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+						    &lt;option selected&gt;Select Nature&lt;/option&gt;
+						    &lt;option value=&quot;&quot;&gt;Nature 1&lt;/option&gt;
+						    &lt;option value=&quot;&quot;&gt;Nature 2&lt;/option&gt;
+						    &lt;option value=&quot;&quot;&gt;Nature 3&lt;/option&gt;
+						&lt;/select&gt;
+		            &lt;/div&gt;
+		        &lt;/div&gt;
+
+		        &lt;div class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;form_oaddress&quot; class=&quot;col-sm-3&quot;&gt;Principal Office Address&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-9&quot;&gt;
+		            	&lt;input type=&quot;text&quot; id=&quot;form_oaddress&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+		            &lt;/div&gt;
+		        &lt;/div&gt;
+
+		        &lt;div class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;form_baddress&quot; class=&quot;col-sm-3&quot;&gt;Business Address&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-9&quot;&gt;
+		            	&lt;input type=&quot;text&quot; id=&quot;form_baddress&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
+		            &lt;/div&gt;
+		        &lt;/div&gt;
+
+			&lt;/div&gt;
+			&lt;div class=&quot;col-sm-3&quot;&gt;
+				&lt;div class=&quot;form-group&quot;&gt;
+					&lt;img class=&quot;abcom-form abcom-form--hasmargin&quot; src=&quot;assets/images/yis.jpg&quot; alt=&quot;Profile Photo&quot;&gt;
+					
+					&lt;label for=&quot;file-input&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn&quot;&gt;
+					  &lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;
+					  &lt;span&gt;Select Photo&lt;/span&gt;
+					  &lt;input id=&quot;file-input&quot; class=&quot;abcom-upload__file&quot; type=&quot;file&quot; name=&quot;file&quot;&gt;
+					&lt;/label&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+
+	&lt;div class=&quot;abcom-title&quot;&gt;
+	  &lt;span class=&quot;abcom-title__main&quot;&gt;Incorporation Details&lt;/span&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;container-fluid&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-sm-12&quot;&gt;
+				&lt;div class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;form_dateinc&quot; class=&quot;col-sm-2&quot;&gt;Incorporation Date&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-4&quot;&gt;
+		            	&lt;input type=&quot;text&quot; id=&quot;form_dateinc&quot; class=&quot;form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
+		            &lt;/div&gt;
+
+		            &lt;label for=&quot;form_secno&quot; class=&quot;col-sm-2&quot;&gt;SEC Registration Number&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-4&quot;&gt;
+		            	&lt;input type=&quot;text&quot; id=&quot;form_secno&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
+		            &lt;/div&gt;
+		        &lt;/div&gt;
+
+		        &lt;div class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;form_asm&quot; class=&quot;col-sm-2&quot;&gt;ASM Date as per By-Laws&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-4&quot;&gt;
+		            	&lt;input type=&quot;text&quot; id=&quot;form_asm&quot; class=&quot;form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
+		            &lt;/div&gt;
+
+		            &lt;label for=&quot;form_tin&quot; class=&quot;col-sm-2&quot;&gt;Tax Identification Number&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-4&quot;&gt;
+		            	&lt;input type=&quot;text&quot; id=&quot;form_tin&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
+		            &lt;/div&gt;
+		        &lt;/div&gt;
+
+		        &lt;div class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;form_statusop&quot; class=&quot;col-sm-2&quot;&gt;Status of Operation&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-4&quot;&gt;
+		            	&lt;select name=&quot;&quot; id=&quot;form_statusop&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+						    &lt;option selected&gt;Select Nature&lt;/option&gt;
+						    &lt;option value=&quot;&quot;&gt;Active&lt;/option&gt;
+						    &lt;option value=&quot;&quot;&gt;Inactive&lt;/option&gt;
+						&lt;/select&gt;
+		            &lt;/div&gt;
+
+		            &lt;label for=&quot;form_statusfile&quot; class=&quot;col-sm-2&quot;&gt;Status of Filing with SEC&lt;/label&gt;
+		            &lt;div class=&quot;col-sm-4&quot;&gt;
+		            	&lt;select name=&quot;&quot; id=&quot;form_statusfile&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
+						    &lt;option selected&gt;Select Nature&lt;/option&gt;
+						    &lt;option value=&quot;&quot;&gt;Active&lt;/option&gt;
+						    &lt;option value=&quot;&quot;&gt;Inactive&lt;/option&gt;
+						&lt;/select&gt;
+		            &lt;/div&gt;
+		        &lt;/div&gt;
+			
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;abcom-title&quot;&gt;
+	  &lt;span class=&quot;abcom-title__main&quot;&gt;Directors and Officers&lt;/span&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;container-fluid&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-sm-12&quot;&gt;
+
+				&lt;div class=&quot;form-group&quot;&gt;
+				  &lt;div class=&quot;abcom-list&quot;&gt;
+					  &lt;label for=&quot;form_director&quot; class=&quot;col-sm-2&quot;&gt;Director&lt;/label&gt;
+					  &lt;div class=&quot;col-sm-4&quot;&gt;
+					    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+					      &lt;select multiple id=&quot;form_director&quot; data-title=&quot;Director&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+					        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+					        &lt;option&gt;Johann Cheese&lt;/option&gt;
+					        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+					        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+					      &lt;/select&gt;
+					      &lt;div class=&quot;input-group-addon&quot;&gt;
+					        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+					      &lt;/div&gt;
+					    &lt;/div&gt;
+					    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_director&quot;&gt;&lt;/ol&gt;
+					  &lt;/div&gt;
+				  &lt;/div&gt;
+
+				  &lt;div class=&quot;abcom-list&quot;&gt;
+					  &lt;label for=&quot;form_officer&quot; class=&quot;col-sm-2&quot;&gt;Officer&lt;/label&gt;
+					  &lt;div class=&quot;col-sm-4&quot;&gt;
+					    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+					      &lt;select multiple id=&quot;form_officer&quot; data-title=&quot;Officer&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+					        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+					        &lt;option&gt;Johann Cheese&lt;/option&gt;
+					        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+					        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+					      &lt;/select&gt;
+					      &lt;div class=&quot;input-group-addon&quot;&gt;
+					        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+					      &lt;/div&gt;
+					    &lt;/div&gt;
+					    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_officer&quot;&gt;&lt;/ol&gt;
+					  &lt;/div&gt;
+				  &lt;/div&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;abcom-title&quot;&gt;
+	  &lt;span class=&quot;abcom-title__main&quot;&gt;Lawyers and Paralegals&lt;/span&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;container-fluid&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-sm-12&quot;&gt;
+
+				&lt;div class=&quot;form-group&quot;&gt;
+				  &lt;div class=&quot;abcom-list&quot;&gt;
+					  &lt;label for=&quot;form_lawyer&quot; class=&quot;col-sm-2&quot;&gt;Lawyers&lt;/label&gt;
+					  &lt;div class=&quot;col-sm-4&quot;&gt;
+					    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+					      &lt;select multiple id=&quot;form_lawyer&quot; data-title=&quot;Lawyers&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+					        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+					        &lt;option&gt;Johann Cheese&lt;/option&gt;
+					        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+					        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+					      &lt;/select&gt;
+					      &lt;div class=&quot;input-group-addon&quot;&gt;
+					        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+					      &lt;/div&gt;
+					    &lt;/div&gt;
+					    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_lawyer&quot;&gt;&lt;/ol&gt;
+					  &lt;/div&gt;
+				  &lt;/div&gt;
+
+				  &lt;div class=&quot;abcom-list&quot;&gt;
+					  &lt;label for=&quot;form_paralegal&quot; class=&quot;col-sm-2&quot;&gt;Paralegal&lt;/label&gt;
+					  &lt;div class=&quot;col-sm-4&quot;&gt;
+					    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+					      &lt;select multiple id=&quot;form_paralegal&quot; data-title=&quot;Paralegal&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+					        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+					        &lt;option&gt;Johann Cheese&lt;/option&gt;
+					        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+					        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+					      &lt;/select&gt;
+					      &lt;div class=&quot;input-group-addon&quot;&gt;
+					        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+					      &lt;/div&gt;
+					    &lt;/div&gt;
+					    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_paralegal&quot;&gt;&lt;/ol&gt;
+					  &lt;/div&gt;
+				  &lt;/div&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+
+	&lt;div class=&quot;abcom-title&quot;&gt;
+	  &lt;span class=&quot;abcom-title__main&quot;&gt;Endorsers and Approvers&lt;/span&gt;
+	&lt;/div&gt;
+
+
+	&lt;div class=&quot;container-fluid&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-sm-12&quot;&gt;
+				
+				&lt;div class=&quot;form-group&quot;&gt;
+				  &lt;div class=&quot;abcom-list&quot;&gt;
+					  &lt;label for=&quot;form_endorser&quot; class=&quot;col-sm-2&quot;&gt;Endorser&lt;/label&gt;
+					  &lt;div class=&quot;col-sm-4&quot;&gt;
+					    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+					      &lt;select multiple id=&quot;form_endorser&quot; data-title=&quot;Endorser&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+					        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+					        &lt;option&gt;Johann Cheese&lt;/option&gt;
+					        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+					        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+					      &lt;/select&gt;
+					      &lt;div class=&quot;input-group-addon&quot;&gt;
+					        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+					      &lt;/div&gt;
+					    &lt;/div&gt;
+					    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_endorser&quot;&gt;&lt;/ol&gt;
+					  &lt;/div&gt;
+				  &lt;/div&gt;
+
+				  &lt;div class=&quot;abcom-list&quot;&gt;
+					  &lt;label for=&quot;form_approver&quot; class=&quot;col-sm-2&quot;&gt;Approver&lt;/label&gt;
+					  &lt;div class=&quot;col-sm-4&quot;&gt;
+					    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+					      &lt;select multiple id=&quot;form_approver&quot; data-title=&quot;Approver&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+					        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+					        &lt;option&gt;Johann Cheese&lt;/option&gt;
+					        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+					        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+					      &lt;/select&gt;
+					      &lt;div class=&quot;input-group-addon&quot;&gt;
+					        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+					      &lt;/div&gt;
+					    &lt;/div&gt;
+					    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_approver&quot;&gt;&lt;/ol&gt;
+					  &lt;/div&gt;
+				  &lt;/div&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;abcom-title&quot;&gt;
+	  &lt;span class=&quot;abcom-title__main&quot;&gt;Date of Meetings&lt;/span&gt;
+	&lt;/div&gt;
+
+
+	&lt;div class=&quot;container-fluid&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-sm-12&quot;&gt;
+
+				&lt;div class=&quot;form-group abcom-list&quot;&gt;
+				  &lt;label for=&quot;&quot; class=&quot;col-sm-1&quot;&gt;Date&lt;/label&gt;
+				  &lt;div class=&quot;col-sm-4&quot;&gt;
+				    &lt;input type=&quot;text&quot; class=&quot;abcom-list__date form-control abcom-form abcom-form__date abcom-form--full&quot; placeholder=&quot;MM/DD/YYYY&quot; /&gt;
+				  &lt;/div&gt;
+				  &lt;label for=&quot;&quot; class=&quot;col-sm-2&quot;&gt;Type of Meeting&lt;/label&gt;
+				  &lt;div class=&quot;col-sm-5&quot;&gt;
+				    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+				      &lt;select multiple id=&quot;abcom-list__select2date&quot; data-title=&quot;Type of Meeting&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
+				        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
+				        &lt;option&gt;Johann Cheese&lt;/option&gt;
+				        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
+				        &lt;option&gt;Natalie Dormer&lt;/option&gt;
+				      &lt;/select&gt;
+				      &lt;div class=&quot;input-group-addon&quot;&gt;
+				        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+				      &lt;/div&gt;
+				    &lt;/div&gt;
+				  &lt;/div&gt;
+				  &lt;div class=&quot;col-sm-12&quot;&gt;
+				    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;abcom-list__select2date&quot;&gt;&lt;/ol&gt;
+				  &lt;/div&gt;
+				&lt;/div&gt;
+
+				&lt;div class=&quot;form-group&quot;&gt;
+                    &lt;div class=&quot;col-sm-12&quot;&gt;
+                      &lt;div class=&quot;abcom-container abcom-container--right&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Cancel&lt;/button&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Submit&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
 
-            &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;form_nature&quot; class=&quot;col-sm-3&quot;&gt;Nature of Business&lt;/label&gt;
-                &lt;div class=&quot;col-sm-9&quot;&gt;
-                  &lt;select name=&quot;&quot; id=&quot;form_nature&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
-                &lt;option selected&gt;Select Nature&lt;/option&gt;
-                &lt;option value=&quot;&quot;&gt;Nature 1&lt;/option&gt;
-                &lt;option value=&quot;&quot;&gt;Nature 2&lt;/option&gt;
-                &lt;option value=&quot;&quot;&gt;Nature 3&lt;/option&gt;
-            &lt;/select&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;form_oaddress&quot; class=&quot;col-sm-3&quot;&gt;Principal Office Address&lt;/label&gt;
-                &lt;div class=&quot;col-sm-9&quot;&gt;
-                  &lt;input type=&quot;text&quot; id=&quot;form_oaddress&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;form_baddress&quot; class=&quot;col-sm-3&quot;&gt;Business Address&lt;/label&gt;
-                &lt;div class=&quot;col-sm-9&quot;&gt;
-                  &lt;input type=&quot;text&quot; id=&quot;form_baddress&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot; /&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-      &lt;/div&gt;
-      &lt;div class=&quot;col-sm-3&quot;&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;img class=&quot;abcom-form abcom-form--hasmargin&quot; src=&quot;assets/images/yis.jpg&quot; alt=&quot;Profile Photo&quot;&gt;
-          
-          &lt;button class=&quot;btn abcom-btn abcom-btn--default abcom-form--full abcom-form--hasmargin abcom-upload__addbtn&quot;&gt;
-            &lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;
-            &lt;span&gt;Select Photo&lt;/span&gt;
-            &lt;input class=&quot;abcom-upload__file&quot; type=&quot;file&quot; name=&quot;file&quot;&gt;
-          &lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-
-  &lt;div class=&quot;abcom-title&quot;&gt;
-    &lt;span class=&quot;abcom-title__main&quot;&gt;Incorporation Details&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;container-fluid&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-sm-12&quot;&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;form_dateinc&quot; class=&quot;col-sm-2&quot;&gt;Incorporation Date&lt;/label&gt;
-                &lt;div class=&quot;col-sm-4&quot;&gt;
-                  &lt;input type=&quot;text&quot; id=&quot;form_dateinc&quot; class=&quot;form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
-                &lt;/div&gt;
-
-                &lt;label for=&quot;form_secno&quot; class=&quot;col-sm-2&quot;&gt;SEC Registration Number&lt;/label&gt;
-                &lt;div class=&quot;col-sm-4&quot;&gt;
-                  &lt;input type=&quot;text&quot; id=&quot;form_secno&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;form_asm&quot; class=&quot;col-sm-2&quot;&gt;ASM Date as per By-Laws&lt;/label&gt;
-                &lt;div class=&quot;col-sm-4&quot;&gt;
-                  &lt;input type=&quot;text&quot; id=&quot;form_asm&quot; class=&quot;form-control abcom-form abcom-form__date abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
-                &lt;/div&gt;
-
-                &lt;label for=&quot;form_tin&quot; class=&quot;col-sm-2&quot;&gt;Tax Identification Number&lt;/label&gt;
-                &lt;div class=&quot;col-sm-4&quot;&gt;
-                  &lt;input type=&quot;text&quot; id=&quot;form_tin&quot; class=&quot;form-control abcom-form  abcom-form--full abcom-form--hasmargin&quot; placeholder=&quot;Type here&quot;&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;form_statusop&quot; class=&quot;col-sm-2&quot;&gt;Status of Operation&lt;/label&gt;
-                &lt;div class=&quot;col-sm-4&quot;&gt;
-                  &lt;select name=&quot;&quot; id=&quot;form_statusop&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
-                &lt;option selected&gt;Select Nature&lt;/option&gt;
-                &lt;option value=&quot;&quot;&gt;Active&lt;/option&gt;
-                &lt;option value=&quot;&quot;&gt;Inactive&lt;/option&gt;
-            &lt;/select&gt;
-                &lt;/div&gt;
-
-                &lt;label for=&quot;form_statusfile&quot; class=&quot;col-sm-2&quot;&gt;Status of Filing with SEC&lt;/label&gt;
-                &lt;div class=&quot;col-sm-4&quot;&gt;
-                  &lt;select name=&quot;&quot; id=&quot;form_statusfile&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
-                &lt;option selected&gt;Select Nature&lt;/option&gt;
-                &lt;option value=&quot;&quot;&gt;Active&lt;/option&gt;
-                &lt;option value=&quot;&quot;&gt;Inactive&lt;/option&gt;
-            &lt;/select&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-      
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;abcom-title&quot;&gt;
-    &lt;span class=&quot;abcom-title__main&quot;&gt;Directors and Officers&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;container-fluid&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-sm-12&quot;&gt;
-
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;div class=&quot;abcom-list&quot;&gt;
-            &lt;label for=&quot;form_director&quot; class=&quot;col-sm-2&quot;&gt;Director&lt;/label&gt;
-            &lt;div class=&quot;col-sm-4&quot;&gt;
-              &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-                &lt;select multiple id=&quot;form_director&quot; data-title=&quot;Director&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-                  &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-                  &lt;option&gt;Johann Cheese&lt;/option&gt;
-                  &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-                  &lt;option&gt;Natalie Dormer&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;div class=&quot;input-group-addon&quot;&gt;
-                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_director&quot;&gt;&lt;/ol&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&quot;abcom-list&quot;&gt;
-            &lt;label for=&quot;form_officer&quot; class=&quot;col-sm-2&quot;&gt;Officer&lt;/label&gt;
-            &lt;div class=&quot;col-sm-4&quot;&gt;
-              &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-                &lt;select multiple id=&quot;form_officer&quot; data-title=&quot;Officer&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-                  &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-                  &lt;option&gt;Johann Cheese&lt;/option&gt;
-                  &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-                  &lt;option&gt;Natalie Dormer&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;div class=&quot;input-group-addon&quot;&gt;
-                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_officer&quot;&gt;&lt;/ol&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;abcom-title&quot;&gt;
-    &lt;span class=&quot;abcom-title__main&quot;&gt;Lawyers and Paralegals&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;container-fluid&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-sm-12&quot;&gt;
-
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;div class=&quot;abcom-list&quot;&gt;
-            &lt;label for=&quot;form_lawyer&quot; class=&quot;col-sm-2&quot;&gt;Lawyers&lt;/label&gt;
-            &lt;div class=&quot;col-sm-4&quot;&gt;
-              &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-                &lt;select multiple id=&quot;form_lawyer&quot; data-title=&quot;Lawyers&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-                  &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-                  &lt;option&gt;Johann Cheese&lt;/option&gt;
-                  &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-                  &lt;option&gt;Natalie Dormer&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;div class=&quot;input-group-addon&quot;&gt;
-                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_lawyer&quot;&gt;&lt;/ol&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&quot;abcom-list&quot;&gt;
-            &lt;label for=&quot;form_paralegal&quot; class=&quot;col-sm-2&quot;&gt;Paralegal&lt;/label&gt;
-            &lt;div class=&quot;col-sm-4&quot;&gt;
-              &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-                &lt;select multiple id=&quot;form_paralegal&quot; data-title=&quot;Paralegal&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-                  &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-                  &lt;option&gt;Johann Cheese&lt;/option&gt;
-                  &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-                  &lt;option&gt;Natalie Dormer&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;div class=&quot;input-group-addon&quot;&gt;
-                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_paralegal&quot;&gt;&lt;/ol&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-
-  &lt;div class=&quot;abcom-title&quot;&gt;
-    &lt;span class=&quot;abcom-title__main&quot;&gt;Endorsers and Approvers&lt;/span&gt;
-  &lt;/div&gt;
-
-
-  &lt;div class=&quot;container-fluid&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-sm-12&quot;&gt;
-        
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;div class=&quot;abcom-list&quot;&gt;
-            &lt;label for=&quot;form_endorser&quot; class=&quot;col-sm-2&quot;&gt;Endorser&lt;/label&gt;
-            &lt;div class=&quot;col-sm-4&quot;&gt;
-              &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-                &lt;select multiple id=&quot;form_endorser&quot; data-title=&quot;Endorser&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-                  &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-                  &lt;option&gt;Johann Cheese&lt;/option&gt;
-                  &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-                  &lt;option&gt;Natalie Dormer&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;div class=&quot;input-group-addon&quot;&gt;
-                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_endorser&quot;&gt;&lt;/ol&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&quot;abcom-list&quot;&gt;
-            &lt;label for=&quot;form_approver&quot; class=&quot;col-sm-2&quot;&gt;Approver&lt;/label&gt;
-            &lt;div class=&quot;col-sm-4&quot;&gt;
-              &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-                &lt;select multiple id=&quot;form_approver&quot; data-title=&quot;Approver&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-                  &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-                  &lt;option&gt;Johann Cheese&lt;/option&gt;
-                  &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-                  &lt;option&gt;Natalie Dormer&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;div class=&quot;input-group-addon&quot;&gt;
-                  &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;form_approver&quot;&gt;&lt;/ol&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;abcom-title&quot;&gt;
-    &lt;span class=&quot;abcom-title__main&quot;&gt;Date of Meetings&lt;/span&gt;
-  &lt;/div&gt;
-
-
-  &lt;div class=&quot;container-fluid&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-sm-12&quot;&gt;
-
-        &lt;div class=&quot;form-group abcom-list&quot;&gt;
-          &lt;label for=&quot;&quot; class=&quot;col-sm-1&quot;&gt;Date&lt;/label&gt;
-          &lt;div class=&quot;col-sm-4&quot;&gt;
-            &lt;input type=&quot;text&quot; class=&quot;abcom-list__date form-control abcom-form abcom-form__date abcom-form--full&quot; placeholder=&quot;MM/DD/YYYY&quot; /&gt;
-          &lt;/div&gt;
-          &lt;label for=&quot;&quot; class=&quot;col-sm-2&quot;&gt;Type of Meeting&lt;/label&gt;
-          &lt;div class=&quot;col-sm-5&quot;&gt;
-            &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-              &lt;select multiple id=&quot;abcom-list__select2date&quot; data-title=&quot;Type of Meeting&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-                &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-                &lt;option&gt;Johann Cheese&lt;/option&gt;
-                &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-                &lt;option&gt;Natalie Dormer&lt;/option&gt;
-              &lt;/select&gt;
-              &lt;div class=&quot;input-group-addon&quot;&gt;
-                &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;col-sm-12&quot;&gt;
-            &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;abcom-list__select2date&quot;&gt;&lt;/ol&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;form-group&quot;&gt;
-            &lt;div class=&quot;col-sm-12&quot;&gt;
-              &lt;div class=&quot;abcom-container abcom-container--right&quot;&gt;
-                &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Cancel&lt;/button&gt;
-                &lt;button type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--default&quot;&gt;Submit&lt;/button&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
 
 &lt;/form&gt;</code></pre>
 

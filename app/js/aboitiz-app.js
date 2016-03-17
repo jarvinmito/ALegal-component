@@ -261,8 +261,9 @@ var aboitizApp = (function(){
 			var index = params.currIndex;
 
 			upParent.find('.abcom-upload__removebtn').unbind('click');
-			upParent.find('.abcom-upload__removebtn').click(function(){
+			upParent.find('.abcom-upload__removebtn').click(function(e){
 				console.log(allFiles[index]);
+				e.preventDefault();
 				var files = allFiles[index];
 				// allFiles[index].splice(allFiles[index].indexOf(data), 1);
 
