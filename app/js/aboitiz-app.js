@@ -370,24 +370,39 @@ var aboitizApp = (function(){
 				}
 
 				if( currOpt[key].selected ){
-					var sort = ( $(currOpt[key]).data('sort') ) ? $(currOpt[key]).data('sort') : sortCount;
-					var name = $(currOpt[key]).data('name');
-					var img = $(currOpt[key]).data('photo');
-					var pos = $(currOpt[key]).data('position');
-					var id = $(currOpt[key]).data('id');
+
+					// Check for Newly Added
+					if( !$(currOpt[key]).attr('data-sort') ){
+						var allSelected = select.find('option:selected');
+						var newSort = allSelected.length;
+						$(currOpt[key]).attr('data-sort', newSort);	
+					}
+
+					var sort = $(currOpt[key]).attr('data-sort');
+					var name = $(currOpt[key]).attr('data-name');
+					var img = $(currOpt[key]).attr('data-photo');
+					var pos = $(currOpt[key]).attr('data-position');
+					var id = $(currOpt[key]).attr('data-id');		
+
 
 					// console.log(currOpt[key]);
 					var element = $('<div data-id="'+id+'" data-sort="'+sort+'" class="abcom-movables__data" />');
 					var inner = '<img src="'+img+'" />';
 					inner += '<h1>'+name+'</h1>';
 					inner += '<p>'+pos+'</p>';
-					inner += '<input type="text" placeholder="'+sort+'" />';
+					inner += '<input type="text" name="members[]" placeholder="'+sort+'" />';
 					inner += '<a href="#" class="abcom-movables__data__remove"><i class="fa fa-close"></i></a>';
 
 					element.html(inner);
 					elements.append(element);
 
 					sortCount++;
+				}else{
+
+					// remove attributes on data-sort
+					if( $(currOpt[key]).attr('data-sort') ){
+						$(currOpt[key]).removeAttr('data-sort');
+					}
 				}
 			}
 
@@ -398,6 +413,7 @@ var aboitizApp = (function(){
 			currSet.find('.abcom-movables__data').remove();
 
 			sortMovables(movables, currSet);
+			revalidateSorting(currSet);
 			bind(currSet);
 
 		};
@@ -410,13 +426,31 @@ var aboitizApp = (function(){
 			}).appendTo(parentElem, 2000);
 		};
 
+		var revalidateSorting = function(parentElem){
+			var elements = parentElem.find('.abcom-movables__data');
+			var first = elements.first();
+			var last = elements.last();
+
+			// if( first.attr('data-sort') > 1 || last.attr('data-sort') < elements.length ){
+				// Not good, must update
+				var sortCount = 1;
+				elements.each(function(){
+					console.log(sortCount);
+					$(this).attr('data-sort', sortCount);
+					$(this).find('input[type="text"]').attr('placeholder', sortCount);
+					parentElem.find('.abcom-movables__add__select select option[data-id="'+$(this).attr('data-id')+'"]').attr('data-sort', sortCount);
+					sortCount++;
+				});
+			// }
+		};
+
 		var bind = function(currSet){
 			currSet.find('.abcom-movables__data__remove').click(function(e){
 				var select = currSet.find('.abcom-movables__add__select select');
 				var parentElem = $(this).parent('.abcom-movables__data');
 				var oldValue = select.val();
 
-				oldValue.splice(oldValue.indexOf(parentElem.data('id').toString()), 1);
+				oldValue.splice(oldValue.indexOf(parentElem.attr('data-id').toString()), 1);
 				var newValue = oldValue;
 
 				select.val(newValue);
