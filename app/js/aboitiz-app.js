@@ -346,6 +346,36 @@ var aboitizApp = (function(){
 
 			upParent.find('.abcom-upload__list').append(html);
 		};
+
+
+
+
+		// for Upload Form with photo
+		var photoForm = $('.abcom-upload--photo');
+
+		if( photoForm.length ){
+			photoForm.each(function(index){
+				var upParent = $(this);
+				var image = upParent.find('img');
+				
+				upParent.find('.abcom-upload__file').fileReaderJS({
+					readAsDefault: "DataURL",
+					on: {
+					    load: function(e, file) {
+					      var data = { e : e, file : file};
+					      var filename = file.name;
+						  var extension = filename.substr(filename.lastIndexOf('.') + 1, filename.length);
+						  var extensions = ['jpg','jpeg','gif','png'];
+
+					      if( extensions.indexOf(extension) != -1 ){
+					      	image.attr('src', e.target.result);
+					      }
+					    }
+					}
+				});
+			});
+		}
+
 	};
 
 	var initDataTables = function(){
