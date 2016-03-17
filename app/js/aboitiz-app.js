@@ -435,7 +435,6 @@ var aboitizApp = (function(){
 				// Not good, must update
 				var sortCount = 1;
 				elements.each(function(){
-					console.log(sortCount);
 					$(this).attr('data-sort', sortCount);
 					$(this).find('input[type="text"]').attr('placeholder', sortCount);
 					parentElem.find('.abcom-movables__add__select select option[data-id="'+$(this).attr('data-id')+'"]').attr('data-sort', sortCount);
@@ -450,10 +449,15 @@ var aboitizApp = (function(){
 				var parentElem = $(this).parent('.abcom-movables__data');
 				var oldValue = select.val();
 
+				console.log(oldValue);
 				oldValue.splice(oldValue.indexOf(parentElem.attr('data-id').toString()), 1);
 				var newValue = oldValue;
 
 				select.val(newValue);
+
+
+				console.log(newValue);
+				console.log(parentElem.attr('data-id'), parentElem.attr('data-sort'));
 
 				renderMovables(currSet);
 
@@ -518,7 +522,7 @@ var aboitizApp = (function(){
 				});
 
 				// Bind change function on input for sorting
-				bind(currSet);
+				// bind(currSet);
 
 			});
 		}
