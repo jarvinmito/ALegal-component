@@ -239,7 +239,7 @@ var aboitizApp = (function(){
 						      		file : file,
 						      		upParent : upParent,
 						      		currIndex : currIndex
-						      	}
+						      	};
 
 					      	allFiles[index].push(data);
 					      	renderList(params);
@@ -277,6 +277,15 @@ var aboitizApp = (function(){
 						parentItem.remove();
 					}
 				}
+			});
+
+			upParent.find('.abcom-upload__clearbtn').unbind('click');
+			upParent.find('.abcom-upload__clearbtn').click(function(e){
+				e.preventDefault();
+
+				// Clear Array
+				allFiles[index].length = 0;
+				upParent.find('.abcom-upload__list__item').remove();
 			});
 		};
 
@@ -480,15 +489,15 @@ var aboitizApp = (function(){
 				var parentElem = $(this).parent('.abcom-movables__data');
 				var oldValue = select.val();
 
-				console.log(oldValue);
+				// console.log(oldValue);
 				oldValue.splice(oldValue.indexOf(parentElem.attr('data-id').toString()), 1);
 				var newValue = oldValue;
 
 				select.val(newValue);
 
 
-				console.log(newValue);
-				console.log(parentElem.attr('data-id'), parentElem.attr('data-sort'));
+				// console.log(newValue);
+				// console.log(parentElem.attr('data-id'), parentElem.attr('data-sort'));
 
 				renderMovables(currSet);
 
@@ -505,10 +514,14 @@ var aboitizApp = (function(){
 				if(new_val <= $movables.length){
 					var pair = currSet.find('div.abcom-movables__data[data-sort="'+new_val+'"]'),
 						curr = $(this).parent('div.abcom-movables__data');
+						currSel = currSet.find('div.abcom-movables__add__select select option[data-id="'+curr.attr('data-id')+'"]');
 					
 					// Find pair and replace number
+					currSet.find('div.abcom-movables__add__select select option[data-id="'+pair.attr('data-id')+'"]').attr('data-sort', old_val);
 					currSet.find('div.abcom-movables__data[data-id="'+pair.attr('data-id')+'"]').attr('data-sort', old_val).children('input').attr('placeholder',old_val);
+					
 					// Change self
+					currSel.attr('data-sort', new_val);
 					curr.attr('data-sort', new_val);
 					$(this).attr('placeholder',new_val);
 					// console.log(curr.attr('data-sort'), pair.attr('data-sort'));
