@@ -123,44 +123,51 @@
 
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-12">
+					<div class="col-sm-6">
 
 						<div class="form-group">
-						  <div class="abcom-list">
-							  <label for="form_director" class="col-sm-2">Director</label>
-							  <div class="col-sm-4">
-							    <div class="input-group abcom-form__inputgroup">
-							      <select multiple id="form_director" data-title="Director" class="form-control abcom-list__dropdown abcom-form" >
-							        <option>Juan Dela Cruz</option>
-							        <option>Johann Cheese</option>
-							        <option>Yvonne Strahovsky</option>
-							        <option>Natalie Dormer</option>
-							      </select>
-							      <div class="input-group-addon">
-							        <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
-							      </div>
-							    </div>
-							    <ol class="abcom-list__items" data-parent="form_director"></ol>
-							  </div>
-						  </div>
+							<div class="abcom-list--v2">
+								<label for="form_director" class="col-sm-2">Directors</label>
+								<div class="col-sm-4">
+									<input type="text" id="form_director" name="" data-name="name" class="form-control abcom-form" placeholder="Type name here">
+								</div>
+								<div class="col-sm-6">
+									<div class="input-group abcom-form__inputgroup">
+										<input type="text" name="" data-name="designation" class="form-control abcom-form" placeholder="Type Designation here">
+										<div class="input-group-addon">
+											<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-offset-2 col-sm-10">
+									<ol class="abcom-list__items"></ol>
+								</div>
+								<input type="hidden" name="" data-name="hidden" class="abcom-list__input">
+							</div>
+						</div>
+					</div>
 
-						  <div class="abcom-list">
-							  <label for="form_officer" class="col-sm-2">Officer</label>
-							  <div class="col-sm-4">
-							    <div class="input-group abcom-form__inputgroup">
-							      <select multiple id="form_officer" data-title="Officer" class="form-control abcom-list__dropdown abcom-form" >
-							        <option>Juan Dela Cruz</option>
-							        <option>Johann Cheese</option>
-							        <option>Yvonne Strahovsky</option>
-							        <option>Natalie Dormer</option>
-							      </select>
-							      <div class="input-group-addon">
-							        <button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
-							      </div>
-							    </div>
-							    <ol class="abcom-list__items" data-parent="form_officer"></ol>
-							  </div>
-						  </div>
+					<div class="col-sm-6">
+
+						<div class="form-group">
+							<div class="abcom-list--v2">
+								<label for="form_officer" class="col-sm-2">Officers</label>
+								<div class="col-sm-4">
+									<input type="text" id="form_officer" name="" data-name="name" class="form-control abcom-form" placeholder="Type name here">
+								</div>
+								<div class="col-sm-6">
+									<div class="input-group abcom-form__inputgroup">
+										<input type="text" name="" data-name="designation" class="form-control abcom-form" placeholder="Type Designation here">
+										<div class="input-group-addon">
+											<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-offset-2 col-sm-10">
+									<ol class="abcom-list__items"></ol>
+								</div>
+								<input type="hidden" name="" data-name="hidden" class="abcom-list__input">
+							</div>
 						</div>
 
 					</div>

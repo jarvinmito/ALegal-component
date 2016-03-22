@@ -141,6 +141,126 @@ var aboitizApp = (function(){
 				}
 			});
 		}
+
+
+		// For features -- Has designation only textbox
+		var v2 = $('div.abcom-list--v2');
+
+		var renderListv2 = function(elem){
+			var html = "";
+			var currSel = elem;
+			var hidden = currSel.find('input[data-name="hidden"]');
+
+			// convert to json
+			var values = eval("(" + hidden.val() + ")");
+
+			for(var key in values){
+				// console.log( key, values, values[key] );
+				html += '<li class="abcom-list__item" data-index="'+key+'" data-value-name="'+values[key].name+'" data-value-designation="'+values[key].designation+'">'+values[key].name+ ' - ' + values[key].designation +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+			}
+
+			var list = currSel.find('.abcom-list__items');
+			list.html(html);
+			list.find('.abcom-list__item__link').unbind('click');
+			list.find('.abcom-list__item__link').click(function(e){
+				var thisList = $(this).parent('.abcom-list__item');
+				var index = thisList.data('index');
+
+				// Remove from selection -- Array
+				var newValue = values;
+				newValue.splice(index, 1);
+
+				thisList.remove();
+
+				// Set to semi-global
+				currSetValues = newValue;
+
+				hidden.val(JSON.stringify(newValue));
+
+				renderListv2(currSel);
+			});
+		};
+
+		if( v2.length ){
+			v2.each(function(index){
+				var currSet = $(this);
+				var currSetValues = [];
+
+				var addButton = currSet.find('.abcom-list__add');
+				var nameInput = currSet.find('input[data-name="name"]');
+				var desiInput = currSet.find('input[data-name="designation"]');
+				var hiddInput = currSet.find('input[data-name="hidden"]');
+
+				nameInput.on('change', function(){
+					$(this).removeClass('has-error');
+				});
+
+				desiInput.on('change', function(){
+					$(this).removeClass('has-error');
+				});
+
+				addButton.on('click', function(e){
+					e.preventDefault();
+					var inputs = currSet.find('input');
+					
+					inputs.each( function(){
+						var currIn = $(this);
+						if( !currIn.val() ){
+							currIn.addClass('has-error');
+						}else{
+							currIn.removeClass('has-error');
+						}
+					});
+
+
+					var name = nameInput;
+					var designation = desiInput;
+					var hidden = currSet.find('input[data-name="hidden"]');
+
+					if( hidden.val() ){
+						currSetValues = eval("(" + hidden.val() + ")");
+					}
+
+					if( name.val() && designation.val() ){
+						var hidden = currSet.find('input[data-name="hidden"]');
+						var data = {
+							"name" : name.val(),
+							"designation" : designation.val()
+						};
+
+
+						// check if the current value already exists inside
+						var key;
+						var marker = false;
+						for(key in currSetValues){
+							var vname = currSetValues[key].name;
+							var vdesignation = currSetValues[key].designation;
+
+							if( vname == data.name && vdesignation == data.designation ){
+								marker = true;
+							}
+						}
+
+						if( !marker ){
+							currSetValues.push(data);
+							// Set inputs to blank
+							name.val('').removeClass('has-error');
+							designation.val('').removeClass('has-error');
+							
+						}else{
+							name.addClass('has-error');
+							designation.addClass('has-error');
+						}
+
+						var datatext = JSON.stringify(currSetValues);
+
+						hidden.val(datatext);
+						renderListv2(currSet);
+					}
+				});
+
+			});
+		}
 	};
 
 	// Used in form dates only

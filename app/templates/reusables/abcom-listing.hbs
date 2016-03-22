@@ -101,6 +101,7 @@
 			<div class="col-sm-12">
 				<ol class="abcom-list__items" data-parent="abcom-list__select2date"></ol>
 			</div>
+			<input type="hidden" name="" class="abcom-list__input">
 		</div>
 
 	</div>
@@ -128,4 +129,53 @@
   &lt;div class=&quot;col-sm-12&quot;&gt;
     &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;abcom-list__select2date&quot;&gt;&lt;/ol&gt;
   &lt;/div&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;&quot; class=&quot;abcom-list__input&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<h4>Using in Directors / Officers with Designation</h4>
+<p>Here is another version you can use.</p>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="form-group abcom-list--v2">
+			<label for="" class="col-sm-2 abcom-form">Directors</label>
+			<div class="col-sm-4">
+				<input type="text" data-name="name" class="form-control abcom-form" placeholder="Type name here">
+			</div>
+			<div class="col-sm-5">
+				<div class="input-group abcom-form__inputgroup">
+					<input type="text" data-name="designation" class="form-control abcom-form" placeholder="Type Designation here">
+					<div class="input-group-addon">
+						<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-offset-2 col-sm-10">
+				<ol class="abcom-list__items" data-parent="select2"></ol>
+			</div>
+			<input type="hidden" name="" data-name="hidden" class="abcom-list__input">
+		</div>
+	</div>
+</div>
+
+<p>Here is the markup for the customized listing.</p>
+<pre class="yondu__code"><code>&lt;div class=&quot;form-group abcom-list--v2&quot;&gt;
+	&lt;label for=&quot;&quot; class=&quot;col-sm-2 abcom-form&quot;&gt;Directors&lt;/label&gt;
+	&lt;div class=&quot;col-sm-4&quot;&gt;
+		&lt;input type=&quot;text&quot; data-name=&quot;name&quot; class=&quot;form-control abcom-form&quot; placeholder=&quot;Type name here&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-sm-5&quot;&gt;
+		&lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+			&lt;input type=&quot;text&quot; data-name=&quot;designation&quot; class=&quot;form-control abcom-form&quot; placeholder=&quot;Type Designation here&quot;&gt;
+			&lt;div class=&quot;input-group-addon&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+		&lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;select2&quot;&gt;&lt;/ol&gt;
+	&lt;/div&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;&quot; data-name=&quot;hidden&quot; class=&quot;abcom-list__input&quot;&gt;
 &lt;/div&gt;</code></pre>
