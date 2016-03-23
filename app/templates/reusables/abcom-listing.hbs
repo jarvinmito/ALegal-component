@@ -79,19 +79,20 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 
-		<div class="form-group abcom-list">
+		<div class="form-group abcom-list--v3">
 			<label for="" class="col-sm-1">Date</label>
 			<div class="col-sm-4">
-				<input type="text" class="abcom-list__date form-control abcom-form abcom-form__date abcom-form--full" placeholder="MM/DD/YYYY" />
+				<input type="text" data-name="date" class="abcom-list__date form-control abcom-form abcom-form__date abcom-form--full" placeholder="MM/DD/YYYY" />
 			</div>
-			<label for="" class="col-sm-2">Type of Meeting</label>
+			<label for="form_typemom" class="col-sm-2">Type of Meeting</label>
 			<div class="col-sm-5">
 				<div class="input-group abcom-form__inputgroup">
-					<select multiple id="abcom-list__select2date" data-title="Type of Meeting" class="form-control abcom-list__dropdown abcom-form" >
-						<option>Juan Dela Cruz</option>
-						<option>Johann Cheese</option>
-						<option>Yvonne Strahovsky</option>
-						<option>Natalie Dormer</option>
+					<select id="form_typemom" data-name="type" placeholder="Select Type" class="form-control abcom-form" >
+						<option value="none" selected>Select Type</option>
+						<option value="Juan Dela Cruz">Juan Dela Cruz</option>
+						<option value="Johann Cheese">Johann Cheese</option>
+						<option value="Yvonne Strahovsky">Yvonne Strahovsky</option>
+						<option value="Natalie Dormer">Natalie Dormer</option>
 					</select>
 					<div class="input-group-addon">
 						<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
@@ -101,35 +102,36 @@
 			<div class="col-sm-12">
 				<ol class="abcom-list__items" data-parent="abcom-list__select2date"></ol>
 			</div>
-			<input type="hidden" name="" class="abcom-list__input">
+			<input type="hidden" name="" data-name="hidden" class="abcom-list__input">
 		</div>
 
 	</div>
 </div>
 
-<pre class="yondu__code"><code>&lt;div class=&quot;form-group abcom-list&quot;&gt;
-  &lt;label for=&quot;&quot; class=&quot;col-sm-1&quot;&gt;Date&lt;/label&gt;
-  &lt;div class=&quot;col-sm-4&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;abcom-list__date form-control abcom-form abcom-form__date abcom-form--full&quot; placeholder=&quot;MM/DD/YYYY&quot; /&gt;
-  &lt;/div&gt;
-  &lt;label for=&quot;&quot; class=&quot;col-sm-2&quot;&gt;Type of Meeting&lt;/label&gt;
-  &lt;div class=&quot;col-sm-5&quot;&gt;
-    &lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
-      &lt;select multiple id=&quot;abcom-list__select2date&quot; data-title=&quot;Type of Meeting&quot; class=&quot;form-control abcom-list__dropdown abcom-form&quot; &gt;
-        &lt;option&gt;Juan Dela Cruz&lt;/option&gt;
-        &lt;option&gt;Johann Cheese&lt;/option&gt;
-        &lt;option&gt;Yvonne Strahovsky&lt;/option&gt;
-        &lt;option&gt;Natalie Dormer&lt;/option&gt;
-      &lt;/select&gt;
-      &lt;div class=&quot;input-group-addon&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-sm-12&quot;&gt;
-    &lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;abcom-list__select2date&quot;&gt;&lt;/ol&gt;
-  &lt;/div&gt;
-  &lt;input type=&quot;hidden&quot; name=&quot;&quot; class=&quot;abcom-list__input&quot;&gt;
+<pre class="yondu__code"><code>&lt;div class=&quot;form-group abcom-list--v3&quot;&gt;
+	&lt;label for=&quot;&quot; class=&quot;col-sm-1&quot;&gt;Date&lt;/label&gt;
+	&lt;div class=&quot;col-sm-4&quot;&gt;
+		&lt;input type=&quot;text&quot; data-name=&quot;date&quot; class=&quot;abcom-list__date form-control abcom-form abcom-form__date abcom-form--full&quot; placeholder=&quot;MM/DD/YYYY&quot; /&gt;
+	&lt;/div&gt;
+	&lt;label for=&quot;form_typemom&quot; class=&quot;col-sm-2&quot;&gt;Type of Meeting&lt;/label&gt;
+	&lt;div class=&quot;col-sm-5&quot;&gt;
+		&lt;div class=&quot;input-group abcom-form__inputgroup&quot;&gt;
+			&lt;select id=&quot;form_typemom&quot; data-name=&quot;type&quot; placeholder=&quot;Select Type&quot; class=&quot;form-control abcom-form&quot; &gt;
+				&lt;option value=&quot;none&quot; selected&gt;Select Type&lt;/option&gt;
+				&lt;option value=&quot;Juan Dela Cruz&quot;&gt;Juan Dela Cruz&lt;/option&gt;
+				&lt;option value=&quot;Johann Cheese&quot;&gt;Johann Cheese&lt;/option&gt;
+				&lt;option value=&quot;Yvonne Strahovsky&quot;&gt;Yvonne Strahovsky&lt;/option&gt;
+				&lt;option value=&quot;Natalie Dormer&quot;&gt;Natalie Dormer&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;div class=&quot;input-group-addon&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-sm-12&quot;&gt;
+		&lt;ol class=&quot;abcom-list__items&quot; data-parent=&quot;abcom-list__select2date&quot;&gt;&lt;/ol&gt;
+	&lt;/div&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;&quot; data-name=&quot;hidden&quot; class=&quot;abcom-list__input&quot;&gt;
 &lt;/div&gt;</code></pre>
 
 

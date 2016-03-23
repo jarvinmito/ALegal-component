@@ -151,34 +151,37 @@ var aboitizApp = (function(){
 			var currSel = elem;
 			var hidden = currSel.find('input[data-name="hidden"]');
 
-			// convert to json
-			var values = eval("(" + hidden.val() + ")");
+			if( hidden.val() ){
 
-			for(var key in values){
-				// console.log( key, values, values[key] );
-				html += '<li class="abcom-list__item" data-index="'+key+'" data-value-name="'+values[key].name+'" data-value-designation="'+values[key].designation+'">'+values[key].name+ ' - ' + values[key].designation +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+				// convert to json
+				var values = eval("(" + hidden.val() + ")");
+
+				for(var key in values){
+					// console.log( key, values, values[key] );
+					html += '<li class="abcom-list__item" data-index="'+key+'" data-value-name="'+values[key].name+'" data-value-designation="'+values[key].designation+'">'+values[key].name+ ' - ' + values[key].designation +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+				}
+
+				var list = currSel.find('.abcom-list__items');
+				list.html(html);
+				list.find('.abcom-list__item__link').unbind('click');
+				list.find('.abcom-list__item__link').click(function(e){
+					var thisList = $(this).parent('.abcom-list__item');
+					var index = thisList.data('index');
+
+					// Remove from selection -- Array
+					var newValue = values;
+					newValue.splice(index, 1);
+
+					thisList.remove();
+
+					// Set to semi-global
+					currSetValues = newValue;
+
+					hidden.val(JSON.stringify(newValue));
+
+					renderListv2(currSel);
+				});
 			}
-
-			var list = currSel.find('.abcom-list__items');
-			list.html(html);
-			list.find('.abcom-list__item__link').unbind('click');
-			list.find('.abcom-list__item__link').click(function(e){
-				var thisList = $(this).parent('.abcom-list__item');
-				var index = thisList.data('index');
-
-				// Remove from selection -- Array
-				var newValue = values;
-				newValue.splice(index, 1);
-
-				thisList.remove();
-
-				// Set to semi-global
-				currSetValues = newValue;
-
-				hidden.val(JSON.stringify(newValue));
-
-				renderListv2(currSel);
-			});
 		};
 
 		if( v2.length ){
@@ -190,6 +193,8 @@ var aboitizApp = (function(){
 				var nameInput = currSet.find('input[data-name="name"]');
 				var desiInput = currSet.find('input[data-name="designation"]');
 				var hiddInput = currSet.find('input[data-name="hidden"]');
+
+				renderListv2(currSet);
 
 				nameInput.on('change', function(){
 					$(this).removeClass('has-error');
@@ -257,6 +262,132 @@ var aboitizApp = (function(){
 						hidden.val(datatext);
 						renderListv2(currSet);
 					}
+				});
+
+			});
+		}
+
+
+
+		var v3 = $('.abcom-list--v3');
+
+		var renderListv3 = function(elem){
+			var html = "";
+			var currSel = elem;
+			var hidden = currSel.find('input[data-name="hidden"]');
+
+			if( hidden.val() ){
+
+				// convert to json
+				var values = eval("(" + hidden.val() + ")");
+
+				for(var key in values){
+					// console.log( key, values, values[key] );
+					html += '<li class="abcom-list__item" data-index="'+key+'" data-value-date="'+values[key].date+'" data-value-type="'+values[key].type+'">'+values[key].date+ ' - ' + values[key].type +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+				}
+
+				var list = currSel.find('.abcom-list__items');
+				list.html(html);
+				list.find('.abcom-list__item__link').unbind('click');
+				list.find('.abcom-list__item__link').click(function(e){
+					var thisList = $(this).parent('.abcom-list__item');
+					var index = thisList.data('index');
+
+					// Remove from selection -- Array
+					var newValue = values;
+					newValue.splice(index, 1);
+
+					thisList.remove();
+
+					// Set to semi-global
+					currSetValuesV3 = newValue;
+
+					hidden.val(JSON.stringify(newValue));
+
+					renderListv3(currSel);
+				});
+
+			}
+		};
+
+		if( v3.length ){
+			v3.each(function(index){
+				var currSet = $(this);
+				var currSetValuesV3 = [];
+
+				var addButton = currSet.find('.abcom-list__add');
+				var dateInput = currSet.find('input[data-name="date"]');
+				var typeInput = currSet.find('select[data-name="type"]');
+				var hiddInput = currSet.find('input[data-name="hidden"]');
+
+				renderListv3(currSet);
+
+				// Resets
+				dateInput.on('change', function(){
+					$(this).removeClass('has-error');
+				});
+
+				typeInput.on('change', function(){
+					$(this).removeClass('has-error');
+				});
+
+				addButton.on('click', function(e){
+					e.preventDefault();
+
+					if( !dateInput.val() ){ 
+						dateInput.addClass('has-error');
+					}else{
+						dateInput.removeClass('has-error');
+					}
+
+					if( typeInput.val() != "none" ){ 
+						typeInput.removeClass('has-error');
+					}else{
+						typeInput.addClass('has-error');
+					}
+
+					var hidden = currSet.find('input[data-name="hidden"]');
+
+					if( hidden.val() ){
+						currSetValuesV3 = eval("(" + hidden.val() + ")");
+					}
+
+					if( dateInput.val() && typeInput.val() != "none" ){
+						var data = {
+							"date" : dateInput.val(),
+							"type" : typeInput.val()
+						};
+
+
+						// check if the current value already exists inside
+						var key;
+						var marker = false;
+						for(key in currSetValuesV3){
+							var vdate = currSetValuesV3[key].date;
+							var vtype = currSetValuesV3[key].type;
+
+							if( vdate == data.date && vtype == data.type ){
+								marker = true;
+							}
+						}
+
+						if( !marker ){
+							currSetValuesV3.push(data);
+							// Set inputs to blank
+							dateInput.val('').removeClass('has-error');
+							typeInput.removeClass('has-error');
+							typeInput.find('option[value="none"]').prop('selected', true);
+						}else{
+							dateInput.addClass('has-error');
+							typeInput.addClass('has-error');
+						}
+
+						var datatext = JSON.stringify(currSetValuesV3);
+
+						hidden.val(datatext);
+						renderListv3(currSet);
+					}
+
 				});
 
 			});
