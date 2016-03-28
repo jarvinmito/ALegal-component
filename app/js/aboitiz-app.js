@@ -71,10 +71,12 @@ var aboitizApp = (function(){
 			var html = "";
 			var currSel = elem;
 			var values = currSel.val();
+			var texts = currSel.select2('data');
 
 			for(var key in values){
 				// console.log( key, values, values[key]);
-				html += '<li class="abcom-list__item" data-index="'+key+'" data-value="'+values[key]+'">'+values[key]+'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+				console.log();
+				html += '<li class="abcom-list__item" data-index="'+key+'" data-id="'+values[key]+'">'+texts[key].text+'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
 			}
 
 			var id = currSel.attr('id');
@@ -355,7 +357,8 @@ var aboitizApp = (function(){
 					if( dateInput.val() && typeInput.val() != "none" ){
 						var data = {
 							"date" : dateInput.val(),
-							"type" : typeInput.val()
+							"type" : $(typeInput[0].options[typeInput[0].selectedIndex]).text(),
+							"id" : typeInput.val()
 						};
 
 
