@@ -8,10 +8,32 @@
 			position: absolute;
 			left: -36px;
 
-			color: $red;
+			&, &--delete{
+				color: $red;
+				
+				&:hover, &:active, &:focus, &.active{
+					color: $red-active;
+				}
+			}
 
-			&:hover, &:active, &:focus, &.active{
-				color: $red-active;
+		}
+	}
+
+
+	&--mom{
+		table{
+			width: 100%;
+
+			th{
+				border-bottom: 1px solid $gray-bg;
+			}
+
+			th,td{
+				padding: 15px;
+			}
+
+			td:last-child{
+				text-align: center;
 			}
 		}
 	}

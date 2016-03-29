@@ -15064,11 +15064,30 @@ img.abcom-form, img.select2-selection {
 .abcom-list__item__link {
   position: absolute;
   left: -36px;
+}
+
+.abcom-list__item__link, .abcom-list__item__link--delete {
   color: #e5322d;
 }
 
-.abcom-list__item__link:hover, .abcom-list__item__link:active, .abcom-list__item__link:focus, .abcom-list__item__link.active {
+.abcom-list__item__link:hover, .abcom-list__item__link:active, .abcom-list__item__link:focus, .abcom-list__item__link.active, .abcom-list__item__link--delete:hover, .abcom-list__item__link--delete:active, .abcom-list__item__link--delete:focus, .abcom-list__item__link--delete.active {
   color: #fe0000;
+}
+
+.abcom-list--mom table {
+  width: 100%;
+}
+
+.abcom-list--mom table th {
+  border-bottom: 1px solid #dddddd;
+}
+
+.abcom-list--mom table th, .abcom-list--mom table td {
+  padding: 15px;
+}
+
+.abcom-list--mom table td:last-child {
+  text-align: center;
 }
 
 .abcom-setup__access {

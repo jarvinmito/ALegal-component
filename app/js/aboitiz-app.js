@@ -63,6 +63,167 @@ var aboitizApp = (function(){
 			});
 		}
 	};
+
+	var initMoMListing = function(){
+		var elem = $('.abcom-list--mom');
+
+		var renderList = function(elem){
+			var html = "";
+			var currSel = elem;
+			var hidden = currSel.find('input[data-name="hidden"]');
+
+			if( hidden.val() ){
+
+				// convert to json
+				var values = eval("(" + hidden.val() + ")");
+
+				for(var key in values){
+					var stype = values[key].service_type;
+					var cat = values[key].category;
+					var scata = values[key].subcata;
+					var scatb = values[key].subcatb;
+
+					// console.log( key, values, values[key] );
+					html += '<tr data-index="'+key+'" class="abcom-list__item">';
+					html += '<td>' + stype.name + '</td>';
+					html += '<td>' + cat.name + '</td>';
+					html += '<td>' + scata.name + '</td>';
+					html += '<td>' + scatb.name + '</td>';
+					html += '<td><a href="javascript:;" class="abcom-list__item__link--delete"><i class="fa fa-close"></i></a></td>';
+					html += '</tr>';
+				}
+
+				var list = currSel.find('.abcom-list__items');
+				var fix = list.find('.abcom-list__item--fix');
+
+				if( fix.length ){
+					list.find('.abcom-list__item').remove();
+				}
+
+				list.append(html);
+				list.find('.abcom-list__item__link--delete').unbind('click');
+				list.find('.abcom-list__item__link--delete').click(function(e){
+					var thisList = $(this).parent('td').parent('.abcom-list__item');
+					var index = thisList.data('index');
+
+					// Remove from selection -- Array
+					var newValue = values;
+					newValue.splice(index, 1);
+
+					thisList.remove();
+
+					// Set to semi-global
+					currSetValues = newValue;
+
+					hidden.val(JSON.stringify(newValue));
+
+					renderList(currSel);
+				});
+			}
+		};
+
+		if( elem.length ){
+			elem.each(function(){
+				var currSet = $(this);
+				var currSetValues = [];
+				var addButton = currSet.find('.abcom-list__add');
+				var required = currSet.find('[data-required="true"]');
+				var hidden = currSet.find('input[data-name="hidden"]');
+				var stype = currSet.find('select[data-name="stype"]');
+				var cat = currSet.find('select[data-name="cat"]');
+				var scata = currSet.find('select[data-name="scata"]');
+				var scatb = currSet.find('select[data-name="scatb"]');
+
+				renderList(currSet);
+
+				currSet.find('select').on('change', function(){
+					var curr = $(this);
+					if( curr.val() != "none"){
+						curr.removeClass('has-error');
+					}
+				});
+
+				addButton.on('click', function(e){
+					e.preventDefault();
+					if( required ){
+						if( required.val() != "none" ){
+							// Proceed
+
+							if( hidden.val() ){
+								currSetValues = eval("(" + hidden.val() + ")");
+							}
+
+							var data = {
+								"service_type" : {
+									"id" : stype.val(),
+									"name" : ( stype.val() != "none") ? $(stype[0].options[stype[0].selectedIndex]).text() : "-"
+								},
+								"category" : {
+									"id" : cat.val(),
+									"name" : ( cat.val() != "none") ? $(cat[0].options[cat[0].selectedIndex]).text() : "-"
+								},	
+								"subcata" : {
+									"id" : scata.val(),
+									"name" : ( scata.val() != "none") ? $(scata[0].options[scata[0].selectedIndex]).text() : "-"
+								},
+								"subcatb" : {
+									"id" : scatb.val(),
+									"name" : ( scatb.val() != "none") ? $(scatb[0].options[scatb[0].selectedIndex]).text() : "-"
+								}
+							};
+							// KJHJFSHAKJShdKJSADKJASKJHSADHAJSGDJSAGDASHLKJDSAd
+
+							// check if the current value already exists inside
+							var key;
+							var marker = false;
+							for( key in currSetValues ){
+								var stypeObj = currSetValues[key].service_type;
+								var catObj = currSetValues[key].category;
+								var subcataObj = currSetValues[key].subcata;
+								var subcatbObj = currSetValues[key].subcatb;
+
+								if( stype.val() == stypeObj.id && cat.val() == catObj.id && scata.val() == subcataObj.id && scatb.val() == subcatbObj.id ){
+									marker = true;
+								}
+							}
+
+							if( !marker ){
+								// Append to array
+								currSetValues.push(data);
+								
+								// Set inputs to blank	
+								stype.removeClass('has-error');
+								cat.removeClass('has-error');
+								scata.removeClass('has-error');
+								scatb.removeClass('has-error');
+								
+								// Reset inputs
+								stype.find('option[value="none"]').prop('selected', true);
+								cat.find('option[value="none"]').prop('selected', true);
+								scata.find('option[value="none"]').prop('selected', true);
+								scatb.find('option[value="none"]').prop('selected', true);
+								
+							}else{
+								stype.addClass('has-error');
+								cat.addClass('has-error');
+								scata.addClass('has-error');
+								scatb.addClass('has-error');
+							}
+
+							var datatext = JSON.stringify(currSetValues);
+
+							hidden.val(datatext);
+							renderList(currSet);
+						}else{
+							required.addClass('has-error');
+						}
+					}
+				});
+			});
+		}
+
+
+	};
 	
 	var initListing = function(){
 		// Select2 is present
@@ -901,6 +1062,7 @@ var aboitizApp = (function(){
 		initColorPicker();
 		initProgressBar();
 		initModals();
+		initMoMListing();
 	};
 
 	return {
@@ -915,7 +1077,8 @@ var aboitizApp = (function(){
 		initMovables : initMovables,
 		initColorPicker : initColorPicker,
 		initProgressBar : initProgressBar,
-		initModals : initModals
+		initModals : initModals,
+		initMoMListing : initMoMListing
 	}
 
 }());

@@ -151,6 +151,7 @@ App.Pageloader = (function(){
 		aboitizApp.initProgressBar();
 		aboitizApp.initColorPicker();
 		aboitizApp.initModals();
+		aboitizApp.initMoMListing();
 
 		bind();
 	};
@@ -171,6 +172,7 @@ App.Pageloader = (function(){
 		aboitizApp.initProgressBar();
 		aboitizApp.initColorPicker();
 		aboitizApp.initModals();
+		aboitizApp.initMoMListing();
 
 		bind();
 	};

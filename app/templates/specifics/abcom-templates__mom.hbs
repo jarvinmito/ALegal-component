@@ -104,7 +104,7 @@
 
 
 			<div id="newTemplate-mom" class="modal fade abcom-modal" tabindex="-1" role="dialog">
-			  <div class="modal-dialog">
+			  <div class="modal-dialog modal-lg">
 			    <div class="modal-content">
 			        <div class="modal-header">
 			            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -112,56 +112,65 @@
 			        </div>
 			        <div class="modal-body">
 			          <form action="" class="form-horizontal">
-			            <div class="form-group">
-			              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Document Name</label>
-			              <div class="col-sm-8">
-			                <input type="text" name="" id="modal_form_company" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
-			              </div>
-			            </div>
 
-			            <div class="form-group">
-			              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Associated Service Type</label>
-			              <div class="col-sm-8">
-			                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-			                  <option selected>Select Service Type</option>
-			                  <option value="">Type A</option>
-			                  <option value="">Type B</option>
-			                </select>
-			              </div>
-			            </div>
+			            <div class="abcom-list--mom">
+						  <div class="form-group">
+						    <label for="modal_form_company" class="col-sm-2 abcom-container--left">Document Name</label>
+						    <div class="col-sm-10">
+						      <input type="text" name="" id="modal_form_company" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+						    </div>
+						  </div>
 
-			            <div class="form-group">
-			              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Category</label>
-			              <div class="col-sm-8">
-			                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-			                  <option selected>Select Category</option>
-			                  <option value="">Category A</option>
-			                  <option value="">Category B</option>
-			                </select>
-			              </div>
-			            </div>
-
-			            <div class="form-group">
-			              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Sub-Category A</label>
-			              <div class="col-sm-8">
-			                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-			                  <option selected>Select Category</option>
-			                  <option value="">Sub-Category A - 1</option>
-			                  <option value="">Sub-Category A - 2</option>
-			                </select>
-			              </div>
-			            </div>
-
-			            <div class="form-group">
-			              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Sub-Category B</label>
-			              <div class="col-sm-8">
-			                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-			                  <option selected>Select Category</option>
-			                  <option value="">Sub-Category B - 1</option>
-			                  <option value="">Sub-Category B - 2</option>
-			                </select>
-			              </div>
-			            </div>
+						  <div class="form-group">
+						  	<table>
+						  		<thead>
+						  			<tr>
+						      			<th>Associated Service Type</th>
+						      			<th>Category</th>
+						      			<th>Sub Category A</th>
+						      			<th>Sub Category B</th>
+						      			<th>Action</th>
+						      		</tr>
+						  		</thead>
+						  		<tbody class="abcom-list__items">
+						  			<tr class="abcom-list__item--fix">
+						  				<td>
+						  					<select name="" id="modal_form_service" data-name="stype" data-required="true" class="selectpicker abcom-form abcom-form--full form-control">
+								                <option value="none" selected>Select Service Type</option>
+								                <option value="1">Type A</option>
+								                <option value="2">Type B</option>
+								            </select>
+								          </td>
+								          <td>
+								          	<select name="" id="modal_form_service" data-name="cat" class="selectpicker abcom-form abcom-form--full form-control">
+								                <option value="none" selected>Select Category</option>
+								                <option value="3">Category A</option>
+								                <option value="4">Category B</option>
+								            </select>
+								          </td>
+								          <td>
+								          	<select name="" id="modal_form_service" data-name="scata" class="selectpicker abcom-form abcom-form--full form-control">
+								                <option value="none" selected>Select Sub Category A</option>
+								                <option value="5">Sub-Category A - 1</option>
+								                <option value="6">Sub-Category A - 2</option>
+								            </select>
+								          </td>
+								          <td>
+								          	<select name="" id="modal_form_service" data-name="scatb" class="selectpicker abcom-form abcom-form--full form-control">
+								                <option value="none" selected>Select Sub Category B</option>
+								                <option value="7">Sub-Category B - 1</option>
+								                <option value="8">Sub-Category B - 2</option>
+								            </select>
+								          </td>
+								          <td>
+								          	<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+								          </td>
+						  			</tr>
+						  		</tbody>
+						  	</table>
+						  </div>
+			            	<input type="hidden" name="" data-name="hidden" class="abcom-list__input">
+						</div>
 
 			            <div class="form-group">
 			              <div class="col-sm-12">
@@ -185,7 +194,7 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 		<div class="abcom-modal" tabindex="-1" role="dialog">
-		  <div class="modal-dialog">
+		  <div class="modal-dialog modal-lg">
 		    <div class="modal-content">
 		        <div class="modal-header">
 		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -193,56 +202,65 @@
 		        </div>
 		        <div class="modal-body">
 		          <form action="" class="form-horizontal">
-		            <div class="form-group">
-		              <label for="modal_form_company" class="col-sm-4 abcom-container--left">Document Name</label>
-		              <div class="col-sm-8">
-		                <input type="text" name="" id="modal_form_company" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
-		              </div>
-		            </div>
 
-		            <div class="form-group">
-		              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Associated Service Type</label>
-		              <div class="col-sm-8">
-		                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-		                  <option selected>Select Service Type</option>
-		                  <option value="">Type A</option>
-		                  <option value="">Type B</option>
-		                </select>
-		              </div>
-		            </div>
+		            <div class="abcom-list--mom">
+					  <div class="form-group">
+					    <label for="modal_form_company" class="col-sm-2 abcom-container--left">Document Name</label>
+					    <div class="col-sm-10">
+					      <input type="text" name="" id="modal_form_company" class="abcom-form abcom-form--full abcom-form--hasmargin form-control" placeholder="Type here">
+					    </div>
+					  </div>
 
-		            <div class="form-group">
-		              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Category</label>
-		              <div class="col-sm-8">
-		                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-		                  <option selected>Select Category</option>
-		                  <option value="">Category A</option>
-		                  <option value="">Category B</option>
-		                </select>
-		              </div>
-		            </div>
-
-		            <div class="form-group">
-		              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Sub-Category A</label>
-		              <div class="col-sm-8">
-		                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-		                  <option selected>Select Category</option>
-		                  <option value="">Sub-Category A - 1</option>
-		                  <option value="">Sub-Category A - 2</option>
-		                </select>
-		              </div>
-		            </div>
-
-		            <div class="form-group">
-		              <label for="modal_form_service" class="col-sm-4 abcom-container--left">Sub-Category B</label>
-		              <div class="col-sm-8">
-		                <select name="" id="modal_form_service" class="selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control">
-		                  <option selected>Select Category</option>
-		                  <option value="">Sub-Category B - 1</option>
-		                  <option value="">Sub-Category B - 2</option>
-		                </select>
-		              </div>
-		            </div>
+					  <div class="form-group">
+					  	<table>
+					  		<thead>
+					  			<tr>
+					      			<th>Associated Service Type</th>
+					      			<th>Category</th>
+					      			<th>Sub Category A</th>
+					      			<th>Sub Category B</th>
+					      			<th>Action</th>
+					      		</tr>
+					  		</thead>
+					  		<tbody class="abcom-list__items">
+					  			<tr class="abcom-list__item--fix">
+					  				<td>
+					  					<select name="" id="modal_form_service" data-name="stype" data-required="true" class="selectpicker abcom-form abcom-form--full form-control">
+							                <option value="none" selected>Select Service Type</option>
+							                <option value="1">Type A</option>
+							                <option value="2">Type B</option>
+							            </select>
+							          </td>
+							          <td>
+							          	<select name="" id="modal_form_service" data-name="cat" class="selectpicker abcom-form abcom-form--full form-control">
+							                <option value="none" selected>Select Category</option>
+							                <option value="3">Category A</option>
+							                <option value="4">Category B</option>
+							            </select>
+							          </td>
+							          <td>
+							          	<select name="" id="modal_form_service" data-name="scata" class="selectpicker abcom-form abcom-form--full form-control">
+							                <option value="none" selected>Select Sub Category A</option>
+							                <option value="5">Sub-Category A - 1</option>
+							                <option value="6">Sub-Category A - 2</option>
+							            </select>
+							          </td>
+							          <td>
+							          	<select name="" id="modal_form_service" data-name="scatb" class="selectpicker abcom-form abcom-form--full form-control">
+							                <option value="none" selected>Select Sub Category B</option>
+							                <option value="7">Sub-Category B - 1</option>
+							                <option value="8">Sub-Category B - 2</option>
+							            </select>
+							          </td>
+							          <td>
+							          	<button type="button" class="btn abcom-btn abcom-btn--default abcom-list__add"><span class="glyphicon glyphicon-plus"></span></button>
+							          </td>
+					  			</tr>
+					  		</tbody>
+					  	</table>
+					  </div>
+				 	<input type="hidden" name="" data-name="hidden" class="abcom-list__input">
+					</div>
 
 		            <div class="form-group">
 		              <div class="col-sm-12">
@@ -261,174 +279,183 @@
 <p>Insert this code inside the <code>main-content__main</code> section.</p>
 
 <pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
-    &lt;div class=&quot;navbar-left&quot;&gt;
-      &lt;div class=&quot;form-group&quot;&gt;
-        &lt;a href=&quot;#&quot; role=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#newTemplate-mom&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;Create New Template&lt;/a&gt;
-        &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
-            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
-              &lt;option selected&gt;Select Category&lt;/option&gt;
-              &lt;option value=&quot;text&quot;&gt;Document Name&lt;/option&gt;
-              &lt;option value=&quot;text&quot;&gt;Created by&lt;/option&gt;
-              &lt;option value=&quot;date&quot;&gt;Date Created&lt;/option&gt;
-              &lt;option value=&quot;text&quot;&gt;Status&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
-            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
-              &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
-              &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
-            &lt;/select&gt;
+  &lt;div class=&quot;navbar-left&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;a href=&quot;#&quot; role=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#newTemplate-mom&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter--hasmargin&quot;&gt;Create New Template&lt;/a&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
+            &lt;option selected&gt;Select Category&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Document Name&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Created by&lt;/option&gt;
+            &lt;option value=&quot;date&quot;&gt;Date Created&lt;/option&gt;
+            &lt;option value=&quot;text&quot;&gt;Status&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
+            &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
+          &lt;/select&gt;
 
-            &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
-                  &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
-                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
-                      &lt;span class=&quot;input-group-addon&quot;&gt;
-                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
-                      &lt;/span&gt;
-                  &lt;/div&gt;
-                  &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
-                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
-                      &lt;span class=&quot;input-group-addon&quot;&gt;
-                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
-                      &lt;/span&gt;
-                  &lt;/div&gt;
-              &lt;/div&gt;
+          &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
+                &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class='input-group abcom-filter__date' data-role=&quot;to&quot;&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;To&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
 
-              &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
-                  &lt;div class='input-group abcom-filter__date'&gt;
-                      &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
-                      &lt;span class=&quot;input-group-addon&quot;&gt;
-                          &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
-                      &lt;/span&gt;
-                  &lt;/div&gt;
-              &lt;/div&gt;
+            &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;date&quot;&gt;
+                &lt;div class='input-group abcom-filter__date'&gt;
+                    &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;Select Date&quot; /&gt;
+                    &lt;span class=&quot;input-group-addon&quot;&gt;
+                        &lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
 
-              &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;navbar-right&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
+      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#templates-mom-table&quot;&gt;
+            &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+            &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+            &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+            &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+          &lt;/select&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;table id=&quot;templates-mom-table&quot; class=&quot;abcom abcom-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Document Name&lt;/th&gt;
+            &lt;th&gt;Created by&lt;/th&gt;
+            &lt;th&gt;Date Created&lt;/th&gt;
+            &lt;th&gt;Status&lt;/th&gt;
+            &lt;th&gt;Action&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Name of document&lt;/td&gt;
+            &lt;td&gt;Name of Creator&lt;/td&gt;
+            &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+            &lt;td&gt;Status&lt;/td&gt;
+            &lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            	&lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            	&lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Name of document&lt;/td&gt;
+            &lt;td&gt;Name of Creator&lt;/td&gt;
+            &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
+            &lt;td&gt;Status&lt;/td&gt;
+            &lt;td&gt;
+				&lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            	&lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            	&lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;div id=&quot;newTemplate-mom&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
+            &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Create New Template&lt;/h4&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;navbar-right&quot;&gt;
-      &lt;div class=&quot;form-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
-        &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
-            &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; data-target=&quot;#templates-mom-table&quot;&gt;
-              &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
-              &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
-              &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
-              &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
-            &lt;/select&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+
+            &lt;div class=&quot;abcom-list--mom&quot;&gt;
+			  &lt;div class=&quot;form-group&quot;&gt;
+			    &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-2 abcom-container--left&quot;&gt;Document Name&lt;/label&gt;
+			    &lt;div class=&quot;col-sm-10&quot;&gt;
+			      &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;modal_form_company&quot; class=&quot;abcom-form abcom-form--full abcom-form--hasmargin form-control&quot; placeholder=&quot;Type here&quot;&gt;
+			    &lt;/div&gt;
+			  &lt;/div&gt;
+
+			  &lt;div class=&quot;form-group&quot;&gt;
+			  	&lt;table&gt;
+			  		&lt;thead&gt;
+			  			&lt;tr&gt;
+			      			&lt;th&gt;Associated Service Type&lt;/th&gt;
+			      			&lt;th&gt;Category&lt;/th&gt;
+			      			&lt;th&gt;Sub Category A&lt;/th&gt;
+			      			&lt;th&gt;Sub Category B&lt;/th&gt;
+			      			&lt;th&gt;Action&lt;/th&gt;
+			      		&lt;/tr&gt;
+			  		&lt;/thead&gt;
+			  		&lt;tbody class=&quot;abcom-list__items&quot;&gt;
+			  			&lt;tr class=&quot;abcom-list__item--fix&quot;&gt;
+			  				&lt;td&gt;
+			  					&lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; data-name=&quot;stype&quot; data-required=&quot;true&quot; class=&quot;selectpicker abcom-form abcom-form--full form-control&quot;&gt;
+					                &lt;option value=&quot;none&quot; selected&gt;Select Service Type&lt;/option&gt;
+					                &lt;option value=&quot;1&quot;&gt;Type A&lt;/option&gt;
+					                &lt;option value=&quot;2&quot;&gt;Type B&lt;/option&gt;
+					            &lt;/select&gt;
+					          &lt;/td&gt;
+					          &lt;td&gt;
+					          	&lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; data-name=&quot;cat&quot; class=&quot;selectpicker abcom-form abcom-form--full form-control&quot;&gt;
+					                &lt;option value=&quot;none&quot; selected&gt;Select Category&lt;/option&gt;
+					                &lt;option value=&quot;3&quot;&gt;Category A&lt;/option&gt;
+					                &lt;option value=&quot;4&quot;&gt;Category B&lt;/option&gt;
+					            &lt;/select&gt;
+					          &lt;/td&gt;
+					          &lt;td&gt;
+					          	&lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; data-name=&quot;scata&quot; class=&quot;selectpicker abcom-form abcom-form--full form-control&quot;&gt;
+					                &lt;option value=&quot;none&quot; selected&gt;Select Sub Category A&lt;/option&gt;
+					                &lt;option value=&quot;5&quot;&gt;Sub-Category A - 1&lt;/option&gt;
+					                &lt;option value=&quot;6&quot;&gt;Sub-Category A - 2&lt;/option&gt;
+					            &lt;/select&gt;
+					          &lt;/td&gt;
+					          &lt;td&gt;
+					          	&lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; data-name=&quot;scatb&quot; class=&quot;selectpicker abcom-form abcom-form--full form-control&quot;&gt;
+					                &lt;option value=&quot;none&quot; selected&gt;Select Sub Category B&lt;/option&gt;
+					                &lt;option value=&quot;7&quot;&gt;Sub-Category B - 1&lt;/option&gt;
+					                &lt;option value=&quot;8&quot;&gt;Sub-Category B - 2&lt;/option&gt;
+					            &lt;/select&gt;
+					          &lt;/td&gt;
+					          &lt;td&gt;
+					          	&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-list__add&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+					          &lt;/td&gt;
+			  			&lt;/tr&gt;
+			  		&lt;/tbody&gt;
+			  	&lt;/table&gt;
+			  &lt;/div&gt;
+            	&lt;input type=&quot;hidden&quot; name=&quot;&quot; data-name=&quot;hidden&quot; class=&quot;abcom-list__input&quot;&gt;
+			&lt;/div&gt;
+
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--full&quot; value=&quot;Submit&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
         &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-
-  &lt;table id=&quot;templates-mom-table&quot; class=&quot;abcom abcom-table&quot;&gt;
-      &lt;thead&gt;
-          &lt;tr&gt;
-              &lt;th&gt;Document Name&lt;/th&gt;
-              &lt;th&gt;Created by&lt;/th&gt;
-              &lt;th&gt;Date Created&lt;/th&gt;
-              &lt;th&gt;Status&lt;/th&gt;
-              &lt;th&gt;Action&lt;/th&gt;
-          &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-          &lt;tr&gt;
-              &lt;td&gt;Name of document&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;Status&lt;/td&gt;
-              &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-              &lt;td&gt;Name of document&lt;/td&gt;
-              &lt;td&gt;Name of Creator&lt;/td&gt;
-              &lt;td&gt;mm/dd/yyyy&lt;/td&gt;
-              &lt;td&gt;Status&lt;/td&gt;
-              &lt;td&gt;
-          &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                &lt;button type=&quot;button&quot; class=&quot;abcom-btn abcom-btn--default abcom-btn--circle&quot;&gt;&lt;i class=&quot;fa fa-pencil-square-o&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-              &lt;/td&gt;
-          &lt;/tr&gt;
-      &lt;/tbody&gt;
-  &lt;/table&gt;
-
-
-  &lt;div id=&quot;newTemplate-mom&quot; class=&quot;modal fade abcom-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
-    &lt;div class=&quot;modal-dialog&quot;&gt;
-      &lt;div class=&quot;modal-content&quot;&gt;
-          &lt;div class=&quot;modal-header&quot;&gt;
-              &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;×&lt;/span&gt;&lt;/button&gt;
-              &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Create New Template&lt;/h4&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;modal-body&quot;&gt;
-            &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
-              &lt;div class=&quot;form-group&quot;&gt;
-                &lt;label for=&quot;modal_form_company&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Document Name&lt;/label&gt;
-                &lt;div class=&quot;col-sm-8&quot;&gt;
-                  &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;modal_form_company&quot; class=&quot;abcom-form abcom-form--full abcom-form--hasmargin form-control&quot; placeholder=&quot;Type here&quot;&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-
-              &lt;div class=&quot;form-group&quot;&gt;
-                &lt;label for=&quot;modal_form_service&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Associated Service Type&lt;/label&gt;
-                &lt;div class=&quot;col-sm-8&quot;&gt;
-                  &lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
-                    &lt;option selected&gt;Select Service Type&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Type A&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Type B&lt;/option&gt;
-                  &lt;/select&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-
-              &lt;div class=&quot;form-group&quot;&gt;
-                &lt;label for=&quot;modal_form_service&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Category&lt;/label&gt;
-                &lt;div class=&quot;col-sm-8&quot;&gt;
-                  &lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
-                    &lt;option selected&gt;Select Category&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Category A&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Category B&lt;/option&gt;
-                  &lt;/select&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-
-              &lt;div class=&quot;form-group&quot;&gt;
-                &lt;label for=&quot;modal_form_service&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Sub-Category A&lt;/label&gt;
-                &lt;div class=&quot;col-sm-8&quot;&gt;
-                  &lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
-                    &lt;option selected&gt;Select Category&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Sub-Category A - 1&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Sub-Category A - 2&lt;/option&gt;
-                  &lt;/select&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-
-              &lt;div class=&quot;form-group&quot;&gt;
-                &lt;label for=&quot;modal_form_service&quot; class=&quot;col-sm-4 abcom-container--left&quot;&gt;Sub-Category B&lt;/label&gt;
-                &lt;div class=&quot;col-sm-8&quot;&gt;
-                  &lt;select name=&quot;&quot; id=&quot;modal_form_service&quot; class=&quot;selectpicker abcom-form abcom-form--full abcom-form--hasmargin form-control&quot;&gt;
-                    &lt;option selected&gt;Select Category&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Sub-Category B - 1&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Sub-Category B - 2&lt;/option&gt;
-                  &lt;/select&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-
-              &lt;div class=&quot;form-group&quot;&gt;
-                &lt;div class=&quot;col-sm-12&quot;&gt;
-                  &lt;input type=&quot;submit&quot; class=&quot;btn abcom-btn abcom-btn--action abcom-form--full&quot; value=&quot;Submit&quot;&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/form&gt;
-          &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+&lt;/div&gt;</code></pre>
 
 <a href="exp-cms-templates-mom.html" target="_blank" class="btn abcom-btn abcom-btn--cool">View Template Minutes of the Meeting Page</a>
