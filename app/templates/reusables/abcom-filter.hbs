@@ -2,13 +2,18 @@
 <p>Displays the filter section for a recordset. The section also occupies the width of its parent container.</p>
 <div class="panel panel-default">
 	<div class="panel-body">
+		<script>
+		var yes = function(){
+			alert('kafkds');
+		};
+		</script>
 		<!-- insert section title component here -->
 		<div class="abcom abcom-filter nav">
 			<div class="navbar-left">
 				<div class="form-group">
 					<label for="" class="abcom-filter__label">Filter/Search by:</label>
 		        	<select name="" id="" class="selectpicker abcom-form abcom-form--min form-control abcom-filter__category">
-		        		<option selected>Select Category</option>
+		        		<option value="none" selected>Select Category</option>
 		        		<option value="text">Creator</option>
 		        		<option value="dropdown">Status</option>
 		        		<option value="date">Date</option>
@@ -47,7 +52,7 @@
 		                </div>
 		            </div>
 
-	            	<button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search">Search</button>
+	            	<button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search" data-callback="yes">Search</button>
 	            	<button type="button" class="btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear">Clear</button>
 		    	</div>
 			</div>
@@ -66,26 +71,26 @@
 		</div>
 		<p>Here is the code sample for the Search Filter Section:</p>
 <pre class="yondu__code"><code>&lt;div class=&quot;abcom abcom-filter nav&quot;&gt;
-  &lt;div class=&quot;navbar-left&quot;&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
-          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
-            &lt;option selected&gt;Select Category&lt;/option&gt;
-            &lt;option value=&quot;text&quot;&gt;Creator&lt;/option&gt;
-            &lt;option value=&quot;dropdown&quot;&gt;Status&lt;/option&gt;
-            &lt;option value=&quot;date&quot;&gt;Date&lt;/option&gt;
-            &lt;option value=&quot;daterange&quot;&gt;Date Range&lt;/option&gt;
-          &lt;/select&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
-          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
-            &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
-            &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-            &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
-            &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
-            &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
-          &lt;/select&gt;
+	&lt;div class=&quot;navbar-left&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Filter/Search by:&lt;/label&gt;
+        	&lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__category&quot;&gt;
+        		&lt;option value=&quot;none&quot; selected&gt;Select Category&lt;/option&gt;
+        		&lt;option value=&quot;text&quot;&gt;Creator&lt;/option&gt;
+        		&lt;option value=&quot;dropdown&quot;&gt;Status&lt;/option&gt;
+        		&lt;option value=&quot;date&quot;&gt;Date&lt;/option&gt;
+        		&lt;option value=&quot;daterange&quot;&gt;Date Range&lt;/option&gt;
+        	&lt;/select&gt;
+        	&lt;input type=&quot;text&quot; class=&quot;form-control abcom-form abcom-form--min abcom-filter__type&quot; data-filter-type=&quot;text&quot; placeholder=&quot;Search here&quot;&gt;
+        	&lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__type&quot; data-filter-type=&quot;dropdown&quot;&gt;
+        		&lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
+        		&lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+        		&lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+        		&lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
+        		&lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
+        	&lt;/select&gt;
 
-          &lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
+        	&lt;div class=&quot;abcom-filter__type abcom-filter__type--date&quot; data-filter-type=&quot;daterange&quot;&gt;
                 &lt;div class='input-group abcom-filter__date' data-role=&quot;from&quot;&gt;
                     &lt;input type='text' class=&quot;form-control abcom-form abcom-form--min&quot; placeholder=&quot;From&quot; /&gt;
                     &lt;span class=&quot;input-group-addon&quot;&gt;
@@ -109,25 +114,28 @@
                 &lt;/div&gt;
             &lt;/div&gt;
 
-            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
-            &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;navbar-right&quot;&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-      &lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
-      &lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
-          &lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot;&gt;
-            &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
-            &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
-            &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
-            &lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
-          &lt;/select&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
+        	&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot;&gt;Search&lt;/button&gt;
+        	&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--clear&quot;&gt;Clear&lt;/button&gt;
+    	&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;navbar-right&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-btn--rounded abcom-filter__btn--legend&quot;&gt;View Legends&lt;/button&gt;
+			&lt;label for=&quot;&quot; class=&quot;abcom-filter__label&quot;&gt;Entries per page&lt;/label&gt;
+        	&lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot;&gt;
+        		&lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+        		&lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+        		&lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+        		&lt;option value=&quot;100&quot;&gt;100&lt;/option&gt;
+        	&lt;/select&gt;
+    	&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
+
+<p>You can also add callback method for the search button by including a <code>data-callback</code> attribute to the button</p>
+<pre class="yondu__code"><code>&lt;button type=&quot;button&quot; class=&quot;btn abcom-btn abcom-btn--default abcom-filter__btn abcom-filter__btn--search&quot; data-callback=&quot;function name here&quot;&gt;Search&lt;/button&gt;</code></pre>
 
 <p>Integrating with <code>Data Table</code> plugin. Just add a <code>data-target</code> attribute in the <code>select</code> element, pointing the id of the data table. Example:</p>
 <pre class="yondu__code"><code>&lt;select name=&quot;&quot; id=&quot;&quot; class=&quot;selectpicker abcom-form abcom-form--min form-control abcom-filter__entries abcom-filter__last&quot; <b>data-target=&quot;#table_id&quot;</b>&gt;</code></pre>

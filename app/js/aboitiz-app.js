@@ -7,13 +7,15 @@ var aboitizApp = (function(){
 				var sfilter = $(this);
 				var cat = sfilter.find('.abcom-filter__category');
 				var entries = sfilter.find('.abcom-filter__entries');
+				var search = sfilter.find('.abcom-filter__btn--search');
 				// var clear = sfilter.find('.abcom-filter__btn--clear');
-				// var search = sfilter.find('.abcom-filter__btn--search');
 
 				sfilter.find('.abcom-filter__type').hide();
 
 				var clearform = function(){
-					sfilter.find('select, input').not('.abcom-filter__category, .abcom-filter__entries').val('');
+					var all = sfilter.find('select, input').not('.abcom-filter__category, .abcom-filter__entries');
+					all.val('');
+					all.removeClass('has-error');
 				};
 
 				cat.on('change', function(e){
@@ -34,6 +36,56 @@ var aboitizApp = (function(){
 
 						actual_target.val(selected);
 						actual_target.trigger('change');
+					}
+
+
+
+				});
+
+				search.on('click', function(e){
+					e.preventDefault();
+
+					var curr = $(this);
+					var currParent = curr.parents('.abcom-filter');
+					var cat = currParent.find('.abcom-filter__category');
+					var visible = currParent.find('select:visible, input:visible').not('.abcom-filter__category, .abcom-filter__entries');
+
+					if( currParent.length ){
+						
+						if( cat.val().toLowerCase() == "none" ){
+							cat.addClass('has-error');
+						}else{
+							cat.removeClass('has-error');
+						}
+
+
+						// currParent.find('select, input').not('.abcom-filter__category, .abcom-filter__entries')
+					}
+
+					total_checked = 0;
+					if( visible.length ){
+
+						visible.each(function(index){
+							if( $(this).val() == "" ){
+								$(this).addClass('has-error');
+							}else{
+								total_checked++;
+								$(this).removeClass('has-error');
+							}
+						});
+					}
+
+					var currCallback = curr.data('callback');
+					if( currCallback ){
+						// convert string to function;
+						var callback = window[currCallback];
+
+						if( total_checked == visible.length ){
+
+							if( typeof callback == 'function'){
+								callback();
+							}
+						}
 					}
 
 				});
