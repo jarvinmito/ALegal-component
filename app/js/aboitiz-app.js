@@ -80,8 +80,7 @@ var aboitizApp = (function(){
 						// convert string to function;
 						var callback = window[currCallback];
 
-						if( total_checked == visible.length ){
-
+						if( total_checked == visible.length && total_checked != 0 ){
 							if( typeof callback == 'function'){
 								callback();
 							}
