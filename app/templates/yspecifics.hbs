@@ -166,6 +166,13 @@
 					<div id="abcom-reports__officers__sidepanel"></div>
 					<hr>
 					<div id="abcom-reports__officers"></div>
+
+					{{!-- REQUESTOR'S SECTION --}}
+					<hr>
+					<hr>
+					<h2>Requestor's Page</h2>
+					<p>Requestors' Page does not use a sidepanel.</p>
+					<div id="abcom-req__about"></div>
 <script>
 $('#abcom-dashboard').html(App.Templates['specifics/abcom-dashboard']());
 $('#abcom-management__sidepanel').html(App.Templates['specifics/abcom-management__sidepanel']());
@@ -217,6 +224,9 @@ $('#abcom-reports__companies__sidepanel').html(App.Templates['specifics/abcom-re
 $('#abcom-reports__companies').html(App.Templates['specifics/abcom-reports__companies']());
 $('#abcom-reports__officers__sidepanel').html(App.Templates['specifics/abcom-reports__officers__sidepanel']());
 $('#abcom-reports__officers').html(App.Templates['specifics/abcom-reports__officers']());
+
+// REQUESTORS PAGE
+$('#abcom-req__about').html(App.Templates['specifics/abcom-req__about']());
 
 </script>
 
