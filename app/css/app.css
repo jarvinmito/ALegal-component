@@ -15242,6 +15242,73 @@ img.abcom-form, img.select2-selection {
   text-align: center;
 }
 
+.abcom-members {
+  width: 100%;
+  text-align: center;
+}
+
+.abcom-members__member {
+  display: inline-block;
+  width: 280px;
+  height: 380px;
+  padding: 20px;
+  margin: 15px;
+  border: 1px solid #dddddd;
+  vertical-align: top;
+  text-align: center;
+  background: #ffffff;
+}
+
+.abcom-members__member p {
+  margin-bottom: 5px;
+}
+
+.abcom-members__member__image {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 40px;
+}
+
+.abcom-members__member__name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.abcom-members__member__position, .abcom-members__member__address, .abcom-members__member__contact, .abcom-members__member__companies {
+  font-size: 12px;
+}
+
+.abcom-members__member__address, .abcom-members__member__companies {
+  margin-top: 20px;
+}
+
+.abcom-members__member__companies__title {
+  font-style: italic;
+}
+
+.abcom-members__member__companies__more {
+  color: #e5322d;
+}
+
+.abcom-members__member__companies__more:hover, .abcom-members__member__companies__more:active, .abcom-members__member__companies__more:focus {
+  color: #fe0000;
+}
+
+.abcom-members__modal {
+  text-align: center;
+}
+
+.abcom-members__modal__title {
+  font-size: 16px;
+}
+
+.abcom-members__modal__company {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
 /**
  * 07 THEMES
  * Custom Theming

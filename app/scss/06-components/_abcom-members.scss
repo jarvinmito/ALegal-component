@@ -1,0 +1,71 @@
+.abcom-members{
+	width: 100%;
+	text-align: center;
+	
+	&__member{
+		display: inline-block;
+		width: 280px;
+		height: 380px;
+		padding: 20px;
+		margin: 15px;
+		border: 1px solid $gray-bg;
+
+		vertical-align: top;
+		text-align: center;
+		background: $white;
+		p{
+			margin-bottom: 5px;
+		}
+
+		&__image{
+			width: 80px;
+			height: 80px;
+			border: none;
+			border-radius: 40px;
+		}
+
+		&__name{
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		&__position, &__address, &__contact, &__companies{
+			font-size: 12px;
+		}
+
+		&__address, &__companies{
+			margin-top: 20px;
+		}
+
+		&__companies{
+			&__title{
+				font-style: italic;
+			}
+
+			&__more{
+				color: $red;
+
+				&:hover, &:active, &:focus{
+					color: $red-active;
+				}
+			}
+		}
+
+	}
+
+	&__modal{
+		text-align: center;
+		
+		&__title{
+			font-size: 16px;
+		}
+
+		&__company{
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+
+	}
+
+}
