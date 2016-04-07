@@ -861,6 +861,86 @@ var aboitizApp = (function(){
 		}
 	};
 
+	var initMembers = function(){
+		var elem = $('.abcom-members');
+		var modal = $('.abcom-members__modal');
+		var elemValues = [];
+
+		if( elem.length ){
+			elem.each(function(eindex){
+				var currSet = $(this);
+				var members = currSet.find('.abcom-members__member');
+				var memberValues = [];
+
+				if( members.length ){
+					members.each(function(mindex){
+
+						var currMem = $(this);
+						var owner = currMem.find('.abcom-members__member__name');
+						var companies = currMem.find('.abcom-members__member__companies__name');
+						if( companies.length ){
+							var text = companies.text().split(";");
+							var len = text.length;
+							var html = "";
+
+							companies.attr('data-eindex', eindex);
+							companies.attr('data-mindex', mindex);
+
+							memberValues[mindex] = {};
+							memberValues[mindex].data = text;
+							memberValues[mindex].owner = owner.text();
+
+							if( len > 3 ){
+								var i = 0;
+								for(i; i < 3; i++){
+									html += '<p>'+text[i]+'</p>';
+								}
+								html += '<a href="#" class="abcom-members__member__companies__more">more...</a>';
+							}
+
+							companies.html(html);
+
+							var more = companies.find('a.abcom-members__member__companies__more');
+
+							more.click(function(e){
+								e.preventDefault();
+
+								var curr = $(this);
+								var currParent = curr.parent('.abcom-members__member__companies__name');
+								var elemIndex = currParent.attr('data-eindex');
+								var memIndex = currParent.attr('data-mindex');
+
+								modal.attr('data-eindex', elemIndex);
+								modal.attr('data-mindex', memIndex);
+								modal.modal('show');
+							});
+						}
+
+					});
+				}
+
+				elemValues[eindex] = memberValues;
+			});
+		}
+
+		modal.on('show.bs.modal', function (e) {
+			var curr = $(this);
+			var values = elemValues[curr.attr('data-eindex')][curr.attr('data-mindex')];
+			var html = "";
+			var len = values.data.length;
+			var i = 0;
+			var owner = curr.find('.abcom-members__modal__title');
+			
+			for(i; i < len; i++){
+				html += '<p class="abcom-members__modal__company">'+values.data[i]+'</p>';
+			}
+
+			curr.find('.abcom-members__modal__company').remove();
+			$(html).insertAfter('.abcom-members__modal__title');
+			owner.find('b').html(values.owner);
+		});
+	};
+
 	var initMovables = function(){
 
 		var renderMovables = function(currSet){
@@ -1129,7 +1209,8 @@ var aboitizApp = (function(){
 		initColorPicker : initColorPicker,
 		initProgressBar : initProgressBar,
 		initModals : initModals,
-		initMoMListing : initMoMListing
+		initMoMListing : initMoMListing,
+		initMembers : initMembers
 	}
 
 }());
