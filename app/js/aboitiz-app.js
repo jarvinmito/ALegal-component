@@ -890,12 +890,22 @@ var aboitizApp = (function(){
 							memberValues[mindex].data = text;
 							memberValues[mindex].owner = owner.text();
 
-							if( len > 3 ){
+							var more = false;
+							var loop = len;
+							if( len != 0 ){
+								if( len > 3 ){
+									more = true;
+									loop = 3;
+								}
+
 								var i = 0;
-								for(i; i < 3; i++){
+								for(i; i < loop; i++){
 									html += '<p>'+text[i]+'</p>';
 								}
-								html += '<a href="#" class="abcom-members__member__companies__more">more...</a>';
+
+								if( more === true ){
+									html += '<a href="#" class="abcom-members__member__companies__more">more...</a>';
+								}  
 							}
 
 							companies.html(html);
@@ -922,6 +932,8 @@ var aboitizApp = (function(){
 				elemValues[eindex] = memberValues;
 			});
 		}
+
+		console.log(elemValues);
 
 		modal.on('show.bs.modal', function (e) {
 			var curr = $(this);
@@ -1194,6 +1206,7 @@ var aboitizApp = (function(){
 		initProgressBar();
 		initModals();
 		initMoMListing();
+		initMembers();
 	};
 
 	return {
