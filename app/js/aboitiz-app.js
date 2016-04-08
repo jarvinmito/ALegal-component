@@ -893,7 +893,7 @@ var aboitizApp = (function(){
 							var more = false;
 							var loop = len;
 							if( len != 0 ){
-								if( len > 3 ){
+								if( len > 4 ){
 									more = true;
 									loop = 3;
 								}
@@ -910,9 +910,9 @@ var aboitizApp = (function(){
 
 							companies.html(html);
 
-							var more = companies.find('a.abcom-members__member__companies__more');
+							// var more = companies.find('a.abcom-members__member__companies__more');
 
-							more.click(function(e){
+							companies.on('click', 'a.abcom-members__member__companies__more', function(e){
 								e.preventDefault();
 
 								var curr = $(this);
@@ -1040,7 +1040,8 @@ var aboitizApp = (function(){
 		};
 
 		var bind = function(currSet){
-			currSet.find('.abcom-movables__data__remove').click(function(e){
+			// Delegate
+			currSet.find('.abcom-movables__data').on('click', '.abcom-movables__data__remove', function(e){
 				var select = currSet.find('.abcom-movables__add__select select');
 				var parentElem = $(this).parent('.abcom-movables__data');
 				var oldValue = select.val();
@@ -1061,7 +1062,7 @@ var aboitizApp = (function(){
 				// console.log(select.val());
 			});
 
-			currSet.find('.abcom-movables__data input').on('change', function(){
+			currSet.on('change', '.abcom-movables__data input', function(){
 				var new_val = parseInt($(this).val()),
 					old_val = parseInt($(this).parent('div.abcom-movables__data').attr('data-sort')),
 					$movable_contents = currSet,
@@ -1104,19 +1105,19 @@ var aboitizApp = (function(){
 				renderMovables(currSet);
 
 				// Bind selection when closing
-				addSelection.on('select2:close', function(){
+				addSection.on('select2:close', '.abcom-movables__add__select select', function(){
 					addSection.find('.abcom-movables__add__select').hide();
 				});
 
 				// Bind click on add button to display the select2 plugin
-				addButton.click(function(e){
+				addSection.on('click', '.abcom-movables__add__btn', function(e){
 					e.preventDefault();
 					addSection.find('.abcom-movables__add__select').show();
 					addSelection.select2('open');
 				});
 
 				// Bind the change funciton of select2 plugin
-				addSelection.on('change', function(){
+				addSection.on('change', '.abcom-movables__add__select select', function(){
 					// console.log(addSelection[0].options);
 					renderMovables(currSet);
 				});
@@ -1141,7 +1142,6 @@ var aboitizApp = (function(){
 					$(this).attr('data-color', color);
 				});
 			});
-
 		}
 	};
 
@@ -1239,6 +1239,6 @@ var aboitizApp = (function(){
 		initMoMListing : initMoMListing,
 		initMembers : initMembers,
 		initLeave : initLeave
-	}
+	};
 
 }());
