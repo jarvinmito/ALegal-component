@@ -153,6 +153,7 @@ App.Pageloader = (function(){
 		aboitizApp.initModals();
 		aboitizApp.initMoMListing();
 		aboitizApp.initMembers();
+		aboitizApp.initLeave();
 
 		bind();
 	};
@@ -175,6 +176,7 @@ App.Pageloader = (function(){
 		aboitizApp.initModals();
 		aboitizApp.initMoMListing();
 		aboitizApp.initMembers();
+		aboitizApp.initLeave();
 
 		bind();
 	};

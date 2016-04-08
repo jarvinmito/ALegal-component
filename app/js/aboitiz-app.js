@@ -933,8 +933,6 @@ var aboitizApp = (function(){
 			});
 		}
 
-		console.log(elemValues);
-
 		modal.on('show.bs.modal', function (e) {
 			var curr = $(this);
 			var values = elemValues[curr.attr('data-eindex')][curr.attr('data-mindex')];
@@ -1193,6 +1191,21 @@ var aboitizApp = (function(){
 		}
 	};
 
+	var initLeave = function(){
+		window.onbeforeunload = function(e) {
+			var text = 'There is a form that has been filled-in, all unsaved data will be deleted.'
+			
+			var form = $('form');
+			var input = form.find('input, select, textarea').filter(function() {
+		        return this.value !== "";
+		    });
+
+		    if( input.length ){
+				return text;
+		    }
+		}
+	};
+
 	var initModule = function(){
 		initDonut();
 		initListing();
@@ -1207,6 +1220,7 @@ var aboitizApp = (function(){
 		initModals();
 		initMoMListing();
 		initMembers();
+		initLeave();
 	};
 
 	return {
@@ -1223,7 +1237,8 @@ var aboitizApp = (function(){
 		initProgressBar : initProgressBar,
 		initModals : initModals,
 		initMoMListing : initMoMListing,
-		initMembers : initMembers
+		initMembers : initMembers,
+		initLeave : initLeave
 	}
 
 }());
