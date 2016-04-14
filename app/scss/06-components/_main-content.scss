@@ -17,10 +17,61 @@
 			padding: 20px;
 
 			margin-right: -76px;
+
+			.side__nav{
+				position:relative;
+
+				&:after{
+					content: attr(title);
+				    position: absolute;
+				    left: 44px;
+				    top: 0px;
+
+				    display: block;
+				    overflow: hidden;
+				    height: 36px;
+				    width: 0;
+				   
+				    
+				    font-size: 12px;
+				    text-align: left;
+				    color: $black;
+
+				    transition: width .15s;
+				}
+			}
+	
+			// This is a button
+			&__expand{
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin: 6px 6px 12px 6px;
+				
+				font-size: 16px;
+				line-height: 24px;
+				text-align: center;
+				color: $black;
+
+			}
+
+			&.expand{
+				.side__nav{
+					&:after{
+						width: 130px;
+					}
+				}
+			}
 		}
 
 		.main-content__main{
 			margin-left: 56px;
+
+			transition: margin .15s;
+
+			&.expand{
+				margin-left: 160px;
+			}
 		}
 	}
 

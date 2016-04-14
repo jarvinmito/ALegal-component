@@ -4,5 +4,5 @@ body {
   margin: 0;
   color: $black;
 
-  @include abcom-gradient($gray-bg, $white-light);
+  @include abcom-gradient($white, $gray-bg);
 }

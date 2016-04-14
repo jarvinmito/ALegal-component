@@ -14286,7 +14286,7 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: #ffffff;
+  color: #fefefe;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background-color: #eeeeee;
@@ -14299,11 +14299,11 @@ body {
   padding: 0;
   margin: 0;
   color: #111111;
-  background: #dddddd;
+  background: #fefefe;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #dddddd 0%, #eeeeee 100%);
+  background: linear-gradient(to bottom, #fefefe 0%, #dddddd 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colortop', endColorstr='$colorbottom',GradientType=0 );
   /* IE6-9 */
@@ -14319,7 +14319,7 @@ body {
 }
 
 .navbar {
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #dddddd;
   margin-bottom: 0;
 }
 
@@ -14330,6 +14330,13 @@ body {
 
 .abnav .navbar-brand {
   padding-top: 25px;
+  font-size: 32px;
+  color: #111111;
+  letter-spacing: -2px;
+}
+
+.abnav .navbar-brand span {
+  color: #e5322d;
 }
 
 .abnav__link {
@@ -14357,6 +14364,7 @@ body {
 
 .absubnav {
   height: 68px;
+  background-color: #eeeeee;
 }
 
 .absubnav__title {
@@ -14391,7 +14399,7 @@ body {
 
 .auth .auth__separator {
   margin: 30px 0;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #dddddd;
 }
 
 .auth .auth__description {
@@ -14399,12 +14407,15 @@ body {
 }
 
 .auth .auth__button {
-  margin: 30px 0;
+  margin: 20px 0;
   text-align: center;
 }
 
+.auth .auth__button select, .auth .auth__button .input-group, .auth .auth__button .abcom-btn {
+  width: 200px;
+}
+
 .auth .auth__button .input-group {
-  width: 100px;
   margin: auto;
 }
 
@@ -14438,7 +14449,7 @@ body {
  * Designed components, Chunk of UI.
  */
 .ab-btn {
-  color: #ffffff;
+  color: #fefefe;
 }
 
 .ab-btn--default {
@@ -14446,7 +14457,7 @@ body {
 }
 
 .ab-btn--default:hover, .ab-btn--default:active, .ab-btn--default:focus {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #393939;
 }
 
@@ -14455,7 +14466,7 @@ body {
 }
 
 .ab-btn--action:hover, .ab-btn--action:active, .ab-btn--action:focus {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #fe0000;
 }
 
@@ -14506,8 +14517,47 @@ body {
   margin-right: -76px;
 }
 
+.main-content.has-side .main-content__side .side__nav {
+  position: relative;
+}
+
+.main-content.has-side .main-content__side .side__nav:after {
+  content: attr(title);
+  position: absolute;
+  left: 44px;
+  top: 0px;
+  display: block;
+  overflow: hidden;
+  height: 36px;
+  width: 0;
+  font-size: 12px;
+  text-align: left;
+  color: #111111;
+  transition: width .15s;
+}
+
+.main-content.has-side .main-content__side__expand {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 6px 6px 12px 6px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #111111;
+}
+
+.main-content.has-side .main-content__side.expand .side__nav:after {
+  width: 130px;
+}
+
 .main-content.has-side .main-content__main {
   margin-left: 56px;
+  transition: margin .15s;
+}
+
+.main-content.has-side .main-content__main.expand {
+  margin-left: 160px;
 }
 
 .main-content__main {
@@ -14529,6 +14579,10 @@ body {
 .side__nav:hover, .side__nav:focus, .side__nav:active, .side__nav.active {
   background-color: #e5322d;
   color: #eeeeee;
+}
+
+.side__nav.active:after, .side__nav:hover:after, .side__nav:focus:after, .side__nav:active:after {
+  color: #e5322d !important;
 }
 
 /* Aboitiz Legal components */
@@ -14616,7 +14670,7 @@ body {
 table.abcom-table {
   width: 100%;
   font-size: 12px;
-  background-color: #ffffff;
+  background-color: #fefefe;
 }
 
 table.abcom-table thead > tr > th, table.abcom-table tbody > tr > td {
@@ -14678,7 +14732,7 @@ table.abcom-table.no-footer, table.abcom-table tbody > tr:last-child > td {
 }
 
 .abcom-progress[value]::-webkit-progress-bar {
-  background-color: #ffffff;
+  background-color: #fefefe;
 }
 
 .abcom-progress[value]::-webkit-progress-value {
@@ -14768,7 +14822,7 @@ div.abcom-progress__value {
 }
 
 .abcom-btn[disabled], .abcom-btn[disabled]:hover, .abcom-btn[disabled]:active, .abcom-btn[disabled]:focus, .abcom-btn.disabled, .abcom-btn.disabled:hover, .abcom-btn.disabled:active, .abcom-btn.disabled:focus {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #dddddd;
   border-color: #dddddd;
 }
@@ -14797,49 +14851,49 @@ div.abcom-progress__value {
 }
 
 .abcom-btn--default {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #555555;
   border-color: #555555;
 }
 
 .abcom-btn--default:hover, .abcom-btn--default.active, .abcom-btn--default:active, .abcom-btn--default:focus {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #7a7a7a;
   border-color: #7a7a7a;
 }
 
 .abcom-btn--action {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #e5322d;
   border-color: #e5322d;
 }
 
 .abcom-btn--action:hover, .abcom-btn--action.active, .abcom-btn--action:active, .abcom-btn--action:focus {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #fe0000;
   border-color: #fe0000;
 }
 
 .abcom-btn--cool {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #00aeef;
   border-color: #00aeef;
 }
 
 .abcom-btn--cool:hover, .abcom-btn--cool.active, .abcom-btn--cool:active, .abcom-btn--cool:focus {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #0188ba;
   border-color: #0188ba;
 }
 
 .abcom-btn--cooler {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #2e3192;
   border-color: #2e3192;
 }
 
 .abcom-btn--cooler:hover, .abcom-btn--cooler.active, .abcom-btn--cooler:active, .abcom-btn--cooler:focus {
-  color: #ffffff;
+  color: #fefefe;
   background-color: #22245f;
   border-color: #2e3192;
 }
@@ -14951,7 +15005,7 @@ img.abcom-form, img.select2-selection {
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #dddddd 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #dddddd 0%, #fefefe 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colortop', endColorstr='$colorbottom',GradientType=0 );
   /* IE6-9 */
@@ -14992,7 +15046,7 @@ img.abcom-form, img.select2-selection {
 }
 
 .abcom-donut .donut .filler {
-  stroke: #ffffff;
+  stroke: #fefefe;
   stroke-dashoffset: 0;
 }
 
@@ -15117,12 +15171,12 @@ img.abcom-form, img.select2-selection {
 
 .abcom-setup__access th {
   border: 1px solid #eeeeee;
-  color: #ffffff;
+  color: #fefefe;
 }
 
 .abcom-setup__access td {
   border: 1px solid #dddddd;
-  background-color: #ffffff;
+  background-color: #fefefe;
 }
 
 .abcom-setup__access thead {
@@ -15256,7 +15310,7 @@ img.abcom-form, img.select2-selection {
   border: 1px solid #dddddd;
   vertical-align: top;
   text-align: center;
-  background: #ffffff;
+  background: #fefefe;
 }
 
 .abcom-members__member p {
@@ -15344,7 +15398,7 @@ img.abcom-form, img.select2-selection {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 24px;
-  color: #ffffff;
+  color: #fefefe;
 }
 
 .yondu__code code {
@@ -15488,7 +15542,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 
 .dataTables_paginate .pagination li.paginate_button a {
-  background: #ffffff;
+  background: #fefefe;
   color: #111111;
 }
 
@@ -15496,5 +15550,5 @@ table.dataTable thead th.sorting_desc:after {
   outline: 0;
   border-color: #e5322d;
   background: #e5322d;
-  color: #ffffff;
+  color: #fefefe;
 }

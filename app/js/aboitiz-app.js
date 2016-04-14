@@ -1,5 +1,52 @@
 var aboitizApp = (function(){
 
+	var initCORS = function(){
+		var header = $('header.header .abnav');
+
+		if( header.length ){
+			var brand = header.find('.navbar-brand');
+			var chars = brand.html().split('');
+			var text = '';
+
+			for(var key in chars){
+				console.log(key);
+
+				if( key == chars.length - 1 ){
+					text += '<span>'+chars[key]+'</span>';
+				}else{
+					text += chars[key];
+				}
+			}
+
+			brand.html(text);
+		}
+	};
+
+	var initSideBar = function(){
+		var sidebar = $('.main-content__side');
+		var main = $('.main-content__main');
+
+		if( sidebar.length ){
+			// create a button
+			var button = $('<a href="#" class="main-content__side__expand"><i class="fa fa-expand" aria-hidden="true"></i></a>');
+			sidebar.prepend(button);
+
+			sidebar.on('click', 'a.main-content__side__expand', function(e){
+				e.preventDefault();
+
+				sidebar.toggleClass('expand');
+				main.toggleClass('expand');
+
+				if( sidebar.hasClass('expand') ){
+					$(this).html('<i class="fa fa-compress" aria-hidden="true"></i>');
+				}else{
+					$(this).html('<i class="fa fa-expand" aria-hidden="true"></i>');
+				}
+			});
+			// bind button
+		}
+	};
+
 	var initFilter = function(){
 		var filter = $('.abcom-filter');
 		if( filter.length ){
@@ -1195,13 +1242,28 @@ var aboitizApp = (function(){
 		window.onbeforeunload = function(e) {
 			var text = 'There is a form that has been filled-in, all unsaved data will be deleted.'
 			
-			var form = $('form');
-			var input = form.find('input, select, textarea').filter(function() {
-		        return this.value !== "";
+			// Exceptions for Form elements checking
+			// Filter Component
+			// Modal Component
+
+			// var form = $('form');
+			var input = $('input:not([type="submit"][type="button"]), select, textarea').filter(function() {
+				var curr = $(this);
+				var abfilter = curr.closest('.abcom-filter');
+				var abmodal = curr.closest('.modal');
+				var abdtable = curr.closest('.dataTables_wrapper');
+				var abauth = curr.closest('.auth__button');
+				if( !abauth.length && !abfilter.length && !abmodal.length && !abdtable.length ){
+					if( curr.val() != "" && curr.val() != "none" && curr.val() != "0" && curr.val().toString().toLowerCase().indexOf('select') == -1 ){
+		        		return this;
+					}
+				}
 		    });
 
 		    if( input.length ){
+		    	console.log(input);
 				return text;
+				// return input.length + " akjshdfkahdfkadf " +text;
 		    }
 		}
 	};
@@ -1221,6 +1283,8 @@ var aboitizApp = (function(){
 		initMoMListing();
 		initMembers();
 		initLeave();
+		initSideBar();
+		initCORS();
 	};
 
 	return {
@@ -1238,7 +1302,9 @@ var aboitizApp = (function(){
 		initModals : initModals,
 		initMoMListing : initMoMListing,
 		initMembers : initMembers,
-		initLeave : initLeave
+		initLeave : initLeave,
+		initSideBar : initSideBar,
+		initCORS : initCORS
 	};
 
 }());

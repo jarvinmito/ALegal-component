@@ -9,7 +9,7 @@
 
 	.auth__separator{
 		margin: 30px 0;
-		border-top: 1px solid $gray-bg-active;
+		border-top: 1px solid $gray-bg;
 	}
 
 	.auth__description{
@@ -17,11 +17,14 @@
 	}
 
 	.auth__button{
-		margin: 30px 0;
+		margin: 20px 0;
 		text-align: center;
 
+		select, .input-group, .abcom-btn{
+			width: 200px;
+		}
+
 		.input-group{
-			width: 100px;
 			margin: auto;
 		}
 	}

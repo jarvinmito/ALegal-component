@@ -10,7 +10,7 @@
 }
 
 .navbar{
-	border-bottom: 1px solid $gray-bg-active;
+	border-bottom: 1px solid $gray-bg;
 	margin-bottom: 0;
 }
 
@@ -19,7 +19,14 @@
 	margin: 0 auto;
 
 	.navbar-brand{
-		padding-top: 25px; 
+		padding-top: 25px;
+		font-size: 32px;
+	    color: $black;
+	    letter-spacing: -2px;
+
+	    span{
+	    	color: $red;
+	    }
 	}
 
 	&__link{
@@ -49,6 +56,8 @@
 
 .absubnav{
 	height: 68px;
+
+	background-color: $white-light;
 	
 	&__title{
 		padding: 10px 15px;
