@@ -27,12 +27,14 @@
 				    left: 44px;
 				    top: 0px;
 
-				    display: block;
+				    display: table-cell;
+				    vertical-align: middle;
 				    overflow: hidden;
+
 				    height: 36px;
 				    width: 0;
-				   
 				    
+				    line-height: 18px;
 				    font-size: 12px;
 				    text-align: left;
 				    color: $black;
@@ -59,6 +61,7 @@
 				.side__nav{
 					&:after{
 						width: 130px;
+						overflow: visible;
 					}
 				}
 			}
@@ -70,7 +73,7 @@
 			transition: margin .15s;
 
 			&.expand{
-				margin-left: 160px;
+				margin-left: 180px;
 			}
 		}
 	}

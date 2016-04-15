@@ -14526,10 +14526,12 @@ body {
   position: absolute;
   left: 44px;
   top: 0px;
-  display: block;
+  display: table-cell;
+  vertical-align: middle;
   overflow: hidden;
   height: 36px;
   width: 0;
+  line-height: 18px;
   font-size: 12px;
   text-align: left;
   color: #111111;
@@ -14549,6 +14551,7 @@ body {
 
 .main-content.has-side .main-content__side.expand .side__nav:after {
   width: 130px;
+  overflow: visible;
 }
 
 .main-content.has-side .main-content__main {
@@ -14557,7 +14560,7 @@ body {
 }
 
 .main-content.has-side .main-content__main.expand {
-  margin-left: 160px;
+  margin-left: 180px;
 }
 
 .main-content__main {
