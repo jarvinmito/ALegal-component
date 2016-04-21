@@ -657,12 +657,23 @@ var aboitizApp = (function(){
 	};
 
 	// Used in form dates only
-	var initDTpicker = function(){
+	var initDTpicker = function(holidays){
+		var todisable = ( holidays !== null ) ? holidays : null;
+
 		if( $('.abcom-form__date').length ){
 			$('.abcom-form__date').each(function(){
-				$(this).datetimepicker({
-					format: 'MM/DD/YYYY'
-				});	
+				// Set generic options for date time picker
+				var options = {
+					format: 'MM/DD/YYYY',
+					daysOfWeekDisabled: [0,6]
+				}
+
+				// Set special disabler for holidays
+				if( todisable !== null ){
+					options.disabledDates = todisable;
+				}
+
+				$(this).datetimepicker(options);	
 			})
 		}
 
@@ -672,12 +683,25 @@ var aboitizApp = (function(){
 					currFrom = currSet.find('.abcom-form__daterange--from'),
 					currTo = currSet.find('.abcom-form__daterange--to');
 
-				currFrom.datetimepicker({ format: 'MM/DD/YYYY' });
+				// Set generic options for date time picker
+				var options = {
+					format: 'MM/DD/YYYY',
+					daysOfWeekDisabled: [0,6]
+				}
+
+				// Set special disabler for holidays
+				if( todisable !== null ){
+					options.disabledDates = todisable;
+				}
+
+				currFrom.datetimepicker(options);
 				currFrom.on("dp.change", function (e) {
 					currTo.data("DateTimePicker").minDate(e.date);
 		        });
 
-		        currTo.datetimepicker({ format: 'MM/DD/YYYY', useCurrent : false });
+		        options.useCurrent = false;
+
+		        currTo.datetimepicker(options);
 				currTo.on("dp.change", function (e) {
 					currFrom.data("DateTimePicker").maxDate(e.date);
 		        });
@@ -685,20 +709,30 @@ var aboitizApp = (function(){
 		}
 	};
 
-	var initDateTimePicker = function(){
+	var initDateTimePicker = function(holidays){
+		var todisable = ( holidays !== null ) ? holidays : null;
 		var inputs = $('.abcom-filter__type--date');
 
 		if( inputs.length ){
 
 			inputs.each(function( index ){
+				// Set generic options for date time picker
+				var options = {
+					format: 'MM/DD/YYYY',
+					daysOfWeekDisabled: [0,6]
+				};
+
+				// Set special disabler for holidays
+				if( todisable !== null ){
+					options.disabledDates = todisable;
+				}
+
 				var currentSet = $(this);
 				var dates = $(this).find('.abcom-filter__date');
 				
 				if( dates.length === 1 ){
 					// single
-					dates.datetimepicker({
-						format: 'MM/DD/YYYY'
-					});
+					dates.datetimepicker(options);
 
 				}else if( dates.length === 2){
 					// daterange
@@ -707,18 +741,15 @@ var aboitizApp = (function(){
 
 						if( current.is($('.abcom-filter__date[data-role="from"]')) ){
 							var from = current;
-							from.datetimepicker({
-								format: 'MM/DD/YYYY'
-							});
+							options.useCurrent = true;
+							from.datetimepicker(options);
 							from.on("dp.change", function (e) {
 								currentSet.find('.abcom-filter__date[data-role="to"]').data("DateTimePicker").minDate(e.date);
 					        });
 						}else if( current.is($('.abcom-filter__date[data-role="to"]')) ){
 							var to = current;
-							to.datetimepicker({
-								format: 'MM/DD/YYYY',
-								useCurrent : false
-							});
+							options.useCurrent = false;
+							to.datetimepicker(options);
 							to.on("dp.change", function (e) {
 								currentSet.find('.abcom-filter__date[data-role="from"]').data("DateTimePicker").maxDate(e.date);
 					        });
@@ -1268,12 +1299,17 @@ var aboitizApp = (function(){
 		}
 	};
 
-	var initModule = function(){
+	var initModule = function(param){
+		var holidays = param.holidays || null;
+		var allowLeave = param.leavePrompt || false;
+
+		console.log(holidays);
+
 		initDonut();
 		initListing();
 		initFileReader();
-		initDateTimePicker();
-		initDTpicker();
+		initDateTimePicker(holidays);
+		initDTpicker(holidays);
 		initFilter();
 		initDataTables();
 		initMovables();
@@ -1282,7 +1318,11 @@ var aboitizApp = (function(){
 		initModals();
 		initMoMListing();
 		initMembers();
-		initLeave();
+
+		if( allowLeave ){
+			initLeave();
+		}
+
 		initSideBar();
 		initCORS();
 	};
