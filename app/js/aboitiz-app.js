@@ -1300,10 +1300,18 @@ var aboitizApp = (function(){
 	};
 
 	var initModule = function(param){
-		var holidays = param.holidays || null;
-		var allowLeave = param.leavePrompt || false;
+		var holidays = null,
+			allowLeave = false;
 
-		console.log(holidays);
+		if( param ){
+			if( param.holidays ){
+				holidays = param.holidays;
+			}
+
+			if( param.leavePrompt ){
+				allowLeave = param.leavePrompt;
+			}
+		}
 
 		initDonut();
 		initListing();
