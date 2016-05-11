@@ -662,14 +662,20 @@ var aboitizApp = (function(){
 
 		if( $('.abcom-form__date').length ){
 			$('.abcom-form__date').each(function(){
+				var curr = $(this);
 				// Set generic options for date time picker
 				var options = {
-					format: 'MM/DD/YYYY',
-					daysOfWeekDisabled: [0,6]
+					format: 'MM/DD/YYYY'
 				}
 
+				// Weekend disable
+				if( curr.data('disable-weekend') ){
+					options.daysOfWeekDisabled = [0,6]
+				}
+
+				// Holiday disable
 				// Set special disabler for holidays
-				if( todisable !== null ){
+				if( todisable !== null && curr.data('disable-holidays')){
 					options.disabledDates = todisable;
 				}
 
@@ -685,14 +691,24 @@ var aboitizApp = (function(){
 
 				// Set generic options for date time picker
 				var options = {
-					format: 'MM/DD/YYYY',
-					daysOfWeekDisabled: [0,6]
+					format: 'MM/DD/YYYY'
+				}
+
+				// Weekend disable
+				if( currSet.data('disable-weekend') || currFrom.data('disable-weekend') || currTo.data('disable-weekend') ){
+					options.daysOfWeekDisabled = [0,6]
+				}
+
+				// Holiday disable
+				// Set special disabler for holidays
+				if( todisable !== null && ( currSet.data('disable-holidays') || currFrom.data('disable-holidays') || currTo.data('disable-holidays'))){
+					options.disabledDates = todisable;
 				}
 
 				// Set special disabler for holidays
-				if( todisable !== null ){
-					options.disabledDates = todisable;
-				}
+				// if( todisable !== null ){
+				// 	options.disabledDates = todisable;
+				// }
 
 				currFrom.datetimepicker(options);
 				currFrom.on("dp.change", function (e) {
@@ -718,26 +734,47 @@ var aboitizApp = (function(){
 			inputs.each(function( index ){
 				// Set generic options for date time picker
 				var options = {
-					format: 'MM/DD/YYYY',
-					daysOfWeekDisabled: [0,6]
+					format: 'MM/DD/YYYY'
 				};
 
-				// Set special disabler for holidays
-				if( todisable !== null ){
-					options.disabledDates = todisable;
-				}
+				
 
 				var currentSet = $(this);
 				var dates = $(this).find('.abcom-filter__date');
+				var dtinput = dates.find('input');
 				
 				if( dates.length === 1 ){
 					// single
+					// Weekend disable
+					if( dtinput.data('disable-weekend') ){
+						options.daysOfWeekDisabled = [0,6];
+						console.log('what!');
+					}
+
+					// Holiday disable
+					// Set special disabler for holidays
+					if( todisable !== null && dtinput.data('disable-holidays')){
+						options.disabledDates = todisable;
+					}
+
 					dates.datetimepicker(options);
 
 				}else if( dates.length === 2){
 					// daterange
 					dates.each(function(){
 						var current = $(this);
+						var cinput = current.find('input');
+
+						// Weekend disable
+						if( cinput.data('disable-weekend') ){
+							options.daysOfWeekDisabled = [0,6]
+						}
+
+						// Holiday disable
+						// Set special disabler for holidays
+						if( todisable !== null && cinput.data('disable-holidays')){
+							options.disabledDates = todisable;
+						}
 
 						if( current.is($('.abcom-filter__date[data-role="from"]')) ){
 							var from = current;
@@ -934,7 +971,14 @@ var aboitizApp = (function(){
 	var initDataTables = function(){
 		if( $('.abcom-table').length ){
 			$('.abcom-table').each(function(){
-				$(this).dataTable();
+				var curr = $(this);
+				var options = {};
+				
+				if( curr.data('has-scroll') ){
+					options.scrollX = true;
+				}
+
+				$(this).dataTable(options);
 			});
 		}
 	};
