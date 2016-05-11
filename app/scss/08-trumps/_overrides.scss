@@ -123,8 +123,8 @@ table.dataTable thead th.sorting_desc:after {
 
             &.active a, & a:hover, & a:active, & a:focus{
                 outline: 0;
-                border-color: $red;
-                background: $red;
+                border-color: $gray-base;
+                background: $gray-base;
                 color: $white;
             }
         }

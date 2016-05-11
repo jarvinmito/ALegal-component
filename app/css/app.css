@@ -14286,27 +14286,21 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: #fefefe;
+  color: #111111;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-color: #eeeeee;
+  background-color: #fefefe;
   padding: 0;
   margin: 0;
 }
 
 body {
   min-height: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   color: #111111;
-  background: #fefefe;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fefefe 0%, #dddddd 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colortop', endColorstr='$colorbottom',GradientType=0 );
-  /* IE6-9 */
+  backgorund-color: #fefefe;
 }
 
 /**
@@ -14340,7 +14334,8 @@ body {
 }
 
 .abnav__link {
-  color: #555555;
+  color: #7a7a7a;
+  transition: color .25s;
 }
 
 .nav > li > .abnav__link {
@@ -14349,12 +14344,12 @@ body {
 
 .nav > li > .abnav__link:hover, .nav > li > .abnav__link:focus, .nav > li > .abnav__link:active {
   background-color: transparent;
-  color: #e5322d;
+  color: #111111;
 }
 
 .nav > li.active > .abnav__link {
   background-color: transparent;
-  color: #e5322d;
+  color: #111111;
 }
 
 .abnav__link .fa {
@@ -14390,11 +14385,11 @@ body {
 
 .auth {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 175px;
 }
 
 .auth .auth__brand {
-  height: 70px;
+  height: 60px;
 }
 
 .auth .auth__separator {
@@ -14485,7 +14480,7 @@ body {
 .usernav__profile {
   position: relative;
   border-radius: 15px 0 0 15px;
-  color: #e5322d;
+  color: #111111;
   text-indent: 24px;
 }
 
@@ -14530,11 +14525,13 @@ body {
   vertical-align: middle;
   overflow: hidden;
   height: 36px;
+  padding-top: 10px;
   width: 0;
-  line-height: 18px;
+  line-height: 1.3;
   font-size: 12px;
+  font-weight: bold;
   text-align: left;
-  color: #111111;
+  color: #7a7a7a;
   transition: width .15s;
 }
 
@@ -14547,6 +14544,7 @@ body {
   line-height: 24px;
   text-align: center;
   color: #111111;
+  outline: none;
 }
 
 .main-content.has-side .main-content__side.expand .side__nav:after {
@@ -14569,23 +14567,24 @@ body {
 
 .side__nav {
   display: block;
+  outline: none;
   width: 36px;
   height: 36px;
   border-radius: 18px;
   margin-bottom: 15px;
-  line-height: 36px;
+  line-height: 2.6;
   text-align: center;
-  background-color: #393939;
+  background-color: #7a7a7a;
   color: #eeeeee;
 }
 
 .side__nav:hover, .side__nav:focus, .side__nav:active, .side__nav.active {
-  background-color: #e5322d;
+  background-color: #111111;
   color: #eeeeee;
 }
 
 .side__nav.active:after, .side__nav:hover:after, .side__nav:focus:after, .side__nav:active:after {
-  color: #e5322d !important;
+  color: #111111 !important;
 }
 
 /* Aboitiz Legal components */
@@ -14629,7 +14628,7 @@ body {
 }
 
 .abcom-filter__label {
-  color: #e5322d;
+  color: #555555;
   font-weight: bold;
   height: 40px;
   margin-bottom: 0;
@@ -14795,14 +14794,14 @@ div.abcom-progress__value {
 }
 
 .abcom-title__main {
-  color: #e5322d;
+  color: #555555;
   text-transform: uppercase;
   font-weight: bold;
   margin-right: 5px;
 }
 
 .abcom-title__sub {
-  color: #111111;
+  color: #555555;
 }
 
 .abcom-title .form-group {
@@ -14840,12 +14839,12 @@ div.abcom-progress__value {
 
 .abcom-btn--circle {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 50%;
   font-size: 10px;
-  line-height: 20px;
+  line-height: 24px;
   text-align: center;
 }
 
@@ -15551,7 +15550,7 @@ table.dataTable thead th.sorting_desc:after {
 
 .dataTables_paginate .pagination li.paginate_button.active a, .dataTables_paginate .pagination li.paginate_button a:hover, .dataTables_paginate .pagination li.paginate_button a:active, .dataTables_paginate .pagination li.paginate_button a:focus {
   outline: 0;
-  border-color: #e5322d;
-  background: #e5322d;
+  border-color: #555555;
+  background: #555555;
   color: #fefefe;
 }

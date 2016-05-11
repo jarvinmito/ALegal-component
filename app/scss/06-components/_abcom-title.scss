@@ -8,14 +8,15 @@
 	background-color: $gray-bg;
 
 	&__main{
-		color: $red;
+		color: $gray-base;
+		// color: $red;
 		text-transform: uppercase;
 		font-weight:bold;
 		margin-right: 5px;
 	}
 
 	&__sub{
-		color: $black;
+		color: $gray-base;
 	}
 
 	.form-group{

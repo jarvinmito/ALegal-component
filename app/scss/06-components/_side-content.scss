@@ -2,24 +2,27 @@
 	
 	&__nav{
 		display: block;
-
+		
+		outline: none;
 		width: 36px;
 		height: 36px;
 		border-radius: 18px;
 		margin-bottom: 15px;
-		line-height: 36px;
+		line-height: 2.6;
 		text-align: center;
 
-		background-color: $gray-base-active;
+		background-color: $gray-light;
 		color: $white-light;
 
 		&:hover, &:focus, &:active, &.active{
-			background-color: $red;
+			background-color: $black;
+			// background-color: $red;
 			color: $white-light;
 		}
 
 		&.active:after, &:hover:after, &:focus:after, &:active:after{
-			color: $red !important;
+			color: $black !important;
+			// color: $red !important;
 		}
 	}	
 

@@ -31,20 +31,23 @@
 
 	&__link{
 		
-		color: $gray-base;
+		color: $gray-light;
+		transition: color .25s;
 
 		.nav > li > &{
 			padding: 25px 15px;
 
 			&:hover, &:focus, &:active {
 				background-color: transparent;
-				color: $red;
+				color: $black;
+				// color: $red;
 			}
 		}
 
 		.nav > li.active > &{
 			background-color: transparent;
-			color: $red;
+			color: $black;
+			// color: $red;
 		}
 
 		.fa{
