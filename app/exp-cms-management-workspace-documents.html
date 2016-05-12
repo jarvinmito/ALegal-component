@@ -106,7 +106,7 @@
 
                   <div class="abcom-filter__type abcom-filter__type--date" data-filter-type="daterange">
                         <div class='input-group abcom-filter__date' data-role="from">
-                            <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" />
+                            <input type='text' class="form-control abcom-form abcom-form--min" placeholder="From" data-disable-weekend="true" data-disable-holidays="true" />
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -146,7 +146,7 @@
           </div>
         </div>
 
-        <table id="workspace_documents" class="abcom abcom-table">
+        <table id="workspace_documents" data-has-scroll="true" class="abcom abcom-table">
             <thead>
                 <tr>
                     <th>Company Name</th>

@@ -1343,6 +1343,34 @@ var aboitizApp = (function(){
 		}
 	};
 
+	var initPreLoader = function(){
+		var preloader = $('<div class="abcom-preloader" />');
+		var plContainer = $('<div class="abcom-preloader__loader"/>');
+		var plImage = $('<img class="abcom-preloader__image" src="assets/images/preloader.gif" />');
+		var plText = $('<span class="abcom-preloader__text">Please wait...</span>');
+
+		if( $('.abcom-preloader').length === 0 ){
+			plContainer.html(plImage);
+			plContainer.append(plText);
+			preloader.html(plContainer);
+			$('body').append(preloader);
+		}
+
+		var showPL = function(){
+			preloader.fadeIn(250);
+		};
+
+		var hidePL = function(){
+			preloader.fadeOut(250);
+		};
+
+		return {
+			showPL : showPL,
+			hidePL : hidePL
+		}
+
+	};
+
 	var initModule = function(param){
 		var holidays = null,
 			allowLeave = false;
@@ -1377,6 +1405,7 @@ var aboitizApp = (function(){
 
 		initSideBar();
 		initCORS();
+		initPreLoader();
 	};
 
 	return {
@@ -1396,7 +1425,8 @@ var aboitizApp = (function(){
 		initMembers : initMembers,
 		initLeave : initLeave,
 		initSideBar : initSideBar,
-		initCORS : initCORS
+		initCORS : initCORS,
+		initPreLoader : initPreLoader
 	};
 
 }());
