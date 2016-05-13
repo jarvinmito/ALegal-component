@@ -1,8 +1,11 @@
 .abcom-parsley{
-	
+
 	&__list{
+		position: absolute;
+		right: 5px;
 		list-style: none;
 	    padding: 0;
+	    margin: 0;
 	    background-color: $red;
 	    border-radius: 5px;
 	    color: $white;
