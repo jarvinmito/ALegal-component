@@ -15436,6 +15436,30 @@ img.abcom-form, img.select2-selection {
   padding: 10px;
 }
 
+.abcom-quicklinks {
+  -webkit-columns: 300px 3;
+  -moz-columns: 300px 3;
+  columns: 300px 3;
+}
+
+.abcom-quicklinks__item, .abcom-quicklinks__item:hover, .abcom-quicklinks__item:active {
+  display: block;
+  padding: 10px;
+  text-align: left;
+  color: #555555;
+  text-decoration: none;
+}
+
+.abcom-quicklinks__item span {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.abcom-quicklinks__item:hover span, .abcom-quicklinks__item:active span {
+  color: #e5322d;
+}
+
 /**
  * 07 THEMES
  * Custom Theming
