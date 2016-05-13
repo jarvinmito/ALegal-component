@@ -1391,7 +1391,7 @@ var aboitizApp = (function(){
 		initDateTimePicker(holidays);
 		initDTpicker(holidays);
 		initFilter();
-		initDataTables();
+		// initDataTables();
 		initMovables();
 		initColorPicker();
 		initProgressBar();
