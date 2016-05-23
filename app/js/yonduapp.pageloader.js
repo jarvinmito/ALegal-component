@@ -161,7 +161,7 @@ App.Pageloader = (function(){
 	var specifics = function(){
 		jqueryMap.$body.html(App.Templates['yspecifics']());
 		initClipboard();
-		initDataTables();
+		// initDataTables();
 
 		aboitizApp.initDonut();
 		aboitizApp.initFileReader();

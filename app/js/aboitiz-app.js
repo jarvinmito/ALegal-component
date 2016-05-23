@@ -507,16 +507,16 @@ var aboitizApp = (function(){
 							}
 						}
 
-						if( !marker ){
+						// if( !marker ){
 							currSetValues.push(data);
 							// Set inputs to blank
 							name.val('').removeClass('has-error');
 							designation.val('').removeClass('has-error');
 							
-						}else{
-							name.addClass('has-error');
-							designation.addClass('has-error');
-						}
+						// }else{
+						// 	name.addClass('has-error');
+						// 	designation.addClass('has-error');
+						// }
 
 						var datatext = JSON.stringify(currSetValues);
 
@@ -1340,13 +1340,19 @@ var aboitizApp = (function(){
 				return text;
 				// return input.length + " akjshdfkahdfkadf " +text;
 		    }
-		}
+		};
+
+		$('[data-is-submit="true"]').parents('form').on('submit', function(){
+			window.onbeforeunload = function(e){ console.log('onbeforeunload reset')};
+			var r = confirm("Are you sure you want to Submit?");
+			return r;
+		});
 	};
 
 	var initPreLoader = function(){
 		var preloader = $('<div class="abcom-preloader" />');
 		var plContainer = $('<div class="abcom-preloader__loader"/>');
-		var plImage = $('<img class="abcom-preloader__image" src="assets/images/preloader.gif" />');
+		var plImage = $('<img class="abcom-preloader__image" src="/assets/images/preloader.gif" />');
 		var plText = $('<span class="abcom-preloader__text">Please wait...</span>');
 
 		if( $('.abcom-preloader').length === 0 ){
@@ -1357,10 +1363,12 @@ var aboitizApp = (function(){
 		}
 
 		var showPL = function(){
+			var preloader = $(document).find('.abcom-preloader');
 			preloader.fadeIn(250);
 		};
 
 		var hidePL = function(){
+			var preloader = $(document).find('.abcom-preloader');
 			preloader.fadeOut(250);
 		};
 
