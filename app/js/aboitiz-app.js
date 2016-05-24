@@ -1257,7 +1257,11 @@ var aboitizApp = (function(){
 		if( cpicker.length ){
 			cpicker.each(function(){
 				var currSet = $(this);
-				currSet.spectrum();
+				currSet.spectrum({
+					preferredFormat: "rgb",
+					showInitial: true,
+    				showInput: true
+				});
 				currSet.on('move.spectrum', function(e, tinycolor){
 					var color = tinycolor.toHexString();
 					$(this).find('div').css({ 'background-color' : color });
