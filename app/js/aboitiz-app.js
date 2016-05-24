@@ -187,7 +187,7 @@ var aboitizApp = (function(){
 					html += '<td>' + cat.name + '</td>';
 					html += '<td>' + scata.name + '</td>';
 					html += '<td>' + scatb.name + '</td>';
-					html += '<td><a href="javascript:;" class="abcom-list__item__link--delete"><i class="fa fa-close"></i></a></td>';
+					html += '<td><a href="javascript:;" class="abcom-list__item__link--delete"><i class="fa fa-minus"></i></a></td>';
 					html += '</tr>';
 				}
 
@@ -335,7 +335,7 @@ var aboitizApp = (function(){
 			for(var key in values){
 				// console.log( key, values, values[key]);
 				console.log();
-				html += '<li class="abcom-list__item" data-index="'+key+'" data-id="'+values[key]+'">'+texts[key].text+'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+				html += '<li class="abcom-list__item" data-index="'+key+'" data-id="'+values[key]+'">'+texts[key].text+'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-minus"></i></a></li>';
 			}
 
 			var id = currSel.attr('id');
@@ -419,7 +419,7 @@ var aboitizApp = (function(){
 
 				for(var key in values){
 					// console.log( key, values, values[key] );
-					html += '<li class="abcom-list__item" data-index="'+key+'" data-value-name="'+values[key].name+'" data-value-designation="'+values[key].designation+'">'+values[key].name+ ' - ' + values[key].designation +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+					html += '<li class="abcom-list__item" data-index="'+key+'" data-value-name="'+values[key].name+'" data-value-designation="'+values[key].designation+'">'+values[key].name+ ' - ' + values[key].designation +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-minus"></i></a></li>';
 				}
 
 				var list = currSel.find('.abcom-list__items');
@@ -544,7 +544,7 @@ var aboitizApp = (function(){
 
 				for(var key in values){
 					// console.log( key, values, values[key] );
-					html += '<li class="abcom-list__item" data-index="'+key+'" data-value-date="'+values[key].date+'" data-value-type="'+values[key].type+'">'+values[key].date+ ' - ' + values[key].type +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-close"></i></a></li>';
+					html += '<li class="abcom-list__item" data-index="'+key+'" data-value-date="'+values[key].date+'" data-value-type="'+values[key].type+'">'+values[key].date+ ' - ' + values[key].type +'<a href="javascript:;" class="abcom-list__item__link"><i class="fa fa-minus"></i></a></li>';
 				}
 
 				var list = currSel.find('.abcom-list__items');
@@ -1254,6 +1254,12 @@ var aboitizApp = (function(){
 	var initColorPicker = function(){
 		var cpicker = $('.abcom-color');
 
+		var cpCallback = function(funchere, color){
+			// if( typeof funchere === 'function' ){
+				funchere(color);
+			// }
+		};
+
 		if( cpicker.length ){
 			cpicker.each(function(){
 				var currSet = $(this);
@@ -1266,6 +1272,12 @@ var aboitizApp = (function(){
 					var color = tinycolor.toHexString();
 					$(this).find('div').css({ 'background-color' : color });
 					$(this).attr('data-color', color);
+				});
+
+				currSet.on('change.spectrum', function(e, tinycolor){
+					var color = tinycolor.toHexString();
+					var funchere = currSet.data('callback');
+					cpCallback(funchere, color);
 				});
 			});
 		}
