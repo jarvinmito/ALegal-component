@@ -14837,21 +14837,6 @@ div.abcom-progress__value {
   outline: 0;
 }
 
-.abcom-btn--circle {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 10px;
-  line-height: 24px;
-  text-align: center;
-}
-
-.abcom-btn--circle .fa {
-  margin: 0;
-}
-
 .abcom-btn--default {
   color: #fefefe;
   background-color: #555555;
@@ -14864,13 +14849,41 @@ div.abcom-progress__value {
   border-color: #7a7a7a;
 }
 
-.abcom-btn--action {
+.abcom-btn--circle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #fefefe;
+  border-color: #fefefe;
+}
+
+.abcom-btn--circle .fa {
+  color: #555555;
+  font-weight: bold;
+  margin: 0;
+}
+
+.abcom-btn--circle:hover, .abcom-btn--circle.active, .abcom-btn--circle:active, .abcom-btn--circle:focus {
+  background-color: #fefefe;
+  border-color: #fefefe;
+}
+
+.abcom-btn--circle:hover .fa, .abcom-btn--circle.active .fa, .abcom-btn--circle:active .fa, .abcom-btn--circle:focus .fa {
+  color: #393939;
+}
+
+.abcom-btn--action, .abcom-btn[type="submit"], .abcom-btn[data-is-submit="true"] {
   color: #fefefe;
   background-color: #e5322d;
   border-color: #e5322d;
 }
 
-.abcom-btn--action:hover, .abcom-btn--action.active, .abcom-btn--action:active, .abcom-btn--action:focus {
+.abcom-btn--action:hover, .abcom-btn--action.active, .abcom-btn--action:active, .abcom-btn--action:focus, .abcom-btn[type="submit"]:hover, .abcom-btn[type="submit"].active, .abcom-btn[type="submit"]:active, .abcom-btn[type="submit"]:focus, .abcom-btn[data-is-submit="true"]:hover, .abcom-btn[data-is-submit="true"].active, .abcom-btn[data-is-submit="true"]:active, .abcom-btn[data-is-submit="true"]:focus {
   color: #fefefe;
   background-color: #fe0000;
   border-color: #fe0000;

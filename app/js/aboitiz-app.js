@@ -973,7 +973,16 @@ var aboitizApp = (function(){
 		if( $('.abcom-table').length ){
 			$('.abcom-table').each(function(){
 				var curr = $(this);
-				var options = {};
+				var options = {
+					"oLanguage" : {
+						"oPaginate" : {
+							"sNext" : "&gt;",
+							"sLast" : "&gt;&gt;",
+							"sFirst" : "&lt;&lt;",
+							"sPrevious" : "&lt;"
+						}
+					}
+				};
 				
 				if( curr.data('has-scroll') ){
 					options.scrollX = true;
@@ -1410,7 +1419,7 @@ var aboitizApp = (function(){
 			}
 		}
 
-		initDonut();
+		// initDonut();
 		initListing();
 		initFileReader();
 		initDateTimePicker(holidays);
