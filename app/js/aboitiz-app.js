@@ -157,7 +157,8 @@ var aboitizApp = (function(){
 				// subtract 440 to reverse the effect
 				// 440 = 0% and 0 = 100% in the stroke-dashoffset of svg in css
 
-				circle.animate({'stroke-dashoffset' : getPercentage}, 1000);
+				// circle.animate({'stroke-dashoffset' : getPercentage}, 1000);
+				circle.animate({'stroke-dashoffset' : 0}, 1000);
 			});
 		}
 	};
@@ -1409,7 +1410,7 @@ var aboitizApp = (function(){
 			}
 		}
 
-		initDonut();
+		// initDonut();
 		initListing();
 		initFileReader();
 		initDateTimePicker(holidays);

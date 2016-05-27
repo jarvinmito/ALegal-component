@@ -51,12 +51,15 @@
 
 		.circle_animation, .filler {
 			stroke-dasharray: 440;
+			// stroke-dasharray: 0;
 			stroke-width: 10px;
 		}
 
 		.circle_animation {
+			// stroke-dashoffset: 0;
 			stroke-dashoffset: 440;
-			stroke: $blue-light;
+			// stroke: $blue-light;
+			stroke: $red;
 		}
 	}
 
