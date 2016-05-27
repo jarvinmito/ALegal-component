@@ -1410,7 +1410,7 @@ var aboitizApp = (function(){
 			}
 		}
 
-		// initDonut();
+		initDonut();
 		initListing();
 		initFileReader();
 		initDateTimePicker(holidays);
