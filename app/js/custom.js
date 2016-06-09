@@ -5,6 +5,21 @@ $(document).ready(function(){
 	};
 
 	aboitizApp.initModule(argus);
+
+
+    var tbl = $('table#management-services-table').dataTable();
+
+    var osettings = tbl.fnSettings();
+    console.log(osettings);
+
+    osettings.oLanguage =  {
+        "oPaginate" : {
+            "sNext" : "&gt;",
+            "sLast" : "&gt;&gt;",
+            "sFirst" : "&lt;&lt;",
+            "sPrevious" : "&lt;"
+        }
+    };
 });
 
 

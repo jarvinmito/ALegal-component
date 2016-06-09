@@ -1,16 +1,18 @@
 .abcom-quicklinks{
-    -webkit-columns: 300px 3;
-    -moz-columns: 300px 3;
-    columns: 300px 3;
+    // -webkit-columns: 300px 3;
+    // -moz-columns: 300px 3;
+    // columns: 300px 3;
 	
 	&__item{
 
    		&, &:hover, &:active{
-	    	display: block;
-   			padding: 10px;
-   			text-align: left;
-   			color: $gray-base;
-   			text-decoration: none;
+	      display: inline-block;
+        width: 33%;
+        padding: 10px;
+        text-align: left;
+        color: $gray-base;
+        text-decoration: none;
+        vertical-align: top;
    		}
 
 		span{

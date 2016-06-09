@@ -15449,18 +15449,14 @@ img.abcom-form, img.select2-selection {
   padding: 10px;
 }
 
-.abcom-quicklinks {
-  -webkit-columns: 300px 3;
-  -moz-columns: 300px 3;
-  columns: 300px 3;
-}
-
 .abcom-quicklinks__item, .abcom-quicklinks__item:hover, .abcom-quicklinks__item:active {
-  display: block;
+  display: inline-block;
+  width: 33%;
   padding: 10px;
   text-align: left;
   color: #555555;
   text-decoration: none;
+  vertical-align: top;
 }
 
 .abcom-quicklinks__item span {
