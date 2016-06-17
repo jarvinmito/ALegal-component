@@ -15449,6 +15449,10 @@ img.abcom-form, img.select2-selection {
   padding: 10px;
 }
 
+.abcom-quicklinks {
+  text-align: left;
+}
+
 .abcom-quicklinks__item, .abcom-quicklinks__item:hover, .abcom-quicklinks__item:active {
   display: inline-block;
   width: 33%;
